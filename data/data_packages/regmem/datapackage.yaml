@@ -1,0 +1,15 @@
+name: regmem
+title: Experimental Register of Members Interests
+description : |
+  Register of members interests with basic NLP extraction (unmaintained)
+version: 0.1
+licenses:
+  
+  - name: CC-BY-4.0
+    path: https://creativecommons.org/licenses/by/4.0/
+    title: Creative Commons Attribution 4.0 International License
+  
+contributors:
+  - title: mySociety
+    path: https://mysociety.org
+    role: author
