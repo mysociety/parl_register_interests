@@ -1,7 +1,12 @@
-# Template notebook
 
-This is a template notebook used for mySociety data science projects.
+# parl_register_experiment
 
-You only update this repo, and don't clone directly from it. See instructions in [this repo](https://github.com/mysociety/notebook-auto-template) on how to use it as a template for new projects.
+[![badge](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mysociety/parl_register_experiment/HEAD)
 
-Instructions on using the features of this notebook are avaliable in [notebooks-readme.md](notebooks-readme.md).
+Proof of concept of applying NLP to register
+
+This repository is available online at https://github.com/mysociety/parl_register_experiment
+
+If Github Pages are enabled, the URL is: https://mysociety.github.io/parl_register_experiment/
+
+Instructions on using the features of this notebook are available in [notebooks-readme.md](notebooks-readme.md).

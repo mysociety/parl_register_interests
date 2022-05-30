@@ -1,4 +1,4 @@
-import template_data_repo
+import parl_register_experiment
 
 import pytest
 
