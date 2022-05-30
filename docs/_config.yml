@@ -32,7 +32,7 @@ sass:
     sass_dir: 
     load_paths:
         - theme/sass
-        - sass  
+        - sass
 
 
 # Exclude these files from the build

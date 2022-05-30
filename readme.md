@@ -12,4 +12,12 @@ If Github Pages are enabled, the URL is: https://mysociety.github.io/parl_regist
 Instructions on using the features of this notebook are available in [notebooks-readme.md](notebooks-readme.md).
 
 
-Extra notes: python -m spacy download en_core_web_sm
+# Post setup notes:
+
+Run 
+
+```
+python -m spacy download en_core_web_sm
+```
+
+To load the library for spacy.
