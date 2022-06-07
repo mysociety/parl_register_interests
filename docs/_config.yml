@@ -2,8 +2,16 @@ title: Experimental register of interests
 description: >
   Register of members interest with basic NLP processing.
 baseurl: "/parl_register_experiment"
-url: "https://mysociety.github.io"
 
+logo: "/theme/img/mysociety-large-social.png"
+layouts_dir: theme/_layouts
+includes_dir: theme/_includes
+
+sass:
+    sass_dir: 
+    load_paths:
+        - theme/sass
+        - sass  
 collections:
   datasets:
     output: true
@@ -13,17 +21,23 @@ collections:
     permalink: /downloads/:name/
 
 
+#  download_gate_type, require form submission before download. soft, present at same time but do not put up a barrier.
+
 defaults:
   - scope:
       path: ""
       type: datasets
     values:
-      layout: dataset
+      layout: datasets/dataset
   - scope:
       path: ""
       type: downloads
     values:
-      layout: download
+      download_gate_type: soft
+      download_form_header: Can you help us with funding by telling us more about yourself?
+      download_survey: 6876792/Data-usage
+      layout: datasets/download
+
 
 plugins:
   - jekyll-feed
@@ -34,6 +48,10 @@ sass:
         - theme/sass
         - sass
 
+# Twitter
+twittercard:
+  enabled: true
+  username: "@mysociety"
 
 # Exclude these files from the build
 exclude:
