@@ -13,6 +13,23 @@ contributors:
   role: author
 custom:
   dataset_order: 1
+  download_options:
+    gate: default
+    survey: default
+    header_text: default
+  composite:
+    xlsx:
+      include: all
+      exclude: none
+      render: true
+    sqlite:
+      include: all
+      exclude: none
+      render: true
+    json:
+      include: all
+      exclude: none
+      render: true
 resources:
 - title: Processed Register of Members Interest
   description: Experimental processessing of 2021-22 interests
