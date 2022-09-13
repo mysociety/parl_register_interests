@@ -1,12 +1,16 @@
-FROM ghcr.io/mysociety/data_common:sha-73c420a
+FROM ghcr.io/mysociety/data_common:sha-85d6935
 
 # Make an empty project directory so the 'self' setup doesn't fail and scripts can be setup
 # Override the .pth created at previous stages to point to where the working directory will land
-COPY pyproject.toml /setup/ 
-COPY src/data_common/pyproject.toml /setup/src/data_common/
-RUN mkdir /setup/src/parl_register_experiment && touch /setup/src/parl_register_experiment/__init__.py \
-    && touch /setup/src/data_common/__init__.py \
-    && export PATH="$HOME/.poetry/bin:$PATH" \
+COPY pyproject.toml poetry.loc[k] /setup/ 
+COPY src/data_common/pyproject.toml src/data_common/poetry.loc[k] /setup/src/data_common/
+RUN mkdir /setup/src/parl_register_experiment \
+    && touch /setup/src/parl_register_experiment/__init__.py \
+    && mkdir --parents /setup/src/data_common/src/data_common \
+    && touch /setup/src/data_common/src/data_common/__init__.py \
+    && export PATH="/root/.local/bin:$PATH" \
     && cd /setup/ && poetry install \
     && echo "/workspaces/parl_register_experiment/src/" > /usr/local/lib/python3.10/site-packages/parl_register_experiment.pth \
     && echo "/workspaces/parl_register_experiment/src/data_common/src" > /usr/local/lib/python3.10/site-packages/data_common.pth
+COPY script/setup /
+RUN chmod +x /setup && /setup

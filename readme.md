@@ -17,6 +17,7 @@ Instructions on using the features of this notebook are available in [notebooks-
 Run 
 
 ```
+apt-get install rsync
 python -m spacy download en_core_web_sm
 ```
 
