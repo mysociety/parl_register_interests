@@ -2,7 +2,7 @@
     "name": "regmem",
     "title": "Experimental Register of Members Interests",
     "description": "Register of members interests with basic NLP extraction (unmaintained)\n",
-    "version": 0.1,
+    "version": "0.1.0",
     "licenses": [
         {
             "name": "CC-BY-4.0",
@@ -41,6 +41,9 @@
                 "exclude": "none",
                 "render": false
             }
+        },
+        "change_log": {
+            "0.1.0": "Don't need to increment, first version"
         }
     },
     "resources": [
@@ -147,7 +150,7 @@
                     }
                 ]
             },
-            "hash": "18dacd77d6b4101c7bd1196f1c6645b5"
+            "hash": "944b41f91d248fefd8b408db65103b5b"
         }
     ]
 }
