@@ -12,5 +12,5 @@ RUN mkdir /setup/src/parl_register_experiment \
     && cd /setup/ && poetry install \
     && echo "/workspaces/parl_register_experiment/src/" > /usr/local/lib/python3.10/site-packages/parl_register_experiment.pth \
     && echo "/workspaces/parl_register_experiment/src/data_common/src" > /usr/local/lib/python3.10/site-packages/data_common.pth
-COPY script/setup /
-RUN chmod +x /setup && /setup
+COPY script /setup/script
+RUN chmod +x /setup/script/setup && /setup/script/setup
