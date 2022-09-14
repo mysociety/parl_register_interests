@@ -4,5 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
+    working_dir: /workspaces/parl_register_experiment
     volumes:
       - ./:/workspaces/parl_register_experiment/
