@@ -14,11 +14,6 @@ Instructions on using the features of this notebook are available in [notebooks-
 
 # Post setup notes:
 
-Run 
-
-```
-apt-get install rsync
-python -m spacy download en_core_web_sm
-```
+`script/setup` should be run as part of docker start-up - but if not 
 
 To load the library for spacy.

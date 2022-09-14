@@ -3,6 +3,10 @@ from .download import download_regmem
 from .process import get_all_data_as_json, process_data
 
 
+def download_and_build():
+    download_regmem()
+    process_data()
+
 @click.group()
 def cli():
     pass
@@ -19,9 +23,7 @@ def download():
 
 @cli.command()
 def build():
-    # download_regmem()
-    process_data()
-
+    download_and_build()
 
 if __name__ == "__main__":
     main()

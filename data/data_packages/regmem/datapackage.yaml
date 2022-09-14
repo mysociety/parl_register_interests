@@ -14,6 +14,7 @@ contributors:
     path: https://mysociety.org
     role: author
 custom:
+  build: parl_register_experiment.__main__:download_and_build
   dataset_order: 1
   download_options:
     gate: default
@@ -31,4 +32,4 @@ custom:
     json:
       include: all
       exclude: none
-      render: true
+      render: false

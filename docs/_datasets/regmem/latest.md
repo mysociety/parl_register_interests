@@ -12,6 +12,7 @@ contributors:
   path: https://mysociety.org
   role: author
 custom:
+  build: parl_register_experiment.__main__:download_and_build
   dataset_order: 1
   download_options:
     gate: default
@@ -29,12 +30,12 @@ custom:
     json:
       include: all
       exclude: none
-      render: true
+      render: false
 resources:
 - title: Processed Register of Members Interest
   description: Experimental processessing of 2021-22 interests
   custom:
-    row_count: 150752
+    row_count: 12351
   path: processed_regmem.csv
   name: processed_regmem
   profile: tabular-data-resource
@@ -49,36 +50,13 @@ resources:
       description: Unique ID for a member based on public whip
       constraints:
         unique: false
-      example: uk.org.publicwhip/person/10001
+      example: uk.org.publicwhip/person/26086
     - name: member_name
       type: string
       description: Name of the member
       constraints:
         unique: false
-      example: Diane Abbott
-    - name: registry_date
-      type: string
-      description: Date of the publication of this entry
-      constraints:
-        unique: false
-      example: '2022-03-14'
-    - name: category_type
-      type: integer
-      description: ID for the kind of disclosure
-      constraints:
-        unique: false
-        enum:
-        - 1
-        - 4
-        - 8
-        - 3
-        - 6
-        - 9
-        - 2
-        - 7
-        - 5
-        - 10
-      example: 1
+      example: Richard Foord
     - name: category_name
       type: string
       description: Descriptive name for the kind of disclosure
@@ -86,51 +64,54 @@ resources:
         unique: false
         enum:
         - Employment and earnings
-        - Visits outside the UK
-        - Miscellaneous
-        - Gifts, benefits and hospitality from UK sources
-        - 'Land and property portfolio: (i) value over £100,000 and/or (ii) giving
-          rental income of over £10,000 a year'
-        - Family members employed and paid from parliamentary expenses
-        - (b) Any other support not included in Category 2(a)
-        - '(i) Shareholdings: over 15% of issued share capital'
-        - (ii) Other shareholdings, valued at more than £70,000
-        - Gifts and benefits from sources outside the UK
         - (a) Support linked to an MP but received by a local party organisation or
           indirectly via a central party organisation
+        - Miscellaneous
+        - 'Land and property portfolio: (i) value over £100,000 and/or (ii) giving
+          rental income of over £10,000 a year'
+        - Gifts, benefits and hospitality from UK sources
+        - (b) Any other support not included in Category 2(a)
+        - '(i) Shareholdings: over 15% of issued share capital'
         - Family members engaged in lobbying the public sector on behalf of a third
           party or client
+        - Visits outside the UK
+        - (ii) Other shareholdings, valued at more than £70,000
+        - Gifts and benefits from sources outside the UK
+        - Family members employed and paid from parliamentary expenses
       example: Employment and earnings
+    - name: earliest_declaration
+      type: string
+      description: Earliest register that this exact text declaration was made
+      constraints:
+        unique: false
+      example: '2022-08-08'
+    - name: latest_declaration
+      type: string
+      description: Latest register that this exact text declaration was made
+      constraints:
+        unique: false
+      example: 2022-09-05 (latest)
     - name: free_text
       type: string
       description: The actual contents of the disclosure
       constraints:
         unique: false
-      example: 'Payments from the Guardian, Kings Place, 90 York Way, London N1 9GU,
-        for articles:'
-    - name: latest_entry
-      type: boolean
-      description: This entry is from the latest release of the register
-      constraints:
-        unique: false
-        enum:
-        - false
-        - true
-      example: 'False'
+      example: '28 July 2022, received final payment of £905.74. Hours: 3.95 hrs.
+        (Registered 28 July 2022)'
     - name: extracted_orgs
       type: string
       description: Semi colon seperated list of ORG entities extracted from the free
         text (Experimental)
       constraints:
         unique: false
-      example: Viking Penguin; TV & Film Agency Ltd
+      example: Association of Liberal Democrat Councillors
     - name: extracted_sum
       type: string
       description: A sum of money extracted from the free text (Experimental)
       constraints:
         unique: false
-      example: '300'
-  hash: 387bffdf80a086afa591c25f7e07910a
+      example: '905.74'
+  hash: 18dacd77d6b4101c7bd1196f1c6645b5
   download_id: regmem-processed-regmem
 full_version: 0.1
 permalink: /datasets/regmem/latest
