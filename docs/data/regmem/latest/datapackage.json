@@ -2,7 +2,7 @@
     "name": "regmem",
     "title": "Experimental Register of Members Interests",
     "description": "Register of members interests with basic NLP extraction (unmaintained)\n",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "licenses": [
         {
             "name": "CC-BY-4.0",
@@ -43,7 +43,8 @@
             }
         },
         "change_log": {
-            "0.1.0": "Don't need to increment, first version"
+            "0.1.0": "Don't need to increment, first version",
+            "0.2.0": "Change in data for resource(s): processed_regmem"
         }
     },
     "resources": [
@@ -51,7 +52,7 @@
             "title": "Processed Register of Members Interest",
             "description": "Experimental processessing of 2021-22 interests",
             "custom": {
-                "row_count": 12351
+                "row_count": 42846
             },
             "path": "processed_regmem.csv",
             "name": "processed_regmem",
@@ -89,13 +90,13 @@
                             "enum": [
                                 "Employment and earnings",
                                 "(a) Support linked to an MP but received by a local party organisation or indirectly via a central party organisation",
+                                "Visits outside the UK",
                                 "Miscellaneous",
                                 "Land and property portfolio: (i) value over \u00a3100,000 and/or (ii) giving rental income of over \u00a310,000 a year",
                                 "Gifts, benefits and hospitality from UK sources",
                                 "(b) Any other support not included in Category 2(a)",
                                 "(i) Shareholdings: over 15% of issued share capital",
                                 "Family members engaged in lobbying the public sector on behalf of a third party or client",
-                                "Visits outside the UK",
                                 "(ii) Other shareholdings, valued at more than \u00a370,000",
                                 "Gifts and benefits from sources outside the UK",
                                 "Family members employed and paid from parliamentary expenses"
@@ -119,7 +120,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "2022-09-05 (latest)"
+                        "example": "2022-10-03 (latest)"
                     },
                     {
                         "name": "free_text",
@@ -137,7 +138,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "Association of Liberal Democrat Councillors"
+                        "example": "Association of Liberal Democrat Councillors\nAddress; Salford M5 3EQ\nAmount"
                     },
                     {
                         "name": "extracted_sum",
@@ -150,7 +151,7 @@
                     }
                 ]
             },
-            "hash": "944b41f91d248fefd8b408db65103b5b"
+            "hash": "e1da3f3a92a29a2fc407b4aedf38a324"
         }
     ]
 }

@@ -1,0 +1,35 @@
+name: regmem
+title: Experimental Register of Members Interests
+description: "Register of members interests with basic NLP extraction (unmaintained)\n"
+version: 0.2.0
+licenses:
+- name: CC-BY-4.0
+  path: https://creativecommons.org/licenses/by/4.0/
+  title: Creative Commons Attribution 4.0 International License
+contributors:
+- title: mySociety
+  path: https://mysociety.org
+  role: author
+custom:
+  build: parl_register_experiment.__main__:download_and_build
+  dataset_order: 1
+  download_options:
+    gate: default
+    survey: default
+    header_text: default
+  composite:
+    xlsx:
+      include: all
+      exclude: none
+      render: true
+    sqlite:
+      include: all
+      exclude: none
+      render: true
+    json:
+      include: all
+      exclude: none
+      render: false
+  change_log:
+    0.1.0: Don't need to increment, first version
+    0.2.0: 'Change in data for resource(s): processed_regmem'
