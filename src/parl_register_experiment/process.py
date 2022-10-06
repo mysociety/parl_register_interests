@@ -25,9 +25,9 @@ class OrgExtractor:
         cache_dir = Path("data", "interim")
 
         with open(cache_dir / "org_cache.json", "w") as f:
-            json.dump(self.org_cache, f)
+            json.dump(self.org_cache, f, indent=4)
         with open(cache_dir / "money_cache.json", "w") as f:
-            json.dump(self.money_cache, f)
+            json.dump(self.money_cache, f, indent=4)
 
     def load_cache(self):
         cache_dir = Path("data", "interim")
@@ -79,12 +79,18 @@ def get_data_from_xml(xml_path: Path, is_latest: bool) -> Iterable[dict[str, str
             category_name = category.get("name", "")
             for record in category:
                 for item in record:
+                    lines: list[str] = [item.text] if item.text else []
+                    for child in item:
+                        if child.text:
+                            lines.append(child.text)
+                    free_text = "\n".join(lines)
+
                     yield {
                         "public_whip_id": publicwhip_id,
                         "member_name": membername,
                         "registry_date": date,
                         "category_name": category_name,
-                        "free_text": item.text,
+                        "free_text": free_text,
                         "latest_entry": is_latest,
                     }
 
