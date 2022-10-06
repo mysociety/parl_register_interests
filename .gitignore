@@ -6,3 +6,4 @@ _render/_parts
 _render/_papermills
 docs/_site
 data/raw/scrapedxml
+data/interim/regmem.json
