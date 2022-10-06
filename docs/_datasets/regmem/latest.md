@@ -31,6 +31,8 @@ custom:
       include: all
       exclude: none
       render: false
+  change_log:
+    0.1.0: Don't need to increment, first version
 resources:
 - title: Processed Register of Members Interest
   description: Experimental processessing of 2021-22 interests
@@ -111,8 +113,8 @@ resources:
       constraints:
         unique: false
       example: '905.74'
-  hash: 18dacd77d6b4101c7bd1196f1c6645b5
+  hash: 944b41f91d248fefd8b408db65103b5b
   download_id: regmem-processed-regmem
-full_version: 0.1
+full_version: 0.1.0
 permalink: /datasets/regmem/latest
 ---

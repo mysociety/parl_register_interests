@@ -5,6 +5,6 @@ package: regmem
 title: processed_regmem
 filename: processed_regmem.csv
 version: latest
-full_version: 0.1
+full_version: 0.1.0
 file: /data/regmem/latest/processed_regmem.csv
 ---
