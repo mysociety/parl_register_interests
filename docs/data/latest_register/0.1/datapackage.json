@@ -2,7 +2,7 @@
     "name": "latest_register",
     "title": "Latest version of Westminster Register of Members Interests",
     "description": "Register of members interests with basic NLP extraction.",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "licenses": [
         {
             "name": "CC-BY-4.0",
@@ -54,7 +54,8 @@
         "change_log": {
             "0.1.0": "",
             "0.1.1": "Minor change in data for resource(s): register_of_interests",
-            "0.1.2": "Minor change in data for resource(s): register_of_interests"
+            "0.1.2": "Minor change in data for resource(s): register_of_interests",
+            "0.1.3": "Minor change in data for resource(s): register_of_interests"
         }
     },
     "resources": [
@@ -98,14 +99,14 @@
                         "constraints": {
                             "unique": false,
                             "enum": [
-                                "Visits outside the UK",
-                                "Gifts, benefits and hospitality from UK sources",
                                 "Miscellaneous",
+                                "Gifts, benefits and hospitality from UK sources",
+                                "Visits outside the UK",
                                 "Family members employed and paid from parliamentary expenses",
                                 "Land and property portfolio: (i) value over \u00a3100,000 and/or (ii) giving rental income of over \u00a310,000 a year",
                                 "Employment and earnings",
-                                "(ii) Other shareholdings, valued at more than \u00a370,000",
                                 "(i) Shareholdings: over 15% of issued share capital",
+                                "(ii) Other shareholdings, valued at more than \u00a370,000",
                                 "(a) Support linked to an MP but received by a local party organisation or indirectly via a central party organisation",
                                 "No declared interests",
                                 "(b) Any other support not included in Category 2(a)",
@@ -113,7 +114,7 @@
                                 "Family members engaged in lobbying the public sector on behalf of a third party or client"
                             ]
                         },
-                        "example": "Visits outside the UK"
+                        "example": "Miscellaneous"
                     },
                     {
                         "name": "free_text",
@@ -122,7 +123,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "Name of donor: PNP Women\u2019s Movement Address of donor: 89 Old Hope Road, St. Andrew, Jamaica Estimate of the probable value (or amount of any donation): Flights \u00a31,737.81, accommodation \u00a3802.01 and use of the airport Lounge \u00a334.75, total value \u00a32,574.57 Destination of visit: Kingston, Jamaica Dates of visit: 7-12 July 2022 Purpose of visit: Guest speaker at the PNP Women\u2019s Movement\u2019s 48th Annual Conference. (Registered 05 September 2022)"
+                        "example": "Since December 2015, a trustee of the Diane Abbott Foundation, which works to excel and improve education. (Registered 26 October 2016)"
                     },
                     {
                         "name": "earliest_declaration",
@@ -131,7 +132,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "2022-09-05"
+                        "example": "2016-10-31"
                     },
                     {
                         "name": "latest_declaration",
@@ -165,7 +166,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "PNP Women\u2019s Movement Address; the PNP Women\u2019s Movement\u2019s"
+                        "example": "the Diane Abbott Foundation"
                     },
                     {
                         "name": "extracted_sum",
@@ -174,11 +175,11 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "1,737.81; 802.01; 34.75; \u00a32,574.57 Destination"
+                        "example": ""
                     }
                 ]
             },
-            "hash": "5489f16b00c21496e6c4d8b85da934d5"
+            "hash": "dadfb553d184ffea602b8eb9f619290a"
         }
     ]
 }

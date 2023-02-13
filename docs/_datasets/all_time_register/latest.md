@@ -41,6 +41,7 @@ custom:
     0.1.0: ''
     0.1.1: 'Minor change in data for resource(s): register_of_interests'
     0.1.2: 'Minor change in data for resource(s): register_of_interests'
+    0.1.3: 'Minor change in data for resource(s): register_of_interests'
 resources:
 - title: Register of Members Interests (2000-)
   description: Register of members interests with basic NLP extraction
@@ -122,7 +123,7 @@ resources:
       constraints:
         unique: false
       example: ''
-  hash: 12e88a8363fe0b40aa3d806ddb24c9a6
-full_version: 0.1.2
+  hash: 7f41153c4baf57388532859dfe356ed4
+full_version: 0.1.3
 permalink: /datasets/all_time_register/latest
 ---
