@@ -1,7 +1,7 @@
 name: all_time_register
 title: Register of Members Interests (2000-)
 description: Register of members interests with basic NLP extraction
-version: 0.1.0
+version: 0.1.1
 licenses:
 - name: CC-BY-4.0
   path: https://creativecommons.org/licenses/by/4.0/
@@ -38,3 +38,4 @@ custom:
       render: false
   change_log:
     0.1.0: ''
+    0.1.1: 'Minor change in data for resource(s): register_of_interests'
