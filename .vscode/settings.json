@@ -1,4 +1,11 @@
 {
+    "sqlfluff.dialect": "ansi",
+    "sqlfluff.format.arguments": [
+        "--ignore=templating"
+    ],
+    "sqlfluff.linter.arguments": [
+        "--ignore=templating"
+    ],
     "python.linting.pylintEnabled": true,
     "python.defaultInterpreterPath": "/usr/local/bin/python",
     "python.terminal.activateEnvironment": false,

@@ -1,24 +1,25 @@
 .site-header {
     color: #fff;
-    
+
     a {
         color: inherit;
     }
-    
+
     h1 {
         font-size: 2em;
         margin-bottom: 0.2em;
-        
+
         @media (min-width: 48em) {
-            max-width: 50%;
+            max-width: 70%;
         }
     }
 }
 
 a.site-header__research-home-link {
     color: mix($colour_brand, #fff, 20%);
-    
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
         color: inherit;
     }
 }
@@ -38,13 +39,13 @@ a.site-header__research-home-link {
         margin-bottom: 0;
         @extend .unstyled-list;
     }
-    
+
     li {
         @media (min-width: 47.5em) {
             display: inline-block;
         }
     }
-    
+
     a {
         margin-right: 0.33em;
         display: block;

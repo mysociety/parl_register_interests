@@ -1,4 +1,4 @@
-import parl_register_experiment
+import parl_register_interests
 
 import pytest
 

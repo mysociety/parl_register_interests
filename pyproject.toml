@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "parl_register_experiment"
+name = "parl_register_interests"
 version = "0.1.0"
 description = "Proof of concept of applying NLP to register"
 authors = []
@@ -9,12 +9,13 @@ python = ">=3.10,<3.11"
 data_common = { path = "src/data_common/", develop = true }
 spacy = "^3.3.0"
 tqdm = "^4.64.1"
+typing-extensions = "^4.4.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"
 
 [tool.poetry.scripts]
-project = 'parl_register_experiment.__main__:main'
+project = 'parl_register_interests.__main__:main'
 dataset = "data_common.dataset.__main__:run"
 
 [tool.pyright]
@@ -30,6 +31,9 @@ default_page_title = "Settings file defined title"
 [tool.dataset]
 dataset_dir = "data/data_packages"
 publish_dir = "docs/"
-publish_url = "https://mysociety.github.io/parl_register_experiment/datasets/"
+publish_url = "https://pages.mysociety.org/parl_register_interests/datasets/"
 credit_text = "If you find this data useful, please let us know to help us make the case for future funding."
 credit_url = "https://survey.alchemer.com/s3/6876792/Data-usage"
+
+[tool.duck]
+query_dir = "src/parl_register_interests/sql"

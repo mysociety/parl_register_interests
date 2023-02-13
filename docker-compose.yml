@@ -1,9 +1,9 @@
 services:
   app:
-    image: mysociety/parl_register_experiment:${TAG:-latest}
+    image: mysociety/parl_register_interests:${TAG:-latest}
     build:
       context: .
       dockerfile: Dockerfile.dev
-    working_dir: /workspaces/parl_register_experiment
+    working_dir: /workspaces/parl_register_interests
     volumes:
-      - ./:/workspaces/parl_register_experiment/
+      - ./:/workspaces/parl_register_interests/

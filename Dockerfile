@@ -1,17 +1,17 @@
 # This dockerfile is used by binder.
 
-FROM ghcr.io/mysociety/data_common:sha-73c420a
+FROM ghcr.io/mysociety/data_common:sha-9c46f69
 
 # Make an empty project directory so the 'self' setup doesn't fail and scripts can be setup
 # Override the .pth created at previous stages to point to where the working directory will land
 COPY pyproject.toml poetry.lock /setup/ 
 COPY src/data_common/pyproject.toml src/data_common/poetry.lock /setup/src/data_common/
-RUN mkdir /setup/src/parl_register_experiment && touch /setup/src/parl_register_experiment/__init__.py \
+RUN mkdir /setup/src/parl_register_interests && touch /setup/src/parl_register_interests/__init__.py \
     && touch /setup/src/data_common/__init__.py \
     && export PATH="$HOME/.poetry/bin:$PATH" \
     && cd /setup/ && poetry install \
-    && echo "/workspaces/parl_register_experiment/src/" > /usr/local/lib/python3.10/site-packages/parl_register_experiment.pth \
-    && echo "/workspaces/parl_register_experiment/src/data_common/src" > /usr/local/lib/python3.10/site-packages/data_common.pth
+    && echo "/workspaces/parl_register_interests/src/" > /usr/local/lib/python3.10/site-packages/parl_register_interests.pth \
+    && echo "/workspaces/parl_register_interests/src/data_common/src" > /usr/local/lib/python3.10/site-packages/data_common.pth
 
 # special binder instructions
 

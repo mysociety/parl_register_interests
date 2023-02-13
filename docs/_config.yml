@@ -1,7 +1,7 @@
-title: Experimental register of interests
+title: UK Parliament - Register of Interests
 description: >
   Register of members interest with basic NLP processing.
-baseurl: "/parl_register_experiment"
+baseurl: "/parl_register_interests"
 
 logo: "/theme/img/mysociety-large-social.png"
 layouts_dir: theme/_layouts
