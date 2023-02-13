@@ -2,7 +2,7 @@
     "name": "all_time_register",
     "title": "Register of Members Interests (2000-)",
     "description": "Register of members interests with basic NLP extraction",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "licenses": [
         {
             "name": "CC-BY-4.0",
@@ -47,7 +47,8 @@
             }
         },
         "change_log": {
-            "0.1.0": ""
+            "0.1.0": "",
+            "0.1.1": "Minor change in data for resource(s): register_of_interests"
         }
     },
     "resources": [
@@ -166,7 +167,7 @@
                     }
                 ]
             },
-            "hash": "ff99e82285de611c406a76c4f069ec55"
+            "hash": "bdcc7486d8fbab9e47609b9a54b267c8"
         }
     ]
 }

@@ -2,7 +2,7 @@
     "name": "latest_register",
     "title": "Latest version of Westminster Register of Members Interests",
     "description": "Register of members interests with basic NLP extraction.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "licenses": [
         {
             "name": "CC-BY-4.0",
@@ -47,7 +47,8 @@
             }
         },
         "change_log": {
-            "0.1.0": ""
+            "0.1.0": "",
+            "0.1.1": "Minor change in data for resource(s): register_of_interests"
         }
     },
     "resources": [
@@ -91,9 +92,9 @@
                         "constraints": {
                             "unique": false,
                             "enum": [
-                                "Miscellaneous",
                                 "Visits outside the UK",
                                 "Gifts, benefits and hospitality from UK sources",
+                                "Miscellaneous",
                                 "Family members employed and paid from parliamentary expenses",
                                 "Employment and earnings",
                                 "Land and property portfolio: (i) value over \u00a3100,000 and/or (ii) giving rental income of over \u00a310,000 a year",
@@ -106,7 +107,7 @@
                                 "Family members engaged in lobbying the public sector on behalf of a third party or client"
                             ]
                         },
-                        "example": "Miscellaneous"
+                        "example": "Visits outside the UK"
                     },
                     {
                         "name": "free_text",
@@ -115,7 +116,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "Since December 2015, a trustee of the Diane Abbott Foundation, which works to excel and improve education. (Registered 26 October 2016)"
+                        "example": "Name of donor: PNP Women\u2019s Movement Address of donor: 89 Old Hope Road, St. Andrew, Jamaica Estimate of the probable value (or amount of any donation): Flights \u00a31,737.81, accommodation \u00a3802.01 and use of the airport Lounge \u00a334.75, total value \u00a32,574.57 Destination of visit: Kingston, Jamaica Dates of visit: 7-12 July 2022 Purpose of visit: Guest speaker at the PNP Women\u2019s Movement\u2019s 48th Annual Conference. (Registered 05 September 2022)"
                     },
                     {
                         "name": "earliest_declaration",
@@ -124,7 +125,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "2016-10-31"
+                        "example": "2022-09-05"
                     },
                     {
                         "name": "latest_declaration",
@@ -158,7 +159,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "the Diane Abbott Foundation"
+                        "example": "PNP Women\u2019s Movement Address; the PNP Women\u2019s Movement\u2019s"
                     },
                     {
                         "name": "extracted_sum",
@@ -167,11 +168,11 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": ""
+                        "example": "1,737.81; 802.01; 34.75; \u00a32,574.57 Destination"
                     }
                 ]
             },
-            "hash": "48bb7bef2698187283a19b9e625b2c85"
+            "hash": "72327471d2e3eaa435011ba00541db2d"
         }
     ]
 }
