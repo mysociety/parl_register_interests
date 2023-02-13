@@ -2,7 +2,7 @@
     "name": "all_time_register",
     "title": "Register of Members Interests (2000-)",
     "description": "Register of members interests with basic NLP extraction",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "licenses": [
         {
             "name": "CC-BY-4.0",
@@ -14,6 +14,11 @@
         {
             "title": "mySociety",
             "path": "https://mysociety.org",
+            "role": "author"
+        },
+        {
+            "title": "UK Parliament",
+            "path": "https://www.parliament.uk",
             "role": "author"
         }
     ],
@@ -48,7 +53,8 @@
         },
         "change_log": {
             "0.1.0": "",
-            "0.1.1": "Minor change in data for resource(s): register_of_interests"
+            "0.1.1": "Minor change in data for resource(s): register_of_interests",
+            "0.1.2": "Minor change in data for resource(s): register_of_interests"
         }
     },
     "resources": [
@@ -92,7 +98,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "Remunerated directorships"
+                        "example": "Registrable shareholdings"
                     },
                     {
                         "name": "free_text",
@@ -101,7 +107,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "Smithville Associates; a training consultancy."
+                        "example": "Smithville Associates."
                     },
                     {
                         "name": "earliest_declaration",
@@ -110,7 +116,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "2000-11-10"
+                        "example": "2002-05-14"
                     },
                     {
                         "name": "latest_declaration",
@@ -167,7 +173,7 @@
                     }
                 ]
             },
-            "hash": "bdcc7486d8fbab9e47609b9a54b267c8"
+            "hash": "bb1ee868352ff404133943e6f04cf58a"
         }
     ]
 }

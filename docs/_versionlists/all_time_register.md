@@ -5,9 +5,11 @@ versions:
   0.1.0:
   - 0.1.0
   0.1.1:
+  - 0.1.1
+  0.1.2:
   - '0'
   - '0.1'
-  - 0.1.1
+  - 0.1.2
   - latest
 permalink: /datasets/all_time_register/versions
 ---
