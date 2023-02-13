@@ -10,6 +10,9 @@ contributors:
 - title: mySociety
   path: https://mysociety.org
   role: author
+- title: UK Parliament
+  path: https://www.parliament.uk/
+  role: author
 custom:
   formats:
     csv: true
