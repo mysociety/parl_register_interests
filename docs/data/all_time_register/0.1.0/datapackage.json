@@ -47,7 +47,7 @@
             }
         },
         "change_log": {
-            "0.1.0": "Don't need to increment, first version"
+            "0.1.0": ""
         }
     },
     "resources": [

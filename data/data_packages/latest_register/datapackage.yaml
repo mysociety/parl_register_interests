@@ -1,7 +1,7 @@
 name: latest_register
 title: Latest version of Westminster Register of Members Interests
-description: "Register of members interests with basic NLP extraction."
-version: 0.2.0
+description: Register of members interests with basic NLP extraction.
+version: 0.1.0
 licenses:
 - name: CC-BY-4.0
   path: https://creativecommons.org/licenses/by/4.0/
@@ -34,5 +34,4 @@ custom:
       exclude: none
       render: false
   change_log:
-    0.1.0: Don't need to increment, first version
-    0.2.0: 'Change in data for resource(s): processed_regmem'
+    0.1.0: ''

@@ -35,7 +35,7 @@ custom:
       exclude: none
       render: false
   change_log:
-    0.1.0: Don't need to increment, first version
+    0.1.0: ''
 resources:
 - title: Register of Members Interests (2000-)
   description: Register of members interests with basic NLP extraction
