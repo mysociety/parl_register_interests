@@ -98,7 +98,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "Registrable shareholdings"
+                        "example": "Remunerated employment, office, profession etc."
                     },
                     {
                         "name": "free_text",
@@ -107,7 +107,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "Smithville Associates."
+                        "example": "Occasional lecturing and journalism."
                     },
                     {
                         "name": "earliest_declaration",
@@ -116,7 +116,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "2002-05-14"
+                        "example": "2000-11-10"
                     },
                     {
                         "name": "latest_declaration",
@@ -160,7 +160,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "Smithville Associates"
+                        "example": ""
                     },
                     {
                         "name": "extracted_sum",
@@ -173,7 +173,7 @@
                     }
                 ]
             },
-            "hash": "bb1ee868352ff404133943e6f04cf58a"
+            "hash": "12e88a8363fe0b40aa3d806ddb24c9a6"
         }
     ]
 }

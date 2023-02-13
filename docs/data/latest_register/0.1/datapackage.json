@@ -98,14 +98,14 @@
                         "constraints": {
                             "unique": false,
                             "enum": [
-                                "Gifts, benefits and hospitality from UK sources",
                                 "Visits outside the UK",
+                                "Gifts, benefits and hospitality from UK sources",
                                 "Miscellaneous",
                                 "Family members employed and paid from parliamentary expenses",
                                 "Land and property portfolio: (i) value over \u00a3100,000 and/or (ii) giving rental income of over \u00a310,000 a year",
                                 "Employment and earnings",
-                                "(i) Shareholdings: over 15% of issued share capital",
                                 "(ii) Other shareholdings, valued at more than \u00a370,000",
+                                "(i) Shareholdings: over 15% of issued share capital",
                                 "(a) Support linked to an MP but received by a local party organisation or indirectly via a central party organisation",
                                 "No declared interests",
                                 "(b) Any other support not included in Category 2(a)",
@@ -113,7 +113,7 @@
                                 "Family members engaged in lobbying the public sector on behalf of a third party or client"
                             ]
                         },
-                        "example": "Gifts, benefits and hospitality from UK sources"
+                        "example": "Visits outside the UK"
                     },
                     {
                         "name": "free_text",
@@ -122,7 +122,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "Name of donor: The Premier League Address of donor: Brunel Building, 57 North Wharf Road, London W2 1HQ Amount of donation or nature and value if donation in kind: Two box tickets with hospitality for Arsenal v Everton, value \u00a3500 Date received: 22 May 2022 Date accepted: 22 May 2022 Donor status: company, registration 02719699 (Registered 14 June 2022)"
+                        "example": "Name of donor: PNP Women\u2019s Movement Address of donor: 89 Old Hope Road, St. Andrew, Jamaica Estimate of the probable value (or amount of any donation): Flights \u00a31,737.81, accommodation \u00a3802.01 and use of the airport Lounge \u00a334.75, total value \u00a32,574.57 Destination of visit: Kingston, Jamaica Dates of visit: 7-12 July 2022 Purpose of visit: Guest speaker at the PNP Women\u2019s Movement\u2019s 48th Annual Conference. (Registered 05 September 2022)"
                     },
                     {
                         "name": "earliest_declaration",
@@ -131,7 +131,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "2022-06-27"
+                        "example": "2022-09-05"
                     },
                     {
                         "name": "latest_declaration",
@@ -165,7 +165,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "The Premier League Address; Brunel Building; Arsenal v Everton"
+                        "example": "PNP Women\u2019s Movement Address; the PNP Women\u2019s Movement\u2019s"
                     },
                     {
                         "name": "extracted_sum",
@@ -174,11 +174,11 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": ""
+                        "example": "1,737.81; 802.01; 34.75; \u00a32,574.57 Destination"
                     }
                 ]
             },
-            "hash": "5a47778baeb2c6177e6fef3544c334e9"
+            "hash": "5489f16b00c21496e6c4d8b85da934d5"
         }
     ]
 }

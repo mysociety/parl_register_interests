@@ -28,19 +28,19 @@ schema:
     description: Category of interest
     constraints:
       unique: false
-    example: Registrable shareholdings
+    example: Remunerated employment, office, profession etc.
   - name: free_text
     type: string
     description: Free text description of interest
     constraints:
       unique: false
-    example: Smithville Associates.
+    example: Occasional lecturing and journalism.
   - name: earliest_declaration
     type: string
     description: Earliest date this interest appeared in register
     constraints:
       unique: false
-    example: '2002-05-14'
+    example: '2000-11-10'
   - name: latest_declaration
     type: string
     description: Latest date this interest appeared in register
@@ -70,11 +70,11 @@ schema:
     description: Semi-colon separated list of organisations extracted from free text
     constraints:
       unique: false
-    example: Smithville Associates
+    example: ''
   - name: extracted_sum
     type: string
     description: Financial sums extracted from free text
     constraints:
       unique: false
     example: ''
-hash: bb1ee868352ff404133943e6f04cf58a
+hash: 12e88a8363fe0b40aa3d806ddb24c9a6
