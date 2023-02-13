@@ -2,7 +2,7 @@
     "name": "all_time_register",
     "title": "Register of Members Interests (2000-)",
     "description": "Register of members interests with basic NLP extraction",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "licenses": [
         {
             "name": "CC-BY-4.0",
@@ -55,7 +55,8 @@
             "0.1.0": "",
             "0.1.1": "Minor change in data for resource(s): register_of_interests",
             "0.1.2": "Minor change in data for resource(s): register_of_interests",
-            "0.1.3": "Minor change in data for resource(s): register_of_interests"
+            "0.1.3": "Minor change in data for resource(s): register_of_interests",
+            "0.1.4": "Minor change in data for resource(s): register_of_interests"
         }
     },
     "resources": [
@@ -90,7 +91,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "Diane Abbott"
+                        "example": "A J Beith"
                     },
                     {
                         "name": "category_name",
@@ -99,7 +100,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "Remunerated employment, office, profession etc."
+                        "example": " Overseas visits"
                     },
                     {
                         "name": "free_text",
@@ -108,7 +109,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "Occasional lecturing and journalism."
+                        "example": "\n"
                     },
                     {
                         "name": "earliest_declaration",
@@ -126,7 +127,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": "2002-05-14"
+                        "example": "2000-11-10"
                     },
                     {
                         "name": "new_in_latest",
@@ -174,7 +175,7 @@
                     }
                 ]
             },
-            "hash": "7f41153c4baf57388532859dfe356ed4"
+            "hash": "b461614f87d933f29a3361f7777ca88b"
         }
     ]
 }
