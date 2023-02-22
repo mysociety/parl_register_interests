@@ -1,6 +1,6 @@
 name: latest_register
-title: Latest version of Westminster Register of Members Interests
-description: Register of members interests with basic NLP extraction.
+title: Most recent version of Westminster Register of Members Interests
+description: Register of members interests, with basic NLP processing.
 version: 0.1.3
 licenses:
 - name: CC-BY-4.0
