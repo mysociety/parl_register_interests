@@ -19,6 +19,8 @@ collections:
   downloads:
     output: true
     permalink: /downloads/:name/
+  versionlinks:
+    output: true
 
 
 #  download_gate_type, require form submission before download. soft, present at same time but do not put up a barrier.
