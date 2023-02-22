@@ -1,9 +1,7 @@
 
 # parl_register_interests
 
-[![badge](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mysociety/parl_register_interests/HEAD)
-
-Proof of concept of applying NLP to register
+Process and publish UK Parliament's register of members interests XML (already reformatted by mySociety) into spreadsheet form.
 
 This repository is available online at https://github.com/mysociety/parl_register_interests
 
