@@ -64,7 +64,7 @@
             "title": "Register of Members Interests (latest register)",
             "description": "Register of members interests with basic NLP extraction",
             "custom": {
-                "row_count": 5028
+                "row_count": 5110
             },
             "path": "register_of_interests.parquet",
             "name": "register_of_interests",
@@ -142,10 +142,10 @@
                         "constraints": {
                             "unique": false,
                             "enum": [
-                                "2023-02-06"
+                                "2023-02-20"
                             ]
                         },
-                        "example": "2023-02-06"
+                        "example": "2023-02-20"
                     },
                     {
                         "name": "new_in_latest",
@@ -180,7 +180,7 @@
                     }
                 ]
             },
-            "hash": "613dc15148236555444db070c79cf92c"
+            "hash": "40cea58d0f7f977dfc2bf46c1417cc22"
         }
     ]
 }
