@@ -29,8 +29,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - Miscellaneous
       - Visits outside the UK
+      - Miscellaneous
       - Gifts, benefits and hospitality from UK sources
       - Family members employed and paid from parliamentary expenses
       - Employment and earnings
@@ -89,4 +89,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: 4290cd920f979c523b89f5e4ebbba302
+hash: e06d1a6a1a555945437627ae1caa922f
