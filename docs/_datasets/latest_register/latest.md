@@ -138,7 +138,7 @@ resources:
       constraints:
         unique: false
       example: ''
-  hash: b53f8aec24d407e4f1817cff3e3ef3ca
+  hash: 0cd53e5d653f919b76c413a6ce2a96b6
 full_version: 0.1.4
 permalink: /datasets/latest_register/latest
 ---
