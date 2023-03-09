@@ -64,7 +64,7 @@
             "title": "Register of Members Interests (latest register)",
             "description": "Register of members interests with basic NLP extraction",
             "custom": {
-                "row_count": 5110
+                "row_count": 5060
             },
             "path": "register_of_interests.parquet",
             "name": "register_of_interests",
@@ -100,14 +100,14 @@
                         "constraints": {
                             "unique": false,
                             "enum": [
-                                "Gifts, benefits and hospitality from UK sources",
                                 "Miscellaneous",
+                                "Gifts, benefits and hospitality from UK sources",
                                 "Visits outside the UK",
                                 "Family members employed and paid from parliamentary expenses",
-                                "Employment and earnings",
                                 "Land and property portfolio: (i) value over \u00a3100,000 and/or (ii) giving rental income of over \u00a310,000 a year",
-                                "(i) Shareholdings: over 15% of issued share capital",
+                                "Employment and earnings",
                                 "(ii) Other shareholdings, valued at more than \u00a370,000",
+                                "(i) Shareholdings: over 15% of issued share capital",
                                 "(a) Support linked to an MP but received by a local party organisation or indirectly via a central party organisation",
                                 "No declared interests",
                                 "(b) Any other support not included in Category 2(a)",
@@ -142,10 +142,10 @@
                         "constraints": {
                             "unique": false,
                             "enum": [
-                                "2023-02-20"
+                                "2023-03-06"
                             ]
                         },
-                        "example": "2023-02-20"
+                        "example": "2023-03-06"
                     },
                     {
                         "name": "new_in_latest",
@@ -180,7 +180,7 @@
                     }
                 ]
             },
-            "hash": "af4860ccc6f0f6c3dd6176c5039bf709"
+            "hash": "f1ee4d26852a04310b00cdda5b6bf555"
         }
     ]
 }
