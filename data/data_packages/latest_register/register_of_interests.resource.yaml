@@ -30,8 +30,8 @@ schema:
       unique: false
       enum:
       - Miscellaneous
-      - Gifts, benefits and hospitality from UK sources
       - Visits outside the UK
+      - Gifts, benefits and hospitality from UK sources
       - Family members employed and paid from parliamentary expenses
       - 'Land and property portfolio: (i) value over £100,000 and/or (ii) giving rental
         income of over £10,000 a year'
@@ -89,4 +89,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: f1ee4d26852a04310b00cdda5b6bf555
+hash: ef5f4822ffac75ec6063175007285e28

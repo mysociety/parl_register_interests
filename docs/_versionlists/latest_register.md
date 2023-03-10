@@ -1,6 +1,6 @@
 ---
 name: latest_register
-title: Latest version of Westminster Register of Members Interests
+title: Current release of Westminster Register of Members Interests
 versions:
   0.1.0:
   - 0.1.0
