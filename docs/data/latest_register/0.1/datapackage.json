@@ -101,8 +101,8 @@
                             "unique": false,
                             "enum": [
                                 "Miscellaneous",
-                                "Gifts, benefits and hospitality from UK sources",
                                 "Visits outside the UK",
+                                "Gifts, benefits and hospitality from UK sources",
                                 "Family members employed and paid from parliamentary expenses",
                                 "Employment and earnings",
                                 "Land and property portfolio: (i) value over \u00a3100,000 and/or (ii) giving rental income of over \u00a310,000 a year",
@@ -180,7 +180,7 @@
                     }
                 ]
             },
-            "hash": "2c8fc8b49cac657404ece9242cd904b4"
+            "hash": "17742e652166f0e30327f03c12b5e757"
         }
     ]
 }
