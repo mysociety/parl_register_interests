@@ -100,12 +100,12 @@
                         "constraints": {
                             "unique": false,
                             "enum": [
+                                "Gifts, benefits and hospitality from UK sources",
                                 "Miscellaneous",
                                 "Visits outside the UK",
-                                "Gifts, benefits and hospitality from UK sources",
                                 "Family members employed and paid from parliamentary expenses",
-                                "Employment and earnings",
                                 "Land and property portfolio: (i) value over \u00a3100,000 and/or (ii) giving rental income of over \u00a310,000 a year",
+                                "Employment and earnings",
                                 "(ii) Other shareholdings, valued at more than \u00a370,000",
                                 "(i) Shareholdings: over 15% of issued share capital",
                                 "(a) Support linked to an MP but received by a local party organisation or indirectly via a central party organisation",
@@ -180,7 +180,7 @@
                     }
                 ]
             },
-            "hash": "17742e652166f0e30327f03c12b5e757"
+            "hash": "71c7db867ffccca3616ef539c437e99c"
         }
     ]
 }
