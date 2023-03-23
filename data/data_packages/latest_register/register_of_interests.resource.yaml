@@ -30,14 +30,14 @@ schema:
       unique: false
       enum:
       - Miscellaneous
-      - Visits outside the UK
       - Gifts, benefits and hospitality from UK sources
+      - Visits outside the UK
       - Family members employed and paid from parliamentary expenses
       - 'Land and property portfolio: (i) value over £100,000 and/or (ii) giving rental
         income of over £10,000 a year'
       - Employment and earnings
-      - '(i) Shareholdings: over 15% of issued share capital'
       - (ii) Other shareholdings, valued at more than £70,000
+      - '(i) Shareholdings: over 15% of issued share capital'
       - (a) Support linked to an MP but received by a local party organisation or
         indirectly via a central party organisation
       - No declared interests
@@ -89,4 +89,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: e5e4593ef6c32d90f2b33fc66b7ca012
+hash: b4281989dc91db71a562a1e24d82284e
