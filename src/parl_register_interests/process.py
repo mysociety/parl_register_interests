@@ -19,7 +19,7 @@ start_file = "regmem2000-01-01.xml"
 
 class OrgExtractor:
     def __init__(self):
-        self.nlp = spacy.load("en_core_web_sm")
+        self.nlp = spacy.load("en_core_web_lg")
         self.cache: pd.DataFrame
         self.load_cache()
 
