@@ -29,7 +29,14 @@ def fix_known_errors():
     for xml_file in xml_files:
         # if xml_file.name != "regmem2015-01-26.xml":
         #    continue
-        txt = xml_file.read_text(encoding="cp1252")
+
+        # older files are in cp1252 encoding but more recent ones are utf-8
+        # try utf-8 first
+
+        try:
+            txt = xml_file.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            txt = xml_file.read_text(encoding="cp1252")
 
         bad_two_options = [
             "<item><strong>2. Remunerated employment, office, profession etc</strong></item>",
