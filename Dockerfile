@@ -1,6 +1,6 @@
 # This dockerfile is used by binder.
 
-FROM ghcr.io/mysociety/data_common:sha-9c46f69
+FROM ghcr.io/mysociety/data_common:sha-2d20c80
 
 # Make an empty project directory so the 'self' setup doesn't fail and scripts can be setup
 # Override the .pth created at previous stages to point to where the working directory will land
