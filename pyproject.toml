@@ -24,7 +24,6 @@ exclude=["src/data_common/typings"]
 stubPath="src/data_common/typings"
 typeCheckingMode="basic"
 
-
 [notebook.settings]
 default_page_title = "Settings file defined title"
 
@@ -37,3 +36,7 @@ credit_url = "https://survey.alchemer.com/s3/6876792/Data-usage"
 
 [tool.duck]
 query_dir = "src/parl_register_interests/sql"
+
+[tool.ruff]
+select = ["E", "F"]
+ignore = ["E501"]

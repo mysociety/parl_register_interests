@@ -7,3 +7,5 @@ _render/_papermills
 docs/_site
 data/raw/scrapedxml
 data/interim/regmem/
+docs/data
+docs/_*
