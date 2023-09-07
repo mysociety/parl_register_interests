@@ -1,7 +1,7 @@
 title: Register of Members Interests (2000-)
 description: Register of members interests with basic NLP extraction
 custom:
-  row_count: 112394
+  row_count: 114243
 path: register_of_interests.parquet
 name: register_of_interests
 profile: data-resource
@@ -22,19 +22,19 @@ schema:
     description: Name of member
     constraints:
       unique: false
-    example: Diane Abbott
+    example: A J Beith
   - name: category_name
     type: string
     description: Category of interest
     constraints:
       unique: false
-    example: Remunerated directorships
+    example: ' Overseas visits'
   - name: free_text
     type: string
     description: Free text description of interest
     constraints:
       unique: false
-    example: Smithville Associates; a training consultancy.
+    example: "\n"
   - name: earliest_declaration
     type: string
     description: Earliest date this interest appeared in register
@@ -46,7 +46,7 @@ schema:
     description: Latest date this interest appeared in register
     constraints:
       unique: false
-    example: '2002-05-14'
+    example: '2000-11-10'
   - name: new_in_latest
     type: boolean
     description: Whether this interest is new in the latest register (true/false)
@@ -70,11 +70,11 @@ schema:
     description: Semi-colon separated list of organisations extracted from free text
     constraints:
       unique: false
-    example: Smithville Associates
+    example: ''
   - name: extracted_sum
     type: string
     description: Financial sums extracted from free text
     constraints:
       unique: false
     example: ''
-hash: ff99e82285de611c406a76c4f069ec55
+hash: ffe336e5c364c604a792f69147d150e1

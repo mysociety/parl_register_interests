@@ -10,9 +10,12 @@ contributors:
 - title: mySociety
   path: https://mysociety.org
   role: author
+- title: UK Parliament
+  path: https://www.parliament.uk
+  role: author
 custom:
   build: parl_register_interests.__main__:download_and_build_all_time
-  dataset_order: 1
+  dataset_order: 2
   download_options:
     gate: default
     survey: default
