@@ -1,25 +1,23 @@
 import hashlib
-import json
 import shutil
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from typing import Iterable
+from typing import Any, Iterable
 
 import pandas as pd
 import rich
 import spacy
+from data_common.db import duck_query
 from tqdm import tqdm
 
-from data_common.db import duck_query
-from .validate import test_all_content_present, is_mp_name_line
-
+from .validate import is_mp_name_line, test_all_content_present
 
 start_file = "regmem2000-01-01.xml"
 
 
 class OrgExtractor:
     def __init__(self):
-        self.nlp = spacy.load("en_core_web_lg")
+        self.nlp = spacy.load("en_core_web_md")
         self.cache: pd.DataFrame
         self.load_cache()
 
@@ -32,7 +30,7 @@ class OrgExtractor:
         if cache_file.exists():
             df = pd.read_parquet(cache_file)
         else:
-            df = pd.DataFrame({"hash": [], "extracted_orgs": [], "extracted_orgs": []})
+            df = pd.DataFrame({"hash": [], "extracted_orgs": [], "extracted_sum": []})
         print(f"Cache loaded, {len(df)} rows")
         self.cache = df.set_index("hash")
 
@@ -48,34 +46,102 @@ class OrgExtractor:
         df = df.merge(self.cache, on="hash", how="left")
 
         # only run the pipeline on new text
-        ndf = df[(df["extracted_orgs"].isna()) | (df["extracted_orgs"].isna())]
+        ndf = df[(df["extracted_orgs"].isna()) | (df["extracted_sum"].isna())]
+
+        # so if the free_text column is longer than 500 characters
+        # we need to split into a list of string showing different
+        # parts of the text.
+
+        # we then need to feed through the nlp pipeline in a way we can
+        # piece this back together afterwards
+        threshold = 500
+
+        # so potential problem here on the split lines
+        def split_text(text: str) -> list[str]:
+            if len(text) > threshold:
+                return [text[i : i + threshold] for i in range(0, len(text), threshold)]
+            else:
+                return [text]
+
+        nlp_df = pd.DataFrame(
+            {"free_text": ndf["free_text"], "original_index": ndf.index}
+        )
+        nlp_df["free_text_split"] = nlp_df["free_text"].apply(split_text)
+        nlp_df = nlp_df.explode("free_text_split").reset_index(drop=True)
+
+        print(f"Split {len(ndf)} entries into {len(nlp_df)} rows for NLP processing")
 
         all_orgs = []
         all_money = []
-        t = tqdm(total=len(ndf))
-        for doc in self.nlp.pipe(
-            ndf["free_text"],
-            disable=["lemmatizer", "textcat"],
-            batch_size=200,
-            n_process=1,
-        ):
-            t.update()
-            orgs = [x.text for x in doc.ents if x.label_ == "ORG"]
-            money = [x.text for x in doc.ents if x.label_ == "MONEY"]
-            all_orgs.append(orgs)
-            all_money.append(money)
-        t.close()
+        t = tqdm(total=len(nlp_df))
 
-        new_orgs = pd.Series(all_orgs, index=ndf.index, dtype="object")
-        new_money = pd.Series(all_money, index=ndf.index, dtype="object")
+        # need to write the ongoing orgs and money to an file to save on memory
+        # then read back in and merge back into the dataframe
+        import tempfile
 
-        # if columns don't exist create blank ones
+        temp_dir = tempfile.mkdtemp()
+        temp_file = Path(temp_dir, "nlp.tsv")
+
+        with open(temp_file, "w") as f:
+
+            for doc in self.nlp.pipe(
+                nlp_df["free_text_split"],
+                disable=["lemmatizer", "textcat"],
+                batch_size=100,
+                n_process=1,
+            ):
+                t.update()
+                orgs = [x.text for x in doc.ents if x.label_ == "ORG"]
+                money = [x.text for x in doc.ents if x.label_ == "MONEY"]
+                to_write = "\t".join(orgs) + "||||" + "\t".join(money)
+                while "\n" in to_write:
+                    to_write = to_write.replace("\n", " ")
+                f.write(to_write + "\n")
+            t.close()
+
+            # now read back in the file
+
+        with open(temp_file, "r") as f:
+            for line in f:
+                line_stored = line.strip().split("||||")
+                if len(line_stored) == 1:
+                    orgs = line_stored[0]
+                    money = ""
+                else:
+                    orgs, money = line_stored
+                all_orgs.append(orgs.split("\t"))
+                all_money.append(money.split("\t"))
+
+        print(len(all_orgs))
+        print(len(all_money))
+
+        # delete temp dir
+        shutil.rmtree(temp_dir)
+        nlp_df["new_orgs"] = pd.Series(all_orgs, index=nlp_df.index, dtype="object")
+        nlp_df["new_money"] = pd.Series(all_money, index=nlp_df.index, dtype="object")
+
+        # now collapse nlp_df based on original index
+        # want to join the orgs and money together (these are both lists) and remove duplicates
+
+        def join_lists(items: list[list[str]]) -> list[str]:
+            # merge multiple lists
+            all_items: list[str] = []
+            for item in items:
+                all_items.extend(item)
+            return remove_duplicates(all_items)
+
+        # groupby also sets the index to the grouped column
+        nlp_df = nlp_df.groupby("original_index").agg(
+            {"new_orgs": join_lists, "new_money": join_lists}
+        )
+
+        # if columns don't exist create blank and merge back in the results
         if "extracted_orgs" not in df.columns:
             df["extracted_orgs"] = pd.Series(dtype="object")
         if "extracted_sum" not in df.columns:
             df["extracted_sum"] = pd.Series(dtype="object")
-        df["extracted_orgs"].update(new_orgs)
-        df["extracted_sum"].update(new_money)
+        df["extracted_orgs"].update(nlp_df["new_orgs"])
+        df["extracted_sum"].update(nlp_df["new_money"])
 
         # get new cache from df
         self.cache = df[["hash", "extracted_orgs", "extracted_sum"]]
@@ -104,7 +170,7 @@ def remove_duplicates(items: list[str]) -> list[str]:
     return items
 
 
-def get_data_from_xml(xml_path: Path, is_latest: bool) -> Iterable[dict[str, str]]:
+def get_data_from_xml(xml_path: Path, is_latest: bool) -> Iterable[dict[str, Any]]:
     """
     Given a register XML, return in a nice data structure
     """
@@ -112,6 +178,10 @@ def get_data_from_xml(xml_path: Path, is_latest: bool) -> Iterable[dict[str, str
     root = tree.getroot()
     for person in root.iter():
         if person.tag != "regmem":
+            continue
+        if isinstance(person, ET.Element):
+            person = person
+        else:
             continue
         publicwhip_id = person.get("personid", "")
         membername = person.get("membername", "")
@@ -172,7 +242,7 @@ def get_data_from_xml(xml_path: Path, is_latest: bool) -> Iterable[dict[str, str
 
             if category.tag != "category":
                 continue
-            category_type = category.get("type", "")
+            category.get("type", "")
             category_name = category.get("name", "")
             for record in category:
                 if (
@@ -309,13 +379,12 @@ def process_data_all_time():
     shutil.copy(origin, dest)
 
 
-def process_data_latest():
+def process_data_2019():
     data_processor.process_data()
     origin = Path("data", "interim", "processed_regmem.parquet")
     dest = Path(
-        "data", "data_packages", "latest_register", "register_of_interests.parquet"
+        "data", "data_packages", "parliament_2019", "register_of_interests.parquet"
     )
     df = pd.read_parquet(origin)
-    df = df[df["declared_in_latest"] == True]
-    df = df.drop(columns=["declared_in_latest"])
-    df.to_parquet(dest, index=False)
+    mask = df["latest_declaration"] >= "2019-12-12"  # type: ignore
+    df[mask].to_parquet(dest, index=False)

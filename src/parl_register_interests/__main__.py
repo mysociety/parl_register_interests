@@ -1,13 +1,13 @@
 import rich_click as click
 from .download import download_regmem
-from .process import process_data_all_time, process_data_latest, get_data_from_xml
+from .process import process_data_all_time, process_data_2019, get_data_from_xml
 from pathlib import Path
 
 
 def download_and_build():
     download_regmem()
     process_data_all_time()
-    process_data_latest()
+    process_data_2019()
 
 
 def download_and_build_all_time():
@@ -15,9 +15,9 @@ def download_and_build_all_time():
     process_data_all_time()
 
 
-def download_and_build_latest():
+def download_and_build_2019():
     download_regmem()
-    process_data_latest()
+    process_data_2019()
 
 
 @click.group()
@@ -37,13 +37,6 @@ def download():
 @cli.command()
 def build():
     download_and_build()
-
-
-@cli.command()
-def test():
-    test_file = Path("data", "raw", "scrapedxml", "regmem", "regmem2023-02-06.xml")
-    for x in get_data_from_xml(test_file, False):
-        pass
 
 
 if __name__ == "__main__":

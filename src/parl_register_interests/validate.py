@@ -1,11 +1,12 @@
-import pandas as pd
-from pathlib import Path
-from tqdm import tqdm
-import xml.etree.ElementTree as ET
-import string
-from data_common.db import duck_query
-import rich
 import re
+import string
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+import pandas as pd
+import rich
+from data_common.db import duck_query
+from tqdm import tqdm
 
 
 def is_mp_name_line(line: str) -> bool:
@@ -78,7 +79,6 @@ def test_all_content_present(start_file: str = ""):
     Open all the original xml files and check that all the content is present in the parquet file
 
     """
-    words = []
     rich.print("[blue]Testing all content transferred[/blue]")
     data = Path("data", "raw", "scrapedxml", "regmem")
     files = sorted(list(data.glob("*.xml")))

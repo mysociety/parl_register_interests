@@ -1,9 +1,9 @@
-import subprocess
-import rich
-from pathlib import Path
 import re
-import shutil
+import subprocess
 from functools import lru_cache
+from pathlib import Path
+
+import rich
 
 
 @lru_cache
@@ -37,11 +37,6 @@ def fix_known_errors():
             txt = xml_file.read_text(encoding="utf-8")
         except UnicodeDecodeError:
             txt = xml_file.read_text(encoding="cp1252")
-
-        bad_two_options = [
-            "<item><strong>2. Remunerated employment, office, profession etc</strong></item>",
-            "<item><strong>2.        Remunerated employment, office, profession, all exclusive of VAT, all gross, etc</strong></item>",
-        ]
 
         regex_pattern = r"<item><strong>(\d+\.\s[A-Za-z\s]+)<\/strong><\/item>"
         matches = re.finditer(regex_pattern, txt, re.MULTILINE)
@@ -129,7 +124,7 @@ def fix_known_errors():
             if (
                 next_record < next_category and next_record_close == -1
             ):  # if opened in the wrong order
-                print(f"Fixing wrong order")
+                print("Fixing wrong order")
                 # delete next mention of '<record>'
                 record_loc = txt.find("<record>", regmem_loc)
                 txt = txt[:record_loc] + txt[record_loc + 8 :]
