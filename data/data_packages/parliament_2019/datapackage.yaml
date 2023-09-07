@@ -38,4 +38,4 @@ custom:
       exclude: none
       render: false
   change_log:
-    0.1.0: ''
+    0.1.0: 'Minor change in data for resource(s): register_of_interests'
