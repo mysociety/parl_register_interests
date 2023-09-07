@@ -1,14 +1,14 @@
-name: Build datasets and deploy
+name: Build datasets and publish
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
   pages: write
   id-token: write
 
-concurrency: 
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-  
 on:
   push: 
     branches: ["main"]
@@ -32,9 +32,11 @@ jobs:
         with:
           run: |
             export PATH="/root/.local/bin:$PATH"
+            poetry install
             script/test
             dataset build --all
             dataset version static --auto-ban major --all --publish
+            dataset publish --all
             
       - name: Push new data
         id: auto-commit-action
@@ -55,7 +57,7 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.HAPPY_DATABOT_SLACK_WEBHOOK }}     
 
       - name: Setup Pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v3
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
@@ -64,7 +66,7 @@ jobs:
           destination: docs/_site
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: docs/_site
 
@@ -89,7 +91,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
 
       - uses: geekyeggo/delete-artifact@v1
         with:
