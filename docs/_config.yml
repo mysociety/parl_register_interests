@@ -19,7 +19,7 @@ collections:
   downloads:
     output: true
     permalink: /downloads/:name/
-  versionlinks:
+  versionlists:
     output: true
 
 
