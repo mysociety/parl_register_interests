@@ -1,7 +1,7 @@
 title: Register of Members Interests (2000-)
 description: Register of members interests with basic NLP extraction
 custom:
-  row_count: 114243
+  row_count: 114372
 path: register_of_interests.parquet
 name: register_of_interests
 profile: data-resource
@@ -22,7 +22,7 @@ schema:
     description: Name of member
     constraints:
       unique: false
-    example: A J Beith
+    example: Aaron Bell
   - name: category_name
     type: string
     description: Category of interest
@@ -77,4 +77,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: aa9de9d58878cb7eddefcb009928ac8c
+hash: c44f3dc4b0411ff1ee6fe7580b458cdf
