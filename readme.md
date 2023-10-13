@@ -1,5 +1,5 @@
 
-# parl_register_interests
+# Parliamentary register of interests
 
 Process and publish UK Parliament's register of members interests XML (already reformatted by mySociety) into spreadsheet form.
 
@@ -12,4 +12,4 @@ Instructions on using the features of this notebook are available in [notebooks-
 
 # Post setup notes:
 
-`script/setup` should be run as part of docker start-up - but if not run it to load the library for spacy.
+`script/setup` should be run as part of docker start-up - but if not, run it to load the library for spacey.
