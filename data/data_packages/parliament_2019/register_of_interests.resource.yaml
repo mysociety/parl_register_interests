@@ -1,7 +1,7 @@
 title: Register of Members Interests (latest register)
 description: Register of members interests with basic NLP extraction
 custom:
-  row_count: 19488
+  row_count: 27499
 path: register_of_interests.parquet
 name: register_of_interests
 profile: data-resource
@@ -28,24 +28,6 @@ schema:
     description: Category of interest
     constraints:
       unique: false
-      enum:
-      - (a) Support linked to an MP but received by a local party organisation or
-        indirectly via a central party organisation
-      - (b) Any other support not included in Category 2(a)
-      - '(i) Shareholdings: over 15% of issued share capital'
-      - (ii) Other shareholdings, valued at more than £70,000
-      - Employment and earnings
-      - Family members employed and paid from parliamentary expenses
-      - Family members engaged in lobbying the public sector on behalf of a third
-        party or client
-      - Gifts and benefits from sources outside the UK
-      - Gifts, benefits and hospitality from UK sources
-      - 'Land and property portfolio: (i) value over £100,000 and/or (ii) giving rental
-        income of over £10,000 a year'
-      - Miscellaneous
-      - No declared interests
-      - Uncatagorised (format error)
-      - Visits outside the UK
     example: (a) Support linked to an MP but received by a local party organisation
       or indirectly via a central party organisation
   - name: free_text
@@ -97,4 +79,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: e67553cb3fb6ce6aef8b8b3c521c7a6b
+hash: a527587c2d2a8cbc2678ab3d17771f62
