@@ -1,7 +1,7 @@
 title: Register of Members Interests (latest register)
 description: Register of members interests with basic NLP extraction
 custom:
-  row_count: 28430
+  row_count: 8549
 path: register_of_interests.parquet
 name: register_of_interests
 profile: data-resource
@@ -22,12 +22,29 @@ schema:
     description: Name of member
     constraints:
       unique: false
-    example: Aaron Bell
+    example: Abena Oppong-Asare
   - name: category_name
     type: string
     description: Category of interest
     constraints:
       unique: false
+      enum:
+      - (a) Support linked to an MP but received by a local party organisation or
+        indirectly via a central party organisation
+      - (b) Any other support not included in Category 2(a)
+      - '(i) Shareholdings: over 15% of issued share capital'
+      - (ii) Other shareholdings, valued at more than £70,000
+      - Employment and earnings
+      - Family members employed and paid from parliamentary expenses
+      - Family members engaged in lobbying the public sector on behalf of a third
+        party or client
+      - Gifts and benefits from sources outside the UK
+      - Gifts, benefits and hospitality from UK sources
+      - Land and property portfolio with a value over £100,000 and where indicated,
+        the portfolio provides a rental income of over £10,000 a year
+      - Miscellaneous
+      - No declared interests
+      - Visits outside the UK
     example: (a) Support linked to an MP but received by a local party organisation
       or indirectly via a central party organisation
   - name: free_text
@@ -35,19 +52,21 @@ schema:
     description: Free text description of interest
     constraints:
       unique: false
-    example: "\n\t\t\tBegley, Órfhlaith (West Tyrone)\n\t\t"
+    example: (Registered 1 April 2019)
   - name: earliest_declaration
     type: string
     description: Earliest date this interest appeared in register
     constraints:
       unique: false
-    example: '2009-07-08'
+    example: '2010-09-06'
   - name: latest_declaration
     type: string
     description: Latest date this interest appeared in register
     constraints:
       unique: false
-    example: '2020-01-11'
+      enum:
+      - '2024-08-04'
+    example: '2024-08-04'
   - name: new_in_latest
     type: boolean
     description: Whether this interest is new in the latest register (true/false)
@@ -63,9 +82,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - false
       - true
-    example: 'False'
+    example: 'True'
   - name: extracted_orgs
     type: string
     description: Semi-colon separated list of organisations extracted from free text
@@ -79,4 +97,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: 08bad5c8f264861a9c9cee11f1258a37
+hash: d5c427b6841cc07d1741db324ef60407
