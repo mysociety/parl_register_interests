@@ -1,7 +1,7 @@
 title: Register of Members Interests (latest register)
 description: Register of members interests with basic NLP extraction
 custom:
-  row_count: 28430
+  row_count: 25251
 path: register_of_interests.parquet
 name: register_of_interests
 profile: data-resource
@@ -55,7 +55,6 @@ schema:
       unique: false
       enum:
       - false
-      - true
     example: 'False'
   - name: declared_in_latest
     type: boolean
@@ -64,7 +63,6 @@ schema:
       unique: false
       enum:
       - false
-      - true
     example: 'False'
   - name: extracted_orgs
     type: string
@@ -79,4 +77,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: 08bad5c8f264861a9c9cee11f1258a37
+hash: 5ec0ab7f0e769a874131e58c98a7b2c1

@@ -1,6 +1,6 @@
 name: parliament_2019
-title: Register of Interests (2019-)
-description: Register of members interests, with basic NLP processing. 2019 and 2024 Parliaments.
+title: Register of Interests (2019-2024)
+description: Register of members interests, with basic NLP processing. 2019 Parliament.
 version: 0.1.0
 licenses:
 - name: CC-BY-4.0
