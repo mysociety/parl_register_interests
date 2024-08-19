@@ -18,7 +18,7 @@ custom:
     csv: true
     parquet: true
   build: parl_register_interests.__main__:download_and_build_2019
-  dataset_order: 1
+  dataset_order: 2
   download_options:
     gate: default
     survey: default
