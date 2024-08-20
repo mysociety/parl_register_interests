@@ -1,0 +1,219 @@
+title: Category 1.1
+description: Employment and earnings - Ad hoc payments
+custom:
+  row_count: 383
+path: category_1.1.parquet
+name: category_1.1
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: id
+    type: integer
+    description: Unique identifier for the interest
+    constraints:
+      unique: true
+    example: 3639
+  - name: parent_interest_id
+    type: integer
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: 3636
+  - name: summary
+    type: string
+    description: Text summary of the interest
+    constraints:
+      unique: false
+    example: Payment expected for services on 01 July 2022 - £4,331.96
+  - name: registration_date
+    type: string
+    description: Date the interest was registered
+    constraints:
+      unique: false
+    example: '2022-09-22'
+  - name: published_date
+    type: string
+    description: Date the interest was published
+    constraints:
+      unique: false
+    example: '2024-03-12'
+  - name: updated_date
+    type: string
+    description: Date the interest was last updated
+    constraints:
+      unique: false
+      enum:
+      - ''
+    example: ''
+  - name: category
+    type: string
+    description: Category of the interest
+    constraints:
+      unique: false
+      enum:
+      - Employment and earnings - Ad hoc payments
+    example: Employment and earnings - Ad hoc payments
+  - name: party
+    type: string
+    description: TWFY ID for the party as of this release date
+    constraints:
+      unique: false
+      enum:
+      - conservative
+      - dup
+      - green
+      - labour
+      - labourco-operative
+      - liberal-democrat
+      - plaid-cymru
+      - reform
+      - scottish-national-party
+    example: conservative
+  - name: member
+    type: string
+    description: Name of the MP
+    constraints:
+      unique: false
+    example: Adam Thompson
+  - name: mnis_id
+    type: integer
+    description: Parliament's unique identifier for the member
+    constraints:
+      unique: false
+    example: 40
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID for the member
+    constraints:
+      unique: false
+    example: '10001'
+  - name: payment_received
+    type: boolean
+    description: Whether there was a payment received
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: received_date
+    type: string
+    description: Date the payment was received
+    constraints:
+      unique: false
+    example: '1994-04-12'
+  - name: job_title
+    type: string
+    description: Job the MP was paid for
+    constraints:
+      unique: false
+    example: for a radio recording of a book.
+  - name: payment_type
+    type: string
+    description: Type of payment
+    constraints:
+      unique: false
+      enum:
+      - In kind
+      - Monetary
+    example: In kind
+  - name: payment_description
+    type: string
+    description: Description of the payment
+    constraints:
+      unique: false
+    example: (Includes 15% to be deducted for Chambers fee)
+  - name: value
+    type: number
+    description: Value of the payment (£)
+    constraints:
+      unique: false
+    example: 36.78
+  - name: hours_worked
+    type: number
+    description: Hours worked for the payment
+    constraints:
+      unique: false
+    example: 0.0
+  - name: hours_details
+    type: string
+    description: Details of the hours worked
+    constraints:
+      unique: false
+    example: (Estimated hours worked for preparation to appear at trial)
+  - name: is_ultimate_payer_different
+    type: boolean
+    description: Whether the ultimate payer is different
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: ultimate_payer_name
+    type: string
+    description: Name of the ultimate payer
+    constraints:
+      unique: false
+    example: 1LoD Ltd
+  - name: ultimate_payer_protected_by_confidentiality
+    type: boolean
+    description: Whether the ultimate payer is protected by confidentiality
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: ultimate_payer_address
+    type: string
+    description: Address of the ultimate payer
+    constraints:
+      unique: false
+    example: 100 Bishopsgate, London EC2P 2SR
+  - name: ultimate_payer_nature_of_business
+    type: string
+    description: Nature of business of the ultimate payer
+    constraints:
+      unique: false
+    example: Crowdfunded small campaign collective
+  - name: is_payment_donated
+    type: boolean
+    description: Whether the payment was donated
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: donatee_paid_by
+    type: string
+    description: Who the payment was donated to
+    constraints:
+      unique: false
+    example: Donated by the Member to the recipient
+  - name: donatee_type
+    type: string
+    description: Type of the donatee
+    constraints:
+      unique: false
+    example: Charity
+  - name: donatee_details
+    type: string
+    description: Details of the donatee
+    constraints:
+      unique: false
+    example: Fee allocated to my staffing budget.
+  - name: category_code
+    type: string
+    description: Code for the category of the interest
+    constraints:
+      unique: false
+      enum:
+      - '1.1'
+    example: '1.1'
+hash: a4c9e0c128da6a5ff1ee108be0f079f4

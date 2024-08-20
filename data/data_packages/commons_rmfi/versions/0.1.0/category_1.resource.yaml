@@ -1,9 +1,9 @@
-title: Category 8
-description: Miscellaneous
+title: Category 1
+description: Employment and earnings
 custom:
-  row_count: 807
-path: category_8.parquet
-name: category_8
+  row_count: 462
+path: category_1.parquet
+name: category_1
 profile: data-resource
 scheme: file
 format: parquet
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 1220
+    example: 3636
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -28,8 +28,7 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: A 10% shareholding in WT IP Ltd.  The shareholding is below the threshold
-      for registration.
+    example: Academic Work - Liberty Fund Inc
   - name: registration_date
     type: string
     description: Date the interest was registered
@@ -41,7 +40,7 @@ schema:
     description: Date the interest was published
     constraints:
       unique: false
-    example: '2022-12-17'
+    example: '2021-03-26'
   - name: updated_date
     type: string
     description: Date the interest was last updated
@@ -54,8 +53,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - Miscellaneous
-    example: Miscellaneous
+      - Employment and earnings
+    example: Employment and earnings
   - name: party
     type: string
     description: Political party of the MP
@@ -72,8 +71,7 @@ schema:
       - plaid-cymru
       - reform
       - scottish-national-party
-      - traditional-unionist-voice
-      - uup
+      - sinn-fein
     example: conservative
   - name: member
     type: string
@@ -93,49 +91,82 @@ schema:
     constraints:
       unique: false
     example: '10001'
-  - name: arose_on
+  - name: job_title
     type: string
-    description: Date the interest arose
+    description: Description of the job role
+    constraints:
+      unique: false
+    example: Academic Work
+  - name: start_date
+    type: string
+    description: Start date of the role
     constraints:
       unique: false
     example: ''
   - name: end_date
     type: string
-    description: Date the interest ended
+    description: End date of the role
     constraints:
       unique: false
     example: ''
-  - name: donor_name
-    type: string
-    description: Name of the donor
-    constraints:
-      unique: false
-    example: Betting & Gaming Council
-  - name: description
-    type: string
-    description: Description of the interest
-    constraints:
-      unique: false
-    example: A 10% shareholding in WT IP Ltd.  The shareholding is below the threshold
-      for registration.
-  - name: miscellaneous_interest_type
-    type: string
-    description: Type of miscellaneous interest
+  - name: is_until_further_notice
+    type: boolean
+    description: Whether the role is until further notice
     constraints:
       unique: false
       enum:
-      - Financial interest or material benefit
-      - Formal role with a party organisation
-      - Fund to defray legal costs
-      - Other
-      - Unpaid role
-    example: Financial interest or material benefit
+      - false
+      - true
+    example: 'False'
+  - name: payer_name
+    type: string
+    description: Name of the payer
+    constraints:
+      unique: false
+    example: 2S Ltd
+  - name: payer_is_private_individual
+    type: boolean
+    description: Whether the payer is a private individual
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: is_paid_as_director_of_payer
+    type: boolean
+    description: Whether the payment is made as a director of the payer
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: payer_nature_of_business
+    type: string
+    description: Nature of the payer's business
+    constraints:
+      unique: false
+    example: A Chartered Institute and professional body
+  - name: payer_public_address
+    type: string
+    description: Public address of the payer
+    constraints:
+      unique: false
+    example: 1 Aldgate, London EC3N 1RE
+  - name: has_sought_acoba_advice
+    type: string
+    description: Whether the MP has sought advice from the Advisory Committee on Business
+      Appointments
+    constraints:
+      unique: false
+    example: 'False'
   - name: category_code
     type: string
-    description: Category code of the interest
+    description: Code for the category of the interest
     constraints:
       unique: false
       enum:
-      - '8'
-    example: '8'
-hash: 2c224709e7e31c8b4841b235aa6b79ae
+      - '1'
+    example: '1'
+hash: d748954d3a98413369f084d28a61541b

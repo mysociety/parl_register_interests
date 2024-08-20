@@ -1,9 +1,9 @@
-title: Category 8
-description: Miscellaneous
+title: Category 7
+description: Shareholdings
 custom:
-  row_count: 807
-path: category_8.parquet
-name: category_8
+  row_count: 185
+path: category_7.parquet
+name: category_7
 profile: data-resource
 scheme: file
 format: parquet
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 1220
+    example: 1330
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -27,9 +27,8 @@ schema:
     type: string
     description: Text summary of the interest
     constraints:
-      unique: false
-    example: A 10% shareholding in WT IP Ltd.  The shareholding is below the threshold
-      for registration.
+      unique: true
+    example: Shares in 100MPH Events Limited (dormant)
   - name: registration_date
     type: string
     description: Date the interest was registered
@@ -41,7 +40,7 @@ schema:
     description: Date the interest was published
     constraints:
       unique: false
-    example: '2022-12-17'
+    example: '2023-12-17'
   - name: updated_date
     type: string
     description: Date the interest was last updated
@@ -54,17 +53,15 @@ schema:
     constraints:
       unique: false
       enum:
-      - Miscellaneous
-    example: Miscellaneous
+      - Shareholdings
+    example: Shareholdings
   - name: party
     type: string
-    description: Political party of the MP
+    description: TWFY party of the MP
     constraints:
       unique: false
       enum:
       - conservative
-      - dup
-      - green
       - independent
       - labour
       - labourco-operative
@@ -72,30 +69,38 @@ schema:
       - plaid-cymru
       - reform
       - scottish-national-party
-      - traditional-unionist-voice
-      - uup
+      - sinn-fein
     example: conservative
   - name: member
     type: string
     description: Name of the MP
     constraints:
       unique: false
-    example: Adam Dance
+    example: Abtisam Mohamed
   - name: mnis_id
     type: integer
-    description: Parliamentary ID of the MP
+    description: Unique identifier for the MP
     constraints:
       unique: false
     example: 40
   - name: twfy_id
     type: string
-    description: TheyWorkForYou ID of the MP
+    description: TWFY identifier for the MP
     constraints:
       unique: false
-    example: '10001'
-  - name: arose_on
+    example: '10103'
+  - name: shareholding_threshold
     type: string
-    description: Date the interest arose
+    description: Shareholding threshold
+    constraints:
+      unique: false
+      enum:
+      - '(i) Shareholdings: over 15% of issued share capital'
+      - (ii) Other shareholdings, valued at more than £70,000
+    example: '(i) Shareholdings: over 15% of issued share capital'
+  - name: registrable_date
+    type: string
+    description: Date the interest was registered
     constraints:
       unique: false
     example: ''
@@ -104,38 +109,48 @@ schema:
     description: Date the interest ended
     constraints:
       unique: false
-    example: ''
-  - name: donor_name
-    type: string
-    description: Name of the donor
-    constraints:
-      unique: false
-    example: Betting & Gaming Council
-  - name: description
-    type: string
-    description: Description of the interest
-    constraints:
-      unique: false
-    example: A 10% shareholding in WT IP Ltd.  The shareholding is below the threshold
-      for registration.
-  - name: miscellaneous_interest_type
-    type: string
-    description: Type of miscellaneous interest
-    constraints:
-      unique: false
       enum:
-      - Financial interest or material benefit
-      - Formal role with a party organisation
-      - Fund to defray legal costs
-      - Other
-      - Unpaid role
-    example: Financial interest or material benefit
+      - ''
+      - '2004-07-05'
+      - '2023-05-09'
+      - '2023-08-10'
+      - '2023-08-11'
+      - '2023-08-29'
+      - '2023-11-17'
+      - '2024-07-18'
+      - '2024-07-25'
+      - '2024-07-29'
+    example: ''
+  - name: organisation_name
+    type: string
+    description: Name of the organisation
+    constraints:
+      unique: true
+    example: 100MPH Events Limited (dormant)
+  - name: organisation_description
+    type: string
+    description: Description of the organisation
+    constraints:
+      unique: false
+    example: A baby swimming company
+  - name: held_on_behalf_of
+    type: string
+    description: Organisation held on behalf of
+    constraints:
+      unique: false
+    example: Company is owned jointly with partner
+  - name: managed_by
+    type: string
+    description: Organisation managed by
+    constraints:
+      unique: false
+    example: DelegatedManagementCompany
   - name: category_code
     type: string
-    description: Category code of the interest
+    description: Category code
     constraints:
       unique: false
       enum:
-      - '8'
-    example: '8'
-hash: 2c224709e7e31c8b4841b235aa6b79ae
+      - '7'
+    example: '7'
+hash: 908ae19eb5cbf2348cf627a999384007
