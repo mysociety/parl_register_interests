@@ -1,0 +1,198 @@
+title: Category 9
+description: Family members employed
+custom:
+  row_count: 34
+path: category_9.parquet
+name: category_9
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: mac-roman
+schema:
+  fields:
+  - name: id
+    type: integer
+    description: Unique identifier for the interest
+    constraints:
+      unique: true
+    example: 2686
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: ''
+  - name: summary
+    type: string
+    description: Text summary of the interest
+    constraints:
+      unique: true
+    example: Alan Hodgson employed
+  - name: registration_date
+    type: string
+    description: Date the interest was registered
+    constraints:
+      unique: false
+      enum:
+      - ''
+      - '2015-06-04'
+      - '2016-01-19'
+      - '2016-02-29'
+      - '2016-03-15'
+      - '2016-04-18'
+      - '2016-04-20'
+      - '2016-04-21'
+      - '2016-05-16'
+      - '2016-06-03'
+      - '2016-06-10'
+      - '2016-08-01'
+    example: ''
+  - name: published_date
+    type: string
+    description: Date the interest was published
+    constraints:
+      unique: false
+      enum:
+      - '2023-12-30'
+      - '2024-01-23'
+      - '2024-01-28'
+      - '2024-04-15'
+      - '2024-07-23'
+      - '2024-07-26'
+    example: '2023-12-30'
+  - name: updated_date
+    type: string
+    description: Date the interest was last updated
+    constraints:
+      unique: false
+      enum:
+      - ''
+      - '2015-05-20'
+      - '2015-06-04'
+      - '2015-06-29'
+      - '2017-01-05'
+      - '2017-07-07'
+      - '2019-04-16'
+      - '2020-10-08'
+      - '2021-11-18'
+      - '2023-11-14'
+      - '2024-02-14'
+      - '2024-04-15'
+      - '2024-07-23'
+      - '2024-07-26'
+    example: ''
+  - name: category
+    type: string
+    description: Category of the interest
+    constraints:
+      unique: false
+      enum:
+      - Family members employed
+    example: Family members employed
+  - name: party
+    type: string
+    description: TWFY party_id
+    constraints:
+      unique: false
+      enum:
+      - conservative
+      - dup
+      - labour
+      - labourco-operative
+      - scottish-national-party
+    example: conservative
+  - name: member
+    type: string
+    description: Name of the MP
+    constraints:
+      unique: true
+    example: Alberto Costa
+  - name: mnis_id
+    type: integer
+    description: Unique identifier for the MP
+    constraints:
+      unique: true
+    example: 55
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: true
+    example: '10045'
+  - name: job_title
+    type: string
+    description: Job title of the family member
+    constraints:
+      unique: false
+      enum:
+      - Administrative Manager
+      - Diary Secretary
+      - Executive Office Manager
+      - Executive Officer
+      - Junior Secretary
+      - Office Manager
+      - Parliamentary Assistant
+      - Principal Secretary
+      - Secretary
+      - Senior Caseworker
+      - Senior Communications Officer
+      - Senior Parliamentary Assistant
+      - Senior Researcher
+      - Senior Secretary
+    example: Administrative Manager
+  - name: working_pattern
+    type: string
+    description: Working pattern of the family member
+    constraints:
+      unique: false
+      enum:
+      - Full time
+      - Part time
+    example: Full time
+  - name: person_name
+    type: string
+    description: Name of the family member
+    constraints:
+      unique: true
+    example: Alan Hodgson
+  - name: end_date
+    type: string
+    description: Date the interest ended
+    constraints:
+      unique: false
+      enum:
+      - ''
+    example: ''
+  - name: family_member_relationship_level
+    type: string
+    description: Level of relationship to the MP
+    constraints:
+      unique: false
+      enum:
+      - Related to member directly
+      - Related to spouse
+    example: Related to member directly
+  - name: family_relation_type
+    type: string
+    description: Type of family relation
+    constraints:
+      unique: false
+      enum:
+      - Brother
+      - Daughter
+      - Father
+      - Partner
+      - Sister
+      - Son
+      - Spouse
+    example: Brother
+  - name: category_code
+    type: string
+    description: Code for the category
+    constraints:
+      unique: false
+      enum:
+      - '9'
+    example: '9'
+hash: 6f86d9bc3cc090b7bcb008229dee922a

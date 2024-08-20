@@ -6,6 +6,7 @@ from .process import (
     get_data_from_xml,
     process_data_2024,
 )
+from .official_data import process_all_regmem
 from pathlib import Path
 
 
@@ -28,6 +29,10 @@ def download_and_build_2019():
 def download_and_build_2024():
     download_regmem()
     process_data_2024()
+
+
+def download_and_build_official():
+    process_all_regmem()
 
 
 @click.group()

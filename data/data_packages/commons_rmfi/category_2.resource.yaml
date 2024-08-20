@@ -1,0 +1,228 @@
+title: Category 2
+description: Donations and other support (including loans) for activities as an MP
+custom:
+  row_count: 2521
+path: category_2.parquet
+name: category_2
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: id
+    type: integer
+    description: Unique identifier for the interest
+    constraints:
+      unique: true
+    example: 32
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: ''
+  - name: summary
+    type: string
+    description: Text summary of the interest
+    constraints:
+      unique: false
+    example: 1900 Club - £2,500.00
+  - name: registration_date
+    type: string
+    description: Date the interest was registered
+    constraints:
+      unique: false
+    example: '2022-08-22'
+  - name: published_date
+    type: string
+    description: Date the interest was published
+    constraints:
+      unique: false
+    example: '2023-11-03'
+  - name: updated_date
+    type: string
+    description: Date the interest was last updated
+    constraints:
+      unique: false
+    example: ''
+  - name: category
+    type: string
+    description: Category of the interest
+    constraints:
+      unique: false
+      enum:
+      - Donations and other support (including loans) for activities as an MP
+    example: Donations and other support (including loans) for activities as an MP
+  - name: party
+    type: string
+    description: Political party of the MP
+    constraints:
+      unique: false
+      enum:
+      - conservative
+      - green
+      - independent
+      - labour
+      - labourco-operative
+      - liberal-democrat
+      - plaid-cymru
+      - reform
+      - scottish-national-party
+      - speaker
+      - uup
+    example: conservative
+  - name: member
+    type: string
+    description: Name of the MP
+    constraints:
+      unique: false
+    example: Abtisam Mohamed
+  - name: mnis_id
+    type: integer
+    description: Parliamentary ID of the MP
+    constraints:
+      unique: false
+    example: 39
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: false
+    example: '10001'
+  - name: donation_source
+    type: string
+    description: Source of the donation
+    constraints:
+      unique: false
+      enum:
+      - (a) Support linked to an MP but received by a local party organisation or
+        indirectly via a central party organisation
+      - (b) Any other support not included in Category 2(a)
+    example: (a) Support linked to an MP but received by a local party organisation
+      or indirectly via a central party organisation
+  - name: payment_type
+    type: string
+    description: Type of payment
+    constraints:
+      unique: false
+      enum:
+      - Cash
+      - InKind
+    example: Cash
+  - name: payment_description
+    type: string
+    description: Description of the payment
+    constraints:
+      unique: false
+    example: (The donation was made to the national party, so other MPs may have benefited
+      as other parts of the party may also have benefitted)
+  - name: value
+    type: number
+    description: Value of the donation
+    constraints:
+      unique: false
+    example: 133.92
+  - name: received_date
+    type: string
+    description: Date the payment was received
+    constraints:
+      unique: false
+      enum:
+      - ''
+    example: ''
+  - name: accepted_date
+    type: string
+    description: Date the payment was accepted
+    constraints:
+      unique: false
+    example: ''
+  - name: received_end_date
+    type: string
+    description: End date of the payment
+    constraints:
+      unique: false
+    example: ''
+  - name: is_sole_beneficiary
+    type: boolean
+    description: Whether the MP is the sole beneficiary
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: donor_name
+    type: string
+    description: Name of the donor
+    constraints:
+      unique: false
+    example: 1900 Club
+  - name: donor_public_address
+    type: string
+    description: Public address of the donor
+    constraints:
+      unique: false
+    example: 1 Canada Square, London E14 5AA
+  - name: donor_status
+    type: string
+    description: Status of the donor
+    constraints:
+      unique: false
+      enum:
+      - Company
+      - Individual
+      - Limited Liability Partnership
+      - Other
+      - Registered Party
+      - Trade Union
+      - Trust
+      - Unincorporated association
+    example: Company
+  - name: donor_company_name
+    type: string
+    description: Name of the donor company
+    constraints:
+      unique: false
+    example: 3West Group
+  - name: donor_company_url
+    type: number
+    description: URL of the donor company
+    constraints:
+      unique: false
+    example: ''
+  - name: donor_company_identifier
+    type: string
+    description: Identifier of the donor company
+    constraints:
+      unique: false
+    example: '10029261'
+  - name: donor_company_identifier_source
+    type: string
+    description: Source of the donor company identifier
+    constraints:
+      unique: false
+    example: Companies House
+  - name: donor_trust_details
+    type: string
+    description: Details of the donor trust
+    constraints:
+      unique: false
+    example: TLC is a Trust, raising funds for political campaigning activities of
+      the South Hams Liberal Democratic Party
+  - name: donor_other_details
+    type: string
+    description: Details of the donor
+    constraints:
+      unique: false
+    example: Group of Labour Gedling Borough Councillors (Gedling Borough Labour Group)
+  - name: category_code
+    type: string
+    description: Code for the category of the interest
+    constraints:
+      unique: false
+      enum:
+      - '2'
+    example: '2'
+hash: 47c50e1dd9dc9f39ee3d54f7aba2ec4c

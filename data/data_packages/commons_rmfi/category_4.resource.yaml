@@ -1,0 +1,403 @@
+title: Category 4
+description: Visits outside the UK
+custom:
+  row_count: 224
+path: category_4.parquet
+name: category_4
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: id
+    type: integer
+    description: Unique identifier for the interest
+    constraints:
+      unique: true
+    example: 1218
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: ''
+  - name: summary
+    type: string
+    description: Text summary of the interest
+    constraints:
+      unique: false
+    example: International visit between 02 October 2023 and 03 October 2023
+  - name: registration_date
+    type: string
+    description: Date the interest was registered
+    constraints:
+      unique: false
+    example: '2023-08-08'
+  - name: published_date
+    type: string
+    description: Date the interest was published
+    constraints:
+      unique: false
+    example: '2023-12-10'
+  - name: updated_date
+    type: string
+    description: Date the interest was last updated
+    constraints:
+      unique: false
+      enum:
+      - ''
+      - '2023-08-23'
+      - '2023-10-30'
+      - '2023-11-03'
+      - '2023-12-18'
+      - '2024-02-05'
+      - '2024-03-22'
+      - '2024-03-27'
+      - '2024-04-11'
+    example: ''
+  - name: category
+    type: string
+    description: Category of the interest
+    constraints:
+      unique: false
+      enum:
+      - Visits outside the UK
+    example: Visits outside the UK
+  - name: party
+    type: string
+    description: TWFY Party ID
+    constraints:
+      unique: false
+      enum:
+      - conservative
+      - dup
+      - independent
+      - labour
+      - labourco-operative
+      - liberal-democrat
+      - plaid-cymru
+      - reform
+      - scottish-national-party
+      - sinn-fein
+      - social-democratic-and-labour-party
+    example: conservative
+  - name: member
+    type: string
+    description: Name of the MP
+    constraints:
+      unique: false
+    example: Afzal Khan
+  - name: mnis_id
+    type: integer
+    description: Parliamentary ID of the MP
+    constraints:
+      unique: false
+    example: 39
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: false
+    example: '10119'
+  - name: visit_locations
+    type: number
+    description: Number of locations visited
+    constraints:
+      unique: false
+    example: ''
+  - name: visit_locations_1__country
+    type: string
+    description: First country visited
+    constraints:
+      unique: false
+    example: Australia
+  - name: visit_locations_1__destination
+    type: string
+    description: First destination visited
+    constraints:
+      unique: false
+    example: Abu Dhabi and Dubai
+  - name: purpose
+    type: string
+    description: Purpose of the visit
+    constraints:
+      unique: false
+    example: (1) In my capacity as Chair of the Parliamentary Network on the World
+      Bank and international Monetary Fund, to attend the World Bank IMF Spring Meetings.  (2)
+      Invited to present a lecture at the University on the Inequality of Wealth.
+  - name: start_date
+    type: string
+    description: Start date of the visit
+    constraints:
+      unique: false
+    example: '2022-08-30'
+  - name: end_date
+    type: string
+    description: End date of the visit
+    constraints:
+      unique: false
+    example: '2022-09-03'
+  - name: appg
+    type: string
+    description: Visit associated with an All-Party Parliamentary Group
+    constraints:
+      unique: false
+    example: APPG Against Antisemitism
+  - name: donors
+    type: number
+    description: Number of donors
+    constraints:
+      unique: false
+    example: ''
+  - name: donors_1__name
+    type: string
+    description: Name of the donor
+    constraints:
+      unique: false
+    example: APPG on Population, Development and Reproductive Health (PDRH) (sponsored
+      by the European Parliamentary Forum on Reproductive Rights)
+  - name: donors_1__is_private_individual
+    type: boolean
+    description: Whether the donor is a private individual
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: donors_1__public_address
+    type: string
+    description: Public address of the donor
+    constraints:
+      unique: false
+    example: 1 Bedford Row, London WC1R 4BU
+  - name: donors_1__payment_type
+    type: string
+    description: Type of payment
+    constraints:
+      unique: false
+      enum:
+      - In kind
+      - Monetary
+    example: In kind
+  - name: donors_1__payment_description
+    type: string
+    description: Description of the payment
+    constraints:
+      unique: false
+    example: "A four night trip to Israel for my husband and I including\r\nflights\
+      \ (£989.74 for two return flights to Tel Aviv), accommodation, meals and visits\
+      \ within Israel (£26,811.53)"
+  - name: donors_1__value
+    type: number
+    description: Value of the payment
+    constraints:
+      unique: false
+    example: 180.0
+  - name: donors_1__is_sole_beneficiary
+    type: boolean
+    description: Whether the MP is the sole beneficiary
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: donors_2__name
+    type: string
+    description: Name of the donor
+    constraints:
+      unique: false
+    example: COP28 Presidency Office
+  - name: donors_2__is_private_individual
+    type: string
+    description: Whether the donor is a private individual
+    constraints:
+      unique: false
+    example: 'False'
+  - name: donors_2__public_address
+    type: string
+    description: Public address of the donor
+    constraints:
+      unique: false
+    example: 14th Floor, GFH Tower, Bahrain Financial Harbour, Building 1411, Road
+      4625, Manama 346, Kingdom of Bahrain
+  - name: donors_2__payment_type
+    type: string
+    description: Type of payment
+    constraints:
+      unique: false
+    example: In kind
+  - name: donors_2__payment_description
+    type: string
+    description: Description of the payment
+    constraints:
+      unique: false
+    example: (1) Return trip Singapore to Melbourne, Australia (travel only)
+  - name: donors_2__value
+    type: number
+    description: Value of the payment
+    constraints:
+      unique: false
+    example: 59.5
+  - name: donors_2__is_sole_beneficiary
+    type: string
+    description: Whether the MP is the sole beneficiary
+    constraints:
+      unique: false
+    example: 'False'
+  - name: donors_3__name
+    type: string
+    description: Name of the donor
+    constraints:
+      unique: false
+    example: Irish American Unity Conference
+  - name: donors_3__is_private_individual
+    type: string
+    description: Whether the donor is a private individual
+    constraints:
+      unique: false
+    example: 'False'
+  - name: donors_3__public_address
+    type: string
+    description: Public address of the donor
+    constraints:
+      unique: false
+    example: 1147 Lindsay Rd, Carnegie, PA 15106
+  - name: donors_3__payment_type
+    type: string
+    description: Type of payment
+    constraints:
+      unique: false
+    example: In kind
+  - name: donors_3__payment_description
+    type: string
+    description: Description of the payment
+    constraints:
+      unique: false
+    example: Accommodation Costs
+  - name: donors_3__value
+    type: number
+    description: Value of the payment
+    constraints:
+      unique: false
+    example: 160.0
+  - name: donors_3__is_sole_beneficiary
+    type: string
+    description: Whether the MP is the sole beneficiary
+    constraints:
+      unique: false
+    example: 'True'
+  - name: donors_4__name
+    type: string
+    description: Name of the donor
+    constraints:
+      unique: false
+    example: The British Residents Society
+  - name: donors_4__is_private_individual
+    type: string
+    description: Whether the donor is a private individual
+    constraints:
+      unique: false
+    example: 'False'
+  - name: donors_4__public_address
+    type: string
+    description: Public address of the donor
+    constraints:
+      unique: false
+    example: Mustafa Cagatay Avenue, Girne
+  - name: donors_4__payment_type
+    type: string
+    description: Type of payment
+    constraints:
+      unique: false
+    example: In kind
+  - name: donors_4__payment_description
+    type: string
+    description: Description of the payment
+    constraints:
+      unique: false
+    example: "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights):\
+      \ £300 (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+      \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+      \nTotal: £1,150"
+  - name: donors_4__value
+    type: number
+    description: Value of the payment
+    constraints:
+      unique: false
+    example: 1150.0
+  - name: donors_4__is_sole_beneficiary
+    type: string
+    description: Whether the MP is the sole beneficiary
+    constraints:
+      unique: false
+    example: 'True'
+  - name: donors_5__name
+    type: string
+    description: Name of the donor
+    constraints:
+      unique: false
+    example: Turkish Airlines
+  - name: donors_5__is_private_individual
+    type: string
+    description: Whether the donor is a private individual
+    constraints:
+      unique: false
+    example: 'False'
+  - name: donors_5__public_address
+    type: string
+    description: Public address of the donor
+    constraints:
+      unique: false
+    example: Istanbul Atatürk Airport, Yeşilköy, Bakırköy, Istanbul, Türkiye
+  - name: donors_5__payment_type
+    type: string
+    description: Type of payment
+    constraints:
+      unique: false
+    example: In kind
+  - name: donors_5__payment_description
+    type: string
+    description: Description of the payment
+    constraints:
+      unique: false
+    example: "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights):\
+      \ £300 (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+      \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+      \nTotal: £1,150"
+  - name: donors_5__value
+    type: number
+    description: Value of the payment
+    constraints:
+      unique: false
+    example: 1150.0
+  - name: donors_5__is_sole_beneficiary
+    type: string
+    description: Whether the MP is the sole beneficiary
+    constraints:
+      unique: false
+    example: 'True'
+  - name: visit_locations_2__country
+    type: string
+    description: Second country visited
+    constraints:
+      unique: false
+    example: El Salvador
+  - name: visit_locations_2__destination
+    type: string
+    description: Second destination visited
+    constraints:
+      unique: false
+    example: Dubai
+  - name: category_code
+    type: string
+    description: Code for the category
+    constraints:
+      unique: false
+      enum:
+      - '4'
+    example: '4'
+hash: 21dbbe08f3aeb4ad4d3a8b92cbc1fac9

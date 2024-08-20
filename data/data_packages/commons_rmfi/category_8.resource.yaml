@@ -1,0 +1,141 @@
+title: Category 8
+description: Miscellaneous
+custom:
+  row_count: 807
+path: category_8.parquet
+name: category_8
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: id
+    type: integer
+    description: Unique identifier for the interest
+    constraints:
+      unique: true
+    example: 1220
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: ''
+  - name: summary
+    type: string
+    description: Text summary of the interest
+    constraints:
+      unique: false
+    example: A 10% shareholding in WT IP Ltd.  The shareholding is below the threshold
+      for registration.
+  - name: registration_date
+    type: string
+    description: Date the interest was registered
+    constraints:
+      unique: false
+    example: ''
+  - name: published_date
+    type: string
+    description: Date the interest was published
+    constraints:
+      unique: false
+    example: '2022-12-17'
+  - name: updated_date
+    type: string
+    description: Date the interest was last updated
+    constraints:
+      unique: false
+    example: ''
+  - name: category
+    type: string
+    description: Category of the interest
+    constraints:
+      unique: false
+      enum:
+      - Miscellaneous
+    example: Miscellaneous
+  - name: party
+    type: string
+    description: Political party of the MP
+    constraints:
+      unique: false
+      enum:
+      - conservative
+      - dup
+      - green
+      - independent
+      - labour
+      - labourco-operative
+      - liberal-democrat
+      - plaid-cymru
+      - reform
+      - scottish-national-party
+      - traditional-unionist-voice
+      - uup
+    example: conservative
+  - name: member
+    type: string
+    description: Name of the MP
+    constraints:
+      unique: false
+    example: Adam Dance
+  - name: mnis_id
+    type: integer
+    description: Parliamentary ID of the MP
+    constraints:
+      unique: false
+    example: 40
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: false
+    example: '10001'
+  - name: arose_on
+    type: string
+    description: Date the interest arose
+    constraints:
+      unique: false
+    example: ''
+  - name: end_date
+    type: string
+    description: Date the interest ended
+    constraints:
+      unique: false
+    example: ''
+  - name: donor_name
+    type: string
+    description: Name of the donor
+    constraints:
+      unique: false
+    example: Betting & Gaming Council
+  - name: description
+    type: string
+    description: Description of the interest
+    constraints:
+      unique: false
+    example: A 10% shareholding in WT IP Ltd.  The shareholding is below the threshold
+      for registration.
+  - name: miscellaneous_interest_type
+    type: string
+    description: Type of miscellaneous interest
+    constraints:
+      unique: false
+      enum:
+      - Financial interest or material benefit
+      - Formal role with a party organisation
+      - Fund to defray legal costs
+      - Other
+      - Unpaid role
+    example: Financial interest or material benefit
+  - name: category_code
+    type: string
+    description: Category code of the interest
+    constraints:
+      unique: false
+      enum:
+      - '8'
+    example: '8'
+hash: 3ec56a3951cc28eaedc1e6b45929d13e

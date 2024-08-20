@@ -1,0 +1,216 @@
+title: Category 3
+description: Gifts, benefits and hospitality from UK sources
+custom:
+  row_count: 444
+path: category_3.parquet
+name: category_3
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: id
+    type: integer
+    description: Unique identifier for the interest
+    constraints:
+      unique: true
+    example: 581
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: ''
+  - name: summary
+    type: string
+    description: Text summary of the interest
+    constraints:
+      unique: false
+    example: Age Partnership Group Limited - £450.00
+  - name: registration_date
+    type: string
+    description: Date the interest was registered
+    constraints:
+      unique: false
+    example: ''
+  - name: published_date
+    type: string
+    description: Date the interest was published
+    constraints:
+      unique: false
+    example: '2023-03-09'
+  - name: updated_date
+    type: string
+    description: Date the interest was last updated
+    constraints:
+      unique: false
+    example: ''
+  - name: category
+    type: string
+    description: Category of the interest
+    constraints:
+      unique: false
+      enum:
+      - Gifts, benefits and hospitality from UK sources
+    example: Gifts, benefits and hospitality from UK sources
+  - name: party
+    type: string
+    description: Political party of the MP
+    constraints:
+      unique: false
+      enum:
+      - conservative
+      - green
+      - independent
+      - labour
+      - labourco-operative
+      - liberal-democrat
+      - reform
+      - scottish-national-party
+    example: conservative
+  - name: member
+    type: string
+    description: Name of the MP
+    constraints:
+      unique: false
+    example: Adrian Ramsay
+  - name: mnis_id
+    type: integer
+    description: Parliamentary ID of the MP
+    constraints:
+      unique: false
+    example: 39
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: false
+    example: '10001'
+  - name: appg
+    type: string
+    description: Payment made via an All-Party Parliamentary Group
+    constraints:
+      unique: false
+    example: APPG on Malaria and Neglected Tropical Diseases
+  - name: payment_type
+    type: string
+    description: Type of payment
+    constraints:
+      unique: false
+      enum:
+      - Cash
+      - InKind
+    example: Cash
+  - name: payment_description
+    type: string
+    description: Description of the payment
+    constraints:
+      unique: false
+    example: 2 tickets to the RHS Chelsea Flower Show Gala preview event and dinner
+      (valued at £185 each)
+  - name: value
+    type: number
+    description: Value of the payment
+    constraints:
+      unique: false
+    example: 22.5
+  - name: received_date
+    type: string
+    description: Date the payment was received
+    constraints:
+      unique: false
+    example: '2002-01-01'
+  - name: accepted_date
+    type: string
+    description: Date the payment was accepted
+    constraints:
+      unique: false
+    example: '2002-01-01'
+  - name: received_end_date
+    type: string
+    description: End date of the payment
+    constraints:
+      unique: false
+    example: ''
+  - name: is_sole_beneficiary
+    type: boolean
+    description: Whether the MP is the sole beneficiary
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: donor_name
+    type: string
+    description: Name of the donor
+    constraints:
+      unique: false
+    example: Age Partnership Group Limited
+  - name: donor_public_address
+    type: string
+    description: Public address of the donor
+    constraints:
+      unique: false
+    example: 1 Bedford Row, London WC1R 4BU
+  - name: donor_status
+    type: string
+    description: Type of donor
+    constraints:
+      unique: false
+      enum:
+      - Company
+      - Friendly society
+      - Individual
+      - Limited Liability Partnership
+      - Other
+      - Trade Union
+      - Unincorporated association
+    example: Company
+  - name: donor_company_name
+    type: string
+    description: Name of the donor company
+    constraints:
+      unique: false
+    example: Age Partnership Group Limited
+  - name: donor_company_url
+    type: number
+    description: URL of the donor company
+    constraints:
+      unique: false
+    example: ''
+  - name: donor_company_identifier
+    type: string
+    description: Company id of the donor
+    constraints:
+      unique: false
+    example: '10690039'
+  - name: donor_company_identifier_source
+    type: string
+    description: Identifer category of company number
+    constraints:
+      unique: false
+    example: Companies House
+  - name: donor_trust_details
+    type: number
+    description: Trust details of the donor
+    constraints:
+      unique: false
+    example: ''
+  - name: donor_other_details
+    type: string
+    description: Other details of the donor
+    constraints:
+      unique: false
+    example: High Commission
+  - name: category_code
+    type: string
+    description: Code for the category of the interest
+    constraints:
+      unique: false
+      enum:
+      - '3'
+    example: '3'
+hash: a81ab51d6cf250540450ecddc76c4968

@@ -1,0 +1,113 @@
+title: Overall Register of Interests
+description: Register of interests, text summaries by category,
+custom:
+  row_count: 5482
+  dataset_order: -10
+path: overall.parquet
+name: overall
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: id
+    type: integer
+    description: Unique identifier for the interest
+    constraints:
+      unique: true
+    example: 32
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: 3636.0
+  - name: member
+    type: string
+    description: Name of the MP
+    constraints:
+      unique: false
+    example: Abtisam Mohamed
+  - name: party
+    type: string
+    description: TWFY id of the party
+    constraints:
+      unique: false
+    example: conservative
+  - name: mnis_id
+    type: integer
+    description: Parliamentary ID for the MP
+    constraints:
+      unique: false
+    example: 39
+  - name: twfy_id
+    type: string
+    description: TWFY ID for the MP
+    constraints:
+      unique: false
+    example: '10001'
+  - name: category
+    type: string
+    description: Category of the interest
+    constraints:
+      unique: false
+      enum:
+      - Donations and other support (including loans) for activities as an MP
+      - Employment and earnings
+      - Employment and earnings - Ad hoc payments
+      - Employment and earnings - Ongoing paid employment
+      - Family members employed
+      - Family members engaged in third-party lobbying
+      - Gifts and benefits from sources outside the UK
+      - Gifts, benefits and hospitality from UK sources
+      - Land and property (within or outside the UK)
+      - Miscellaneous
+      - Shareholdings
+      - Visits outside the UK
+    example: Donations and other support (including loans) for activities as an MP
+  - name: category_code
+    type: string
+    description: Code for the category of the interest
+    constraints:
+      unique: false
+      enum:
+      - '1'
+      - '1.1'
+      - '1.2'
+      - '10'
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+      - '6'
+      - '7'
+      - '8'
+      - '9'
+    example: '1'
+  - name: registration_date
+    type: string
+    description: Date the interest was registered
+    constraints:
+      unique: false
+    example: ''
+  - name: published_date
+    type: string
+    description: Date the interest was published
+    constraints:
+      unique: false
+    example: '2015-05-01'
+  - name: updated_date
+    type: string
+    description: Date the interest was last updated
+    constraints:
+      unique: false
+    example: ''
+  - name: summary
+    type: string
+    description: Text summary of the interest
+    constraints:
+      unique: false
+    example: 1900 Club - £2,500.00
+hash: 9c59444350ccf2e1932a9c49deb925ad

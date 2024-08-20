@@ -1,0 +1,156 @@
+title: Category 7
+description: Shareholdings
+custom:
+  row_count: 185
+path: category_7.parquet
+name: category_7
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: id
+    type: integer
+    description: Unique identifier for the interest
+    constraints:
+      unique: true
+    example: 1330
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: ''
+  - name: summary
+    type: string
+    description: Text summary of the interest
+    constraints:
+      unique: true
+    example: Shares in 100MPH Events Limited (dormant)
+  - name: registration_date
+    type: string
+    description: Date the interest was registered
+    constraints:
+      unique: false
+    example: ''
+  - name: published_date
+    type: string
+    description: Date the interest was published
+    constraints:
+      unique: false
+    example: '2023-12-17'
+  - name: updated_date
+    type: string
+    description: Date the interest was last updated
+    constraints:
+      unique: false
+    example: ''
+  - name: category
+    type: string
+    description: Category of the interest
+    constraints:
+      unique: false
+      enum:
+      - Shareholdings
+    example: Shareholdings
+  - name: party
+    type: string
+    description: TWFY party of the MP
+    constraints:
+      unique: false
+      enum:
+      - conservative
+      - independent
+      - labour
+      - labourco-operative
+      - liberal-democrat
+      - plaid-cymru
+      - reform
+      - scottish-national-party
+      - sinn-fein
+    example: conservative
+  - name: member
+    type: string
+    description: Name of the MP
+    constraints:
+      unique: false
+    example: Abtisam Mohamed
+  - name: mnis_id
+    type: integer
+    description: Unique identifier for the MP
+    constraints:
+      unique: false
+    example: 40
+  - name: twfy_id
+    type: string
+    description: TWFY identifier for the MP
+    constraints:
+      unique: false
+    example: '10103'
+  - name: shareholding_threshold
+    type: string
+    description: Shareholding threshold
+    constraints:
+      unique: false
+      enum:
+      - '(i) Shareholdings: over 15% of issued share capital'
+      - (ii) Other shareholdings, valued at more than £70,000
+    example: '(i) Shareholdings: over 15% of issued share capital'
+  - name: registrable_date
+    type: string
+    description: Date the interest was registered
+    constraints:
+      unique: false
+    example: ''
+  - name: end_date
+    type: string
+    description: Date the interest ended
+    constraints:
+      unique: false
+      enum:
+      - ''
+      - '2004-07-05'
+      - '2023-05-09'
+      - '2023-08-10'
+      - '2023-08-11'
+      - '2023-08-29'
+      - '2023-11-17'
+      - '2024-07-18'
+      - '2024-07-25'
+      - '2024-07-29'
+    example: ''
+  - name: organisation_name
+    type: string
+    description: Name of the organisation
+    constraints:
+      unique: true
+    example: 100MPH Events Limited (dormant)
+  - name: organisation_description
+    type: string
+    description: Description of the organisation
+    constraints:
+      unique: false
+    example: A baby swimming company
+  - name: held_on_behalf_of
+    type: string
+    description: Organisation held on behalf of
+    constraints:
+      unique: false
+    example: Company is owned jointly with partner
+  - name: managed_by
+    type: string
+    description: Organisation managed by
+    constraints:
+      unique: false
+    example: DelegatedManagementCompany
+  - name: category_code
+    type: string
+    description: Category code
+    constraints:
+      unique: false
+      enum:
+      - '7'
+    example: '7'
+hash: 908ae19eb5cbf2348cf627a999384007
