@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 444
+  row_count: 446
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 581
+    example: 582
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -28,24 +28,30 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: Age Partnership Group Limited - £450.00
+    example: 3UK - £1,785.68
   - name: registration_date
     type: string
     description: Date the interest was registered
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: published_date
     type: string
     description: Date the interest was published
     constraints:
       unique: false
-    example: '2023-03-09'
+      enum:
+      - ''
+    example: ''
   - name: updated_date
     type: string
     description: Date the interest was last updated
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: category
     type: string
@@ -148,7 +154,7 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-    example: Age Partnership Group Limited
+    example: 3UK
   - name: donor_public_address
     type: string
     description: Public address of the donor
@@ -174,7 +180,7 @@ schema:
     description: Name of the donor company
     constraints:
       unique: false
-    example: Age Partnership Group Limited
+    example: 3UK
   - name: donor_company_url
     type: number
     description: URL of the donor company
@@ -186,7 +192,7 @@ schema:
     description: Company id of the donor
     constraints:
       unique: false
-    example: '10690039'
+    example: '00023307'
   - name: donor_company_identifier_source
     type: string
     description: Identifer category of company number
@@ -204,7 +210,13 @@ schema:
     description: Other details of the donor
     constraints:
       unique: false
-    example: High Commission
+    example: 'Charity number: 1108609'
+  - name: api_link
+    type: string
+    description: Link to the API endpoint for the interest
+    constraints:
+      unique: true
+    example: https://interests-api.parliament.uk/api/v1/Interests/10009
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -213,4 +225,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: acb28055a202bbef14df1c775f3c5556
+hash: 79d86212cd230c20ced2a553746fdc2b

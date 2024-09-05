@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 9
+  row_count: 6
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -18,10 +18,7 @@ schema:
       unique: true
       enum:
       - 591
-      - 595
       - 596
-      - 598
-      - 601
       - 3238
       - 3242
       - 4566
@@ -40,12 +37,7 @@ schema:
       unique: false
       enum:
       - Association of Marshall Scholars - £465.00
-      - Cricket Australia - £1,998.00
       - HM Government of Gibraltar - £1,275.00
-      - Qatar Racing and Equestrian Club (Qatar Ministry of Sports and Culture) -
-        £575.00
-      - Qatar Racing and Equestrian Club (Qatar Ministry of Sports and Culture) and
-        the Embassy of the State of Qatar - £600.00
       - Stripe Press Inc - £414.00
       - The Lord (Philip) Harris of Peckham - £5,000.00
       - Viagogo - £838.80
@@ -54,29 +46,18 @@ schema:
     type: string
     description: Date the interest was registered
     constraints:
-      unique: true
+      unique: false
       enum:
-      - '2023-08-07'
-      - '2023-08-21'
-      - '2023-08-29'
-      - '2023-10-10'
-      - '2023-10-24'
-      - '2024-01-26'
-      - '2024-02-07'
-      - '2024-03-19'
-      - '2024-08-01'
-    example: '2023-08-07'
+      - ''
+    example: ''
   - name: published_date
     type: string
     description: Date the interest was published
     constraints:
       unique: false
       enum:
-      - '2023-12-03'
-      - '2024-03-06'
-      - '2024-03-22'
-      - '2024-08-04'
-    example: '2023-12-03'
+      - ''
+    example: ''
   - name: updated_date
     type: string
     description: Date the interest was last updated
@@ -111,11 +92,8 @@ schema:
       enum:
       - Alison Griffiths
       - Dame Harriett Baldwin
-      - Esther McVey
-      - Lucy Powell
       - Mr Richard Holden
       - Neil O'Brien
-      - Sir John Whittingdale
       - Stephen Doughty
       - Stephen Morgan
     example: Alison Griffiths
@@ -125,32 +103,26 @@ schema:
     constraints:
       unique: true
       enum:
-      - 39
-      - 4084
       - 4107
-      - 4263
       - 4264
       - 4653
       - 4679
       - 4813
       - 5203
-    example: 39
+    example: 4107
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
     constraints:
       unique: true
       enum:
-      - '10632'
       - '24785'
-      - '24882'
-      - '25165'
       - '25166'
       - '25658'
       - '25679'
       - '25893'
       - '26536'
-    example: '10632'
+    example: '24785'
   - name: appg
     type: number
     description: Linked to an All-Party Parliamentary Group
@@ -177,15 +149,8 @@ schema:
       - Associated with taking part in the US-UK legislative exchange in Oxford, hospitality
         and accommodation
       - Four nights' accommodation during the Labour Party Conference
-      - Guest at Qatar Goodwood Festival 2023, including accommodation, hospitality
-        and lunch
-      - In my role as Shadow Secretary of State for DCMS, I attended the Ashes with
-        a plus one (two tickets with hospitality), as guests of the Australian High
-        Commissioner, with tickets provided by Cricket Australia
       - Meals and accommodation at small group retreat in Guildford
       - One ticket with hospitality for England v New Zealand one day cricket match
-      - Two tickets to Qatar Goodwood Festival 2023 including hospitality and accommodation
-        for one night
       - for general election campaign expenditure
     example: Associated with participating in a cross-party conference, accommodation
       (£315) and hospitality (£150)
@@ -197,11 +162,8 @@ schema:
       enum:
       - 414.0
       - 465.0
-      - 575.0
-      - 600.0
       - 838.8
       - 1275.0
-      - 1998.0
       - 5000.0
     example: 414.0
   - name: received_date
@@ -210,30 +172,24 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2023-07-27'
-      - '2023-07-31'
-      - '2023-08-02'
       - '2023-09-15'
       - '2023-10-08'
       - '2024-01-13'
       - '2024-03-04'
       - '2024-06-11'
-    example: '2023-07-27'
+    example: '2023-09-15'
   - name: accepted_date
     type: string
     description: Date the payment was accepted
     constraints:
       unique: false
       enum:
-      - '2023-07-27'
-      - '2023-07-31'
-      - '2023-08-02'
       - '2023-09-15'
       - '2023-10-08'
       - '2024-01-13'
       - '2024-03-04'
       - '2024-06-11'
-    example: '2023-07-27'
+    example: '2023-09-15'
   - name: received_end_date
     type: string
     description: End date of the payment
@@ -241,7 +197,6 @@ schema:
       unique: false
       enum:
       - ''
-      - '2023-08-02'
       - '2023-10-11'
       - '2024-01-14'
       - '2024-03-06'
@@ -252,9 +207,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - false
       - true
-    example: 'False'
+    example: 'True'
   - name: donor_name
     type: string
     description: Name of the donor
@@ -262,11 +216,7 @@ schema:
       unique: false
       enum:
       - Association of Marshall Scholars
-      - Cricket Australia
       - HM Government of Gibraltar
-      - Qatar Racing and Equestrian Club (Qatar Ministry of Sports and Culture)
-      - Qatar Racing and Equestrian Club (Qatar Ministry of Sports and Culture) and
-        the Embassy of the State of Qatar
       - Stripe Press Inc
       - The Lord (Philip) Harris of Peckham
       - Viagogo
@@ -276,7 +226,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: true
-    example: 1 South Audley Street, London W1K 1NB
+    example: 168 Prospect Park SW, Brooklyn, NY 11218, USA
   - name: donor_status
     type: string
     description: Type of donor
@@ -294,7 +244,7 @@ schema:
     description: Name of the donor company
     constraints:
       unique: false
-    example: Cricket Australia
+    example: Viagogo
   - name: donor_company_url
     type: number
     description: URL of the donor company
@@ -306,7 +256,7 @@ schema:
     description: Identifier of the donor company
     constraints:
       unique: false
-    example: ABN 53 006 089 130
+    example: outside the UK
   - name: donor_company_identifier_source
     type: string
     description: Donor company identifier register
@@ -325,6 +275,19 @@ schema:
     constraints:
       unique: false
     example: US non-profit endowment
+  - name: api_link
+    type: string
+    description: Link to the API endpoint for the interest
+    constraints:
+      unique: true
+      enum:
+      - https://interests-api.parliament.uk/api/v1/Interests/3238
+      - https://interests-api.parliament.uk/api/v1/Interests/3242
+      - https://interests-api.parliament.uk/api/v1/Interests/4566
+      - https://interests-api.parliament.uk/api/v1/Interests/591
+      - https://interests-api.parliament.uk/api/v1/Interests/596
+      - https://interests-api.parliament.uk/api/v1/Interests/9052
+    example: https://interests-api.parliament.uk/api/v1/Interests/3238
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -333,4 +296,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 3c6b55c8f7dfa3884fa9b965a4e19b9f
+hash: 600315f2a9e40417ef25765a904a44db

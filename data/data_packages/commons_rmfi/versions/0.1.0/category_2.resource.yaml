@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 2521
+  row_count: 2617
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -34,18 +34,24 @@ schema:
     description: Date the interest was registered
     constraints:
       unique: false
-    example: '2022-08-22'
+      enum:
+      - ''
+    example: ''
   - name: published_date
     type: string
     description: Date the interest was published
     constraints:
       unique: false
-    example: '2023-11-03'
+      enum:
+      - ''
+    example: ''
   - name: updated_date
     type: string
     description: Date the interest was last updated
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: category
     type: string
@@ -185,7 +191,7 @@ schema:
     description: Name of the donor company
     constraints:
       unique: false
-    example: 3West Group
+    example: 1ST IT Limited
   - name: donor_company_url
     type: number
     description: URL of the donor company
@@ -197,7 +203,7 @@ schema:
     description: Identifier of the donor company
     constraints:
       unique: false
-    example: '10029261'
+    example: '00044888'
   - name: donor_company_identifier_source
     type: string
     description: Source of the donor company identifier
@@ -217,6 +223,12 @@ schema:
     constraints:
       unique: false
     example: Group of Labour Gedling Borough Councillors (Gedling Borough Labour Group)
+  - name: api_link
+    type: string
+    description: Link to the API endpoint for the interest
+    constraints:
+      unique: true
+    example: https://interests-api.parliament.uk/api/v1/Interests/10000
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -225,4 +237,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: 6fc7b789dea9e4f0d83296e6c4e64bfb
+hash: 154f2ff6a206906d0a72bacb3d536f60
