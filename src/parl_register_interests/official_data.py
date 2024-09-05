@@ -6,7 +6,7 @@ from datetime import date as date, datetime
 
 RAW_DATA = Path("data", "raw", "external", "official_data")
 
-known_dates = [date(2024, 8, 4)]
+known_dates = [date(2024, 9, 2)]
 
 
 def fix_snake_case(s: str) -> str:
@@ -116,7 +116,6 @@ def process_register(register_date: date):
                 lambda x: x.date().isoformat() if isinstance(x, datetime) else ""
             )
             date_str = [x if x != "NaT" else "" for x in date_str]
-            print(date_str)
             df[col] = date_str
 
         df.to_parquet(package_dir / f"{name}.parquet")
