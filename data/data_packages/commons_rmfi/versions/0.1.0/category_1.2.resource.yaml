@@ -1,0 +1,248 @@
+title: Category 1.2
+description: Employment and earnings - Ongoing paid employment
+custom:
+  row_count: 178
+path: category_1.2.parquet
+name: category_1.2
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: id
+    type: integer
+    description: Unique identifier for the interest
+    constraints:
+      unique: true
+    example: 4034
+  - name: parent_interest_id
+    type: integer
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: 4017
+  - name: summary
+    type: string
+    description: Text summary of the interest
+    constraints:
+      unique: false
+    example: Agreement - £1,000.00
+  - name: registration_date
+    type: string
+    description: Date the interest was registered
+    constraints:
+      unique: false
+    example: ''
+  - name: published_date
+    type: string
+    description: Date the interest was published
+    constraints:
+      unique: false
+    example: '2024-03-16'
+  - name: updated_date
+    type: string
+    description: Date the interest was last updated
+    constraints:
+      unique: false
+      enum:
+      - ''
+      - '2018-12-12'
+      - '2020-07-08'
+      - '2022-09-22'
+      - '2022-11-22'
+      - '2023-08-16'
+      - '2023-09-29'
+      - '2024-01-03'
+      - '2024-01-31'
+      - '2024-04-30'
+      - '2024-05-15'
+      - '2024-05-23'
+      - '2024-08-04'
+    example: ''
+  - name: category
+    type: string
+    description: Category of the interest
+    constraints:
+      unique: false
+      enum:
+      - Employment and earnings - Ongoing paid employment
+    example: Employment and earnings - Ongoing paid employment
+  - name: party
+    type: string
+    description: TWFY ID for the party as of this release date
+    constraints:
+      unique: false
+      enum:
+      - conservative
+      - dup
+      - independent
+      - labour
+      - labourco-operative
+      - liberal-democrat
+      - reform
+      - scottish-national-party
+      - sinn-fein
+    example: conservative
+  - name: member
+    type: string
+    description: Name of the MP
+    constraints:
+      unique: false
+    example: Adam Dance
+  - name: mnis_id
+    type: integer
+    description: Parliament ID of the MP
+    constraints:
+      unique: false
+    example: 146
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: false
+    example: '10119'
+  - name: regularity_of_payment
+    type: string
+    description: Regularity of the payment
+    constraints:
+      unique: false
+      enum:
+      - Monthly
+      - Quarterly
+      - Yearly
+    example: Monthly
+  - name: start_date
+    type: string
+    description: Start date of the payment
+    constraints:
+      unique: false
+    example: ''
+  - name: end_date
+    type: string
+    description: End date of the payment
+    constraints:
+      unique: false
+    example: ''
+  - name: period_for_hours_worked
+    type: string
+    description: Period for hours worked
+    constraints:
+      unique: false
+      enum:
+      - Monthly
+      - Quarterly
+      - Weekly
+      - Yearly
+    example: Monthly
+  - name: job_title
+    type: string
+    description: Job title
+    constraints:
+      unique: false
+    example: Councillor
+  - name: payment_type
+    type: string
+    description: Type of payment
+    constraints:
+      unique: false
+      enum:
+      - In kind
+      - Monetary
+    example: In kind
+  - name: payment_description
+    type: string
+    description: Description of the payment
+    constraints:
+      unique: false
+    example: (plus VAT) paid quarterly for international legal services
+  - name: value
+    type: number
+    description: Value of the payment (£)
+    constraints:
+      unique: false
+    example: 0.0
+  - name: hours_worked
+    type: number
+    description: Hours worked for the payment
+    constraints:
+      unique: false
+    example: 0.0
+  - name: hours_details
+    type: string
+    description: Details of the hours worked
+    constraints:
+      unique: false
+    example: (between 20 and 30 hrs)
+  - name: is_ultimate_payer_different
+    type: boolean
+    description: Whether the ultimate payer is different
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: ultimate_payer_name
+    type: string
+    description: Name of the ultimate payer
+    constraints:
+      unique: false
+    example: Evans Derry Solicitors
+  - name: ultimate_payer_protected_by_confidentiality
+    type: boolean
+    description: Whether the ultimate payer is protected by confidentiality
+    constraints:
+      unique: false
+      enum:
+      - false
+    example: 'False'
+  - name: ultimate_payer_address
+    type: string
+    description: Address of the ultimate payer
+    constraints:
+      unique: false
+    example: 133  Long Street Atherstone Warwickshire CV9 1AD
+  - name: ultimate_payer_nature_of_business
+    type: string
+    description: Nature of business of the ultimate payer
+    constraints:
+      unique: false
+    example: High Street Solicitors Practice
+  - name: is_payment_donated
+    type: boolean
+    description: Whether the payment was donated
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: donatee_paid_by
+    type: string
+    description: Who the payment was donated to
+    constraints:
+      unique: false
+    example: Donated by the Member to the recipient
+  - name: donatee_type
+    type: string
+    description: Type of donatee
+    constraints:
+      unique: false
+    example: Charity
+  - name: donatee_details
+    type: string
+    description: Details of the donatee
+    constraints:
+      unique: false
+    example: Kemyel Ltd
+  - name: category_code
+    type: string
+    description: Code for the category of the interest
+    constraints:
+      unique: false
+      enum:
+      - '1.2'
+    example: '1.2'
+hash: 46101880948b8f3e138da6cdb91e49d2

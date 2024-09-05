@@ -1,0 +1,224 @@
+title: Category 6
+description: Land and property (within or outside the UK)
+custom:
+  row_count: 217
+path: category_6.parquet
+name: category_6
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: id
+    type: integer
+    description: Unique identifier for the interest
+    constraints:
+      unique: true
+    example: 2170
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: ''
+  - name: summary
+    type: string
+    description: Text summary of the interest
+    constraints:
+      unique: false
+    example: Agricultural in Ballygarvin
+  - name: registration_date
+    type: string
+    description: Date the interest was registered
+    constraints:
+      unique: false
+    example: ''
+  - name: published_date
+    type: string
+    description: Date the interest was published
+    constraints:
+      unique: false
+    example: '2015-05-01'
+  - name: updated_date
+    type: string
+    description: Date the interest was last updated
+    constraints:
+      unique: false
+    example: ''
+  - name: category
+    type: string
+    description: Category of the interest
+    constraints:
+      unique: false
+      enum:
+      - Land and property (within or outside the UK)
+    example: Land and property (within or outside the UK)
+  - name: party
+    type: string
+    description: TWFY party id of the MP
+    constraints:
+      unique: false
+      enum:
+      - conservative
+      - dup
+      - green
+      - independent
+      - labour
+      - labourco-operative
+      - liberal-democrat
+      - plaid-cymru
+      - reform
+      - scottish-national-party
+      - sinn-fein
+      - traditional-unionist-voice
+    example: conservative
+  - name: member
+    type: string
+    description: Name of the MP
+    constraints:
+      unique: false
+    example: Adrian Ramsay
+  - name: mnis_id
+    type: integer
+    description: Parliamentary ID of the MP
+    constraints:
+      unique: false
+    example: 39
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MPss
+    constraints:
+      unique: false
+    example: '10119'
+  - name: start_date
+    type: string
+    description: Date the interest started
+    constraints:
+      unique: false
+    example: ''
+  - name: end_date
+    type: string
+    description: Date the interest ended
+    constraints:
+      unique: false
+      enum:
+      - ''
+      - '2023-08-14'
+      - '2023-09-22'
+      - '2024-07-18'
+      - '2024-07-21'
+      - '2024-08-31'
+    example: ''
+  - name: is_sole_owner
+    type: boolean
+    description: Is the MP the sole owner of the property
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: location
+    type: string
+    description: Location of the property
+    constraints:
+      unique: false
+    example: Aberdeen
+  - name: property_description
+    type: string
+    description: Description of the property
+    constraints:
+      unique: false
+    example: 1 bed Flat
+  - name: property_owner_details
+    type: string
+    description: Details of the property owner
+    constraints:
+      unique: false
+    example: 25% share
+  - name: rental_income_details
+    type: string
+    description: Details of the rental income
+    constraints:
+      unique: false
+    example: 50% of rental income paid to my husband
+  - name: rental_income_start_date
+    type: string
+    description: Date the rental income started
+    constraints:
+      unique: false
+    example: ''
+  - name: rental_income_end_date
+    type: string
+    description: Date the rental income ended
+    constraints:
+      unique: false
+      enum:
+      - ''
+      - '2023-08-14'
+      - '2024-07-17'
+      - '2024-07-31'
+    example: ''
+  - name: number_of_properties
+    type: number
+    description: Number of properties owned
+    constraints:
+      unique: false
+    example: 1.0
+  - name: is_land
+    type: boolean
+    description: Is the property land
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: is_any_rental_income_paid_to_another_person
+    type: boolean
+    description: Is any rental income paid to another person
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+  - name: country
+    type: string
+    description: Country of the property
+    constraints:
+      unique: false
+      enum:
+      - France
+      - Germany
+      - India
+      - Ireland
+      - Italy
+      - Portugal
+      - Spain
+      - United Kingdom
+      - United States
+    example: France
+  - name: land_use
+    type: string
+    description: Use of the land
+    constraints:
+      unique: false
+    example: Agricultural
+  - name: property_type
+    type: string
+    description: Type of property
+    constraints:
+      unique: false
+    example: Agricultural
+  - name: category_code
+    type: string
+    description: Code for the category of the interest
+    constraints:
+      unique: false
+      enum:
+      - '6'
+    example: '6'
+hash: aa45351b7846e68e1e4ab7c6a8f99c4a
