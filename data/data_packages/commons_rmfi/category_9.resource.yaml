@@ -158,9 +158,9 @@ schema:
       - Son
       - Spouse
     example: Brother
-  - name: link_1
+  - name: api_link
     type: string
-    description:
+    description: Link to the API endpoint for the interest
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/2686
@@ -172,4 +172,4 @@ schema:
       enum:
       - '9'
     example: '9'
-hash: 41fe9318b16eb52a03816fc3fa953984
+hash: 9670bd8188af4c31f0a59e7c9b1d9461

@@ -137,9 +137,9 @@ schema:
       - Other
       - Unpaid role
     example: Financial interest or material benefit
-  - name: link_1
+  - name: api_link
     type: string
-    description:
+    description: Link to the API endpoint for the interest
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10007
@@ -151,4 +151,4 @@ schema:
       enum:
       - '8'
     example: '8'
-hash: 565c253457061b5e9c50fe6187260a4d
+hash: 88463ce097b0bec507bc5e577a571530

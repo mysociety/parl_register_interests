@@ -275,9 +275,9 @@ schema:
     constraints:
       unique: false
     example: US non-profit endowment
-  - name: link_1
+  - name: api_link
     type: string
-    description:
+    description: Link to the API endpoint for the interest
     constraints:
       unique: true
       enum:
@@ -296,4 +296,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: ccdcc2cd1e84a406b79f1fdf21fa4423
+hash: 600315f2a9e40417ef25765a904a44db

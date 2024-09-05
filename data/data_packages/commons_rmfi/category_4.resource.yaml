@@ -388,9 +388,9 @@ schema:
     constraints:
       unique: false
     example: Dubai
-  - name: link_1
+  - name: api_link
     type: string
-    description:
+    description: Link to the API endpoint for the interest
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10168
@@ -402,4 +402,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 01696bc3c4d5b43222818e2add9aec51
+hash: 3c813bf629288dc3a4064dc2ad6e7c2f

@@ -118,6 +118,7 @@ def process_register(register_date: date):
             date_str = [x if x != "NaT" else "" for x in date_str]
             df[col] = date_str
 
+        df = df.rename(columns={"link_1": "api_link"})
         df.to_parquet(package_dir / f"{name}.parquet")
         df = df[all_columns]
         collected_df.append(df)

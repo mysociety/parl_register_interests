@@ -151,9 +151,9 @@ schema:
     constraints:
       unique: false
     example: DelegatedManagementCompany
-  - name: link_1
+  - name: api_link
     type: string
-    description:
+    description: Link to the API endpoint for the interest
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10005
@@ -165,4 +165,4 @@ schema:
       enum:
       - '7'
     example: '7'
-hash: 0d13aee30d2984f826ff1dcd6f0c71fc
+hash: abf131c257dca9f69adc076bf1b34eb8

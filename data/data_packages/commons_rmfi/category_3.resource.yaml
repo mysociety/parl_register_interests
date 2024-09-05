@@ -211,9 +211,9 @@ schema:
     constraints:
       unique: false
     example: 'Charity number: 1108609'
-  - name: link_1
+  - name: api_link
     type: string
-    description:
+    description: Link to the API endpoint for the interest
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10009
@@ -225,4 +225,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: f8d7dd6b0572d9a09187f15e848636b5
+hash: d56e8f1ac03f98e6201a34e06cf89adc
