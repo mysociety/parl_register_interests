@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 383
+  row_count: 395
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -34,13 +34,17 @@ schema:
     description: Date the interest was registered
     constraints:
       unique: false
-    example: '2022-09-22'
+      enum:
+      - ''
+    example: ''
   - name: published_date
     type: string
     description: Date the interest was published
     constraints:
       unique: false
-    example: '2024-03-12'
+      enum:
+      - ''
+    example: ''
   - name: updated_date
     type: string
     description: Date the interest was last updated
@@ -111,7 +115,7 @@ schema:
     description: Job the MP was paid for
     constraints:
       unique: false
-    example: for a radio recording of a book.
+    example: Councillor
   - name: payment_type
     type: string
     description: Type of payment
@@ -208,6 +212,12 @@ schema:
     constraints:
       unique: false
     example: Fee allocated to my staffing budget.
+  - name: link_1
+    type: string
+    description:
+    constraints:
+      unique: true
+    example: https://interests-api.parliament.uk/api/v1/Interests/10033
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -216,4 +226,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: a4c9e0c128da6a5ff1ee108be0f079f4
+hash: bbe16e294ccaa173204324ff6fe1cf72

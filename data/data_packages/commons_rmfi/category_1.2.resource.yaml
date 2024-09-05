@@ -1,7 +1,7 @@
 title: Category 1.2
 description: Employment and earnings - Ongoing paid employment
 custom:
-  row_count: 178
+  row_count: 180
 path: category_1.2.parquet
 name: category_1.2
 profile: data-resource
@@ -34,13 +34,17 @@ schema:
     description: Date the interest was registered
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: published_date
     type: string
     description: Date the interest was published
     constraints:
       unique: false
-    example: '2024-03-16'
+      enum:
+      - ''
+    example: ''
   - name: updated_date
     type: string
     description: Date the interest was last updated
@@ -48,18 +52,6 @@ schema:
       unique: false
       enum:
       - ''
-      - '2018-12-12'
-      - '2020-07-08'
-      - '2022-09-22'
-      - '2022-11-22'
-      - '2023-08-16'
-      - '2023-09-29'
-      - '2024-01-03'
-      - '2024-01-31'
-      - '2024-04-30'
-      - '2024-05-15'
-      - '2024-05-23'
-      - '2024-08-04'
     example: ''
   - name: category
     type: string
@@ -237,6 +229,12 @@ schema:
     constraints:
       unique: false
     example: Kemyel Ltd
+  - name: link_1
+    type: string
+    description:
+    constraints:
+      unique: true
+    example: https://interests-api.parliament.uk/api/v1/Interests/10028
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -245,4 +243,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: 46101880948b8f3e138da6cdb91e49d2
+hash: bcc91294cf7ae586430cba4e1eab256d

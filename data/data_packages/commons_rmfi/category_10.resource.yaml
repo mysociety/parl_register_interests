@@ -1,7 +1,7 @@
 title: Category 10
 description: Family members engaged in third-party lobbying
 custom:
-  row_count: 18
+  row_count: 17
   dataset_order: 20
 path: category_10.parquet
 name: category_10
@@ -28,27 +28,24 @@ schema:
     type: string
     description: Text summary of the interest
     constraints:
-      unique: false
+      unique: true
     example: Alastair Craft employed as Lobbyist
   - name: registration_date
     type: string
     description: Date the interest was registered
     constraints:
       unique: false
-    example: '2015-06-02'
+      enum:
+      - ''
+    example: ''
   - name: published_date
     type: string
     description: Date the interest was published
     constraints:
       unique: false
       enum:
-      - '2023-12-17'
-      - '2024-07-15'
-      - '2024-07-22'
-      - '2024-07-26'
-      - '2024-07-29'
-      - '2024-08-04'
-    example: '2023-12-17'
+      - ''
+    example: ''
   - name: updated_date
     type: string
     description: Date the interest was last updated
@@ -56,9 +53,6 @@ schema:
       unique: false
       enum:
       - ''
-      - '2021-05-11'
-      - '2022-12-09'
-      - '2023-08-18'
     example: ''
   - name: category
     type: string
@@ -82,19 +76,19 @@ schema:
     type: string
     description: Name of the MP
     constraints:
-      unique: false
+      unique: true
     example: Dame Nia Griffith
   - name: mnis_id
     type: integer
     description: Unique identifier for the MP
     constraints:
-      unique: false
+      unique: true
     example: 39
   - name: twfy_id
     type: string
     description: TWFY identifier for the MP
     constraints:
-      unique: false
+      unique: true
     example: '10632'
   - name: job_title
     type: string
@@ -104,7 +98,6 @@ schema:
       enum:
       - Account Executive
       - Associate Director
-      - Consultant
       - Director
       - Director and Head of Public Affairs
       - Director, Community Conversations Ltd.
@@ -134,7 +127,6 @@ schema:
       - Hanover Communications
       - Kanda Consultancy
       - Lodestone Communications; a public relations company
-      - Pagefield Communications
       - SEC Newgate UK
       - Self Employed
       - TB Cardew
@@ -143,7 +135,7 @@ schema:
     type: string
     description: Name of the family member
     constraints:
-      unique: false
+      unique: true
     example: Alastair Craft
   - name: end_date
     type: string
@@ -152,7 +144,6 @@ schema:
       unique: false
       enum:
       - ''
-      - '2023-05-12'
     example: ''
   - name: family_member_relationship_level
     type: string
@@ -177,6 +168,12 @@ schema:
       - Son
       - Spouse
     example: Brother
+  - name: link_1
+    type: string
+    description:
+    constraints:
+      unique: true
+    example: https://interests-api.parliament.uk/api/v1/Interests/1193
   - name: category_code
     type: string
     description: Code for the category
@@ -185,4 +182,4 @@ schema:
       enum:
       - '10'
     example: '10'
-hash: 2985bab0ffd166cd4e7ead3ccd542db5
+hash: 4d5701b936d35c4a1f45ccfcf93e273e
