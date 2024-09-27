@@ -62,7 +62,7 @@ def get_word_list(regmem_date: str):
 
     # combine all series of the dataframe into one big series
     combined = pd.concat(serieses)
-    processed_regmem = " ".join(combined.astype(str)) # type: ignore
+    processed_regmem = " ".join(combined.astype(str))  # type: ignore
 
     # all words that made it through to the final output
     processed_words = set(
