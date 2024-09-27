@@ -395,7 +395,7 @@ def process_data_2019():
         "data", "data_packages", "parliament_2019", "register_of_interests.parquet"
     )
     df = pd.read_parquet(origin)
-    mask = (df["latest_declaration"] >= "2019-12-12") & (
+    mask = (df["latest_declaration"] >= "2019-12-12") & ( # type: ignore
         df["latest_declaration"] < "2024-07-01"
     )  # type: ignore
     df[mask].to_parquet(dest, index=False)
