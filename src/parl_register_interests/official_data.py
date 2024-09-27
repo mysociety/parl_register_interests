@@ -1,8 +1,10 @@
+from datetime import date as date
+from datetime import datetime
 from pathlib import Path
+
 import pandas as pd
 from mysoc_validator import Popolo
 from mysoc_validator.models.popolo import Chamber, IdentifierScheme
-from datetime import date as date, datetime
 
 RAW_DATA = Path("data", "raw", "external", "official_data")
 
@@ -141,8 +143,8 @@ def process_register(register_date: date):
 
 
 def process_all_regmem():
-    for date in known_dates:
-        process_register(date)
+    for regmem_date in known_dates:
+        process_register(regmem_date)
 
 
 if __name__ == "__main__":
