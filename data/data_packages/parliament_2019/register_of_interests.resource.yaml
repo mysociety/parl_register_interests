@@ -48,12 +48,6 @@ schema:
     constraints:
       unique: false
     example: '2020-01-11'
-  - name: source_order
-    type: integer
-    description:
-    constraints:
-      unique: false
-    example: 202002101
   - name: new_in_latest
     type: boolean
     description: Whether this interest is new in the latest register (true/false)
@@ -83,4 +77,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: 548e6d60c64e80c6a474542a3b07337a
+hash: d0c3e8db1d8bf5147e7b54072f47b3ce

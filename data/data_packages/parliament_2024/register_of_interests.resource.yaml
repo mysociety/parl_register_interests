@@ -68,12 +68,6 @@ schema:
       - '2024-08-04'
       - '2024-09-02'
     example: '2024-08-04'
-  - name: source_order
-    type: integer
-    description:
-    constraints:
-      unique: false
-    example: 202408401
   - name: new_in_latest
     type: boolean
     description: Whether this interest is new in the latest register (true/false)
@@ -105,4 +99,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: dd132cdb9e6eee811bc8e491b7f60627
+hash: 88107bf1410024408813c41c697b5c07
