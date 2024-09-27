@@ -36,17 +36,6 @@ schema:
       unique: false
       enum:
       - ''
-      - '2015-06-04'
-      - '2016-01-19'
-      - '2016-02-29'
-      - '2016-03-15'
-      - '2016-04-18'
-      - '2016-04-20'
-      - '2016-04-21'
-      - '2016-05-16'
-      - '2016-06-03'
-      - '2016-06-10'
-      - '2016-08-01'
     example: ''
   - name: published_date
     type: string
@@ -54,13 +43,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2023-12-30'
-      - '2024-01-23'
-      - '2024-01-28'
-      - '2024-04-15'
-      - '2024-07-23'
-      - '2024-07-26'
-    example: '2023-12-30'
+      - ''
+    example: ''
   - name: updated_date
     type: string
     description: Date the interest was last updated
@@ -68,19 +52,6 @@ schema:
       unique: false
       enum:
       - ''
-      - '2015-05-20'
-      - '2015-06-04'
-      - '2015-06-29'
-      - '2017-01-05'
-      - '2017-07-07'
-      - '2019-04-16'
-      - '2020-10-08'
-      - '2021-11-18'
-      - '2023-11-14'
-      - '2024-02-14'
-      - '2024-04-15'
-      - '2024-07-23'
-      - '2024-07-26'
     example: ''
   - name: category
     type: string
@@ -187,6 +158,12 @@ schema:
       - Son
       - Spouse
     example: Brother
+  - name: api_link
+    type: string
+    description: Link to the API endpoint for the interest
+    constraints:
+      unique: true
+    example: https://interests-api.parliament.uk/api/v1/Interests/2686
   - name: category_code
     type: string
     description: Code for the category
@@ -195,4 +172,4 @@ schema:
       enum:
       - '9'
     example: '9'
-hash: 6f86d9bc3cc090b7bcb008229dee922a
+hash: 9670bd8188af4c31f0a59e7c9b1d9461

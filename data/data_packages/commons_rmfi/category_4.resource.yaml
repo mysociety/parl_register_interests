@@ -183,7 +183,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "A four night trip to Israel for my husband and I including\r\nflights\
+    example: "A four night trip to Israel for my husband and I including\nflights\
       \ (£989.74 for two return flights to Tel Aviv), accommodation, meals and visits\
       \ within Israel (£26,811.53)"
   - name: donors_1__value
@@ -315,10 +315,10 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights):\
-      \ £300 (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
-      \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
-      \nTotal: £1,150"
+    example: "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300\
+      \ (The Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
+      \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\nTotal:\
+      \ £1,150"
   - name: donors_4__value
     type: number
     description: Value of the payment
@@ -360,10 +360,10 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights):\
-      \ £300 (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
-      \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
-      \nTotal: £1,150"
+    example: "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300\
+      \ (The Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
+      \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\nTotal:\
+      \ £1,150"
   - name: donors_5__value
     type: number
     description: Value of the payment
@@ -402,4 +402,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 3c813bf629288dc3a4064dc2ad6e7c2f
+hash: 491c2a3393cdd1361b7b5f8078ff04a4

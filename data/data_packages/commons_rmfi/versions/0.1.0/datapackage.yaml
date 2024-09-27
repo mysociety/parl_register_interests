@@ -45,4 +45,4 @@ custom:
       exclude: none
       render: true
   change_log:
-    0.1.0: Don't need to increment, first version
+    0.1.0: 'New field(s) added to resource: api_link'

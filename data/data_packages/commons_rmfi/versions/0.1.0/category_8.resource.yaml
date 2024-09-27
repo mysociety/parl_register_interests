@@ -1,7 +1,7 @@
 title: Category 8
 description: Miscellaneous
 custom:
-  row_count: 807
+  row_count: 828
 path: category_8.parquet
 name: category_8
 profile: data-resource
@@ -35,18 +35,24 @@ schema:
     description: Date the interest was registered
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: published_date
     type: string
     description: Date the interest was published
     constraints:
       unique: false
-    example: '2022-12-17'
+      enum:
+      - ''
+    example: ''
   - name: updated_date
     type: string
     description: Date the interest was last updated
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: category
     type: string
@@ -72,6 +78,7 @@ schema:
       - plaid-cymru
       - reform
       - scottish-national-party
+      - sinn-fein
       - traditional-unionist-voice
       - uup
     example: conservative
@@ -130,6 +137,12 @@ schema:
       - Other
       - Unpaid role
     example: Financial interest or material benefit
+  - name: api_link
+    type: string
+    description: Link to the API endpoint for the interest
+    constraints:
+      unique: true
+    example: https://interests-api.parliament.uk/api/v1/Interests/10007
   - name: category_code
     type: string
     description: Category code of the interest
@@ -138,4 +151,4 @@ schema:
       enum:
       - '8'
     example: '8'
-hash: 2c224709e7e31c8b4841b235aa6b79ae
+hash: de2fc16c81924bc93f42afcd458ada22

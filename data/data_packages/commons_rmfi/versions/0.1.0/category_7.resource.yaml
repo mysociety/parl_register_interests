@@ -1,7 +1,7 @@
 title: Category 7
 description: Shareholdings
 custom:
-  row_count: 185
+  row_count: 190
 path: category_7.parquet
 name: category_7
 profile: data-resource
@@ -34,18 +34,24 @@ schema:
     description: Date the interest was registered
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: published_date
     type: string
     description: Date the interest was published
     constraints:
       unique: false
-    example: '2023-12-17'
+      enum:
+      - ''
+    example: ''
   - name: updated_date
     type: string
     description: Date the interest was last updated
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: category
     type: string
@@ -145,6 +151,12 @@ schema:
     constraints:
       unique: false
     example: DelegatedManagementCompany
+  - name: api_link
+    type: string
+    description: Link to the API endpoint for the interest
+    constraints:
+      unique: true
+    example: https://interests-api.parliament.uk/api/v1/Interests/10005
   - name: category_code
     type: string
     description: Category code
@@ -153,4 +165,4 @@ schema:
       enum:
       - '7'
     example: '7'
-hash: 908ae19eb5cbf2348cf627a999384007
+hash: abf131c257dca9f69adc076bf1b34eb8

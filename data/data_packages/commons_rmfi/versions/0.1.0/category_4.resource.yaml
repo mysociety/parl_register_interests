@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 224
+  row_count: 216
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -34,13 +34,17 @@ schema:
     description: Date the interest was registered
     constraints:
       unique: false
-    example: '2023-08-08'
+      enum:
+      - ''
+    example: ''
   - name: published_date
     type: string
     description: Date the interest was published
     constraints:
       unique: false
-    example: '2023-12-10'
+      enum:
+      - ''
+    example: ''
   - name: updated_date
     type: string
     description: Date the interest was last updated
@@ -48,14 +52,6 @@ schema:
       unique: false
       enum:
       - ''
-      - '2023-08-23'
-      - '2023-10-30'
-      - '2023-11-03'
-      - '2023-12-18'
-      - '2024-02-05'
-      - '2024-03-22'
-      - '2024-03-27'
-      - '2024-04-11'
     example: ''
   - name: category
     type: string
@@ -144,7 +140,7 @@ schema:
     description: Visit associated with an All-Party Parliamentary Group
     constraints:
       unique: false
-    example: APPG Against Antisemitism
+    example: APPG For Cyprus
   - name: donors
     type: number
     description: Number of donors
@@ -392,6 +388,12 @@ schema:
     constraints:
       unique: false
     example: Dubai
+  - name: api_link
+    type: string
+    description: Link to the API endpoint for the interest
+    constraints:
+      unique: true
+    example: https://interests-api.parliament.uk/api/v1/Interests/10168
   - name: category_code
     type: string
     description: Code for the category
@@ -400,4 +402,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: f68fede7f6ed2063ec7ced4fc6ee9b9a
+hash: 491c2a3393cdd1361b7b5f8078ff04a4
