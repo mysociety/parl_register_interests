@@ -19,7 +19,6 @@ def download_regmem():
 
 
 def fix_known_errors():
-
     # fix category formatting error
 
     folder = Path("data", "raw", "scrapedxml", "regmem")

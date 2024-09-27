@@ -83,7 +83,6 @@ class OrgExtractor:
         temp_file = Path(temp_dir, "nlp.tsv")
 
         with open(temp_file, "w") as f:
-
             for doc in self.nlp.pipe(
                 nlp_df["free_text_split"],
                 disable=["lemmatizer", "textcat"],
@@ -187,6 +186,7 @@ def get_data_from_xml(xml_path: Path, is_latest: bool) -> Iterable[dict[str, Any
         membername = person.get("membername", "")
         date = person.get("date")
         for category in person:
+            source_order = 1
             if category.tag == "record":
                 meta_items = [x.text for x in category.iter()]
                 if "Nil" in meta_items:
@@ -197,9 +197,10 @@ def get_data_from_xml(xml_path: Path, is_latest: bool) -> Iterable[dict[str, Any
                         "category_name": "No declared interests",
                         "free_text": "Nil interests were declared",
                         "latest_entry": is_latest,
+                        "source_order": source_order,
                     }
+                    source_order += 1
                 else:
-
                     for item in category:
                         # check this isn't just the MP name
                         if is_mp_name_line(item.text or ""):
@@ -215,8 +216,9 @@ def get_data_from_xml(xml_path: Path, is_latest: bool) -> Iterable[dict[str, Any
                                     "category_name": "Uncatagorised (format error)",
                                     "free_text": text,
                                     "latest_entry": is_latest,
+                                    "source_order": source_order,
                                 }
-
+                                source_order += 1
             if category.tag == "item":
                 if category.text and "not taken his heat" in category.text:
                     yield {
@@ -226,7 +228,9 @@ def get_data_from_xml(xml_path: Path, is_latest: bool) -> Iterable[dict[str, Any
                         "category_name": "No declared interests",
                         "free_text": "Not taken heat",
                         "latest_entry": is_latest,
+                        "source_order": source_order,
                     }
+                    source_order += 1
                 else:
                     # get text from this item and all children
                     text = "".join(category.itertext())
@@ -238,7 +242,9 @@ def get_data_from_xml(xml_path: Path, is_latest: bool) -> Iterable[dict[str, Any
                             "category_name": "Uncatagorised (format error)",
                             "free_text": text,
                             "latest_entry": is_latest,
+                            "source_order": source_order,
                         }
+                        source_order += 1
 
             if category.tag != "category":
                 continue
@@ -262,7 +268,9 @@ def get_data_from_xml(xml_path: Path, is_latest: bool) -> Iterable[dict[str, Any
                         "category_name": category_name,
                         "free_text": free_text,
                         "latest_entry": is_latest,
+                        "source_order": source_order,
                     }
+                    source_order += 1
 
 
 def get_latest_file() -> Path:
@@ -289,6 +297,8 @@ def reduce_data() -> pd.DataFrame:
         "group_same_entry.sql",
         parquet_path=parquet_path,
     ).df()
+
+    df = df.drop(columns=["source_order"])
 
     # move member_name column to after public_whip_id column
     cols = list(df.columns)
@@ -354,7 +364,6 @@ def add_orgs_data():
 
 
 class data_processor:
-
     iteration = 0
 
     @classmethod
@@ -386,7 +395,9 @@ def process_data_2019():
         "data", "data_packages", "parliament_2019", "register_of_interests.parquet"
     )
     df = pd.read_parquet(origin)
-    mask = (df["latest_declaration"] >= "2019-12-12") & (df["latest_declaration"] < "2024-07-01")  # type: ignore
+    mask = (df["latest_declaration"] >= "2019-12-12") & (
+        df["latest_declaration"] < "2024-07-01"
+    )  # type: ignore
     df[mask].to_parquet(dest, index=False)
 
 

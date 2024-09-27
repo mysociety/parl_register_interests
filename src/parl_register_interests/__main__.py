@@ -3,11 +3,9 @@ from .download import download_regmem
 from .process import (
     process_data_all_time,
     process_data_2019,
-    get_data_from_xml,
     process_data_2024,
 )
 from .official_data import process_all_regmem
-from pathlib import Path
 
 
 def download_and_build():

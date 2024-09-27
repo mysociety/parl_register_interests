@@ -37,7 +37,6 @@ def fix_snake_case(s: str) -> str:
 
 
 def process_register(register_date: date):
-
     str_date = register_date.strftime("%y%m%d")
 
     data_path = RAW_DATA / str_date
@@ -64,7 +63,6 @@ def process_register(register_date: date):
     collected_df = []
 
     for csv in data_path.glob("*.csv"):
-
         name = csv.stem.replace("PublishedInterest-", "").lower()
         df = pd.read_csv(csv)
 
@@ -111,7 +109,7 @@ def process_register(register_date: date):
         if "arose_on" in df.columns:
             date_columns.append("arose_on")
         for col in date_columns:
-            date_objs = pd.to_datetime(df[col], format="%d/%m/%Y", errors="ignore")
+            date_objs = pd.to_datetime(df[col], format="%d/%m/%Y", errors="ignore")  # type: ignore
             date_str = date_objs.apply(
                 lambda x: x.date().isoformat() if isinstance(x, datetime) else ""
             )
@@ -139,7 +137,7 @@ def process_register(register_date: date):
     collected_df = collected_df.sort_values("sort_tuple")  # type: ignore
     collected_df = collected_df.drop(columns=["sort_tuple"])
 
-    collected_df.to_parquet(package_dir / f"overall.parquet")
+    collected_df.to_parquet(package_dir / "overall.parquet")
 
 
 def process_all_regmem():
