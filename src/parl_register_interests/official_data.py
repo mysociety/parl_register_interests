@@ -8,7 +8,8 @@ from mysoc_validator.models.popolo import Chamber, IdentifierScheme
 
 RAW_DATA = Path("data", "raw", "external", "official_data")
 
-known_dates = [date(2024, 9, 2)]
+# ]date(2024, 9, 2)
+known_dates = [date(2024, 9, 30)]
 
 
 def fix_snake_case(s: str) -> str:
