@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 446
+  row_count: 466
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -95,11 +95,11 @@ schema:
       unique: false
     example: '10001'
   - name: appg
-    type: string
+    type: number
     description: Payment made via an All-Party Parliamentary Group
     constraints:
       unique: false
-    example: APPG on Malaria and Neglected Tropical Diseases
+    example: ''
   - name: payment_type
     type: string
     description: Type of payment
@@ -160,7 +160,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: 1 Bedford Row, London WC1R 4BU
+    example: 1 - 3 Cockburn Street, Edinburgh EH1 1QB
   - name: donor_status
     type: string
     description: Type of donor
@@ -225,4 +225,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 79d86212cd230c20ced2a553746fdc2b
+hash: 92620ac332131ed5d9579cb0ea3cbbe2

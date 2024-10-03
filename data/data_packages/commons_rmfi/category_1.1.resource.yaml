@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 395
+  row_count: 416
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -68,7 +68,6 @@ schema:
       unique: false
       enum:
       - conservative
-      - dup
       - green
       - labour
       - labourco-operative
@@ -226,4 +225,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 840fb1971a1379df68ff225d2e82f129
+hash: 0b6c94272ac321b0367a936eae34a6f5

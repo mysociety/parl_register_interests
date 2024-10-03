@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 2617
+  row_count: 2658
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 32
+    example: 39
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -237,4 +237,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: 154f2ff6a206906d0a72bacb3d536f60
+hash: 366564e3b2912431a976633aa190c53d
