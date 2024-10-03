@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 216
+  row_count: 204
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -108,7 +108,7 @@ schema:
     description: First country visited
     constraints:
       unique: false
-    example: Australia
+    example: Armenia
   - name: visit_locations_1__destination
     type: string
     description: First destination visited
@@ -128,13 +128,13 @@ schema:
     description: Start date of the visit
     constraints:
       unique: false
-    example: '2022-08-30'
+    example: '2023-07-09'
   - name: end_date
     type: string
     description: End date of the visit
     constraints:
       unique: false
-    example: '2022-09-03'
+    example: '2023-07-13'
   - name: appg
     type: string
     description: Visit associated with an All-Party Parliamentary Group
@@ -183,7 +183,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "A four night trip to Israel for my husband and I including\nflights\
+    example: "A four night trip to Israel for my husband and I including\r\nflights\
       \ (£989.74 for two return flights to Tel Aviv), accommodation, meals and visits\
       \ within Israel (£26,811.53)"
   - name: donors_1__value
@@ -201,6 +201,30 @@ schema:
       - false
       - true
     example: 'False'
+  - name: visit_locations_2__country
+    type: string
+    description: Second country visited
+    constraints:
+      unique: false
+    example: Azerbaijan
+  - name: visit_locations_2__destination
+    type: string
+    description: Second destination visited
+    constraints:
+      unique: false
+    example: Dubai
+  - name: visit_locations_3__country
+    type: string
+    description: Third country visited
+    constraints:
+      unique: false
+    example: Georgia
+  - name: visit_locations_3__destination
+    type: string
+    description: Third destination visited
+    constraints:
+      unique: false
+    example: Tbilisi airport (transfer)
   - name: donors_2__name
     type: string
     description: Name of the donor
@@ -315,10 +339,10 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300\
-      \ (The Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-      \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\nTotal:\
-      \ £1,150"
+    example: "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights):\
+      \ £300 (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+      \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+      \nTotal: £1,150"
   - name: donors_4__value
     type: number
     description: Value of the payment
@@ -360,10 +384,10 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300\
-      \ (The Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-      \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\nTotal:\
-      \ £1,150"
+    example: "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights):\
+      \ £300 (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+      \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+      \nTotal: £1,150"
   - name: donors_5__value
     type: number
     description: Value of the payment
@@ -376,18 +400,6 @@ schema:
     constraints:
       unique: false
     example: 'True'
-  - name: visit_locations_2__country
-    type: string
-    description: Second country visited
-    constraints:
-      unique: false
-    example: El Salvador
-  - name: visit_locations_2__destination
-    type: string
-    description: Second destination visited
-    constraints:
-      unique: false
-    example: Dubai
   - name: api_link
     type: string
     description: Link to the API endpoint for the interest
@@ -402,4 +414,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 491c2a3393cdd1361b7b5f8078ff04a4
+hash: e1ca1e32eae343501d6accc76127d4c5
