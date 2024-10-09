@@ -333,6 +333,21 @@ def get_all_data(quiet: bool = False) -> Iterable[pd.DataFrame]:
             df.groupby(["public_whip_id", "category_name", "free_text"]).cumcount() + 1
         )
 
+        # we're getting '(Registered 31 July 2024)' seperated into a new row, when it should belong to the item previous to it
+        # where this exists, add it to the previous item free_text
+
+        for index, row in df.iterrows():
+            # if last row, skip
+            if index == len(df) - 1:
+                continue
+            int_index = int(index)  # type: ignore
+            next_row = df["free_text"].iloc[int_index + 1]
+            if next_row.startswith("(Registered"):
+                df.at[index, "free_text"] += " " + next_row
+
+        # delete all rows that start with '(Registered'
+        df = df[~df["free_text"].str.startswith("(Registered")]
+
         yield df
 
 
