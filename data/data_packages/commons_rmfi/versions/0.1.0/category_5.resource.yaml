@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 6
+  row_count: 8
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -23,6 +23,8 @@ schema:
       - 3242
       - 4566
       - 9052
+      - 10723
+      - 10782
     example: 591
   - name: parent_interest_id
     type: number
@@ -37,7 +39,9 @@ schema:
       unique: false
       enum:
       - Association of Marshall Scholars - £465.00
+      - Ayita LLC - £836.00
       - HM Government of Gibraltar - £1,275.00
+      - Mr Ronald Chagoury - £1,440.00
       - Stripe Press Inc - £414.00
       - The Lord (Philip) Harris of Peckham - £5,000.00
       - Viagogo - £838.80
@@ -91,7 +95,9 @@ schema:
       unique: true
       enum:
       - Alison Griffiths
+      - Angela Rayner
       - Dame Harriett Baldwin
+      - Helen Grant
       - Mr Richard Holden
       - Neil O'Brien
       - Stephen Doughty
@@ -103,13 +109,15 @@ schema:
     constraints:
       unique: true
       enum:
+      - 4018
       - 4107
       - 4264
+      - 4356
       - 4653
       - 4679
       - 4813
       - 5203
-    example: 4107
+    example: 4018
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -117,7 +125,9 @@ schema:
       unique: true
       enum:
       - '24785'
+      - '24796'
       - '25166'
+      - '25429'
       - '25658'
       - '25679'
       - '25893'
@@ -144,16 +154,21 @@ schema:
     constraints:
       unique: true
       enum:
+      - Accommodation at the Peninsula Hotel, 19 Av. Kléber, 75116 Paris, France -
+        value €1700 Euro - equivalent to GBP @1.18 = £1440.  I was accompanied by
+        my husband.
       - Associated with participating in a cross-party conference, accommodation (£315)
         and hospitality (£150)
       - Associated with taking part in the US-UK legislative exchange in Oxford, hospitality
         and accommodation
       - Four nights' accommodation during the Labour Party Conference
+      - Hospitality - visit to DJ booth, Hï Ibiza
       - Meals and accommodation at small group retreat in Guildford
       - One ticket with hospitality for England v New Zealand one day cricket match
       - for general election campaign expenditure
-    example: Associated with participating in a cross-party conference, accommodation
-      (£315) and hospitality (£150)
+    example: Accommodation at the Peninsula Hotel, 19 Av. Kléber, 75116 Paris, France
+      - value €1700 Euro - equivalent to GBP @1.18 = £1440.  I was accompanied by
+      my husband.
   - name: value
     type: number
     description: Value of the payment (£)
@@ -162,8 +177,10 @@ schema:
       enum:
       - 414.0
       - 465.0
+      - 836.0
       - 838.8
       - 1275.0
+      - 1440.0
       - 5000.0
     example: 414.0
   - name: received_date
@@ -177,6 +194,8 @@ schema:
       - '2024-01-13'
       - '2024-03-04'
       - '2024-06-11'
+      - '2024-08-28'
+      - '2024-09-02'
     example: '2023-09-15'
   - name: accepted_date
     type: string
@@ -189,6 +208,8 @@ schema:
       - '2024-01-13'
       - '2024-03-04'
       - '2024-06-11'
+      - '2024-08-28'
+      - '2024-09-02'
     example: '2023-09-15'
   - name: received_end_date
     type: string
@@ -200,6 +221,7 @@ schema:
       - '2023-10-11'
       - '2024-01-14'
       - '2024-03-06'
+      - '2024-09-03'
     example: ''
   - name: is_sole_beneficiary
     type: boolean
@@ -207,8 +229,9 @@ schema:
     constraints:
       unique: false
       enum:
+      - false
       - true
-    example: 'True'
+    example: 'False'
   - name: donor_name
     type: string
     description: Name of the donor
@@ -216,7 +239,9 @@ schema:
       unique: false
       enum:
       - Association of Marshall Scholars
+      - Ayita LLC
       - HM Government of Gibraltar
+      - Mr Ronald Chagoury
       - Stripe Press Inc
       - The Lord (Philip) Harris of Peckham
       - Viagogo
@@ -225,7 +250,7 @@ schema:
     type: string
     description: Public address of the donor
     constraints:
-      unique: true
+      unique: false
     example: 168 Prospect Park SW, Brooklyn, NY 11218, USA
   - name: donor_status
     type: string
@@ -281,13 +306,15 @@ schema:
     constraints:
       unique: true
       enum:
+      - https://interests-api.parliament.uk/api/v1/Interests/10723
+      - https://interests-api.parliament.uk/api/v1/Interests/10782
       - https://interests-api.parliament.uk/api/v1/Interests/3238
       - https://interests-api.parliament.uk/api/v1/Interests/3242
       - https://interests-api.parliament.uk/api/v1/Interests/4566
       - https://interests-api.parliament.uk/api/v1/Interests/591
       - https://interests-api.parliament.uk/api/v1/Interests/596
       - https://interests-api.parliament.uk/api/v1/Interests/9052
-    example: https://interests-api.parliament.uk/api/v1/Interests/3238
+    example: https://interests-api.parliament.uk/api/v1/Interests/10723
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -296,4 +323,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 600315f2a9e40417ef25765a904a44db
+hash: 493c27df836355b658cbd1f90e2cbeec

@@ -1,7 +1,7 @@
 title: Overall Register of Interests
 description: Register of interests, text summaries by category,
 custom:
-  row_count: 5605
+  row_count: 5690
   dataset_order: -10
 path: overall.parquet
 name: overall
@@ -17,7 +17,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 32
+    example: 39
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -116,4 +116,4 @@ schema:
     constraints:
       unique: false
     example: 1900 Club - £2,500.00
-hash: 16f06becf9cab26bd528ee7aba02e944
+hash: 52d9681a14c5b8d7cd5855def5aa0aaf

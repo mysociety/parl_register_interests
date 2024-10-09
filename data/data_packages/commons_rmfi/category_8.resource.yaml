@@ -1,7 +1,7 @@
 title: Category 8
 description: Miscellaneous
 custom:
-  row_count: 828
+  row_count: 837
 path: category_8.parquet
 name: category_8
 profile: data-resource
@@ -79,6 +79,7 @@ schema:
       - reform
       - scottish-national-party
       - sinn-fein
+      - social-democratic-and-labour-party
       - traditional-unionist-voice
       - uup
     example: conservative
@@ -151,4 +152,4 @@ schema:
       enum:
       - '8'
     example: '8'
-hash: de2fc16c81924bc93f42afcd458ada22
+hash: cdf9c873654ebd181a70652ead23ade0
