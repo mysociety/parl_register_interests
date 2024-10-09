@@ -7,8 +7,9 @@ from typing import Any, Iterable
 import pandas as pd
 import rich
 import spacy
-from data_common.db import duck_query
 from tqdm import tqdm
+
+from data_common.db import duck_query
 
 from .validate import is_mp_name_line, test_all_content_present
 
@@ -298,7 +299,7 @@ def reduce_data() -> pd.DataFrame:
         parquet_path=parquet_path,
     ).df()
 
-    df = df.drop(columns=["source_order"])
+    df = df.drop(columns=["source_order", "dup_count"])
 
     # move member_name column to after public_whip_id column
     cols = list(df.columns)
@@ -324,7 +325,15 @@ def get_all_data(quiet: bool = False) -> Iterable[pd.DataFrame]:
         if not quiet:
             rich.print(f"[blue]Processing {file}[/blue]")
         data = get_data_from_xml(file, is_latest=file == latest)
-        yield pd.DataFrame(data)  # type: ignore
+        df = pd.DataFrame(data)
+        # we want to add a dup_count based on public_whip_id, category_name and free_text
+        # the purpose of this is preserving items that are correct dupes within the same register
+        # but not across registers
+        df["dup_count"] = df.groupby(["public_whip_id", "category_name", "free_text"])[
+            "free_text"
+        ].transform("count")
+
+        yield df
 
 
 def get_all_data_as_parquet():

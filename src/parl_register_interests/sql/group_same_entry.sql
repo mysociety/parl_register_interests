@@ -18,6 +18,7 @@ SELECT
     t.public_whip_id as public_whip_id,
     t.category_name as category_name,
     t.free_text as free_text,
+    t.dup_count as dup_count,
     MIN(lm.member_name) AS member_name,
     MIN(t.registry_date) AS earliest_declaration,
     MAX(t.registry_date) AS latest_declaration,
@@ -33,6 +34,7 @@ GROUP BY
     lm.member_name,
     t.category_name,
     t.free_text,
+    t.dup_count
 ORDER BY
     t.public_whip_id,
     latest_declaration,
