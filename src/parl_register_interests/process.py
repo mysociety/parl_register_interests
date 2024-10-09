@@ -329,9 +329,9 @@ def get_all_data(quiet: bool = False) -> Iterable[pd.DataFrame]:
         # we want to add a dup_count based on public_whip_id, category_name and free_text
         # the purpose of this is preserving items that are correct dupes within the same register
         # but not across registers
-        df["dup_count"] = df.groupby(["public_whip_id", "category_name", "free_text"])[
-            "free_text"
-        ].transform("count")
+        df["dup_count"] = (
+            df.groupby(["public_whip_id", "category_name", "free_text"]).cumcount() + 1
+        )
 
         yield df
 
