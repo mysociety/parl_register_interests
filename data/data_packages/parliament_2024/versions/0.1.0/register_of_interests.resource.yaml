@@ -1,7 +1,7 @@
 title: Register of Members Interests (latest register)
 description: Register of members interests with basic NLP extraction
 custom:
-  row_count: 6122
+  row_count: 6325
 path: register_of_interests.parquet
 name: register_of_interests
 profile: data-resource
@@ -68,6 +68,7 @@ schema:
       - '2024-08-04'
       - '2024-09-02'
       - '2024-09-30'
+      - '2024-10-14'
     example: '2024-08-04'
   - name: new_in_latest
     type: boolean
@@ -100,4 +101,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: 032c3340ce94a170b648700bc45d44b5
+hash: f4de8a3750cbcd4e6a66bf83c4cdc40d
