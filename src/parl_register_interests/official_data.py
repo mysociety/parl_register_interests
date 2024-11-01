@@ -153,8 +153,10 @@ def download_reg_on_date(register_date: date, force: bool = False):
 
     if not force and dest_folder.exists():
         return
-    # use MYSOC_USER_AGENT env var to identify ourselves
-    headers = {"User-Agent": os.environ.get("MYSOC_USER_AGENT", "")}
+    user_agent = os.environ.get("MYSOC_USER_AGENT")
+    if not user_agent:
+        raise ValueError("Please set the MYSOC_USER_AGENT environment variable")
+    headers = {"User-Agent": user_agent}
     print(f"Downloading {url} to {zip_path}")
     with httpx.Client() as client:
         response = client.get(url, headers=headers)
