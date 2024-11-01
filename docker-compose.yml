@@ -7,3 +7,5 @@ services:
     working_dir: /workspaces/parl_register_interests
     volumes:
       - ./:/workspaces/parl_register_interests/
+    environment:
+      - MYSOC_USER_AGENT=${MYSOC_USER_AGENT}
