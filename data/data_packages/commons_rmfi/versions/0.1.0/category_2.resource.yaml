@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 2658
+  row_count: 2722
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 39
+    example: '39'
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -90,7 +90,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: 39
+    example: '39'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -129,7 +129,7 @@ schema:
     description: Value of the donation
     constraints:
       unique: false
-    example: 133.92
+    example: '133.92'
   - name: received_date
     type: string
     description: Date the payment was received
@@ -237,4 +237,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: 0c2eacbef79919d426c9e7f905187ec9
+hash: d5ebcdea079ae7a8392f0d32e0328487

@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 8
+  row_count: 7
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -22,10 +22,9 @@ schema:
       - 3238
       - 3242
       - 4566
-      - 9052
       - 10723
       - 10782
-    example: 591
+    example: '591'
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -43,7 +42,6 @@ schema:
       - HM Government of Gibraltar - £1,275.00
       - Mr Ronald Chagoury - £1,440.00
       - Stripe Press Inc - £414.00
-      - The Lord (Philip) Harris of Peckham - £5,000.00
       - Viagogo - £838.80
     example: Association of Marshall Scholars - £465.00
   - name: registration_date
@@ -94,7 +92,6 @@ schema:
     constraints:
       unique: true
       enum:
-      - Alison Griffiths
       - Angela Rayner
       - Dame Harriett Baldwin
       - Helen Grant
@@ -102,7 +99,7 @@ schema:
       - Neil O'Brien
       - Stephen Doughty
       - Stephen Morgan
-    example: Alison Griffiths
+    example: Angela Rayner
   - name: mnis_id
     type: integer
     description: Parliamentary ID of the MP
@@ -116,8 +113,7 @@ schema:
       - 4653
       - 4679
       - 4813
-      - 5203
-    example: 4018
+    example: '4018'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -131,7 +127,6 @@ schema:
       - '25658'
       - '25679'
       - '25893'
-      - '26536'
     example: '24785'
   - name: appg
     type: number
@@ -145,9 +140,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - Cash
       - InKind
-    example: Cash
+    example: InKind
   - name: payment_description
     type: string
     description: Description of the payment
@@ -156,7 +150,7 @@ schema:
       enum:
       - Accommodation at the Peninsula Hotel, 19 Av. Kléber, 75116 Paris, France -
         value €1700 Euro - equivalent to GBP @1.18 = £1440.  I was accompanied by
-        my husband.
+        my husband
       - Associated with participating in a cross-party conference, accommodation (£315)
         and hospitality (£150)
       - Associated with taking part in the US-UK legislative exchange in Oxford, hospitality
@@ -165,10 +159,9 @@ schema:
       - Hospitality - visit to DJ booth, Hï Ibiza
       - Meals and accommodation at small group retreat in Guildford
       - One ticket with hospitality for England v New Zealand one day cricket match
-      - for general election campaign expenditure
     example: Accommodation at the Peninsula Hotel, 19 Av. Kléber, 75116 Paris, France
       - value €1700 Euro - equivalent to GBP @1.18 = £1440.  I was accompanied by
-      my husband.
+      my husband
   - name: value
     type: number
     description: Value of the payment (£)
@@ -181,8 +174,7 @@ schema:
       - 838.8
       - 1275.0
       - 1440.0
-      - 5000.0
-    example: 414.0
+    example: '414.0'
   - name: received_date
     type: string
     description: Date the payment was received
@@ -193,7 +185,6 @@ schema:
       - '2023-10-08'
       - '2024-01-13'
       - '2024-03-04'
-      - '2024-06-11'
       - '2024-08-28'
       - '2024-09-02'
     example: '2023-09-15'
@@ -207,7 +198,6 @@ schema:
       - '2023-10-08'
       - '2024-01-13'
       - '2024-03-04'
-      - '2024-06-11'
       - '2024-08-28'
       - '2024-09-02'
     example: '2023-09-15'
@@ -243,14 +233,13 @@ schema:
       - HM Government of Gibraltar
       - Mr Ronald Chagoury
       - Stripe Press Inc
-      - The Lord (Philip) Harris of Peckham
       - Viagogo
     example: Association of Marshall Scholars
   - name: donor_public_address
     type: string
     description: Public address of the donor
     constraints:
-      unique: false
+      unique: true
     example: 168 Prospect Park SW, Brooklyn, NY 11218, USA
   - name: donor_status
     type: string
@@ -313,7 +302,6 @@ schema:
       - https://interests-api.parliament.uk/api/v1/Interests/4566
       - https://interests-api.parliament.uk/api/v1/Interests/591
       - https://interests-api.parliament.uk/api/v1/Interests/596
-      - https://interests-api.parliament.uk/api/v1/Interests/9052
     example: https://interests-api.parliament.uk/api/v1/Interests/10723
   - name: category_code
     type: string
@@ -323,4 +311,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 493c27df836355b658cbd1f90e2cbeec
+hash: 608e6f6fc19a63260206ea31252e2acf

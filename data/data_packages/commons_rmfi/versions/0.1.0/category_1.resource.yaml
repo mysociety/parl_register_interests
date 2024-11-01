@@ -1,7 +1,7 @@
 title: Category 1
 description: Employment and earnings
 custom:
-  row_count: 462
+  row_count: 468
 path: category_1.parquet
 name: category_1
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 3636
+    example: '3636'
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -90,7 +90,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: 40
+    example: '40'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -181,4 +181,4 @@ schema:
       enum:
       - '1'
     example: '1'
-hash: 0fe2d59664f77a3a6915a5f14a4c2ae1
+hash: 0de8e1831fa09d6554a95cc402c75946

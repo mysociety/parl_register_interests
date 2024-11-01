@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 2686
+    example: '2686'
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -84,7 +84,7 @@ schema:
     description: Unique identifier for the MP
     constraints:
       unique: true
-    example: 55
+    example: '55'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -172,4 +172,4 @@ schema:
       enum:
       - '9'
     example: '9'
-hash: 62e717811f708efbed0ab1b6f415ff6f
+hash: 16153422e2c11d1868d08ee1c287fcc2

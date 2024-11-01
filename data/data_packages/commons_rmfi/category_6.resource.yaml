@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 2170
+    example: '2170'
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -91,7 +91,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: 39
+    example: '39'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MPss
@@ -170,7 +170,7 @@ schema:
     description: Number of properties owned
     constraints:
       unique: false
-    example: 1.0
+    example: '1.0'
   - name: is_land
     type: boolean
     description: Is the property land
@@ -231,4 +231,4 @@ schema:
       enum:
       - '6'
     example: '6'
-hash: c60da5ffe03ad7f77ef5147686a57c92
+hash: c4864ebbfdcc302fe216cc461fe6db36
