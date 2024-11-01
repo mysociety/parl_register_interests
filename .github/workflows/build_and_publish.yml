@@ -26,7 +26,13 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: 'recursive'
-          
+
+      - name: Create dotenv
+        env:
+          MYSOC_USER_AGENT: ${{ secrets.MYSOC_USER_AGENT }}
+        run: |
+          echo "MYSOC_USER_AGENT=$MYSOC_USER_AGENT" >> .env
+
       - name: Run tests and try and build project
         uses: mysociety/run-in-devcontainer@v1
         with:

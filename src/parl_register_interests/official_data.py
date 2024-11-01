@@ -5,11 +5,12 @@ from pathlib import Path
 import pandas as pd
 from mysoc_validator import Popolo
 from mysoc_validator.models.popolo import Chamber, IdentifierScheme
+import os
+import zipfile
+
+import httpx
 
 RAW_DATA = Path("data", "raw", "external", "official_data")
-
-# ]date(2024, 9, 2)
-known_dates = [date(2024, 9, 30)]
 
 
 def fix_snake_case(s: str) -> str:
@@ -143,8 +144,50 @@ def process_register(register_date: date):
     collected_df.to_parquet(package_dir / "overall.parquet")
 
 
+def download_reg_on_date(register_date: date, force: bool = False):
+    date_str = register_date.strftime("%y%m%d")
+
+    url = f"https://publications.parliament.uk/pa/cm/cmregmem/{date_str}/{date_str}.zip"
+    zip_path = RAW_DATA / f"{date_str}.zip"
+    dest_folder = RAW_DATA / date_str
+
+    if not force and dest_folder.exists():
+        return
+    # use MYSOC_USER_AGENT env var to identify ourselves
+    headers = {"User-Agent": os.environ.get("MYSOC_USER_AGENT", "")}
+    print(f"Downloading {url} to {zip_path}")
+    with httpx.Client() as client:
+        response = client.get(url, headers=headers)
+        response.raise_for_status()
+
+        with open(zip_path, "wb") as f:
+            f.write(response.content)
+
+    with zipfile.ZipFile(zip_path, "r") as zip_ref:
+        zip_ref.extractall(dest_folder)
+
+    # remove the zip file
+    zip_path.unlink()
+
+
+def get_latest():
+    api_url = "https://interests-api.parliament.uk/api/v1/Registers?Take=20&Skip=0"
+
+    with httpx.Client() as client:
+        response = client.get(api_url)
+        response.raise_for_status()
+        data = response.json()
+
+    latest = data["items"][0]
+    published_date = latest["publishedDate"]
+    published_date = datetime.fromisoformat(published_date)
+    return published_date.date()
+
+
 def process_all_regmem():
+    known_dates = [get_latest()]
     for regmem_date in known_dates:
+        download_reg_on_date(regmem_date)
         process_register(regmem_date)
 
 
