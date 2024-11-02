@@ -45,4 +45,4 @@ custom:
       exclude: none
       render: true
   change_log:
-    0.1.0: 'Existing resource field(s) type changed: appg'
+    0.1.0: 'Minor change in data for resource(s): overall,category_2,category_3,category_4,category_5,category_8'
