@@ -92,6 +92,18 @@ schema:
     constraints:
       unique: true
     example: Alberto Costa
+  - name: mnis_id
+    type: integer
+    description: Unique identifier for the MP
+    constraints:
+      unique: true
+    example: '55'
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: true
+    example: '10045'
   - name: job_title
     type: string
     description: Job title of the family member

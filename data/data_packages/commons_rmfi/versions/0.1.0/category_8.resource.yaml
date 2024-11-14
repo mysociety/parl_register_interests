@@ -1,7 +1,7 @@
 title: Category 8
 description: Miscellaneous
 custom:
-  row_count: 837
+  row_count: 859
 path: category_8.parquet
 name: category_8
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 1220
+    example: '1220'
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -94,7 +94,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: 40
+    example: '40'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -152,4 +152,4 @@ schema:
       enum:
       - '8'
     example: '8'
-hash: cdf9c873654ebd181a70652ead23ade0
+hash: 22e13592df7c9e97318671475023aa2b

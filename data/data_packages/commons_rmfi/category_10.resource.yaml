@@ -18,6 +18,12 @@ schema:
     constraints:
       unique: true
     example: '1193'
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: ''
   - name: summary
     type: string
     description: Text summary of the interest
@@ -92,6 +98,18 @@ schema:
     constraints:
       unique: true
     example: Dame Nia Griffith
+  - name: mnis_id
+    type: integer
+    description: Unique identifier for the MP
+    constraints:
+      unique: true
+    example: '39'
+  - name: twfy_id
+    type: string
+    description: TWFY identifier for the MP
+    constraints:
+      unique: true
+    example: '10632'
   - name: job_title
     type: string
     description: Job title of the family member

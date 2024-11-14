@@ -1,7 +1,7 @@
 title: Category 7
 description: Shareholdings
 custom:
-  row_count: 191
+  row_count: 194
 path: category_7.parquet
 name: category_7
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 1330
+    example: '1330'
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -88,7 +88,7 @@ schema:
     description: Unique identifier for the MP
     constraints:
       unique: false
-    example: 40
+    example: '40'
   - name: twfy_id
     type: string
     description: TWFY identifier for the MP
@@ -144,7 +144,7 @@ schema:
     description: Organisation held on behalf of
     constraints:
       unique: false
-    example: Company is owned jointly with partner
+    example: Business with my wife
   - name: managed_by
     type: string
     description: Organisation managed by
@@ -165,4 +165,4 @@ schema:
       enum:
       - '7'
     example: '7'
-hash: 5fb878b98a49dc075c3a44e8285dfb5c
+hash: 157226d8e24bb427fa1ea58ae1925da6

@@ -80,6 +80,18 @@ schema:
     constraints:
       unique: false
     example: Adam Dance
+  - name: mnis_id
+    type: integer
+    description: Parliamentary ID of the MP
+    constraints:
+      unique: false
+    example: '40'
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: false
+    example: '10001'
   - name: arose_on
     type: string
     description: Date the interest arose

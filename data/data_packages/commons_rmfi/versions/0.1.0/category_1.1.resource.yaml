@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 416
+  row_count: 449
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -16,13 +16,13 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 3639
+    example: '3639'
   - name: parent_interest_id
     type: integer
     description: Unique identifier for the parent interest
     constraints:
       unique: false
-    example: 3636
+    example: '3636'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -87,7 +87,7 @@ schema:
     description: Parliament's unique identifier for the member
     constraints:
       unique: false
-    example: 40
+    example: '40'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID for the member
@@ -135,13 +135,13 @@ schema:
     description: Value of the payment (£)
     constraints:
       unique: false
-    example: 36.78
+    example: '36.78'
   - name: hours_worked
     type: number
     description: Hours worked for the payment
     constraints:
       unique: false
-    example: 0.0
+    example: '0.0'
   - name: hours_details
     type: string
     description: Details of the hours worked
@@ -210,7 +210,7 @@ schema:
     description: Details of the donatee
     constraints:
       unique: false
-    example: Fee allocated to my staffing budget.
+    example: Elizabeth Garrett Anderson School
   - name: api_link
     type: string
     description: Link to the API endpoint for the interest
@@ -225,4 +225,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 0b6c94272ac321b0367a936eae34a6f5
+hash: c23c7a15cf18eaa923169dc5b5dd75bc

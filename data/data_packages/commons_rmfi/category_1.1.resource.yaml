@@ -88,6 +88,18 @@ schema:
     constraints:
       unique: false
     example: Adam Thompson
+  - name: mnis_id
+    type: integer
+    description: Parliament's unique identifier for the member
+    constraints:
+      unique: false
+    example: '40'
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID for the member
+    constraints:
+      unique: false
+    example: '10001'
   - name: payment_received
     type: boolean
     description: Whether there was a payment received

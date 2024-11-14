@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 466
+  row_count: 510
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 582
+    example: '582'
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -87,7 +87,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: 39
+    example: '39'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -95,11 +95,11 @@ schema:
       unique: false
     example: '10001'
   - name: appg
-    type: number
+    type: string
     description: Payment made via an All-Party Parliamentary Group
     constraints:
       unique: false
-    example: ''
+    example: APPG on Beer
   - name: payment_type
     type: string
     description: Type of payment
@@ -114,14 +114,13 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: 2 tickets to the RHS Chelsea Flower Show Gala preview event and dinner
-      (valued at £185 each)
+    example: 2 Tickets to the Davis Cup in September 2024
   - name: value
     type: number
     description: Value of the payment
     constraints:
       unique: false
-    example: 22.5
+    example: '21.36'
   - name: received_date
     type: string
     description: Date the payment was received
@@ -225,4 +224,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 92620ac332131ed5d9579cb0ea3cbbe2
+hash: 73d40da4c22722a0750c8a7e92d6dc72
