@@ -1,7 +1,7 @@
 title: Category 7
 description: Shareholdings
 custom:
-  row_count: 194
+  row_count: 196
 path: category_7.parquet
 name: category_7
 profile: data-resource
@@ -17,42 +17,36 @@ schema:
     constraints:
       unique: true
     example: '1330'
-  - name: parent_interest_id
-    type: number
-    description: Unique identifier for the parent interest
-    constraints:
-      unique: false
-    example: ''
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: true
     example: Shares in 100MPH Events Limited (dormant)
-  - name: registration_date
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: ''
+  - name: registered
     type: string
     description: Date the interest was registered
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: published_date
+    example: '2012-12-13'
+  - name: published
     type: string
     description: Date the interest was published
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: updated_date
+    example: '2023-12-17'
+  - name: updated_1
     type: string
-    description: Date the interest was last updated
+    description: Date the interest was updated
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
+    example: '2015-06-02'
   - name: category
     type: string
     description: Category of the interest
@@ -61,6 +55,18 @@ schema:
       enum:
       - Shareholdings
     example: Shareholdings
+  - name: mnis_id
+    type: integer
+    description: Unique identifier for the MP
+    constraints:
+      unique: false
+    example: '40'
+  - name: twfy_id
+    type: string
+    description: TWFY identifier for the MP
+    constraints:
+      unique: false
+    example: '10103'
   - name: party
     type: string
     description: TWFY party of the MP
@@ -76,6 +82,7 @@ schema:
       - reform
       - scottish-national-party
       - sinn-fein
+      - unknown
     example: conservative
   - name: member
     type: string
@@ -83,18 +90,6 @@ schema:
     constraints:
       unique: false
     example: Abtisam Mohamed
-  - name: mnis_id
-    type: integer
-    description: Unique identifier for the MP
-    constraints:
-      unique: false
-    example: '40'
-  - name: twfy_id
-    type: string
-    description: TWFY identifier for the MP
-    constraints:
-      unique: false
-    example: '10103'
   - name: shareholding_threshold
     type: string
     description: Shareholding threshold
@@ -109,6 +104,8 @@ schema:
     description: Date the interest was registered
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: end_date
     type: string
@@ -117,15 +114,6 @@ schema:
       unique: false
       enum:
       - ''
-      - '2004-07-05'
-      - '2023-05-09'
-      - '2023-08-10'
-      - '2023-08-11'
-      - '2023-08-29'
-      - '2023-11-17'
-      - '2024-07-18'
-      - '2024-07-25'
-      - '2024-07-29'
     example: ''
   - name: organisation_name
     type: string
@@ -151,12 +139,24 @@ schema:
     constraints:
       unique: false
     example: DelegatedManagementCompany
-  - name: api_link
+  - name: link
     type: string
-    description: Link to the API endpoint for the interest
+    description: Link to the interest in the Parliament API
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10005
+  - name: updated_2
+    type: string
+    description: Date the second interest was updated
+    constraints:
+      unique: false
+    example: '2015-11-02'
+  - name: updated_3
+    type: string
+    description: Date the third interest was updated
+    constraints:
+      unique: false
+    example: '2024-01-22'
   - name: category_code
     type: string
     description: Category code
@@ -165,4 +165,4 @@ schema:
       enum:
       - '7'
     example: '7'
-hash: 157226d8e24bb427fa1ea58ae1925da6
+hash: 0609448c1a53ebb312813fa6bc798fb8

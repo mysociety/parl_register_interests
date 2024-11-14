@@ -1,7 +1,7 @@
 title: Overall Register of Interests
 description: Register of interests, text summaries by category,
 custom:
-  row_count: 5879
+  row_count: 5900
   dataset_order: -10
 path: overall.parquet
 name: overall
@@ -86,34 +86,10 @@ schema:
       - '8'
       - '9'
     example: '1'
-  - name: registration_date
-    type: string
-    description: Date the interest was registered
-    constraints:
-      unique: false
-      enum:
-      - ''
-    example: ''
-  - name: published_date
-    type: string
-    description: Date the interest was published
-    constraints:
-      unique: false
-      enum:
-      - ''
-    example: ''
-  - name: updated_date
-    type: string
-    description: Date the interest was last updated
-    constraints:
-      unique: false
-      enum:
-      - ''
-    example: ''
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: false
     example: 1900 Club - £2,500.00
-hash: 64258201261bed3012c63ecfaab01b45
+hash: 3623b3a9d597319b66dac465c4ead4c6

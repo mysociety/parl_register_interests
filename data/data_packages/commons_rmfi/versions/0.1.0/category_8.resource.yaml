@@ -1,7 +1,7 @@
 title: Category 8
 description: Miscellaneous
 custom:
-  row_count: 859
+  row_count: 883
 path: category_8.parquet
 name: category_8
 profile: data-resource
@@ -17,12 +17,6 @@ schema:
     constraints:
       unique: true
     example: '1220'
-  - name: parent_interest_id
-    type: number
-    description: Unique identifier for the parent interest
-    constraints:
-      unique: false
-    example: ''
   - name: summary
     type: string
     description: Text summary of the interest
@@ -30,30 +24,30 @@ schema:
       unique: false
     example: A 10% shareholding in WT IP Ltd.  The shareholding is below the threshold
       for registration.
-  - name: registration_date
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: ''
+  - name: registered
     type: string
     description: Date the interest was registered
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: published_date
+    example: '2012-12-16'
+  - name: published
     type: string
     description: Date the interest was published
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: updated_date
+    example: '2022-12-17'
+  - name: updated_1
     type: string
-    description: Date the interest was last updated
+    description: Date the interest was updated
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
+    example: '2015-05-19'
   - name: category
     type: string
     description: Category of the interest
@@ -62,33 +56,6 @@ schema:
       enum:
       - Miscellaneous
     example: Miscellaneous
-  - name: party
-    type: string
-    description: Political party of the MP
-    constraints:
-      unique: false
-      enum:
-      - conservative
-      - dup
-      - green
-      - independent
-      - labour
-      - labourco-operative
-      - liberal-democrat
-      - plaid-cymru
-      - reform
-      - scottish-national-party
-      - sinn-fein
-      - social-democratic-and-labour-party
-      - traditional-unionist-voice
-      - uup
-    example: conservative
-  - name: member
-    type: string
-    description: Name of the MP
-    constraints:
-      unique: false
-    example: Adam Dance
   - name: mnis_id
     type: integer
     description: Parliamentary ID of the MP
@@ -101,17 +68,33 @@ schema:
     constraints:
       unique: false
     example: '10001'
+  - name: party
+    type: string
+    description: Political party of the MP
+    constraints:
+      unique: false
+    example: conservative
+  - name: member
+    type: string
+    description: Name of the MP
+    constraints:
+      unique: false
+    example: Adam Dance
   - name: arose_on
     type: string
     description: Date the interest arose
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: end_date
     type: string
     description: Date the interest ended
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: donor_name
     type: string
@@ -138,12 +121,36 @@ schema:
       - Other
       - Unpaid role
     example: Financial interest or material benefit
-  - name: api_link
+  - name: link
     type: string
-    description: Link to the API endpoint for the interest
+    description: Link to the interest in the Parliament API
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10007
+  - name: updated_2
+    type: string
+    description: Date the second interest was updated
+    constraints:
+      unique: false
+    example: '2021-07-22'
+  - name: updated_3
+    type: string
+    description: Date the third interest was updated
+    constraints:
+      unique: false
+    example: '2022-09-28'
+  - name: updated_4
+    type: string
+    description: Date the fourth interest was updated
+    constraints:
+      unique: false
+    example: '2023-08-15'
+  - name: updated_5
+    type: string
+    description: Date the fifth interest was updated
+    constraints:
+      unique: false
+    example: '2024-07-11'
   - name: category_code
     type: string
     description: Category code of the interest
@@ -152,4 +159,4 @@ schema:
       enum:
       - '8'
     example: '8'
-hash: 22e13592df7c9e97318671475023aa2b
+hash: f5390d262289035c362f6a8c83a7fa67

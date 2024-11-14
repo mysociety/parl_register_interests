@@ -17,12 +17,6 @@ schema:
     constraints:
       unique: true
     example: '2170'
-  - name: parent_interest_id
-    type: number
-    description: Unique identifier for the parent interest
-    constraints:
-      unique: false
-    example: ''
   - name: summary
     type: string
     description: Text summary of the interest
@@ -98,18 +92,6 @@ schema:
     constraints:
       unique: false
     example: Adrian Ramsay
-  - name: mnis_id
-    type: integer
-    description: Parliamentary ID of the MP
-    constraints:
-      unique: false
-    example: '39'
-  - name: twfy_id
-    type: string
-    description: TheyWorkForYou ID of the MPss
-    constraints:
-      unique: false
-    example: '10119'
   - name: start_date
     type: string
     description: Date the interest started

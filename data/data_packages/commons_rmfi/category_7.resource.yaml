@@ -1,7 +1,7 @@
 title: Category 7
 description: Shareholdings
 custom:
-  row_count: 194
+  row_count: 196
 path: category_7.parquet
 name: category_7
 profile: data-resource
@@ -17,12 +17,6 @@ schema:
     constraints:
       unique: true
     example: '1330'
-  - name: parent_interest_id
-    type: number
-    description: Unique identifier for the parent interest
-    constraints:
-      unique: false
-    example: ''
   - name: summary
     type: string
     description: Text summary of the interest
@@ -96,18 +90,6 @@ schema:
     constraints:
       unique: false
     example: Abtisam Mohamed
-  - name: mnis_id
-    type: integer
-    description: Unique identifier for the MP
-    constraints:
-      unique: false
-    example: '40'
-  - name: twfy_id
-    type: string
-    description: TWFY identifier for the MP
-    constraints:
-      unique: false
-    example: '10103'
   - name: shareholding_threshold
     type: string
     description: Shareholding threshold

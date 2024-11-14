@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 510
+  row_count: 512
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -16,43 +16,37 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '582'
-  - name: parent_interest_id
-    type: number
-    description: Unique identifier for the parent interest
-    constraints:
-      unique: false
-    example: ''
+    example: '629'
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: false
     example: 3UK - £1,785.68
-  - name: registration_date
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: ''
+  - name: registered
     type: string
     description: Date the interest was registered
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: published_date
+    example: '2015-08-10'
+  - name: published
     type: string
     description: Date the interest was published
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: updated_date
+    example: '2023-03-09'
+  - name: updated_1
     type: string
-    description: Date the interest was last updated
+    description: Date the interest was updated
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
+    example: '2019-01-29'
   - name: category
     type: string
     description: Category of the interest
@@ -61,6 +55,18 @@ schema:
       enum:
       - Gifts, benefits and hospitality from UK sources
     example: Gifts, benefits and hospitality from UK sources
+  - name: mnis_id
+    type: integer
+    description: Parliamentary ID of the MP
+    constraints:
+      unique: false
+    example: '39'
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: false
+    example: '10001'
   - name: party
     type: string
     description: Political party of the MP
@@ -75,25 +81,15 @@ schema:
       - liberal-democrat
       - reform
       - scottish-national-party
+      - sinn-fein
+      - unknown
     example: conservative
   - name: member
     type: string
     description: Name of the MP
     constraints:
       unique: false
-    example: Adrian Ramsay
-  - name: mnis_id
-    type: integer
-    description: Parliamentary ID of the MP
-    constraints:
-      unique: false
-    example: '39'
-  - name: twfy_id
-    type: string
-    description: TheyWorkForYou ID of the MP
-    constraints:
-      unique: false
-    example: '10001'
+    example: Abtisam Mohamed
   - name: appg
     type: string
     description: Payment made via an All-Party Parliamentary Group
@@ -126,18 +122,24 @@ schema:
     description: Date the payment was received
     constraints:
       unique: false
-    example: '2002-01-01'
+      enum:
+      - ''
+    example: ''
   - name: accepted_date
     type: string
     description: Date the payment was accepted
     constraints:
       unique: false
-    example: '2002-01-01'
+      enum:
+      - ''
+    example: ''
   - name: received_end_date
     type: string
     description: End date of the payment
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: is_sole_beneficiary
     type: boolean
@@ -171,6 +173,7 @@ schema:
       - Individual
       - Limited Liability Partnership
       - Other
+      - Registered Party
       - Trade Union
       - Unincorporated association
     example: Company
@@ -209,13 +212,19 @@ schema:
     description: Other details of the donor
     constraints:
       unique: false
-    example: 'Charity number: 1108609'
-  - name: api_link
+    example: Charity (registration number SC006161)
+  - name: link
     type: string
-    description: Link to the API endpoint for the interest
+    description: Link to the interest in the Parliament API
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10009
+  - name: updated_2
+    type: string
+    description: Date the second interest was updated
+    constraints:
+      unique: false
+    example: '2023-01-11'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -224,4 +233,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 73d40da4c22722a0750c8a7e92d6dc72
+hash: d494ff2c806aabee20319fb3567529fa

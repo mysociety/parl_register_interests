@@ -92,12 +92,6 @@ schema:
     example: Abtisam Mohamed
   - name: appg
     type: string
-    description: TheyWorkForYou ID of the MP
-    constraints:
-      unique: false
-    example: '10001'
-  - name: appg
-    type: number
     description: Payment made via an All-Party Parliamentary Group
     constraints:
       unique: false

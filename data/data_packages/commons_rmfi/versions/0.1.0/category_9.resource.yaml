@@ -17,42 +17,43 @@ schema:
     constraints:
       unique: true
     example: '2686'
-  - name: parent_interest_id
-    type: number
-    description: Unique identifier for the parent interest
-    constraints:
-      unique: false
-    example: ''
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: true
     example: Alan Hodgson employed
-  - name: registration_date
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: ''
+  - name: registered
     type: string
     description: Date the interest was registered
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: published_date
+    example: '2015-06-04'
+  - name: published
     type: string
     description: Date the interest was published
     constraints:
       unique: false
       enum:
-      - ''
-    example: ''
-  - name: updated_date
+      - '2023-12-30'
+      - '2024-01-23'
+      - '2024-01-28'
+      - '2024-04-15'
+      - '2024-07-23'
+      - '2024-07-26'
+    example: '2023-12-30'
+  - name: updated_1
     type: string
-    description: Date the interest was last updated
+    description: Date the interest was updated
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
+    example: '2015-05-20'
   - name: category
     type: string
     description: Category of the interest
@@ -61,6 +62,18 @@ schema:
       enum:
       - Family members employed
     example: Family members employed
+  - name: mnis_id
+    type: integer
+    description: Unique identifier for the MP
+    constraints:
+      unique: true
+    example: '55'
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: true
+    example: '10045'
   - name: party
     type: string
     description: TWFY party_id
@@ -79,18 +92,6 @@ schema:
     constraints:
       unique: true
     example: Alberto Costa
-  - name: mnis_id
-    type: integer
-    description: Unique identifier for the MP
-    constraints:
-      unique: true
-    example: '55'
-  - name: twfy_id
-    type: string
-    description: TheyWorkForYou ID of the MP
-    constraints:
-      unique: true
-    example: '10045'
   - name: job_title
     type: string
     description: Job title of the family member
@@ -158,12 +159,24 @@ schema:
       - Son
       - Spouse
     example: Brother
-  - name: api_link
+  - name: link
     type: string
-    description: Link to the API endpoint for the interest
+    description: Link to the interest in the Parliament API
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/2686
+  - name: updated_2
+    type: string
+    description: Date the second interest was updated
+    constraints:
+      unique: false
+    example: '2017-06-30'
+  - name: updated_3
+    type: string
+    description: Date the third interest was updated
+    constraints:
+      unique: false
+    example: '2024-02-14'
   - name: category_code
     type: string
     description: Code for the category
@@ -172,4 +185,4 @@ schema:
       enum:
       - '9'
     example: '9'
-hash: 16153422e2c11d1868d08ee1c287fcc2
+hash: b285ba67d54fe5bf610a700162322548

@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 2722
+  row_count: 2747
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -17,42 +17,36 @@ schema:
     constraints:
       unique: true
     example: '39'
-  - name: parent_interest_id
-    type: number
-    description: Unique identifier for the parent interest
-    constraints:
-      unique: false
-    example: ''
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: false
     example: 1900 Club - £2,500.00
-  - name: registration_date
-    type: string
-    description: Date the interest was registered
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
     constraints:
       unique: false
-      enum:
-      - ''
     example: ''
-  - name: published_date
+  - name: registered
     type: string
-    description: Date the interest was published
+    description: Registered date
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: updated_date
+    example: '2022-08-22'
+  - name: published
     type: string
-    description: Date the interest was last updated
+    description: Published date
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
+    example: '2023-11-03'
+  - name: updated_1
+    type: string
+    description: Updated date
+    constraints:
+      unique: false
+    example: '2023-06-29'
   - name: category
     type: string
     description: Category of the interest
@@ -61,6 +55,18 @@ schema:
       enum:
       - Donations and other support (including loans) for activities as an MP
     example: Donations and other support (including loans) for activities as an MP
+  - name: mnis_id
+    type: integer
+    description: Parliamentary ID of the MP
+    constraints:
+      unique: false
+    example: '39'
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: false
+    example: '10001'
   - name: party
     type: string
     description: Political party of the MP
@@ -85,18 +91,6 @@ schema:
     constraints:
       unique: false
     example: Abtisam Mohamed
-  - name: mnis_id
-    type: integer
-    description: Parliamentary ID of the MP
-    constraints:
-      unique: false
-    example: '39'
-  - name: twfy_id
-    type: string
-    description: TheyWorkForYou ID of the MP
-    constraints:
-      unique: false
-    example: '10001'
   - name: donation_source
     type: string
     description: Source of the donation
@@ -143,12 +137,16 @@ schema:
     description: Date the payment was accepted
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: received_end_date
     type: string
     description: End date of the payment
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: is_sole_beneficiary
     type: boolean
@@ -223,12 +221,18 @@ schema:
     constraints:
       unique: false
     example: Group of Labour Gedling Borough Councillors (Gedling Borough Labour Group)
-  - name: api_link
+  - name: link
     type: string
-    description: Link to the API endpoint for the interest
+    description: Link to the interest in the Parliament API
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10000
+  - name: updated_2
+    type: string
+    description: Date the second interest was updated
+    constraints:
+      unique: false
+    example: '2023-12-22'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -237,4 +241,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: 0cbe15de0fe55ab6ac1157b1e7d888c0
+hash: 3ad138259ce975ec2aa807cea1a86ada

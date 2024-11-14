@@ -1,7 +1,7 @@
 title: Category 6
 description: Land and property (within or outside the UK)
 custom:
-  row_count: 216
+  row_count: 215
 path: category_6.parquet
 name: category_6
 profile: data-resource
@@ -17,42 +17,36 @@ schema:
     constraints:
       unique: true
     example: '2170'
-  - name: parent_interest_id
-    type: number
-    description: Unique identifier for the parent interest
-    constraints:
-      unique: false
-    example: ''
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: false
     example: Agricultural in Ballygarvin
-  - name: registration_date
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
+    constraints:
+      unique: false
+    example: ''
+  - name: registered
     type: string
     description: Date the interest was registered
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: published_date
+    example: '2011-12-22'
+  - name: published
     type: string
     description: Date the interest was published
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: updated_date
+    example: '2015-05-01'
+  - name: updated_1
     type: string
-    description: Date the interest was last updated
+    description: Date the interest was updated
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
+    example: '2014-11-24'
   - name: category
     type: string
     description: Category of the interest
@@ -61,6 +55,18 @@ schema:
       enum:
       - Land and property (within or outside the UK)
     example: Land and property (within or outside the UK)
+  - name: mnis_id
+    type: integer
+    description: Parliamentary ID of the MP
+    constraints:
+      unique: false
+    example: '39'
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MPss
+    constraints:
+      unique: false
+    example: '10119'
   - name: party
     type: string
     description: TWFY party id of the MP
@@ -86,23 +92,13 @@ schema:
     constraints:
       unique: false
     example: Adrian Ramsay
-  - name: mnis_id
-    type: integer
-    description: Parliamentary ID of the MP
-    constraints:
-      unique: false
-    example: '39'
-  - name: twfy_id
-    type: string
-    description: TheyWorkForYou ID of the MPss
-    constraints:
-      unique: false
-    example: '10119'
   - name: start_date
     type: string
     description: Date the interest started
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: end_date
     type: string
@@ -111,10 +107,6 @@ schema:
       unique: false
       enum:
       - ''
-      - '2023-09-22'
-      - '2024-07-18'
-      - '2024-07-21'
-      - '2024-08-09'
     example: ''
   - name: is_sole_owner
     type: boolean
@@ -154,6 +146,8 @@ schema:
     description: Date the rental income started
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: rental_income_end_date
     type: string
@@ -162,8 +156,6 @@ schema:
       unique: false
       enum:
       - ''
-      - '2024-07-17'
-      - '2024-07-31'
     example: ''
   - name: number_of_properties
     type: number
@@ -217,12 +209,24 @@ schema:
     constraints:
       unique: false
     example: Agricultural
-  - name: api_link
+  - name: link
     type: string
-    description: Link to the API endpoint for the interest
+    description: Link to the interest
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10004
+  - name: updated_2
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+    example: '2016-10-11'
+  - name: updated_3
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+    example: '2020-01-09'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -231,4 +235,4 @@ schema:
       enum:
       - '6'
     example: '6'
-hash: c4864ebbfdcc302fe216cc461fe6db36
+hash: 628a9ce7ced30da6a8f14253c8d5e4c8

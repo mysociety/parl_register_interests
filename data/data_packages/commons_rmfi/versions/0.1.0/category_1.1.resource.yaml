@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 449
+  row_count: 442
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -17,42 +17,36 @@ schema:
     constraints:
       unique: true
     example: '3639'
-  - name: parent_interest_id
-    type: integer
-    description: Unique identifier for the parent interest
-    constraints:
-      unique: false
-    example: '3636'
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: false
     example: Payment expected for services on 01 July 2022 - £4,331.96
-  - name: registration_date
-    type: string
-    description: Date the interest was registered
+  - name: parent_interest_id
+    type: integer
+    description: Unique identifier for the parent interest
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: published_date
+    example: '3636'
+  - name: registered
     type: string
-    description: Date the interest was published
+    description: registered date
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: updated_date
+    example: '2022-09-22'
+  - name: published
     type: string
-    description: Date the interest was last updated
+    description: published date
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
+    example: '2024-03-12'
+  - name: updated_1
+    type: string
+    description: updated date
+    constraints:
+      unique: false
+    example: '2024-08-27'
   - name: category
     type: string
     description: Category of the interest
@@ -61,6 +55,18 @@ schema:
       enum:
       - Employment and earnings - Ad hoc payments
     example: Employment and earnings - Ad hoc payments
+  - name: mnis_id
+    type: integer
+    description: Parliament's unique identifier for the member
+    constraints:
+      unique: false
+    example: '40'
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID for the member
+    constraints:
+      unique: false
+    example: '10001'
   - name: party
     type: string
     description: TWFY ID for the party as of this release date
@@ -82,18 +88,6 @@ schema:
     constraints:
       unique: false
     example: Adam Thompson
-  - name: mnis_id
-    type: integer
-    description: Parliament's unique identifier for the member
-    constraints:
-      unique: false
-    example: '40'
-  - name: twfy_id
-    type: string
-    description: TheyWorkForYou ID for the member
-    constraints:
-      unique: false
-    example: '10001'
   - name: payment_received
     type: boolean
     description: Whether there was a payment received
@@ -108,7 +102,9 @@ schema:
     description: Date the payment was received
     constraints:
       unique: false
-    example: '1994-04-12'
+      enum:
+      - ''
+    example: ''
   - name: job_title
     type: string
     description: Job the MP was paid for
@@ -135,7 +131,7 @@ schema:
     description: Value of the payment (£)
     constraints:
       unique: false
-    example: '36.78'
+    example: '50.0'
   - name: hours_worked
     type: number
     description: Hours worked for the payment
@@ -211,9 +207,9 @@ schema:
     constraints:
       unique: false
     example: Elizabeth Garrett Anderson School
-  - name: api_link
+  - name: link
     type: string
-    description: Link to the API endpoint for the interest
+    description: Link to the interest
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10033
@@ -225,4 +221,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: c23c7a15cf18eaa923169dc5b5dd75bc
+hash: 72a49375ad39d6cbfda01b481272035d
