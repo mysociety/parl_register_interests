@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 8
+  row_count: 5
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -17,21 +17,12 @@ schema:
     constraints:
       unique: true
       enum:
-      - 591
-      - 596
       - 3238
       - 3242
       - 4566
-      - 9052
       - 10723
       - 10782
-    example: 591
-  - name: parent_interest_id
-    type: number
-    description: Unique identifier for the parent interest
-    constraints:
-      unique: false
-    example: ''
+    example: '3238'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -40,35 +31,43 @@ schema:
       enum:
       - Association of Marshall Scholars - £465.00
       - Ayita LLC - £836.00
-      - HM Government of Gibraltar - £1,275.00
       - Mr Ronald Chagoury - £1,440.00
       - Stripe Press Inc - £414.00
-      - The Lord (Philip) Harris of Peckham - £5,000.00
-      - Viagogo - £838.80
     example: Association of Marshall Scholars - £465.00
-  - name: registration_date
-    type: string
-    description: Date the interest was registered
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
     constraints:
       unique: false
-      enum:
-      - ''
     example: ''
-  - name: published_date
+  - name: registered
     type: string
-    description: Date the interest was published
+    description: Registered date
+    constraints:
+      unique: true
+      enum:
+      - '2024-01-26'
+      - '2024-02-07'
+      - '2024-03-19'
+      - '2024-09-17'
+      - '2024-09-25'
+    example: '2024-01-26'
+  - name: published
+    type: string
+    description: Published date
     constraints:
       unique: false
       enum:
-      - ''
-    example: ''
-  - name: updated_date
-    type: string
-    description: Date the interest was last updated
+      - '2024-03-06'
+      - '2024-03-22'
+      - '2024-09-17'
+      - '2024-09-25'
+    example: '2024-03-06'
+  - name: updated_1
+    type: number
+    description: Updated date
     constraints:
       unique: false
-      enum:
-      - ''
     example: ''
   - name: category
     type: string
@@ -78,6 +77,30 @@ schema:
       enum:
       - Gifts and benefits from sources outside the UK
     example: Gifts and benefits from sources outside the UK
+  - name: mnis_id
+    type: integer
+    description: Parliamentary ID of the MP
+    constraints:
+      unique: true
+      enum:
+      - 4018
+      - 4107
+      - 4264
+      - 4356
+      - 4679
+    example: '4018'
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: true
+      enum:
+      - '24785'
+      - '24796'
+      - '25166'
+      - '25429'
+      - '25679'
+    example: '24785'
   - name: party
     type: string
     description: Political party of the MP
@@ -94,45 +117,12 @@ schema:
     constraints:
       unique: true
       enum:
-      - Alison Griffiths
       - Angela Rayner
       - Dame Harriett Baldwin
       - Helen Grant
-      - Mr Richard Holden
       - Neil O'Brien
       - Stephen Doughty
-      - Stephen Morgan
-    example: Alison Griffiths
-  - name: mnis_id
-    type: integer
-    description: Parliamentary ID of the MP
-    constraints:
-      unique: true
-      enum:
-      - 4018
-      - 4107
-      - 4264
-      - 4356
-      - 4653
-      - 4679
-      - 4813
-      - 5203
-    example: 4018
-  - name: twfy_id
-    type: string
-    description: TheyWorkForYou ID of the MP
-    constraints:
-      unique: true
-      enum:
-      - '24785'
-      - '24796'
-      - '25166'
-      - '25429'
-      - '25658'
-      - '25679'
-      - '25893'
-      - '26536'
-    example: '24785'
+    example: Angela Rayner
   - name: appg
     type: number
     description: Linked to an All-Party Parliamentary Group
@@ -145,9 +135,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - Cash
       - InKind
-    example: Cash
+    example: InKind
   - name: payment_description
     type: string
     description: Description of the payment
@@ -156,19 +145,16 @@ schema:
       enum:
       - Accommodation at the Peninsula Hotel, 19 Av. Kléber, 75116 Paris, France -
         value €1700 Euro - equivalent to GBP @1.18 = £1440.  I was accompanied by
-        my husband.
+        my husband
       - Associated with participating in a cross-party conference, accommodation (£315)
         and hospitality (£150)
       - Associated with taking part in the US-UK legislative exchange in Oxford, hospitality
         and accommodation
-      - Four nights' accommodation during the Labour Party Conference
       - Hospitality - visit to DJ booth, Hï Ibiza
       - Meals and accommodation at small group retreat in Guildford
-      - One ticket with hospitality for England v New Zealand one day cricket match
-      - for general election campaign expenditure
     example: Accommodation at the Peninsula Hotel, 19 Av. Kléber, 75116 Paris, France
       - value €1700 Euro - equivalent to GBP @1.18 = £1440.  I was accompanied by
-      my husband.
+      my husband
   - name: value
     type: number
     description: Value of the payment (£)
@@ -178,39 +164,24 @@ schema:
       - 414.0
       - 465.0
       - 836.0
-      - 838.8
-      - 1275.0
       - 1440.0
-      - 5000.0
-    example: 414.0
+    example: '414.0'
   - name: received_date
     type: string
     description: Date the payment was received
     constraints:
       unique: false
       enum:
-      - '2023-09-15'
-      - '2023-10-08'
-      - '2024-01-13'
-      - '2024-03-04'
-      - '2024-06-11'
-      - '2024-08-28'
-      - '2024-09-02'
-    example: '2023-09-15'
+      - ''
+    example: ''
   - name: accepted_date
     type: string
     description: Date the payment was accepted
     constraints:
       unique: false
       enum:
-      - '2023-09-15'
-      - '2023-10-08'
-      - '2024-01-13'
-      - '2024-03-04'
-      - '2024-06-11'
-      - '2024-08-28'
-      - '2024-09-02'
-    example: '2023-09-15'
+      - ''
+    example: ''
   - name: received_end_date
     type: string
     description: End date of the payment
@@ -218,10 +189,6 @@ schema:
       unique: false
       enum:
       - ''
-      - '2023-10-11'
-      - '2024-01-14'
-      - '2024-03-06'
-      - '2024-09-03'
     example: ''
   - name: is_sole_beneficiary
     type: boolean
@@ -240,23 +207,20 @@ schema:
       enum:
       - Association of Marshall Scholars
       - Ayita LLC
-      - HM Government of Gibraltar
       - Mr Ronald Chagoury
       - Stripe Press Inc
-      - The Lord (Philip) Harris of Peckham
-      - Viagogo
     example: Association of Marshall Scholars
   - name: donor_public_address
     type: string
     description: Public address of the donor
     constraints:
-      unique: false
+      unique: true
     example: 168 Prospect Park SW, Brooklyn, NY 11218, USA
   - name: donor_status
     type: string
     description: Type of donor
     constraints:
-      unique: false
+      unique: true
       enum:
       - Company
       - Friendly society
@@ -265,11 +229,11 @@ schema:
       - Unincorporated association
     example: Company
   - name: donor_company_name
-    type: string
+    type: number
     description: Name of the donor company
     constraints:
       unique: false
-    example: Viagogo
+    example: ''
   - name: donor_company_url
     type: number
     description: URL of the donor company
@@ -277,17 +241,17 @@ schema:
       unique: false
     example: ''
   - name: donor_company_identifier
-    type: string
+    type: number
     description: Identifier of the donor company
     constraints:
       unique: false
-    example: outside the UK
+    example: ''
   - name: donor_company_identifier_source
-    type: string
+    type: number
     description: Donor company identifier register
     constraints:
       unique: false
-    example: Companies House
+    example: ''
   - name: donor_trust_details
     type: number
     description: Details of the donor trust
@@ -300,9 +264,9 @@ schema:
     constraints:
       unique: false
     example: US non-profit endowment
-  - name: api_link
+  - name: link
     type: string
-    description: Link to the API endpoint for the interest
+    description: Link to the interest in the Parliament API
     constraints:
       unique: true
       enum:
@@ -311,9 +275,6 @@ schema:
       - https://interests-api.parliament.uk/api/v1/Interests/3238
       - https://interests-api.parliament.uk/api/v1/Interests/3242
       - https://interests-api.parliament.uk/api/v1/Interests/4566
-      - https://interests-api.parliament.uk/api/v1/Interests/591
-      - https://interests-api.parliament.uk/api/v1/Interests/596
-      - https://interests-api.parliament.uk/api/v1/Interests/9052
     example: https://interests-api.parliament.uk/api/v1/Interests/10723
   - name: category_code
     type: string
@@ -323,4 +284,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 493c27df836355b658cbd1f90e2cbeec
+hash: 021ce749944c55ec3066e663a60d02e0

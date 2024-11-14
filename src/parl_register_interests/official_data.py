@@ -58,9 +58,6 @@ def process_register(register_date: date):
         "twfy_id",
         "category",
         "category_code",
-        "registration_date",
-        "published_date",
-        "updated_date",
         "summary",
     ]
 

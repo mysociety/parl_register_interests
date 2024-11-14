@@ -1,7 +1,7 @@
 title: Overall Register of Interests
 description: Register of interests, text summaries by category,
 custom:
-  row_count: 5690
+  row_count: 5900
   dataset_order: -10
 path: overall.parquet
 name: overall
@@ -17,13 +17,13 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 39
+    example: '39'
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
     constraints:
       unique: false
-    example: 3636.0
+    example: '3636.0'
   - name: member
     type: string
     description: Name of the MP
@@ -41,7 +41,7 @@ schema:
     description: Parliamentary ID for the MP
     constraints:
       unique: false
-    example: 39
+    example: '39'
   - name: twfy_id
     type: string
     description: TWFY ID for the MP
@@ -86,34 +86,10 @@ schema:
       - '8'
       - '9'
     example: '1'
-  - name: registration_date
-    type: string
-    description: Date the interest was registered
-    constraints:
-      unique: false
-      enum:
-      - ''
-    example: ''
-  - name: published_date
-    type: string
-    description: Date the interest was published
-    constraints:
-      unique: false
-      enum:
-      - ''
-    example: ''
-  - name: updated_date
-    type: string
-    description: Date the interest was last updated
-    constraints:
-      unique: false
-      enum:
-      - ''
-    example: ''
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: false
     example: 1900 Club - £2,500.00
-hash: 52d9681a14c5b8d7cd5855def5aa0aaf
+hash: 3623b3a9d597319b66dac465c4ead4c6

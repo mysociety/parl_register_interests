@@ -1,7 +1,7 @@
 title: Category 1.2
 description: Employment and earnings - Ongoing paid employment
 custom:
-  row_count: 181
+  row_count: 185
 path: category_1.2.parquet
 name: category_1.2
 profile: data-resource
@@ -16,43 +16,37 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 4034
-  - name: parent_interest_id
-    type: integer
-    description: Unique identifier for the parent interest
-    constraints:
-      unique: false
-    example: 4017
+    example: '4034'
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: false
     example: Agreement - £1,000.00
-  - name: registration_date
-    type: string
-    description: Date the interest was registered
+  - name: parent_interest_id
+    type: integer
+    description: Unique identifier for the parent interest
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: published_date
+    example: '4017'
+  - name: registered
     type: string
-    description: Date the interest was published
+    description: Registered date
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: updated_date
+    example: '2018-06-28'
+  - name: published
     type: string
-    description: Date the interest was last updated
+    description: Published date
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
+    example: '2024-03-16'
+  - name: updated_1
+    type: string
+    description: Updated date
+    constraints:
+      unique: false
+    example: '2014-03-19'
   - name: category
     type: string
     description: Category of the interest
@@ -61,6 +55,18 @@ schema:
       enum:
       - Employment and earnings - Ongoing paid employment
     example: Employment and earnings - Ongoing paid employment
+  - name: mnis_id
+    type: integer
+    description: Parliament ID of the MP
+    constraints:
+      unique: false
+    example: '146'
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: false
+    example: '10119'
   - name: party
     type: string
     description: TWFY ID for the party as of this release date
@@ -83,18 +89,6 @@ schema:
     constraints:
       unique: false
     example: Adam Dance
-  - name: mnis_id
-    type: integer
-    description: Parliament ID of the MP
-    constraints:
-      unique: false
-    example: 146
-  - name: twfy_id
-    type: string
-    description: TheyWorkForYou ID of the MP
-    constraints:
-      unique: false
-    example: '10119'
   - name: regularity_of_payment
     type: string
     description: Regularity of the payment
@@ -110,12 +104,16 @@ schema:
     description: Start date of the payment
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: end_date
     type: string
     description: End date of the payment
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: period_for_hours_worked
     type: string
@@ -148,19 +146,19 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: (plus VAT) paid quarterly for international legal services
+    example: (last received in July)
   - name: value
     type: number
     description: Value of the payment (£)
     constraints:
       unique: false
-    example: 0.0
+    example: '0.0'
   - name: hours_worked
     type: number
     description: Hours worked for the payment
     constraints:
       unique: false
-    example: 0.0
+    example: '0.0'
   - name: hours_details
     type: string
     description: Details of the hours worked
@@ -229,12 +227,30 @@ schema:
     constraints:
       unique: false
     example: Kemyel Ltd
-  - name: api_link
+  - name: link
     type: string
-    description: Link to the API endpoint for the interest
+    description: URL to the interest on the interests API
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10028
+  - name: updated_2
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+    example: '2019-07-25'
+  - name: updated_3
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+    example: '2020-11-11'
+  - name: updated_4
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+    example: '2022-11-22'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -243,4 +259,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: 40b7ce874ff5954e34721fbeda6228e8
+hash: 2ef3e3f2d16d7c0f71df652c83e15e74

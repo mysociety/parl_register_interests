@@ -1,7 +1,7 @@
 title: Category 1
 description: Employment and earnings
 custom:
-  row_count: 462
+  row_count: 470
 path: category_1.parquet
 name: category_1
 profile: data-resource
@@ -16,43 +16,37 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: 3636
-  - name: parent_interest_id
-    type: number
-    description: Unique identifier for the parent interest
-    constraints:
-      unique: false
-    example: ''
+    example: '3636'
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: false
     example: Academic Work - Liberty Fund Inc
-  - name: registration_date
-    type: string
-    description: Date the interest was registered
+  - name: parent_interest_id
+    type: number
+    description: Unique identifier for the parent interest
     constraints:
       unique: false
-      enum:
-      - ''
     example: ''
-  - name: published_date
+  - name: registered
     type: string
-    description: Date the interest was published
+    description: Registered date
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
-  - name: updated_date
+    example: '2013-09-07'
+  - name: published
     type: string
-    description: Date the interest was last updated
+    description: Published date
     constraints:
       unique: false
-      enum:
-      - ''
-    example: ''
+    example: '2021-03-26'
+  - name: updated_1
+    type: string
+    description: Updated date
+    constraints:
+      unique: false
+    example: '2014-01-15'
   - name: category
     type: string
     description: Category of the interest
@@ -61,6 +55,18 @@ schema:
       enum:
       - Employment and earnings
     example: Employment and earnings
+  - name: mnis_id
+    type: integer
+    description: Parliamentary ID of the MP
+    constraints:
+      unique: false
+    example: '40'
+  - name: twfy_id
+    type: string
+    description: TheyWorkForYou ID of the MP
+    constraints:
+      unique: false
+    example: '10001'
   - name: party
     type: string
     description: Political party of the MP
@@ -85,18 +91,6 @@ schema:
     constraints:
       unique: false
     example: Adam Dance
-  - name: mnis_id
-    type: integer
-    description: Parliamentary ID of the MP
-    constraints:
-      unique: false
-    example: 40
-  - name: twfy_id
-    type: string
-    description: TheyWorkForYou ID of the MP
-    constraints:
-      unique: false
-    example: '10001'
   - name: job_title
     type: string
     description: Description of the job role
@@ -108,12 +102,16 @@ schema:
     description: Start date of the role
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: end_date
     type: string
     description: End date of the role
     constraints:
       unique: false
+      enum:
+      - ''
     example: ''
   - name: is_until_further_notice
     type: boolean
@@ -167,12 +165,48 @@ schema:
     constraints:
       unique: false
     example: 'False'
-  - name: api_link
+  - name: link
     type: string
-    description: Link to the API endpoint for the interest
+    description: Link to the interest in the Parliament API
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10026
+  - name: updated_2
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+    example: '2015-10-02'
+  - name: updated_3
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+    example: '2020-03-13'
+  - name: updated_4
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+    example: '2021-11-16'
+  - name: updated_5
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+    example: '2022-06-21'
+  - name: updated_6
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+    example: '2022-10-07'
+  - name: updated_7
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+    example: '2023-10-26'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -181,4 +215,4 @@ schema:
       enum:
       - '1'
     example: '1'
-hash: 0fe2d59664f77a3a6915a5f14a4c2ae1
+hash: b5e98da49d7a29def1f67a87eebbfb03
