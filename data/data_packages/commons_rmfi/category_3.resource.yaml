@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 512
+  row_count: 519
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '629'
+    example: '651'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -82,7 +82,6 @@ schema:
       - reform
       - scottish-national-party
       - sinn-fein
-      - unknown
     example: conservative
   - name: member
     type: string
@@ -233,4 +232,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 63c83b23da8b10a7572281fb62f1aee6
+hash: 587627383ed1de8c3df09a8701158de8

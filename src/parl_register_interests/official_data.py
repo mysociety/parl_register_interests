@@ -1,7 +1,7 @@
 from datetime import date as date
 from datetime import datetime
 from pathlib import Path
-
+from typing import TypedDict
 import pandas as pd
 from mysoc_validator import Popolo
 from mysoc_validator.models.popolo import Chamber, IdentifierScheme
@@ -141,10 +141,11 @@ def process_register(register_date: date):
     collected_df.to_parquet(package_dir / "overall.parquet")
 
 
-def download_reg_on_date(register_date: date, force: bool = False):
+def download_reg_on_date(register_id: int, register_date: date, force: bool = False):
     date_str = register_date.strftime("%y%m%d")
 
-    url = f"https://publications.parliament.uk/pa/cm/cmregmem/{date_str}/{date_str}.zip"
+    url = f"https://interests-api.parliament.uk/api/v1/Interests/csv/?RegisterID={register_id}"
+
     zip_path = RAW_DATA / f"{date_str}.zip"
     dest_folder = RAW_DATA / date_str
 
@@ -155,7 +156,7 @@ def download_reg_on_date(register_date: date, force: bool = False):
         raise ValueError("Please set the MYSOC_USER_AGENT environment variable")
     headers = {"User-Agent": user_agent}
     print(f"Downloading {url} to {zip_path}")
-    with httpx.Client() as client:
+    with httpx.Client(timeout=60.0) as client:
         response = client.get(url, headers=headers)
         response.raise_for_status()
 
@@ -169,25 +170,31 @@ def download_reg_on_date(register_date: date, force: bool = False):
     zip_path.unlink()
 
 
-def get_latest():
+class LatestDetails(TypedDict):
+    id: int
+    date: date
+
+
+def get_latest() -> LatestDetails:
     api_url = "https://interests-api.parliament.uk/api/v1/Registers?Take=20&Skip=0"
 
-    with httpx.Client() as client:
+    with httpx.Client(timeout=60.0) as client:
         response = client.get(api_url)
         response.raise_for_status()
         data = response.json()
 
     latest = data["items"][0]
+    latest_id = latest["id"]
     published_date = latest["publishedDate"]
-    published_date = datetime.fromisoformat(published_date)
-    return published_date.date()
+    published_date = datetime.fromisoformat(published_date).date()
+    return {"id": latest_id, "date": published_date}
 
 
 def process_all_regmem():
     known_dates = [get_latest()]
-    for regmem_date in known_dates:
-        download_reg_on_date(regmem_date)
-        process_register(regmem_date)
+    for reg in known_dates:
+        download_reg_on_date(reg["id"], reg["date"])
+        process_register(reg["date"])
 
 
 if __name__ == "__main__":
