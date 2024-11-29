@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 5
+  row_count: 6
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -22,6 +22,7 @@ schema:
       - 4566
       - 10723
       - 10782
+      - 11267
     example: '3238'
   - name: summary
     type: string
@@ -31,6 +32,7 @@ schema:
       enum:
       - Association of Marshall Scholars - £465.00
       - Ayita LLC - £836.00
+      - Azad Government of the State of Jammu & Kashmir - £707.00
       - Mr Ronald Chagoury - £1,440.00
       - Stripe Press Inc - £414.00
     example: Association of Marshall Scholars - £465.00
@@ -51,6 +53,7 @@ schema:
       - '2024-03-19'
       - '2024-09-17'
       - '2024-09-25'
+      - '2024-11-14'
     example: '2024-01-26'
   - name: published
     type: string
@@ -62,6 +65,7 @@ schema:
       - '2024-03-22'
       - '2024-09-17'
       - '2024-09-25'
+      - '2024-11-18'
     example: '2024-03-06'
   - name: updated_1
     type: number
@@ -87,6 +91,7 @@ schema:
       - 4107
       - 4264
       - 4356
+      - 4598
       - 4679
     example: '4018'
   - name: twfy_id
@@ -99,6 +104,7 @@ schema:
       - '24796'
       - '25166'
       - '25429'
+      - '25649'
       - '25679'
     example: '24785'
   - name: party
@@ -120,6 +126,7 @@ schema:
       - Angela Rayner
       - Dame Harriett Baldwin
       - Helen Grant
+      - Mohammad Yasin
       - Neil O'Brien
       - Stephen Doughty
     example: Angela Rayner
@@ -152,6 +159,8 @@ schema:
         and accommodation
       - Hospitality - visit to DJ booth, Hï Ibiza
       - Meals and accommodation at small group retreat in Guildford
+      - Transport was provided for me and up to six other family members during my
+        recent trip to Pakistan
     example: Accommodation at the Peninsula Hotel, 19 Av. Kléber, 75116 Paris, France
       - value €1700 Euro - equivalent to GBP @1.18 = £1440.  I was accompanied by
       my husband
@@ -163,6 +172,7 @@ schema:
       enum:
       - 414.0
       - 465.0
+      - 707.0
       - 836.0
       - 1440.0
     example: '414.0'
@@ -207,6 +217,7 @@ schema:
       enum:
       - Association of Marshall Scholars
       - Ayita LLC
+      - Azad Government of the State of Jammu & Kashmir
       - Mr Ronald Chagoury
       - Stripe Press Inc
     example: Association of Marshall Scholars
@@ -220,7 +231,7 @@ schema:
     type: string
     description: Type of donor
     constraints:
-      unique: true
+      unique: false
       enum:
       - Company
       - Friendly society
@@ -263,7 +274,7 @@ schema:
     description: Other details of the donor
     constraints:
       unique: false
-    example: US non-profit endowment
+    example: Government
   - name: link
     type: string
     description: Link to the interest in the Parliament API
@@ -272,6 +283,7 @@ schema:
       enum:
       - https://interests-api.parliament.uk/api/v1/Interests/10723
       - https://interests-api.parliament.uk/api/v1/Interests/10782
+      - https://interests-api.parliament.uk/api/v1/Interests/11267
       - https://interests-api.parliament.uk/api/v1/Interests/3238
       - https://interests-api.parliament.uk/api/v1/Interests/3242
       - https://interests-api.parliament.uk/api/v1/Interests/4566
@@ -284,4 +296,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: f59df5ec0af45fb71c0a7fb5796e7417
+hash: 4e5bd2826b1a12764ecf870ec9cc154a

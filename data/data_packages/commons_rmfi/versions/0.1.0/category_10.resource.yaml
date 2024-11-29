@@ -1,7 +1,7 @@
 title: Category 10
 description: Family members engaged in third-party lobbying
 custom:
-  row_count: 18
+  row_count: 19
   dataset_order: 20
 path: category_10.parquet
 name: category_10
@@ -49,6 +49,7 @@ schema:
       - '2024-07-29'
       - '2024-08-04'
       - '2024-10-31'
+      - '2024-11-13'
     example: '2023-12-17'
   - name: updated_1
     type: string
@@ -97,21 +98,6 @@ schema:
     description: Job title of the family member
     constraints:
       unique: false
-      enum:
-      - Account Executive
-      - Associate Director
-      - Consultant
-      - Director
-      - Director and Head of Public Affairs
-      - Director, Community Conversations Ltd.
-      - Executive Chairman
-      - Freelance
-      - Freelance public relations consultant
-      - Owner and director
-      - Self-employed political consultant
-      - Senior Consultant
-      - Sole trader, providing policy and public affairs advice to clients
-      - Specialist Partner, Flint Global and Next Chapter Strategy
     example: Account Executive
   - name: employer
     type: string
@@ -179,6 +165,12 @@ schema:
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/11130
+  - name: updated_2
+    type: string
+    description: Date the (second) interest was updated
+    constraints:
+      unique: false
+    example: '2024-11-19'
   - name: category_code
     type: string
     description: Code for the category
@@ -187,4 +179,4 @@ schema:
       enum:
       - '10'
     example: '10'
-hash: f6505b5197a4220d24bbec1335b74c88
+hash: 458dcbc1b60a1d8f1831d58e9f836748

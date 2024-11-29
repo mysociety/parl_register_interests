@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 442
+  row_count: 481
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -131,7 +131,7 @@ schema:
     description: Value of the payment (£)
     constraints:
       unique: false
-    example: '50.0'
+    example: '28.74'
   - name: hours_worked
     type: number
     description: Hours worked for the payment
@@ -221,4 +221,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 72a49375ad39d6cbfda01b481272035d
+hash: 0243883c3032506464a768609b9ca1a3

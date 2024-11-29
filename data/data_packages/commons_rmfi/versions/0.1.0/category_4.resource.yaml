@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 193
+  row_count: 201
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -400,4 +400,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: e1785ebe5210adc25933a7e7cfd985e0
+hash: aed70f29fe6d2a097cc1892b4ab253a1
