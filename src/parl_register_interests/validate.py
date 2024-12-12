@@ -37,6 +37,7 @@ def remove_punctuation(text: str):
     # replace all puntuation with a space
     for p in string.punctuation:
         text = text.replace(p, " ")
+    text = text.replace("\n", " ")
     return text
 
 
