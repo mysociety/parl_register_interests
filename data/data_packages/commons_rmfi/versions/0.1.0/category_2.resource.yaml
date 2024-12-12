@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 2769
+  row_count: 2765
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -80,7 +80,6 @@ schema:
       - labourco-operative
       - liberal-democrat
       - plaid-cymru
-      - reform
       - scottish-national-party
       - speaker
       - uup
@@ -241,4 +240,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: b1f10527721a6ff37da4a034fe020fb0
+hash: 2a29fd5e29ab773e24cd8256b595c1f7

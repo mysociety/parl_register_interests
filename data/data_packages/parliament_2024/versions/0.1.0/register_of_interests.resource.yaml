@@ -1,7 +1,7 @@
 title: Register of Members Interests (latest register)
 description: Register of members interests with basic NLP extraction
 custom:
-  row_count: 6583
+  row_count: 7020
 path: register_of_interests.parquet
 name: register_of_interests
 profile: data-resource
@@ -29,36 +29,45 @@ schema:
     constraints:
       unique: false
       enum:
-      - (a) Support linked to an MP but received by a local party organisation or
-        indirectly via a central party organisation
-      - (b) Any other support not included in Category 2(a)
-      - '(i) Shareholdings: over 15% of issued share capital'
-      - (ii) Other shareholdings, valued at more than £70,000
+      - Donations and other support (including loans) for activities as an MP
       - Employment and earnings
-      - Family members employed and paid from parliamentary expenses
-      - Family members engaged in lobbying the public sector on behalf of a third
-        party or client
+      - Employment and earnings - Ad hoc payments
+      - Employment and earnings - Ongoing paid employment
+      - Family members employed
+      - Family members engaged in third-party lobbying
       - Gifts and benefits from sources outside the UK
       - Gifts, benefits and hospitality from UK sources
-      - Land and property portfolio with a value over £100,000 and where indicated,
-        the portfolio provides a rental income of over £10,000 a year
+      - Land and property (within or outside the UK)
       - Miscellaneous
-      - No declared interests
+      - Shareholdings
       - Visits outside the UK
-    example: (a) Support linked to an MP but received by a local party organisation
-      or indirectly via a central party organisation
+    example: Donations and other support (including loans) for activities as an MP
   - name: free_text
     type: string
     description: Free text description of interest
     constraints:
       unique: false
-    example: (Updated 1 June 2015)
+    example: "1900 Club - £2,500.00\nDonation Source: (a) Support linked to an MP\
+      \ but received by a local party organisation or indirectly via a central party\
+      \ organisation\nPayment Type: Cash\nPayment Description: Fighting fund donation\n\
+      Value: 2500.00\nIs Sole Beneficiary: True\nDonor Name: 1900 Club\nDonor Public\
+      \ Address: 4 Barton Street, London SW1P 3NG\nDonor Status: Unincorporated association\n\
+      Registration Date: 02 August 2024\nPublished Date: 02 August 2024"
   - name: earliest_declaration
     type: string
     description: Earliest date this interest appeared in register
     constraints:
       unique: false
-    example: '2010-09-06'
+      enum:
+      - '2024-08-04'
+      - '2024-09-02'
+      - '2024-09-30'
+      - '2024-10-14'
+      - '2024-10-28'
+      - '2024-11-11'
+      - '2024-11-25'
+      - '2024-12-09'
+    example: '2024-08-04'
   - name: latest_declaration
     type: string
     description: Latest date this interest appeared in register
@@ -71,6 +80,8 @@ schema:
       - '2024-10-14'
       - '2024-10-28'
       - '2024-11-11'
+      - '2024-11-25'
+      - '2024-12-09'
     example: '2024-08-04'
   - name: new_in_latest
     type: boolean
@@ -103,4 +114,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: fe552235627cc622aee305b2df4fc021
+hash: d99dc8a2048846b9e61e74ae419c6069
