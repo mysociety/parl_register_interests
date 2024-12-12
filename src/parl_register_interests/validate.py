@@ -117,6 +117,14 @@ def test_all_content_present(start_file: str = ""):
             item_words = set([x for x in item_words if len(x) > 2])
             missing_words = item_words.difference(processed_words)
             missing_words = [x for x in missing_words if len(x) > 1]
+            # we ignore this is the words are any of "Specific work or payments"
+            break_phrase = "Specific work or payments".split(" ")
+            missing_words = [
+                x
+                for x in missing_words
+                if x not in break_phrase and x.lower() not in break_phrase
+            ]
+
             if item.text and len(missing_words) > 0:
                 raise ValueError(f"error: {xml_path} -  {item_text} - {missing_words}")
         process_length -= 1

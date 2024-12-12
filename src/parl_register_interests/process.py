@@ -11,9 +11,16 @@ from tqdm import tqdm
 
 from data_common.db import duck_query
 
-from .validate import is_mp_name_line, test_all_content_present
+from parl_register_interests.validate import is_mp_name_line, test_all_content_present
 
 start_file = "regmem2000-01-01.xml"
+
+
+def split_and_recombine_lines(s: str) -> str:
+    lines = s.split("\n")
+    txt = "\n".join([line.strip() for line in lines if line.strip()])
+    txt = txt.replace(":\n", ": ")
+    return txt
 
 
 class OrgExtractor:
@@ -170,12 +177,34 @@ def remove_duplicates(items: list[str]) -> list[str]:
     return items
 
 
+def split_sub_interests(s: str) -> list[str]:
+    """
+    various child interests are put below parents
+    for the purpose of a spreadsheet - we want these split up again!
+    """
+    if "Specific work or payments" not in s:
+        return [s]
+    parent, children = s.split("Specific work or payments")
+    children_list = children.split("Summary: ")
+    children_list = [
+        "Summary: " + c + "Parent interest details: \n" + parent.strip()
+        for c in children_list
+        if c.strip()
+    ]
+    return children_list
+
+
 def get_data_from_xml(xml_path: Path, is_latest: bool) -> Iterable[dict[str, Any]]:
     """
     Given a register XML, return in a nice data structure
     """
-    tree = ET.parse(str(xml_path))
-    root = tree.getroot()
+
+    str_xml = xml_path.read_bytes()
+    str_xml = str_xml.replace(
+        b'<p class="interest-summary parent-interest-item">',
+        b'<p class="interest-summary parent-interest-item">Summary: ',
+    )
+    root = ET.fromstring(str_xml)
     for person in root.iter():
         if person.tag != "regmem":
             continue
@@ -261,16 +290,19 @@ def get_data_from_xml(xml_path: Path, is_latest: bool) -> Iterable[dict[str, Any
                         if i.tag == "br":
                             i.text = " " + (i.text or "")
                     lines = item.itertext()
-                    free_text = "".join(lines)
-                    yield {
-                        "public_whip_id": publicwhip_id,
-                        "member_name": membername,
-                        "registry_date": date,
-                        "category_name": category_name,
-                        "free_text": free_text,
-                        "latest_entry": is_latest,
-                        "source_order": source_order,
-                    }
+                    free_text = "".join(lines).strip()
+                    free_text = split_and_recombine_lines(free_text)
+                    free_text_children = split_sub_interests(free_text)
+                    for free_text_child in free_text_children:
+                        yield {
+                            "public_whip_id": publicwhip_id,
+                            "member_name": membername,
+                            "registry_date": date,
+                            "category_name": category_name,
+                            "free_text": free_text_child,
+                            "latest_entry": is_latest,
+                            "source_order": source_order,
+                        }
                     source_order += 1
 
 
@@ -434,3 +466,13 @@ def process_data_2024():
     df = pd.read_parquet(origin)
     mask = df["latest_declaration"] >= "2024-07-01"  # type: ignore
     df[mask].to_parquet(dest, index=False)
+
+
+if __name__ == "__main__":
+    data = get_data_from_xml(
+        Path("data", "raw", "scrapedxml", "regmem", "regmem2024-04-15.xml"),
+        is_latest=False,
+    )
+    df = pd.DataFrame(data)
+    print(df)
+    test_all_content_present("regmem2024-04-15.xml")
