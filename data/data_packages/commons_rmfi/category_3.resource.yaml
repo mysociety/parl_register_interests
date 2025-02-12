@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 515
+  row_count: 502
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '651'
+    example: '818'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -40,13 +40,13 @@ schema:
     description: Date the interest was published
     constraints:
       unique: false
-    example: '2023-03-09'
+    example: '2023-12-03'
   - name: updated_1
     type: string
     description: Date the interest was updated
     constraints:
       unique: false
-    example: '2019-01-29'
+    example: '2022-01-25'
   - name: category
     type: string
     description: Category of the interest
@@ -232,4 +232,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 7f919add5b53289fb301fbbbedfaed0a
+hash: 3e32a563b80479dc1427719cd47092ca

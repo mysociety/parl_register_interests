@@ -1,7 +1,7 @@
 title: Category 1.2
 description: Employment and earnings - Ongoing paid employment
 custom:
-  row_count: 185
+  row_count: 182
 path: category_1.2.parquet
 name: category_1.2
 profile: data-resource
@@ -265,4 +265,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: e29c25e71c724e813b5c5e3c277cffdb
+hash: 9d7d9cefcf8abab768a4a0d556904161

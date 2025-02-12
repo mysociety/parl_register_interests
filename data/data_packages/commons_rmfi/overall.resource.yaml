@@ -1,7 +1,7 @@
 title: Overall Register of Interests
 description: Register of interests, text summaries by category,
 custom:
-  row_count: 5992
+  row_count: 6031
   dataset_order: -10
 path: overall.parquet
 name: overall
@@ -92,4 +92,4 @@ schema:
     constraints:
       unique: false
     example: 1900 Club - £2,500.00
-hash: 7959997ce0b77838cad8b3df222e3a87
+hash: 08162181003604a7e9486206e3379994

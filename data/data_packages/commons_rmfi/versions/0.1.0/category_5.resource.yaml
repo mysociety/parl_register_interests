@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 6
+  row_count: 5
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -17,18 +17,17 @@ schema:
     constraints:
       unique: true
       enum:
-      - 3238
       - 3242
       - 4566
       - 10723
       - 10782
       - 11267
-    example: '3238'
+    example: '3242'
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
-      unique: false
+      unique: true
       enum:
       - Association of Marshall Scholars - £465.00
       - Ayita LLC - £836.00
@@ -48,18 +47,17 @@ schema:
     constraints:
       unique: true
       enum:
-      - '2024-01-26'
       - '2024-02-07'
       - '2024-03-19'
       - '2024-09-17'
       - '2024-09-25'
       - '2024-11-14'
-    example: '2024-01-26'
+    example: '2024-02-07'
   - name: published
     type: string
     description: Published date
     constraints:
-      unique: false
+      unique: true
       enum:
       - '2024-03-06'
       - '2024-03-22'
@@ -88,7 +86,6 @@ schema:
       unique: true
       enum:
       - 4018
-      - 4107
       - 4264
       - 4356
       - 4598
@@ -100,13 +97,12 @@ schema:
     constraints:
       unique: true
       enum:
-      - '24785'
       - '24796'
       - '25166'
       - '25429'
       - '25649'
       - '25679'
-    example: '24785'
+    example: '24796'
   - name: party
     type: string
     description: Political party of the MP
@@ -124,7 +120,6 @@ schema:
       unique: true
       enum:
       - Angela Rayner
-      - Dame Harriett Baldwin
       - Helen Grant
       - Mohammad Yasin
       - Neil O'Brien
@@ -155,8 +150,6 @@ schema:
         my husband
       - Associated with participating in a cross-party conference, accommodation (£315)
         and hospitality (£150)
-      - Associated with taking part in the US-UK legislative exchange in Oxford, hospitality
-        and accommodation
       - Hospitality - visit to DJ booth, Hï Ibiza
       - Meals and accommodation at small group retreat in Guildford
       - Transport was provided for me and up to six other family members during my
@@ -168,7 +161,7 @@ schema:
     type: number
     description: Value of the payment (£)
     constraints:
-      unique: false
+      unique: true
       enum:
       - 414.0
       - 465.0
@@ -213,7 +206,7 @@ schema:
     type: string
     description: Name of the donor
     constraints:
-      unique: false
+      unique: true
       enum:
       - Association of Marshall Scholars
       - Ayita LLC
@@ -226,12 +219,12 @@ schema:
     description: Public address of the donor
     constraints:
       unique: true
-    example: 168 Prospect Park SW, Brooklyn, NY 11218, USA
+    example: 354 Oyster Point Boulevard, South San Francisco, CA 94080, United States
   - name: donor_status
     type: string
     description: Type of donor
     constraints:
-      unique: false
+      unique: true
       enum:
       - Company
       - Friendly society
@@ -284,7 +277,6 @@ schema:
       - https://interests-api.parliament.uk/api/v1/Interests/10723
       - https://interests-api.parliament.uk/api/v1/Interests/10782
       - https://interests-api.parliament.uk/api/v1/Interests/11267
-      - https://interests-api.parliament.uk/api/v1/Interests/3238
       - https://interests-api.parliament.uk/api/v1/Interests/3242
       - https://interests-api.parliament.uk/api/v1/Interests/4566
     example: https://interests-api.parliament.uk/api/v1/Interests/10723
@@ -296,4 +288,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 4e5bd2826b1a12764ecf870ec9cc154a
+hash: 4f2889bddb1e6f3dc0aa4082ab113ec7

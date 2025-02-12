@@ -98,29 +98,12 @@ schema:
     description: Job title of the family member
     constraints:
       unique: false
-    example: Account Executive
+    example: Associate Director
   - name: employer
     type: string
     description: Name of the employer
     constraints:
       unique: false
-      enum:
-      - BB Partners
-      - Cavendish
-      - Cavendish Consulting
-      - Community Conversations Ltd.
-      - Earthcott Limited
-      - Endeavour Advisory Ltd, which provides communications and public affairs advice
-      - Flint Global (which advises international businesses and investors on policy,
-        politics, regulation, and competition issues in European markets)
-      - Flint Global (which advises international businesses and investors on policy,
-        politics, regulation, and competition issues in UK and European markets)
-      - Hanover Communications
-      - Kanda Consultancy
-      - Lodestone Communications; a public relations company
-      - SEC Newgate UK
-      - Self Employed
-      - TB Cardew
     example: BB Partners
   - name: person_name
     type: string
@@ -179,4 +162,4 @@ schema:
       enum:
       - '10'
     example: '10'
-hash: fde813af12e1ff7ab3e564fd8478b072
+hash: f371ca865845c5c6f4843c0cdcadb93b

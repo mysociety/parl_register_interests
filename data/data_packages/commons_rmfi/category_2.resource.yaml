@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 2765
+  row_count: 2749
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -34,7 +34,7 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2022-08-22'
+    example: '2023-03-01'
   - name: published
     type: string
     description: Published date
@@ -46,7 +46,7 @@ schema:
     description: Updated date
     constraints:
       unique: false
-    example: '2023-06-29'
+    example: '2023-09-08'
   - name: category
     type: string
     description: Category of the interest
@@ -80,8 +80,10 @@ schema:
       - labourco-operative
       - liberal-democrat
       - plaid-cymru
+      - reform
       - scottish-national-party
       - speaker
+      - traditional-unionist-voice
       - uup
     example: conservative
   - name: member
@@ -122,7 +124,7 @@ schema:
     description: Value of the donation
     constraints:
       unique: false
-    example: '133.92'
+    example: '85.0'
   - name: received_date
     type: string
     description: Date the payment was received
@@ -231,7 +233,7 @@ schema:
     description: Date the second interest was updated
     constraints:
       unique: false
-    example: '2023-12-22'
+    example: '2024-08-01'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -240,4 +242,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: 04a31f5dd0d20e5d59c9de3b5852c2a7
+hash: 3cfa32f0fe12d026523ea3a81a869af9

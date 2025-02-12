@@ -1,7 +1,7 @@
 title: Category 7
 description: Shareholdings
 custom:
-  row_count: 198
+  row_count: 195
 path: category_7.parquet
 name: category_7
 profile: data-resource
@@ -151,12 +151,6 @@ schema:
     constraints:
       unique: false
     example: '2015-11-02'
-  - name: updated_3
-    type: string
-    description: Date the third interest was updated
-    constraints:
-      unique: false
-    example: '2024-01-22'
   - name: category_code
     type: string
     description: Category code
@@ -165,4 +159,4 @@ schema:
       enum:
       - '7'
     example: '7'
-hash: c1ea800da66a3e3c84055f163e63b30c
+hash: 416bbbee77e07bdf612392e43fc3cb05
