@@ -34,7 +34,7 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2018-06-28'
+    example: '2018-09-28'
   - name: published
     type: string
     description: Published date
@@ -238,7 +238,7 @@ schema:
     description: Date the interest was updated
     constraints:
       unique: false
-    example: '2019-07-25'
+    example: '2019-10-31'
   - name: updated_3
     type: string
     description: Date the interest was updated
@@ -265,4 +265,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: 9d7d9cefcf8abab768a4a0d556904161
+hash: 866305a1aca841e7b88d794c5d20951a
