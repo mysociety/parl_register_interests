@@ -82,7 +82,6 @@ schema:
       enum:
       - conservative
       - dup
-      - independent
       - labour
       - labourco-operative
       - scottish-national-party
@@ -186,4 +185,4 @@ schema:
       enum:
       - '9'
     example: '9'
-hash: 5fcb32247ecc484780e2ba0b1eaa85c3
+hash: a3ef2402d30117d4382954dfa4c5c4cd
