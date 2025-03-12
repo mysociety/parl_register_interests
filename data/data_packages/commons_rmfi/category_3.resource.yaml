@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 519
+  row_count: 522
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -80,7 +80,6 @@ schema:
       - labourco-operative
       - liberal-democrat
       - reform
-      - scottish-national-party
       - sinn-fein
     example: conservative
   - name: member
@@ -232,4 +231,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 0148dce73b5af216007fdb239d041ab9
+hash: 5487bb9a1ba745ab7e227695af66a42c

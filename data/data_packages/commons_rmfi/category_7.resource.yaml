@@ -1,7 +1,7 @@
 title: Category 7
 description: Shareholdings
 custom:
-  row_count: 195
+  row_count: 194
 path: category_7.parquet
 name: category_7
 profile: data-resource
@@ -60,7 +60,7 @@ schema:
     description: Unique identifier for the MP
     constraints:
       unique: false
-    example: '40'
+    example: '242'
   - name: twfy_id
     type: string
     description: TWFY identifier for the MP
@@ -159,4 +159,4 @@ schema:
       enum:
       - '7'
     example: '7'
-hash: 7fbec418f2fc591a519d7c410926fac4
+hash: 4e9422ba8b5ffcb964c1036c37b3740b

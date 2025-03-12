@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 6
+  row_count: 5
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -17,26 +17,24 @@ schema:
     constraints:
       unique: true
       enum:
-      - 3242
       - 4566
       - 10723
       - 10782
       - 11267
       - 11809
-    example: '3242'
+    example: '4566'
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: true
       enum:
-      - Association of Marshall Scholars - £465.00
       - Ayita LLC - £836.00
       - Azad Government of the State of Jammu & Kashmir - £707.00
       - Mr Ronald Chagoury - £1,440.00
       - Stripe Press Inc - £414.00
       - Trump Vance Inaugural Committee - £712.87
-    example: Association of Marshall Scholars - £465.00
+    example: Ayita LLC - £836.00
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -49,26 +47,24 @@ schema:
     constraints:
       unique: true
       enum:
-      - '2024-02-07'
       - '2024-03-19'
       - '2024-09-17'
       - '2024-09-25'
       - '2024-11-14'
       - '2025-02-14'
-    example: '2024-02-07'
+    example: '2024-03-19'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: true
       enum:
-      - '2024-03-06'
       - '2024-03-22'
       - '2024-09-17'
       - '2024-09-25'
       - '2024-11-18'
       - '2025-02-14'
-    example: '2024-03-06'
+    example: '2024-03-22'
   - name: updated_1
     type: number
     description: Updated date
@@ -90,7 +86,6 @@ schema:
       unique: true
       enum:
       - 4018
-      - 4264
       - 4356
       - 4475
       - 4598
@@ -103,7 +98,6 @@ schema:
       unique: true
       enum:
       - '24796'
-      - '25166'
       - '25272'
       - '25429'
       - '25649'
@@ -117,7 +111,6 @@ schema:
       enum:
       - conservative
       - labour
-      - labourco-operative
     example: conservative
   - name: member
     type: string
@@ -129,7 +122,6 @@ schema:
       - Helen Grant
       - Mohammad Yasin
       - Neil O'Brien
-      - Stephen Doughty
       - Suella Braverman
     example: Angela Rayner
   - name: appg
@@ -155,8 +147,6 @@ schema:
       - Accommodation at the Peninsula Hotel, 19 Av. Kléber, 75116 Paris, France -
         value €1700 Euro - equivalent to GBP @1.18 = £1440.  I was accompanied by
         my husband
-      - Associated with participating in a cross-party conference, accommodation (£315)
-        and hospitality (£150)
       - Hospitality - visit to DJ booth, Hï Ibiza
       - Meals and accommodation at small group retreat in Guildford
       - Tickets for my husband and I to attend the Trump Victory Rally on 19th January,
@@ -174,7 +164,6 @@ schema:
       unique: true
       enum:
       - 414.0
-      - 465.0
       - 707.0
       - 712.87
       - 836.0
@@ -219,13 +208,12 @@ schema:
     constraints:
       unique: true
       enum:
-      - Association of Marshall Scholars
       - Ayita LLC
       - Azad Government of the State of Jammu & Kashmir
       - Mr Ronald Chagoury
       - Stripe Press Inc
       - Trump Vance Inaugural Committee
-    example: Association of Marshall Scholars
+    example: Ayita LLC
   - name: donor_public_address
     type: string
     description: Public address of the donor
@@ -242,7 +230,6 @@ schema:
       - Friendly society
       - Individual
       - Other
-      - Unincorporated association
     example: Company
   - name: donor_company_name
     type: number
@@ -290,7 +277,6 @@ schema:
       - https://interests-api.parliament.uk/api/v1/Interests/10782
       - https://interests-api.parliament.uk/api/v1/Interests/11267
       - https://interests-api.parliament.uk/api/v1/Interests/11809
-      - https://interests-api.parliament.uk/api/v1/Interests/3242
       - https://interests-api.parliament.uk/api/v1/Interests/4566
     example: https://interests-api.parliament.uk/api/v1/Interests/10723
   - name: category_code
@@ -301,4 +287,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 1223daf37cc1585e0e36d5ffd0416f93
+hash: 88fa2a7ec50e833dea8c8121de77dc6e

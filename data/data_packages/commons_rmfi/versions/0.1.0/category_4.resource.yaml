@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 220
+  row_count: 222
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '3323'
+    example: '4127'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -34,19 +34,19 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2024-01-22'
+    example: '2024-02-29'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: false
-    example: '2023-12-17'
+    example: '2024-03-12'
   - name: updated_1
     type: string
     description: Updated date
     constraints:
       unique: false
-    example: '2024-02-05'
+    example: '2024-03-22'
   - name: category
     type: string
     description: Category of the interest
@@ -82,7 +82,6 @@ schema:
       - reform
       - scottish-national-party
       - sinn-fein
-      - social-democratic-and-labour-party
     example: conservative
   - name: member
     type: string
@@ -153,7 +152,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: 1 Bedford Row, London WC1R 4BU
+    example: 1 Horse Guards Avenue, London SW1A 2HU
   - name: donors__payment_type_1
     type: string
     description: Type of payment
@@ -168,7 +167,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "A four night trip to Israel for my husband and I including\nflights\
+    example: "A four night trip to Israel for my husband and I including\r\nflights\
       \ (£989.74 for two return flights to Tel Aviv), accommodation, meals and visits\
       \ within Israel (£26,811.53)"
   - name: donors__value_1
@@ -176,7 +175,7 @@ schema:
     description: Value of the payment
     constraints:
       unique: false
-    example: '324.2'
+    example: '350.9'
   - name: donors__is_sole_beneficiary_1
     type: boolean
     description: Whether the MP is the sole beneficiary
@@ -192,6 +191,30 @@ schema:
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10168
+  - name: visit_locations__country_2
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+    example: Azerbaijan
+  - name: visit_locations__destination_2
+    type: string
+    description: Destination of the visit
+    constraints:
+      unique: false
+    example: Baku
+  - name: visit_locations__country_3
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+    example: Georgia
+  - name: visit_locations__destination_3
+    type: string
+    description: Destination of the visit
+    constraints:
+      unique: false
+    example: Tbilisi airport (transfer)
   - name: donors__name_2
     type: string
     description: Name of the donor
@@ -227,7 +250,7 @@ schema:
     description: Value of the payment
     constraints:
       unique: false
-    example: '300.0'
+    example: '324.0'
   - name: donors__is_sole_beneficiary_2
     type: string
     description: Whether the MP is the sole beneficiary
@@ -276,30 +299,6 @@ schema:
     constraints:
       unique: false
     example: 'False'
-  - name: visit_locations__country_2
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-    example: Azerbaijan
-  - name: visit_locations__destination_2
-    type: string
-    description: Destination of the visit
-    constraints:
-      unique: false
-    example: Baku
-  - name: visit_locations__country_3
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-    example: Georgia
-  - name: visit_locations__destination_3
-    type: string
-    description: Destination of the visit
-    constraints:
-      unique: false
-    example: Tbilisi airport (transfer)
   - name: donors__name_4
     type: string
     description: Name of the donor
@@ -329,10 +328,10 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300\
-      \ (The Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-      \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\nTotal:\
-      \ £1,150"
+    example: "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights):\
+      \ £300 (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+      \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+      \nTotal: £1,150"
   - name: donors__value_4
     type: number
     description: Value of the payment
@@ -374,10 +373,10 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300\
-      \ (The Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-      \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\nTotal:\
-      \ £1,150"
+    example: "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights):\
+      \ £300 (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+      \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+      \nTotal: £1,150"
   - name: donors__value_5
     type: number
     description: Value of the payment
@@ -398,4 +397,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: f4b4f24c121559fc1cf1e84ea85c9c74
+hash: 54817a9ee83a5870a93472d750676ca4
