@@ -92,4 +92,4 @@ schema:
     constraints:
       unique: false
     example: 1900 Club - £2,500.00
-hash: d05ca28fa2f4d8cdb5de35bbfa69322c
+hash: 33e71f90788e8a41f0e59a77e54b9656
