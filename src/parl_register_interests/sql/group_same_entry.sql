@@ -40,4 +40,5 @@ ORDER BY
     latest_declaration,
     t.category_name,
     source_order,
-    earliest_declaration;
+    earliest_declaration,
+    free_text;
