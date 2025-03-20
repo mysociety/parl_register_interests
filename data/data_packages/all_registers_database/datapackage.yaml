@@ -1,0 +1,46 @@
+name: all_registers_database
+title: All Registers Database
+description : |
+  Combined datasets of covered registers
+version: 0.1.0
+licenses:
+  
+  - name: CC-BY-4.0
+    path: https://creativecommons.org/licenses/by/4.0/
+    title: Creative Commons Attribution 4.0 International License
+  
+contributors:
+  - title: mySociety
+    path: https://mysociety.org
+    role: author
+
+
+custom:
+  build: parl_register_interests.__main__:process_universal
+  tests:
+    - test_database
+  dataset_order: 0
+  download_options:
+    gate: default
+    survey: default
+    header_text: default
+  formats:
+    csv: true
+    parquet: true
+    gpkg: false
+    geojson: false
+  is_geodata: false
+  composite:
+    xlsx:
+      include: all
+      exclude: none
+      render: true
+    sqlite:
+      include: all
+      exclude: none
+      render: true
+    json:
+      include: all
+      exclude: none
+      render: true
+

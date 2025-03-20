@@ -20,7 +20,7 @@ custom:
   build: parl_register_interests.__main__:download_and_build_official
   tests:
   - test_uk_parliament_register_data
-  dataset_order: 0
+  dataset_order: 1
   download_options:
     gate: default
     survey: default

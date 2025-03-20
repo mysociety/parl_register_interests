@@ -14,6 +14,8 @@ def download_regmem():
     rich.print("[blue]Downloading regmem files[/blue]")
     cmd = "rsync -az --progress --exclude '.svn' --exclude 'tmp/' --relative data.theyworkforyou.com::parldata/scrapedxml/regmem/* data/raw"
     subprocess.run(cmd.split(" "))
+    cmd = "rsync -az --progress --exclude '.svn' --exclude 'tmp/' --relative data.theyworkforyou.com::parldata/scrapedjson/universal_format_regmem/* data/raw"
+    subprocess.run(cmd.split(" "))
     rich.print("[green]Done[/green]")
     fix_known_errors()
 

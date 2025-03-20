@@ -6,6 +6,7 @@ from .process import (
     process_data_2024,
 )
 from .official_data import process_all_regmem
+from .universal_processing import store_database_regmem
 
 
 def download_and_build():
@@ -31,6 +32,11 @@ def download_and_build_2024():
 
 def download_and_build_official():
     process_all_regmem()
+
+
+def process_universal():
+    download_regmem()
+    store_database_regmem()
 
 
 @click.group()

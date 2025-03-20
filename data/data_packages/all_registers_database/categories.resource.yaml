@@ -1,0 +1,38 @@
+title: Categories
+description: ID to name mapping for categories
+custom:
+  row_count: 39
+  dataset_order: 2
+path: categories.parquet
+name: categories
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: mac-roman
+schema:
+  fields:
+  - name: chamber
+    type: string
+    description: The chamber the category is associated with
+    constraints:
+      unique: false
+      enum:
+      - house-of-commons
+      - northern-ireland-assembly
+      - scottish-parliament
+      - welsh-parliament
+    example: house-of-commons
+  - name: category_id
+    type: string
+    description: The ID of the category
+    constraints:
+      unique: false
+    example: '1'
+  - name: category_name
+    type: string
+    description: The name of the category
+    constraints:
+      unique: false
+    example: Controlled transactions
+hash: a6ff1101aec9b02bc49ce5dbfe970bc0

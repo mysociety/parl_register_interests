@@ -6,7 +6,9 @@ _render/_parts
 _render/_papermills
 docs/_site
 data/raw/scrapedxml
+data/raw/scrapedjson
 data/interim/regmem/
 docs/data
 docs/_*
 data/vol_interests
+data/data_packages/all_registers_database/*.parquet
