@@ -2951,14 +2951,14 @@ files = [
 
 [[package]]
 name = "mysoc-validator"
-version = "1.1.0"
+version = "1.1.1"
 description = "Pydantic validators for mySociety democracy types"
 optional = false
 python-versions = "<4.0,>=3.9"
 groups = ["main"]
 files = [
-    {file = "mysoc_validator-1.1.0-py3-none-any.whl", hash = "sha256:fa6e5b13839a47d17a39a71dcd6d36b72cf742ddcacc5dc4e02bdf0fb9dd50ba"},
-    {file = "mysoc_validator-1.1.0.tar.gz", hash = "sha256:0e2ce1a51b060f07874031dd119fd3d6bfc696db331df35c47aa77632c497334"},
+    {file = "mysoc_validator-1.1.1-py3-none-any.whl", hash = "sha256:45e40cf6128a96f4699a7ca19e26c1bf3ee1eaa9648e65ab1950288c28f81e7d"},
+    {file = "mysoc_validator-1.1.1.tar.gz", hash = "sha256:dbcb6fb992febe0cff1127c36e39279d3a0eb5a9ed7162a15e6b3af9f13ee948"},
 ]
 
 [package.dependencies]
@@ -6089,4 +6089,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<3.11"
-content-hash = "f73e1caab9da6452afdcc04b9e90fac8dfb97cf6d3c61536baa049391849a095"
+content-hash = "dc5881d4f538f9c7ba60f933fe375d025c46cda6b39e07db032c3f9a965b39d5"
