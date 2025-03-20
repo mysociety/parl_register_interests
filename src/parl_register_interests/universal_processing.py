@@ -2,6 +2,18 @@ from mysoc_validator.models.interests import RegmemRegister, RegmemEntry, slugif
 import pandas as pd
 from pathlib import Path
 from typing import NamedTuple
+import json
+import datetime
+import decimal
+
+
+class CustomEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, decimal.Decimal):
+            return str(o)
+        elif isinstance(o, datetime.date):
+            return o.isoformat()
+        return super().default(o)
 
 
 def regmem_to_entries_df(reg: RegmemRegister) -> pd.DataFrame:
@@ -33,7 +45,9 @@ def regmem_to_entries_df(reg: RegmemRegister) -> pd.DataFrame:
                 item["entry_id"] = entry_id
                 item["parent_id"] = None
                 item |= entry.model_dump(exclude=exclude_cols)
-                item["details"] = entry.details.detail_dict()
+                item["details"] = json.dumps(
+                    entry.details.detail_dict(), cls=CustomEncoder
+                )
                 items.append(item)
                 for sub_entry in entry.sub_entries:
                     sub_entry_id = f"{int_person_id}_{slugify(category.category_id)}_{sub_entry.comparable_id}"
@@ -48,7 +62,9 @@ def regmem_to_entries_df(reg: RegmemRegister) -> pd.DataFrame:
                     subitem["parent_id"] = entry_id
                     subitem["entry_id"] = sub_entry_id
                     subitem |= sub_entry.model_dump(exclude=exclude_cols)
-                    subitem["details"] = sub_entry.details.detail_dict()
+                    subitem["details"] = json.dumps(
+                        sub_entry.details.detail_dict(), cls=CustomEncoder
+                    )
                     items.append(subitem)
 
     df = pd.DataFrame(items)
