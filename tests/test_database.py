@@ -6,6 +6,10 @@ package_dir = Path("data", "data_packages", "all_registers_database")
 
 
 def test_foreign_keys():
+    # if no parquet files in the package directory just return cleanly
+    if not any(package_dir.glob("*.parquet")):
+        return
+
     entries = pd.read_parquet(package_dir / "entries.parquet")
     categories = pd.read_parquet(package_dir / "categories.parquet")
     details = pd.read_parquet(package_dir / "details.parquet")

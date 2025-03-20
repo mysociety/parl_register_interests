@@ -2,7 +2,6 @@ from mysoc_validator.models.interests import RegmemRegister, RegmemEntry, slugif
 import pandas as pd
 from pathlib import Path
 from typing import NamedTuple
-from decimal import Decimal
 
 
 def regmem_to_entries_df(reg: RegmemRegister) -> pd.DataFrame:
@@ -18,7 +17,6 @@ def regmem_to_entries_df(reg: RegmemRegister) -> pd.DataFrame:
     }
 
     items = []
-    details = []
     for person_entry in reg.persons:
         int_person_id = person_entry.person_id.split("/")[-1]
 
