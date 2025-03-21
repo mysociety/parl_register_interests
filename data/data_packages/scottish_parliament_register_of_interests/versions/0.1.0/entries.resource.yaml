@@ -137,4 +137,13 @@ schema:
     constraints:
       unique: false
     example: '2016-06-30'
-hash: 541f885486fb9e180bf8f3abe576de49
+  - name: in_latest_register
+    type: boolean
+    description: If this entry appears in the latest register
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+hash: 89024766eec491baeb9299cc48ac5e4f

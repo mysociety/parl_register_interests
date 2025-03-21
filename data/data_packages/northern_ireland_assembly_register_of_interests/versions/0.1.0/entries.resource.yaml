@@ -97,4 +97,12 @@ schema:
       enum:
       - '2025-03-11'
     example: '2025-03-11'
-hash: 6f781b89d077aaee86f22d7fd36e9a53
+  - name: in_latest_register
+    type: boolean
+    description: If this entry appears in the latest register
+    constraints:
+      unique: false
+      enum:
+      - true
+    example: 'True'
+hash: 9bc3bd68c3987bbb3b82e9ba389d0b7f
