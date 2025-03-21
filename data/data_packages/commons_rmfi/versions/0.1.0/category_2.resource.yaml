@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '39'
+    example: '10000'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -28,6 +28,8 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
+      enum:
+      - .nan
     example: ''
   - name: registered
     type: string
@@ -60,7 +62,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: '39'
+    example: '1211'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -124,7 +126,7 @@ schema:
     description: Value of the donation
     constraints:
       unique: false
-    example: '85.0'
+    example: '1000.0'
   - name: received_date
     type: string
     description: Date the payment was received
@@ -196,6 +198,8 @@ schema:
     description: URL of the donor company
     constraints:
       unique: false
+      enum:
+      - .nan
     example: ''
   - name: donor_company_identifier
     type: string
@@ -208,12 +212,21 @@ schema:
     description: Source of the donor company identifier
     constraints:
       unique: false
+      enum:
+      - Companies House
     example: Companies House
   - name: donor_trust_details
     type: string
     description: Details of the donor trust
     constraints:
       unique: false
+      enum:
+      - TLC is a Trust, raising funds for political campaigning activities of the
+        South Hams Liberal Democratic Party
+      - The Port Isaac Liberal Club is administered as a trust.
+      - Trust created before 27 July 1999
+      - Trust supporting unionist campaigns
+      - Trust supporting unionist candidates
     example: TLC is a Trust, raising funds for political campaigning activities of
       the South Hams Liberal Democratic Party
   - name: donor_other_details
@@ -233,6 +246,11 @@ schema:
     description: Date the second interest was updated
     constraints:
       unique: false
+      enum:
+      - '2024-08-01'
+      - '2024-10-04'
+      - '2024-10-18'
+      - '2024-12-02'
     example: '2024-08-01'
   - name: category_code
     type: string

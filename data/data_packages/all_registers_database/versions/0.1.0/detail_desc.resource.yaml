@@ -1,0 +1,77 @@
+title: Detail Types
+description: "This contains more information about the detail types that are used\
+  \ in the\nregisters. This is mostly reflecting the Commons descriptions. \n"
+custom:
+  row_count: 191
+  dataset_order: 3
+path: detail_desc.parquet
+name: detail_desc
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: chamber
+    type: string
+    description: The chamber the detail is associated with
+    constraints:
+      unique: false
+      enum:
+      - house-of-commons
+      - welsh-parliament
+    example: house-of-commons
+  - name: category_id
+    type: string
+    description: The ID of the category the detail is associated with
+    constraints:
+      unique: false
+      enum:
+      - '1'
+      - '1.1'
+      - '1.2'
+      - '10'
+      - '11'
+      - '12'
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+      - '6'
+      - '7'
+      - '8'
+      - '9'
+    example: '1'
+  - name: slug
+    type: string
+    description: The slug of the detail type
+    constraints:
+      unique: false
+    example: accepted_date
+  - name: display_as
+    type: string
+    description: The display name of the detail
+    constraints:
+      unique: false
+    example: Accepted Date
+  - name: description
+    type: string
+    description: A description of the property
+    constraints:
+      unique: false
+    example: A description of the property
+  - name: type
+    type: string
+    description: The data type of the property
+    constraints:
+      unique: false
+      enum:
+      - boolean
+      - container
+      - date
+      - decimal
+      - int
+      - string
+    example: boolean
+hash: 3859c1dcdd044fda0a0f198d0cb5ef17

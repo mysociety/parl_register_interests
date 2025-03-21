@@ -1,26 +1,20 @@
-name: commons_rmfi
-title: UK House of Commons Register of Members' Financial Interests
-description: "Reformat of the [new bulk data release](https://publications.parliament.uk/pa/cm/cmregmem/contents2425.htm)\
-  \ of the UK House of Commons Register of Members' Financial Interests.\nTheyWorkForYou\
-  \ IDs and party added.\nExperimental release. Expect to change columns and add more\
-  \ transformations. \n"
+name: all_registers_database
+title: All Registers Database
+description: "Combined datasets of covered registers\n"
 version: 0.1.0
 licenses:
 - name: CC-BY-4.0
   path: https://creativecommons.org/licenses/by/4.0/
   title: Creative Commons Attribution 4.0 International License
 contributors:
-- title: UK Parliament
-  path: https://www.parliament.uk/
-  role: author
 - title: mySociety
   path: https://mysociety.org
   role: author
 custom:
-  build: parl_register_interests.__main__:download_and_build_official
+  build: parl_register_interests.__main__:process_universal
   tests:
-  - test_uk_parliament_register_data
-  dataset_order: 1
+  - test_database
+  dataset_order: 0
   download_options:
     gate: default
     survey: default
@@ -45,4 +39,4 @@ custom:
       exclude: none
       render: true
   change_log:
-    0.1.0: 'overall: example changed from 39 to 10000'
+    0.1.0: Don't need to increment, first version

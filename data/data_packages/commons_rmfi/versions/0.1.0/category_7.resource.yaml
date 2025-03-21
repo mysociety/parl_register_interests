@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '1330'
+    example: '10005'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -28,6 +28,8 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
+      enum:
+      - .nan
     example: ''
   - name: registered
     type: string
@@ -60,7 +62,7 @@ schema:
     description: Unique identifier for the MP
     constraints:
       unique: false
-    example: '242'
+    example: '1211'
   - name: twfy_id
     type: string
     description: TWFY identifier for the MP
@@ -138,6 +140,9 @@ schema:
     description: Organisation managed by
     constraints:
       unique: false
+      enum:
+      - DelegatedManagementCompany
+      - Trust
     example: DelegatedManagementCompany
   - name: link
     type: string
@@ -150,6 +155,9 @@ schema:
     description: Date the second interest was updated
     constraints:
       unique: false
+      enum:
+      - '2015-11-02'
+      - '2021-05-13'
     example: '2015-11-02'
   - name: category_code
     type: string
