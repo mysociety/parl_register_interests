@@ -1,6 +1,6 @@
 name: all_registers_database
 title: All Registers Database
-description: "Combined datasets of covered registers"
+description: Combined datasets of covered registers
 version: 0.1.0
 licenses:
 - name: CC-BY-4.0
@@ -51,4 +51,5 @@ custom:
       exclude: none
       render: true
   change_log:
-    0.1.0: Don't need to increment, first version
+    0.1.0: "description changed from 'Combined datasets of covered registers\n' to\
+      \ 'Combined datasets of covered registers'"
