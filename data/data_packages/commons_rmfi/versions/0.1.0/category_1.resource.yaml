@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '3636'
+    example: '10026'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -28,6 +28,8 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
+      enum:
+      - .nan
     example: ''
   - name: registered
     type: string
@@ -60,7 +62,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: '40'
+    example: '1171'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -164,6 +166,9 @@ schema:
       Appointments
     constraints:
       unique: false
+      enum:
+      - 'False'
+      - 'True'
     example: 'False'
   - name: link
     type: string
@@ -176,36 +181,59 @@ schema:
     description: Date the interest was updated
     constraints:
       unique: false
+      enum:
+      - '2015-10-02'
+      - '2017-07-06'
+      - '2022-04-25'
+      - '2023-04-14'
+      - '2023-06-30'
+      - '2023-10-19'
+      - '2024-01-03'
+      - '2024-04-12'
+      - '2024-07-30'
+      - '2024-10-15'
+      - '2025-03-07'
     example: '2015-10-02'
   - name: updated_3
     type: string
     description: Date the interest was updated
     constraints:
       unique: false
+      enum:
+      - '2020-03-13'
+      - '2024-08-02'
     example: '2020-03-13'
   - name: updated_4
     type: string
     description: Date the interest was updated
     constraints:
       unique: false
+      enum:
+      - '2021-11-16'
     example: '2021-11-16'
   - name: updated_5
     type: string
     description: Date the interest was updated
     constraints:
       unique: false
+      enum:
+      - '2022-06-21'
     example: '2022-06-21'
   - name: updated_6
     type: string
     description: Date the interest was updated
     constraints:
       unique: false
+      enum:
+      - '2022-10-07'
     example: '2022-10-07'
   - name: updated_7
     type: string
     description: Date the interest was updated
     constraints:
       unique: false
+      enum:
+      - '2023-10-26'
     example: '2023-10-26'
   - name: category_code
     type: string

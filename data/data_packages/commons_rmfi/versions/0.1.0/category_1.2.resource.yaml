@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '4034'
+    example: '10028'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -28,7 +28,7 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
-    example: '3636'
+    example: '10097'
   - name: registered
     type: string
     description: Registered date
@@ -131,6 +131,13 @@ schema:
     description: Job title
     constraints:
       unique: false
+      enum:
+      - Councillor
+      - Deputy Leader of the Council and Cabinet Member
+      - Project management and delivery
+      - Special Responsibility Allowance - Sutton Local Committee Chair
+      - This post is solely focused on the School of International Relations.
+      - advice and scrutiny
     example: Councillor
   - name: payment_type
     type: string
@@ -179,6 +186,9 @@ schema:
     description: Name of the ultimate payer
     constraints:
       unique: false
+      enum:
+      - Evans Derry Solicitors
+      - SSE
     example: Evans Derry Solicitors
   - name: ultimate_payer_protected_by_confidentiality
     type: boolean
@@ -193,12 +203,18 @@ schema:
     description: Address of the ultimate payer
     constraints:
       unique: false
+      enum:
+      - 133  Long Street Atherstone Warwickshire CV9 1AD
+      - Inveralmond House, 200 Dunkeld Rd, Perth, PH1 3AQ
     example: 133  Long Street Atherstone Warwickshire CV9 1AD
   - name: ultimate_payer_nature_of_business
     type: string
     description: Nature of business of the ultimate payer
     constraints:
       unique: false
+      enum:
+      - High Street Solicitors Practice
+      - Multinational energy company headquartered in Perth, Scotland
     example: High Street Solicitors Practice
   - name: is_payment_donated
     type: boolean
@@ -214,18 +230,28 @@ schema:
     description: Who the payment was donated to
     constraints:
       unique: false
+      enum:
+      - Donated by the Member to the recipient
+      - Paid direct to the recipient by the payer
     example: Donated by the Member to the recipient
   - name: donatee_type
     type: string
     description: Type of donatee
     constraints:
       unique: false
+      enum:
+      - Charity
+      - Community organisation
+      - Local party organisation
+      - Other
     example: Charity
   - name: donatee_details
     type: string
     description: Details of the donatee
     constraints:
       unique: false
+      enum:
+      - Kemyel Ltd
     example: Kemyel Ltd
   - name: link
     type: string
@@ -244,18 +270,27 @@ schema:
     description: Date the interest was updated
     constraints:
       unique: false
+      enum:
+      - '2020-11-11'
+      - '2024-05-15'
+      - '2024-10-14'
+      - '2025-03-07'
     example: '2020-11-11'
   - name: updated_4
     type: string
     description: Date the interest was updated
     constraints:
       unique: false
+      enum:
+      - '2022-11-22'
     example: '2022-11-22'
   - name: updated_5
     type: string
     description: Date the interest was updated
     constraints:
       unique: false
+      enum:
+      - '2025-01-03'
     example: '2025-01-03'
   - name: category_code
     type: string

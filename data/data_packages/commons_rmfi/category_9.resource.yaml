@@ -28,12 +28,26 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
+      enum:
+      - .nan
     example: ''
   - name: registered
     type: string
     description: Date the interest was registered
     constraints:
       unique: false
+      enum:
+      - '2015-06-04'
+      - '2016-01-19'
+      - '2016-02-29'
+      - '2016-03-15'
+      - '2016-04-18'
+      - '2016-04-20'
+      - '2016-04-21'
+      - '2016-05-16'
+      - '2016-06-03'
+      - '2016-06-10'
+      - '2016-08-01'
     example: '2015-06-04'
   - name: published
     type: string
@@ -67,7 +81,7 @@ schema:
     description: Unique identifier for the MP
     constraints:
       unique: true
-    example: '55'
+    example: '1383'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -170,12 +184,20 @@ schema:
     description: Date the second interest was updated
     constraints:
       unique: false
+      enum:
+      - '2017-06-30'
+      - '2020-12-14'
+      - '2023-11-14'
+      - '2024-04-15'
     example: '2017-06-30'
   - name: updated_3
     type: string
     description: Date the third interest was updated
     constraints:
       unique: false
+      enum:
+      - '2024-02-14'
+      - '2024-07-23'
     example: '2024-02-14'
   - name: category_code
     type: string

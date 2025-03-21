@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '818'
+    example: '10009'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -28,6 +28,8 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
+      enum:
+      - .nan
     example: ''
   - name: registered
     type: string
@@ -60,7 +62,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: '39'
+    example: '1383'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -93,6 +95,11 @@ schema:
     description: Payment made via an All-Party Parliamentary Group
     constraints:
       unique: false
+      enum:
+      - APPG on Beer
+      - British Busses
+      - Tennis APPG
+      - Ukraine
     example: APPG on Beer
   - name: payment_type
     type: string
@@ -114,7 +121,7 @@ schema:
     description: Value of the payment
     constraints:
       unique: false
-    example: '21.36'
+    example: '100.0'
   - name: received_date
     type: string
     description: Date the payment was received
@@ -186,6 +193,8 @@ schema:
     description: URL of the donor company
     constraints:
       unique: false
+      enum:
+      - .nan
     example: ''
   - name: donor_company_identifier
     type: string
@@ -198,12 +207,16 @@ schema:
     description: Identifer category of company number
     constraints:
       unique: false
+      enum:
+      - Companies House
     example: Companies House
   - name: donor_trust_details
     type: number
     description: Trust details of the donor
     constraints:
       unique: false
+      enum:
+      - .nan
     example: ''
   - name: donor_other_details
     type: string
@@ -222,6 +235,11 @@ schema:
     description: Date the second interest was updated
     constraints:
       unique: false
+      enum:
+      - '2023-01-11'
+      - '2024-03-13'
+      - '2024-12-12'
+      - '2024-12-18'
     example: '2023-01-11'
   - name: category_code
     type: string

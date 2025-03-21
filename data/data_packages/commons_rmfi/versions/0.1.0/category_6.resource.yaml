@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '2170'
+    example: '10004'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -28,6 +28,8 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
+      enum:
+      - .nan
     example: ''
   - name: registered
     type: string
@@ -60,7 +62,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: '39'
+    example: '1442'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MPss
@@ -162,6 +164,16 @@ schema:
     description: Number of properties owned
     constraints:
       unique: false
+      enum:
+      - 1.0
+      - .nan
+      - 2.0
+      - 3.0
+      - 4.0
+      - 5.0
+      - 6.0
+      - 7.0
+      - 15.0
     example: '1.0'
   - name: is_land
     type: boolean
@@ -202,12 +214,21 @@ schema:
     description: Use of the land
     constraints:
       unique: false
+      enum:
+      - Agricultural
+      - Other
     example: Agricultural
   - name: property_type
     type: string
     description: Type of property
     constraints:
       unique: false
+      enum:
+      - Agricultural
+      - Business
+      - Commercial
+      - Other
+      - Residential
     example: Agricultural
   - name: link
     type: string
@@ -220,12 +241,23 @@ schema:
     description: Date the interest was updated
     constraints:
       unique: false
+      enum:
+      - '2016-10-11'
+      - '2017-04-03'
+      - '2019-01-18'
+      - '2024-09-09'
+      - '2024-11-28'
+      - '2024-12-04'
+      - '2025-02-19'
     example: '2016-10-11'
   - name: updated_3
     type: string
     description: Date the interest was updated
     constraints:
       unique: false
+      enum:
+      - '2020-01-09'
+      - '2025-03-07'
     example: '2020-01-09'
   - name: category_code
     type: string

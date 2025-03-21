@@ -17,7 +17,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '1193'
+    example: '11130'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -29,6 +29,8 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
+      enum:
+      - .nan
     example: ''
   - name: registered
     type: string
@@ -58,6 +60,11 @@ schema:
     description: Date the interest was updated
     constraints:
       unique: false
+      enum:
+      - '2021-05-11'
+      - '2022-12-09'
+      - '2024-12-16'
+      - '2025-01-13'
     example: '2021-05-11'
   - name: category
     type: string
@@ -72,7 +79,7 @@ schema:
     description: Unique identifier for the MP
     constraints:
       unique: true
-    example: '39'
+    example: '1383'
   - name: twfy_id
     type: string
     description: TWFY identifier for the MP
@@ -156,6 +163,8 @@ schema:
     description: Date the (second) interest was updated
     constraints:
       unique: false
+      enum:
+      - '2024-11-19'
     example: '2024-11-19'
   - name: category_code
     type: string

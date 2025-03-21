@@ -17,13 +17,13 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '39'
+    example: '10000'
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
     constraints:
       unique: false
-    example: '3636.0'
+    example: '10026.0'
   - name: member
     type: string
     description: Name of the MP
@@ -41,7 +41,7 @@ schema:
     description: Parliamentary ID for the MP
     constraints:
       unique: false
-    example: '39'
+    example: '1171'
   - name: twfy_id
     type: string
     description: TWFY ID for the MP

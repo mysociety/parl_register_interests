@@ -1,0 +1,97 @@
+title: Details
+description: "A key-value that can belong to an entry with more specific data.\nSome\
+  \ details have sub-details - which come in groups. \n"
+custom:
+  row_count: 53895
+  dataset_order: 1
+path: details.parquet
+name: details
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: chamber
+    type: string
+    description: The chamber the detail is associated with
+    constraints:
+      unique: false
+      enum:
+      - house-of-commons
+      - welsh-parliament
+    example: house-of-commons
+  - name: category_id
+    type: string
+    description: The ID of the category the detail is associated with
+    constraints:
+      unique: false
+      enum:
+      - '1'
+      - '1.1'
+      - '1.2'
+      - '10'
+      - '11'
+      - '12'
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+      - '6'
+      - '7'
+      - '8'
+      - '9'
+    example: '1'
+  - name: person_id
+    type: string
+    description: The ID of the person the detail is associated with
+    constraints:
+      unique: false
+    example: uk.org.publicwhip/person/10001
+  - name: entry_id
+    type: string
+    description: The ID of the entry the detail is associated with
+    constraints:
+      unique: false
+    example: '10001_11_10714'
+  - name: parent_detail_id
+    type: string
+    description: The ID of the parent detail (if any)
+    constraints:
+      unique: false
+    example: 10119_4_2288_donors
+  - name: detail_row_id
+    type: string
+    description: The ID of the detail row (for sub details)
+    constraints:
+      unique: false
+    example: 10119_4_2288_donors_0
+  - name: detail_id
+    type: string
+    description: The ID of the detail
+    constraints:
+      unique: true
+    example: 10001_11_10714_job_title
+  - name: source
+    type: string
+    description: The source of the detail
+    constraints:
+      unique: false
+      enum:
+      - official
+    example: official
+  - name: slug
+    type: string
+    description: The slug of the detail type
+    constraints:
+      unique: false
+    example: accepted_date
+  - name: value
+    type: string
+    description: The value of the detail (always string - but the actual content might
+      not be)
+    constraints:
+      unique: false
+    example: ''
+hash: 92a19ccf5396ca6f2f852f35ca3cd6b4

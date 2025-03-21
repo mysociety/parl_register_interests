@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '1220'
+    example: '10007'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -29,6 +29,8 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
+      enum:
+      - .nan
     example: ''
   - name: registered
     type: string
@@ -61,7 +63,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: '40'
+    example: '1409'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -132,24 +134,41 @@ schema:
     description: Date the second interest was updated
     constraints:
       unique: false
+      enum:
+      - '2021-07-22'
+      - '2022-02-25'
+      - '2023-04-18'
+      - '2024-02-05'
+      - '2024-07-12'
+      - '2024-07-19'
+      - '2024-09-09'
+      - '2024-09-24'
+      - '2024-10-28'
     example: '2021-07-22'
   - name: updated_3
     type: string
     description: Date the third interest was updated
     constraints:
       unique: false
+      enum:
+      - '2022-09-28'
+      - '2024-07-10'
     example: '2022-09-28'
   - name: updated_4
     type: string
     description: Date the fourth interest was updated
     constraints:
       unique: false
+      enum:
+      - '2023-08-15'
     example: '2023-08-15'
   - name: updated_5
     type: string
     description: Date the fifth interest was updated
     constraints:
       unique: false
+      enum:
+      - '2024-07-11'
     example: '2024-07-11'
   - name: category_code
     type: string

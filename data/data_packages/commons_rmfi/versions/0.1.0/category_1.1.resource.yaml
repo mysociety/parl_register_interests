@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '3870'
+    example: '10033'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -28,7 +28,7 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
-    example: '3636'
+    example: '10026'
   - name: registered
     type: string
     description: registered date
@@ -46,6 +46,13 @@ schema:
     description: updated date
     constraints:
       unique: false
+      enum:
+      - '2024-08-27'
+      - '2024-09-25'
+      - '2024-09-30'
+      - '2024-10-03'
+      - '2024-12-05'
+      - '2024-12-18'
     example: '2024-08-27'
   - name: category
     type: string
@@ -60,7 +67,7 @@ schema:
     description: Parliament's unique identifier for the member
     constraints:
       unique: false
-    example: '40'
+    example: '1171'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID for the member
@@ -111,6 +118,17 @@ schema:
     description: Job the MP was paid for
     constraints:
       unique: false
+      enum:
+      - Councillor
+      - Guest presenting LBC Radio programme
+      - Institutional Investor Event - guest speaker
+      - Italian translation of a book
+      - Speaking engagement
+      - Speech and workshop at LGA Black, Asian and Minority Ethnic Councillors Masterclass
+        Weekender
+      - Writing
+      - for a radio recording of a book.
+      - medical practice
     example: Councillor
   - name: payment_type
     type: string
@@ -132,7 +150,7 @@ schema:
     description: Value of the payment (£)
     constraints:
       unique: false
-    example: '28.74'
+    example: '1000.0'
   - name: hours_worked
     type: number
     description: Hours worked for the payment
@@ -195,18 +213,27 @@ schema:
     description: Who the payment was donated to
     constraints:
       unique: false
+      enum:
+      - Donated by the Member to the recipient
+      - Paid direct to the recipient by the payer
     example: Donated by the Member to the recipient
   - name: donatee_type
     type: string
     description: Type of the donatee
     constraints:
       unique: false
+      enum:
+      - Charity
+      - Other
     example: Charity
   - name: donatee_details
     type: string
     description: Details of the donatee
     constraints:
       unique: false
+      enum:
+      - Elizabeth Garrett Anderson School
+      - Fee allocated to my staffing budget.
     example: Elizabeth Garrett Anderson School
   - name: link
     type: string
