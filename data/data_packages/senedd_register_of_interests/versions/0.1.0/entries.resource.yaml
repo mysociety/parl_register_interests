@@ -1,0 +1,102 @@
+title: Entries
+description: "Reprocessed register of interests for the Senedd/Welsh Parliament\n\
+  Starting register date starts when this file was created (March 2025).\n"
+custom:
+  row_count: 957
+path: entries.parquet
+name: entries
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: person_id
+    type: string
+    description: TheyWorkForYou ID of the person the entry is associated with
+    constraints:
+      unique: false
+    example: uk.org.publicwhip/person/10442
+  - name: person_name
+    type: string
+    description: The name of the person the entry is associated with
+    constraints:
+      unique: false
+    example: Adam Price MS
+  - name: category_id
+    type: string
+    description: The ID of the category the entry is associated with
+    constraints:
+      unique: false
+      enum:
+      - '1'
+      - '10'
+      - '11'
+      - '12'
+      - '2'
+      - '4'
+      - '5'
+      - '6'
+      - '7'
+      - '8'
+      - '9'
+    example: '1'
+  - name: category_name
+    type: string
+    description: The name of the category the entry is associated with
+    constraints:
+      unique: false
+      enum:
+      - Directorships
+      - Financial sponsorship
+      - Gifts, hospitality, material benefit or advantage
+      - Land and property
+      - Membership/Chairmanship of bodies in receipt of Senedd funds
+      - Overseas visits
+      - Record of membership of societies
+      - Record of the employment of family members
+      - Remunerated employment, office, profession etc
+      - Remuneration or other material benefit
+      - Shareholdings
+    example: Directorships
+  - name: entry_id
+    type: string
+    description: Unique ID for this entry
+    constraints:
+      unique: true
+    example: 10442_11_00a4f30d1e
+  - name: content
+    type: string
+    description: The content of the entry
+    constraints:
+      unique: false
+    example: '-'
+  - name: null_entry
+    type: boolean
+    description: Whether it's just an entry saying 'no interests' or similar.
+    constraints:
+      unique: false
+      enum:
+      - false
+    example: 'False'
+  - name: details
+    type: string
+    description: Machine friendly version of the two fields
+    constraints:
+      unique: false
+    example: '{"entry_in_respect_of": "-", "name_of_organisation_and_position_held":
+      "."}'
+  - name: first_register
+    type: string
+    description: The first register (that we publish) that this entry appeared in
+    constraints:
+      unique: false
+    example: '2021-07-02'
+  - name: last_register
+    type: string
+    description: The last register (that we publish) that this entry appeared in
+    constraints:
+      unique: false
+    example: '2021-07-02'
+hash: 04b124a0c4ff41ab1d739cbb14f23d27
