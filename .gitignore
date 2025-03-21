@@ -12,3 +12,4 @@ docs/data
 docs/_*
 data/vol_interests
 data/data_packages/all_registers_database/*.parquet
+data/data_packages/*_register_of_interests/*.parquet

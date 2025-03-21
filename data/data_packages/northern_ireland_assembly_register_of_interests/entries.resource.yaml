@@ -1,0 +1,100 @@
+title: Entries
+description: "Reprocessed register of interests for the Northern Ireland Assembly\n"
+custom:
+  row_count: 371
+path: entries.parquet
+name: entries
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: person_id
+    type: string
+    description: TheyWorkForYou ID of the person the entry is associated with
+    constraints:
+      unique: false
+    example: uk.org.publicwhip/person/13758
+  - name: person_name
+    type: string
+    description: The name of the person the entry is associated with
+    constraints:
+      unique: false
+    example: Dr Caoimhe Archibald
+  - name: category_id
+    type: string
+    description: The ID of the category the entry is associated with
+    constraints:
+      unique: false
+      enum:
+      - '45'
+      - '46'
+      - '47'
+      - '48'
+      - '49'
+      - '50'
+      - '51'
+      - '52'
+      - '53'
+    example: '45'
+  - name: category_name
+    type: string
+    description: The name of the category the entry is associated with
+    constraints:
+      unique: false
+      enum:
+      - Donations and other support
+      - Employment and Earnings
+      - Family members who benefit from Office Cost Expenditure
+      - Gifts, benefits and hospitality
+      - Land and Property
+      - Miscellaneous
+      - Shareholdings
+      - Unremunerated interests
+      - Visits
+    example: Donations and other support
+  - name: entry_id
+    type: string
+    description: Unique ID for this entry
+    constraints:
+      unique: true
+    example: 13758_50_08e35cfc3d
+  - name: content
+    type: string
+    description: The content of the entry
+    constraints:
+      unique: false
+    example: 1 December 2024. I accepted 'Terminal Perks' parking and lounge access
+      at Belfast International Airport for official business. Approximate value of
+      £400. Costs met by Belfast International Airport.
+  - name: date_published
+    type: string
+    description: The date the entry was published
+    constraints:
+      unique: false
+    example: '2022-05-19'
+  - name: null_entry
+    type: boolean
+    description: Whether it's just an entry saying 'no interests' or similar.
+    constraints:
+      unique: false
+      enum:
+      - false
+    example: 'False'
+  - name: first_register
+    type: string
+    description: The first register (that we publish) that this entry appeared in
+    constraints:
+      unique: false
+    example: '2022-05-19'
+  - name: last_register
+    type: string
+    description: The last register (that we publish) that this entry appeared in
+    constraints:
+      unique: false
+      enum:
+      - '2025-03-11'
+    example: '2025-03-11'
+hash: 6f781b89d077aaee86f22d7fd36e9a53

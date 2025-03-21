@@ -15,7 +15,7 @@ contributors:
   role: author
 custom:
   build: parl_register_interests.__main__:download_and_build_all_time
-  dataset_order: 3
+  dataset_order: 7
   download_options:
     gate: default
     survey: default

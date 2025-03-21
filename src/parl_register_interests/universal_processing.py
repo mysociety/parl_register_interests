@@ -294,3 +294,46 @@ def store_database_regmem():
         collection.detail_desc.to_parquet(
             package_path / "detail_desc.parquet", index=False
         )
+
+
+def seperate_out_chamber():
+    package_path = Path("data", "data_packages", "all_registers_database")
+    entries = package_path / "entries.parquet"
+
+    if not entries.exists():
+        store_database_regmem()
+
+    chambers = ["scottish-parliament", "northern-ireland-assembly", "welsh-parliament"]
+
+    df = pd.read_parquet(entries)
+
+    to_exclude_normal = ["chamber", "parent_id", "details"]
+
+    to_exclude_wales = [
+        "chamber",
+        "parent_id",
+        "date_registered",
+        "date_received",
+        "date_updated",
+        "date_published",
+    ]
+
+    for c in chambers:
+        cdf = df[df["chamber"] == c]
+        if c == "welsh-parliament":
+            file_name = "senedd"
+            cdf = cdf.drop(columns=to_exclude_wales)
+        else:
+            file_name = c.replace("-", "_")
+            cdf = cdf.drop(columns=to_exclude_normal)
+
+        # delete columns that are entirely empty
+        for col in cdf.columns:
+            if cdf[col].isnull().all():
+                cdf = cdf.drop(columns=[col])
+
+        package_name = f"{file_name}_register_of_interests"
+
+        package_path = Path("data", "data_packages", package_name)
+
+        cdf.to_parquet(package_path / "entries.parquet", index=False)

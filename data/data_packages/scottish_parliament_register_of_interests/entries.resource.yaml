@@ -1,9 +1,7 @@
 title: Entries
-description: "This is the main register of interests data. It contains the entries\
-  \ for all\nthe different registers.\n"
+description: "Reprocessed register of interests for the Scottish Parliament\n"
 custom:
-  row_count: 20886
-  dataset_order: 0
+  row_count: 12525
 path: entries.parquet
 name: entries
 profile: data-resource
@@ -13,53 +11,52 @@ hashing: md5
 encoding: utf-8
 schema:
   fields:
-  - name: chamber
-    type: string
-    description: The chamber the entry is associated with
-    constraints:
-      unique: false
-      enum:
-      - house-of-commons
-      - northern-ireland-assembly
-      - scottish-parliament
-      - welsh-parliament
-    example: house-of-commons
   - name: person_id
     type: string
-    description: The ID of the person the entry is associated with
+    description: TheyWorkForYou ID of the person the entry is associated with
     constraints:
       unique: false
-    example: uk.org.publicwhip/person/10001
+    example: uk.org.publicwhip/person/10581
   - name: person_name
     type: string
     description: The name of the person the entry is associated with
     constraints:
       unique: false
-    example: Abena Oppong-Asare
+    example: Alasdair Allan
   - name: category_id
     type: string
     description: The ID of the category the entry is associated with
     constraints:
       unique: false
-    example: '1'
+      enum:
+      - controlled_transactions
+      - gifts
+      - heritable_property
+      - interest_in_shares
+      - overseas_visits
+      - remuneration_and_related_undertaking
+      - voluntary
+    example: controlled_transactions
   - name: category_name
     type: string
     description: The name of the category the entry is associated with
     constraints:
       unique: false
+      enum:
+      - Controlled transactions
+      - Gifts
+      - Heritable property
+      - Interest in shares
+      - Overseas visits
+      - Remuneration and related undertaking
+      - Voluntary
     example: Controlled transactions
   - name: entry_id
     type: string
     description: Unique ID for this entry
     constraints:
       unique: true
-    example: '10001_11_10714'
-  - name: parent_id
-    type: string
-    description: The ID of the parent entry (if any)
-    constraints:
-      unique: false
-    example: '10001_11_10714'
+    example: 10581_controlledtransactions_M2098E335P586R1171
   - name: content
     type: string
     description: The content of the entry
@@ -106,25 +103,19 @@ schema:
     description: The date the entry was registered
     constraints:
       unique: false
-    example: '2011-12-22'
+    example: '2016-05-16'
   - name: date_published
     type: string
     description: The date the entry was published
     constraints:
       unique: false
-    example: '2015-05-01'
+    example: '2016-06-06'
   - name: date_updated
     type: string
     description: The date the entry was last updated
     constraints:
       unique: false
     example: '2016-06-06'
-  - name: date_received
-    type: string
-    description: The date the entry was received
-    constraints:
-      unique: false
-    example: '0204-05-28'
   - name: null_entry
     type: boolean
     description: Whether it's just an entry saying 'no interests' or similar.
@@ -134,28 +125,16 @@ schema:
       - false
       - true
     example: 'False'
-  - name: details
-    type: string
-    description: The details of the entry
-    constraints:
-      unique: false
-    example: '{"appg": "APPG on Beer", "payment_type": "InKind", "payment_description":
-      "ticket to the National Television Awards with hospitality", "value": "1140.00",
-      "received_date": "2024-09-11", "accepted_date": "2024-09-11", "received_end_date":
-      "2024-09-11", "donor_name": "Scenario UK", "donor_public_address": "13 Lime
-      Court, Condult Lane, Hoddesdon, Herts EN11 8EP", "donor_status": "Company",
-      "donor_company_name": "Scenario UK", "donor_company_identifier": "OC365594",
-      "donor_company_identifier_source": "Companies House"}'
   - name: first_register
     type: string
-    description: The register the entry was first registered in
+    description: The first register (that we publish) that this entry appeared in
     constraints:
       unique: false
     example: '2016-06-06'
   - name: last_register
     type: string
-    description: The register the entry was last registered in
+    description: The last register (that we publish) that this entry appeared in
     constraints:
       unique: false
     example: '2016-06-30'
-hash: c4a48601ed65c81d4b4763a8ef505168
+hash: 541f885486fb9e180bf8f3abe576de49

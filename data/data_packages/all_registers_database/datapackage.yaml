@@ -1,24 +1,31 @@
 name: all_registers_database
 title: All Registers Database
-description : |
-  Combined datasets of covered registers
+description: "Combined datasets of covered registers"
 version: 0.1.0
 licenses:
-  
-  - name: CC-BY-4.0
-    path: https://creativecommons.org/licenses/by/4.0/
-    title: Creative Commons Attribution 4.0 International License
-  
+- name: CC-BY-4.0
+  path: https://creativecommons.org/licenses/by/4.0/
+  title: Creative Commons Attribution 4.0 International License
 contributors:
-  - title: mySociety
-    path: https://mysociety.org
-    role: author
-
-
+- title: mySociety
+  path: https://mysociety.org
+  role: author
+- title: UK Parliament
+  path: https://www.parliament.uk/
+  role: author
+- title: Northern Ireland Assembly
+  path: https://www.niassembly.gov.uk/your-mlas/register-of-interests/
+  role: author
+- title: Senedd/Welsh Parliament
+  path: https://senedd.wales/senedd-business/register-of-members-interests/
+  role: author
+- title: Scottish Parliament
+  path: https://www.parliament.scot/msps/register-of-interests
+  role: author
 custom:
   build: parl_register_interests.__main__:process_universal
   tests:
-    - test_database
+  - test_database
   dataset_order: 0
   download_options:
     gate: default
@@ -43,4 +50,5 @@ custom:
       include: all
       exclude: none
       render: true
-
+  change_log:
+    0.1.0: Don't need to increment, first version
