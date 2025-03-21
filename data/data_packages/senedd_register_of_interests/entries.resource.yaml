@@ -99,4 +99,13 @@ schema:
     constraints:
       unique: false
     example: '2021-07-02'
-hash: 04b124a0c4ff41ab1d739cbb14f23d27
+  - name: in_latest_register
+    type: boolean
+    description: If this entry appears in the latest register
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
+hash: e074880fac731da624a7a455f9f3ce02

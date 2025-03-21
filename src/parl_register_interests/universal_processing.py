@@ -332,6 +332,12 @@ def seperate_out_chamber():
             if cdf[col].isnull().all():
                 cdf = cdf.drop(columns=[col])
 
+        latest_register = cdf["last_register"].max()
+
+        cdf["in_latest_register"] = cdf["last_register"] == latest_register
+
+        cdf = cdf.sort_values("last_register", ascending=False)
+
         package_name = f"{file_name}_register_of_interests"
 
         package_path = Path("data", "data_packages", package_name)
