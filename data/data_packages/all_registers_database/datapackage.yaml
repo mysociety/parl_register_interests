@@ -51,5 +51,4 @@ custom:
       exclude: none
       render: true
   change_log:
-    0.1.0: "description changed from 'Combined datasets of covered registers\n' to\
-      \ 'Combined datasets of covered registers'"
+    0.1.0: 'Change in data for resource(s): entries'
