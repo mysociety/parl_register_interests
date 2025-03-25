@@ -2,7 +2,7 @@ title: Entries
 description: "This is the main register of interests data. It contains the entries\
   \ for all\nthe different registers.\n"
 custom:
-  row_count: 20893
+  row_count: 20911
   dataset_order: 0
 path: entries.parquet
 name: entries
@@ -158,4 +158,4 @@ schema:
     constraints:
       unique: false
     example: '2016-06-30'
-hash: f0e08838b32aa022d8a182a1e0487718
+hash: fa9e4a64f0c4195923730147451700c3
