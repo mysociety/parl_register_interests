@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 522
+  row_count: 548
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -96,20 +96,23 @@ schema:
     constraints:
       unique: false
       enum:
+      - APPG Aviation, Aerospace and Travel (This event was during my time as Chair)
       - APPG on Beer
       - British Busses
+      - Music
       - Tennis APPG
       - Ukraine
-    example: APPG on Beer
+    example: APPG Aviation, Aerospace and Travel (This event was during my time as
+      Chair)
   - name: payment_type
     type: string
     description: Type of payment
     constraints:
       unique: false
       enum:
-      - Cash
-      - InKind
-    example: Cash
+      - In kind
+      - Monetary
+    example: In kind
   - name: payment_description
     type: string
     description: Description of the payment
@@ -249,4 +252,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: dc2481e8fa2e499e9dd0b2fcbee7a31a
+hash: 829d9a0ad51f677d6bf974c27f5948f2

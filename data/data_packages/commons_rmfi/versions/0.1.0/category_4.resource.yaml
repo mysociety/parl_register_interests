@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 222
+  row_count: 237
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -95,7 +95,7 @@ schema:
     description: Name of the MP
     constraints:
       unique: false
-    example: Afzal Khan
+    example: Adam Jogee
   - name: visit_locations__country_1
     type: string
     description: Country of the visit
@@ -174,7 +174,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "A four night trip to Israel for my husband and I including\nflights\
+    example: "A four night trip to Israel for my husband and I including\r\nflights\
       \ (£989.74 for two return flights to Tel Aviv), accommodation, meals and visits\
       \ within Israel (£26,811.53)"
   - name: donors__value_1
@@ -284,7 +284,7 @@ schema:
       - Woodstock Accountancy, 3a Market Place, Woodstock OX20 1SY
       - Woodstock Accountancy, 3a Market Place, Woodstock OX20 1SY (company number
         13877908)
-      - "Woodstock Accountancy, 3a Market Place, Woodstock OX20 1SY,\nCompany number\
+      - "Woodstock Accountancy, 3a Market Place, Woodstock OX20 1SY,\r\nCompany number\
         \ 13877908"
     example: 20 Rushworth Street, London SE1 2SS
   - name: donors__payment_type_2
@@ -308,10 +308,10 @@ schema:
       - Flight to COP 16 Conference in Cali
       - Flights, accommodation and meals
       - Flights, accommodation, meals
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
       - For my husband and I, ski pass (one person), value £373. I paid all other
         costs
       - For two people, hospitality (I paid all other costs)
@@ -395,10 +395,10 @@ schema:
       enum:
       - Accommodation Costs
       - Accommodation, meals
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
       - Formal Dinner and receptions
       - Hotel (£350), Food (£20)
     example: Accommodation Costs
@@ -461,14 +461,14 @@ schema:
     constraints:
       unique: false
       enum:
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
-    example: "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300\
-      \ (The Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-      \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\nTotal:\
-      \ £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
+    example: "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights):\
+      \ £300 (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+      \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+      \nTotal: £1,150"
   - name: donors__value_4
     type: number
     description: Value of the payment
@@ -524,14 +524,14 @@ schema:
     constraints:
       unique: false
       enum:
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
-    example: "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300\
-      \ (The Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-      \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\nTotal:\
-      \ £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
+    example: "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights):\
+      \ £300 (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+      \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+      \nTotal: £1,150"
   - name: donors__value_5
     type: number
     description: Value of the payment
@@ -557,4 +557,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 7c2558519026643a514819fdfed24ee6
+hash: b36188d734fdcd7aff396acc28a44011

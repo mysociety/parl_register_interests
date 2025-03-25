@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 563
+  row_count: 573
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -119,6 +119,7 @@ schema:
     constraints:
       unique: false
       enum:
+      - Adaptation of authored works.
       - Councillor
       - Guest presenting LBC Radio programme
       - Institutional Investor Event - guest speaker
@@ -129,7 +130,7 @@ schema:
       - Writing
       - for a radio recording of a book.
       - medical practice
-    example: Councillor
+    example: Adaptation of authored works.
   - name: payment_type
     type: string
     description: Type of payment
@@ -249,4 +250,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 7476efded22f0c94f35dcd9cab12bb2f
+hash: 63efa6c57ea1f2e2a3913b28fb13a75e

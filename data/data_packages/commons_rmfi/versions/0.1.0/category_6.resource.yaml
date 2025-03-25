@@ -137,6 +137,15 @@ schema:
     constraints:
       unique: false
     example: 25% share
+  - name: registrable_rental_income
+    type: boolean
+    description: Is the rental income registrable
+    constraints:
+      unique: false
+      enum:
+      - false
+      - true
+    example: 'False'
   - name: rental_income_details
     type: string
     description: Details of the rental income
@@ -166,13 +175,13 @@ schema:
       unique: false
       enum:
       - 1.0
+      - 3.0
+      - 5.0
+      - 7.0
       - .nan
       - 2.0
-      - 3.0
       - 4.0
-      - 5.0
       - 6.0
-      - 7.0
       - 15.0
     example: '1.0'
   - name: is_land
@@ -267,4 +276,4 @@ schema:
       enum:
       - '6'
     example: '6'
-hash: d84953c4da3caf4e61ec7257722e2f65
+hash: 414b0ec24ebbc0d96ae3db8e7e06e702

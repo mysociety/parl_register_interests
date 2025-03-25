@@ -1,7 +1,7 @@
 title: Category 7
 description: Shareholdings
 custom:
-  row_count: 194
+  row_count: 195
 path: category_7.parquet
 name: category_7
 profile: data-resource
@@ -141,9 +141,9 @@ schema:
     constraints:
       unique: false
       enum:
-      - DelegatedManagementCompany
+      - Delegated management company
       - Trust
-    example: DelegatedManagementCompany
+    example: Delegated management company
   - name: link
     type: string
     description: Link to the interest in the Parliament API
@@ -167,4 +167,4 @@ schema:
       enum:
       - '7'
     example: '7'
-hash: 4e9422ba8b5ffcb964c1036c37b3740b
+hash: 5cff17b434edd3a327dfcc65e2c1e92f

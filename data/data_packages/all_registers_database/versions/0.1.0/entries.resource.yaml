@@ -2,7 +2,7 @@ title: Entries
 description: "This is the main register of interests data. It contains the entries\
   \ for all\nthe different registers.\n"
 custom:
-  row_count: 20911
+  row_count: 20997
   dataset_order: 0
 path: entries.parquet
 name: entries
@@ -139,13 +139,14 @@ schema:
     description: The details of the entry
     constraints:
       unique: false
-    example: '{"appg": "APPG on Beer", "payment_type": "InKind", "payment_description":
-      "ticket to the National Television Awards with hospitality", "value": "1140.00",
-      "received_date": "2024-09-11", "accepted_date": "2024-09-11", "received_end_date":
-      "2024-09-11", "donor_name": "Scenario UK", "donor_public_address": "13 Lime
-      Court, Condult Lane, Hoddesdon, Herts EN11 8EP", "donor_status": "Company",
-      "donor_company_name": "Scenario UK", "donor_company_identifier": "OC365594",
-      "donor_company_identifier_source": "Companies House"}'
+    example: '{"appg": "APPG Aviation, Aerospace and Travel (This event was during
+      my time as Chair)", "payment_type": "In kind", "payment_description": "Ticket
+      for the Airlines UK 2025 annual dinner (value is approximate)", "value": "400.00",
+      "received_date": "2025-02-25", "accepted_date": "2025-02-25", "is_sole_beneficiary":
+      true, "donor_name": "Jet2 Holidays", "donor_public_address": "Low Fare Finder
+      House Leeds Bradford Airport, Yeadon, Leeds, West Yorkshire LS19 7TU", "donor_status":
+      "Company", "donor_company_name": "Jet2 Holidays", "donor_company_identifier":
+      "04472486", "donor_company_identifier_source": "Companies House"}'
   - name: first_register
     type: string
     description: The register the entry was first registered in
@@ -158,4 +159,4 @@ schema:
     constraints:
       unique: false
     example: '2016-06-30'
-hash: fa9e4a64f0c4195923730147451700c3
+hash: 8cab793fdced586bfbb641826aa3cc74

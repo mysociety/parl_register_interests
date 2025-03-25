@@ -45,4 +45,4 @@ custom:
       exclude: none
       render: true
   change_log:
-    0.1.0: 'overall: example changed from 39 to 10000'
+    0.1.0: 'New field(s) added to resource: registrable_rental_income'

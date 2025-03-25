@@ -2,7 +2,7 @@ title: Detail Types
 description: "This contains more information about the detail types that are used\
   \ in the\nregisters. This is mostly reflecting the Commons descriptions. \n"
 custom:
-  row_count: 191
+  row_count: 194
   dataset_order: 3
 path: detail_desc.parquet
 name: detail_desc
@@ -74,4 +74,4 @@ schema:
       - int
       - string
     example: boolean
-hash: 3859c1dcdd044fda0a0f198d0cb5ef17
+hash: 272b4c11508b90cf63626bb0e75caf20
