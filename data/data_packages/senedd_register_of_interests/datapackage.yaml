@@ -42,4 +42,4 @@ custom:
       exclude: none
       render: true
   change_log:
-    0.1.0: 'New field(s) added to end of resource: in_latest_register'
+    0.1.0: 'Change in data for resource(s): entries'
