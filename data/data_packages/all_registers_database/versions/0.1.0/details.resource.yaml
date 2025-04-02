@@ -2,7 +2,7 @@ title: Details
 description: "A key-value that can belong to an entry with more specific data.\nSome\
   \ details have sub-details - which come in groups. \n"
 custom:
-  row_count: 54829
+  row_count: 54831
   dataset_order: 1
 path: details.parquet
 name: details
@@ -94,4 +94,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: 5f71fe0ec0d92337a5fd5e4ed1026f8f
+hash: e585564e13d9cb41de8164987c4f6ed4
