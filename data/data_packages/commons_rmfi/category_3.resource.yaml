@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 548
+  row_count: 534
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -99,6 +99,7 @@ schema:
       - APPG Aviation, Aerospace and Travel (This event was during my time as Chair)
       - APPG on Beer
       - British Busses
+      - Food and Drink APPG
       - Music
       - Tennis APPG
       - Ukraine
@@ -204,7 +205,7 @@ schema:
     description: Company id of the donor
     constraints:
       unique: false
-    example: '00023307'
+    example: '00028301'
   - name: donor_company_identifier_source
     type: string
     description: Identifer category of company number
@@ -240,7 +241,6 @@ schema:
       unique: false
       enum:
       - '2023-01-11'
-      - '2024-03-13'
       - '2024-12-12'
       - '2024-12-18'
     example: '2023-01-11'
@@ -252,4 +252,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 880fc94b0e96b9ebdf66c47a0e0dda63
+hash: 52e1243d07f00cf39ba6b96ee25d0c55

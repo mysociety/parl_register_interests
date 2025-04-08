@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 237
+  row_count: 232
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -22,7 +22,8 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: International visit between 13 February 2024 and 16 February 2024
+    example: International visit to Albania between 30 January 2025 and 03 February
+      2025
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -36,24 +37,22 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2024-02-29'
+    example: '2024-03-13'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: false
-    example: '2024-03-12'
+    example: '2024-04-08'
   - name: updated_1
     type: string
     description: Updated date
     constraints:
       unique: false
       enum:
-      - '2024-03-22'
-      - '2024-03-27'
       - '2024-04-11'
       - '2024-10-25'
-    example: '2024-03-22'
+    example: '2024-04-11'
   - name: category
     type: string
     description: Category of the interest
@@ -143,8 +142,7 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-    example: APPG on Population, Development and Reproductive Health (PDRH) (sponsored
-      by the European Parliamentary Forum on Reproductive Rights)
+    example: Adam Management Holdings
   - name: donors__is_private_individual_1
     type: boolean
     description: Whether the donor is a private individual
@@ -174,7 +172,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "A four night trip to Israel for my husband and I including\nflights\
+    example: "A four night trip to Israel for my husband and I including\r\nflights\
       \ (£989.74 for two return flights to Tel Aviv), accommodation, meals and visits\
       \ within Israel (£26,811.53)"
   - name: donors__value_1
@@ -192,6 +190,280 @@ schema:
       - false
       - true
     example: 'False'
+  - name: donors__name_2
+    type: string
+    description: Name of the donor
+    constraints:
+      unique: false
+    example: B4NZ
+  - name: donors__is_private_individual_2
+    type: string
+    description: Whether the donor is a private individual
+    constraints:
+      unique: false
+      enum:
+      - 'False'
+      - 'True'
+    example: 'False'
+  - name: donors__public_address_2
+    type: string
+    description: Public address of the donor
+    constraints:
+      unique: false
+    example: 20 Rushworth Street, London SE1 2SS
+  - name: donors__payment_type_2
+    type: string
+    description: Type of payment
+    constraints:
+      unique: false
+      enum:
+      - In kind
+    example: In kind
+  - name: donors__payment_description_2
+    type: string
+    description: Description of the payment
+    constraints:
+      unique: false
+    example: (1) Return trip Singapore to Melbourne, Australia (travel only)
+  - name: donors__value_2
+    type: number
+    description: Value of the payment
+    constraints:
+      unique: false
+    example: '1150.0'
+  - name: donors__is_sole_beneficiary_2
+    type: string
+    description: Whether the MP is the sole beneficiary
+    constraints:
+      unique: false
+      enum:
+      - 'False'
+      - 'True'
+    example: 'False'
+  - name: donors__name_3
+    type: string
+    description: Name of the donor
+    constraints:
+      unique: false
+      enum:
+      - British Embassy Berne
+      - Irish American Unity Conference
+      - Kyivstar
+      - The Arkin Group
+      - UK-India Business Council
+      - Zhytomyr Administration
+    example: British Embassy Berne
+  - name: donors__is_private_individual_3
+    type: string
+    description: Whether the donor is a private individual
+    constraints:
+      unique: false
+      enum:
+      - 'False'
+    example: 'False'
+  - name: donors__public_address_3
+    type: string
+    description: Public address of the donor
+    constraints:
+      unique: false
+      enum:
+      - 03113, m. Kyiv, vul. Dehtiarivska, 53
+      - 1147 Lindsay Rd, Carnegie, PA 15106
+      - 25 Mala Berdichivska str., Zhytomyr, Ukraine, 10014
+      - 3 Orchard Pl, London SW1H 0BF
+      - 'P.O. Box : 309 Girne- Kıbrıs, 99300'
+      - S.P. Korolova Square, 4/2, Zhytomyr, Zhytomyr Oblast, Ukraine, 10002
+      - Thunstrasse 50, CH - 3005 Bern
+    example: 03113, m. Kyiv, vul. Dehtiarivska, 53
+  - name: donors__payment_type_3
+    type: string
+    description: Type of payment
+    constraints:
+      unique: false
+      enum:
+      - In kind
+    example: In kind
+  - name: donors__payment_description_3
+    type: string
+    description: Description of the payment
+    constraints:
+      unique: false
+      enum:
+      - Accommodation Costs
+      - Accommodation, meals
+      - Daytrip to Zhytomyr (approx.)
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
+      - Formal Dinner and receptions
+      - Hotel (£350), Food (£20)
+      - Meal £50.00
+      - Transport and buffet lunch
+    example: Accommodation Costs
+  - name: donors__value_3
+    type: number
+    description: Value of the payment
+    constraints:
+      unique: false
+      enum:
+      - 25.0
+      - .nan
+      - 50.0
+      - 160.0
+      - 370.0
+      - 670.28
+      - 1150.0
+    example: '1150.0'
+  - name: donors__is_sole_beneficiary_3
+    type: string
+    description: Whether the MP is the sole beneficiary
+    constraints:
+      unique: false
+      enum:
+      - 'False'
+      - 'True'
+    example: 'False'
+  - name: donors__name_4
+    type: string
+    description: Name of the donor
+    constraints:
+      unique: false
+      enum:
+      - Kyivstar
+      - The British Residents Society
+      - UK Friends of Ukraine
+      - Yes Foundation
+    example: Kyivstar
+  - name: donors__is_private_individual_4
+    type: string
+    description: Whether the donor is a private individual
+    constraints:
+      unique: false
+      enum:
+      - 'False'
+    example: 'False'
+  - name: donors__public_address_4
+    type: string
+    description: Public address of the donor
+    constraints:
+      unique: false
+      enum:
+      - 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
+      - 81 High Street, Cosham, Portsmouth, PO6 3BL
+      - Mustafa Cagatay Avenue, Girne
+      - Vikentiya Khvoiky St, 15/15
+    example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
+  - name: donors__payment_type_4
+    type: string
+    description: Type of payment
+    constraints:
+      unique: false
+      enum:
+      - In kind
+    example: In kind
+  - name: donors__payment_description_4
+    type: string
+    description: Description of the payment
+    constraints:
+      unique: false
+      enum:
+      - Bus transport in Kyiv and Lviv
+      - Conference £150
+      - Dinner in Kyiv (approx.)
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
+    example: Bus transport in Kyiv and Lviv
+  - name: donors__value_4
+    type: number
+    description: Value of the payment
+    constraints:
+      unique: false
+      enum:
+      - 25.0
+      - .nan
+      - 25.86
+      - 150.0
+      - 1150.0
+    example: '1150.0'
+  - name: donors__is_sole_beneficiary_4
+    type: string
+    description: Whether the MP is the sole beneficiary
+    constraints:
+      unique: false
+      enum:
+      - 'True'
+    example: 'True'
+  - name: donors__name_5
+    type: string
+    description: Name of the donor
+    constraints:
+      unique: false
+      enum:
+      - Bulldog Political Consulting
+      - Turkish Airlines
+      - YES Foundation
+    example: Bulldog Political Consulting
+  - name: donors__is_private_individual_5
+    type: string
+    description: Whether the donor is a private individual
+    constraints:
+      unique: false
+      enum:
+      - 'False'
+    example: 'False'
+  - name: donors__public_address_5
+    type: string
+    description: Public address of the donor
+    constraints:
+      unique: false
+      enum:
+      - 19-20 Bourne Court, Southend Road, Woodford Green, Essex IG8 8HD
+      - 81 High Street, Cosham, Portsmouth PO6 3BL
+      - Istanbul Atatürk Airport, Yeşilköy, Bakırköy, Istanbul, Türkiye
+    example: 19-20 Bourne Court, Southend Road, Woodford Green, Essex IG8 8HD
+  - name: donors__payment_type_5
+    type: string
+    description: Type of payment
+    constraints:
+      unique: false
+      enum:
+      - In kind
+    example: In kind
+  - name: donors__payment_description_5
+    type: string
+    description: Description of the payment
+    constraints:
+      unique: false
+      enum:
+      - Dinner in Lviv
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
+      - YES Conference
+    example: Dinner in Lviv
+  - name: donors__value_5
+    type: number
+    description: Value of the payment
+    constraints:
+      unique: false
+      enum:
+      - 92.11
+      - .nan
+      - 86.2
+      - 1150.0
+    example: '1150.0'
+  - name: donors__is_sole_beneficiary_5
+    type: string
+    description: Whether the MP is the sole beneficiary
+    constraints:
+      unique: false
+      enum:
+      - 'True'
+    example: 'True'
   - name: link
     type: string
     description: Link to the interest
@@ -236,319 +508,6 @@ schema:
       enum:
       - Tbilisi airport (transfer)
     example: Tbilisi airport (transfer)
-  - name: donors__name_2
-    type: string
-    description: Name of the donor
-    constraints:
-      unique: false
-      enum:
-      - B4NZ
-      - Cyprus Premier
-      - Davos Klosters Bergbahnen AG
-      - Gulf Air
-      - Irish Society of Philadelphia
-      - Labour Party
-      - Landschaft Davos
-      - Skigruppe der Bundesversammlung
-      - The 1928 Institute
-      - The 1928 Institute (Secretariat to the India APPG)
-      - The Stone Center, Harris School of Public Policy
-      - Transport Workers Union USA
-    example: B4NZ
-  - name: donors__is_private_individual_2
-    type: string
-    description: Whether the donor is a private individual
-    constraints:
-      unique: false
-      enum:
-      - 'False'
-      - 'True'
-    example: 'False'
-  - name: donors__public_address_2
-    type: string
-    description: Public address of the donor
-    constraints:
-      unique: false
-      enum:
-      - 20 Rushworth Street, London SE1 2SS
-      - 239-241 Kennington Ln, London SE11 5QU
-      - 325 Chestnut St, Philadelphia, PA 19106
-      - 3a Market Place, Woodstock OX20 1SY
-      - Brämabühlstrasse 11, CH- 7270 Davos Platz
-      - First Floor, 10 Queen Street Place, London EC4R 1BE
-      - Rathaus, Berglilstutz1, CH - 7270 Davos Platz
-      - The Mille, 1000 Great West Road, Brentford, Middlesex TW8 9DW
-      - Transport Workers Union, 1220 19th St NW 6th Floor, Washington, DC 20036,
-        USA
-      - University of Chicago, 5801 S. Ellis Ave. Chicago, IL 60637, USA
-      - Woodstock Accountancy, 3a Market Place, Woodstock OX20 1SY
-      - Woodstock Accountancy, 3a Market Place, Woodstock OX20 1SY (company number
-        13877908)
-      - "Woodstock Accountancy, 3a Market Place, Woodstock OX20 1SY,\nCompany number\
-        \ 13877908"
-    example: 20 Rushworth Street, London SE1 2SS
-  - name: donors__payment_type_2
-    type: string
-    description: Type of payment
-    constraints:
-      unique: false
-      enum:
-      - In kind
-    example: In kind
-  - name: donors__payment_description_2
-    type: string
-    description: Description of the payment
-    constraints:
-      unique: false
-      enum:
-      - (1) Return trip Singapore to Melbourne, Australia (travel only)
-      - Accommodation (£650) and sundries (estimated at £100)
-      - Accommodation costs (£480) and meals (£120)
-      - Domestic Flights (£184) Hotel Stay (£170) Food (£70)
-      - Flight to COP 16 Conference in Cali
-      - Flights, accommodation and meals
-      - Flights, accommodation, meals
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
-      - For my husband and I, ski pass (one person), value £373. I paid all other
-        costs
-      - For two people, hospitality (I paid all other costs)
-      - Free upgrade to Falcon Gold class seats provided by the airline, in line with
-        their policy of upgrading officials visiting the Kingdom. Equivalent value
-        of £2425.43 per person
-      - Ski passes
-      - Travel to and from airport, hotel and meetings, accommodation and meals
-    example: (1) Return trip Singapore to Melbourne, Australia (travel only)
-  - name: donors__value_2
-    type: number
-    description: Value of the payment
-    constraints:
-      unique: false
-      enum:
-      - .nan
-      - 324.0
-      - 424.0
-      - 600.0
-      - 750.0
-      - 1150.0
-      - 1206.33
-      - 1418.0
-      - 1500.0
-      - 1701.99
-      - 3047.0
-      - 4850.86
-    example: '1150.0'
-  - name: donors__is_sole_beneficiary_2
-    type: string
-    description: Whether the MP is the sole beneficiary
-    constraints:
-      unique: false
-      enum:
-      - 'False'
-      - 'True'
-    example: 'False'
-  - name: donors__name_3
-    type: string
-    description: Name of the donor
-    constraints:
-      unique: false
-      enum:
-      - British Embassy Berne
-      - Irish American Unity Conference
-      - The Arkin Group
-      - UK-India Business Council
-    example: British Embassy Berne
-  - name: donors__is_private_individual_3
-    type: string
-    description: Whether the donor is a private individual
-    constraints:
-      unique: false
-      enum:
-      - 'False'
-    example: 'False'
-  - name: donors__public_address_3
-    type: string
-    description: Public address of the donor
-    constraints:
-      unique: false
-      enum:
-      - 1147 Lindsay Rd, Carnegie, PA 15106
-      - 3 Orchard Pl, London SW1H 0BF
-      - 'P.O. Box : 309 Girne- Kıbrıs, 99300'
-      - Thunstrasse 50, CH - 3005 Bern
-    example: 1147 Lindsay Rd, Carnegie, PA 15106
-  - name: donors__payment_type_3
-    type: string
-    description: Type of payment
-    constraints:
-      unique: false
-      enum:
-      - In kind
-    example: In kind
-  - name: donors__payment_description_3
-    type: string
-    description: Description of the payment
-    constraints:
-      unique: false
-      enum:
-      - Accommodation Costs
-      - Accommodation, meals
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
-      - Formal Dinner and receptions
-      - Hotel (£350), Food (£20)
-    example: Accommodation Costs
-  - name: donors__value_3
-    type: number
-    description: Value of the payment
-    constraints:
-      unique: false
-      enum:
-      - .nan
-      - 160.0
-      - 370.0
-      - 670.28
-      - 1150.0
-    example: '1150.0'
-  - name: donors__is_sole_beneficiary_3
-    type: string
-    description: Whether the MP is the sole beneficiary
-    constraints:
-      unique: false
-      enum:
-      - 'False'
-      - 'True'
-    example: 'False'
-  - name: donors__name_4
-    type: string
-    description: Name of the donor
-    constraints:
-      unique: false
-      enum:
-      - The British Residents Society
-    example: The British Residents Society
-  - name: donors__is_private_individual_4
-    type: string
-    description: Whether the donor is a private individual
-    constraints:
-      unique: false
-      enum:
-      - 'False'
-    example: 'False'
-  - name: donors__public_address_4
-    type: string
-    description: Public address of the donor
-    constraints:
-      unique: false
-      enum:
-      - Mustafa Cagatay Avenue, Girne
-    example: Mustafa Cagatay Avenue, Girne
-  - name: donors__payment_type_4
-    type: string
-    description: Type of payment
-    constraints:
-      unique: false
-      enum:
-      - In kind
-    example: In kind
-  - name: donors__payment_description_4
-    type: string
-    description: Description of the payment
-    constraints:
-      unique: false
-      enum:
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
-    example: "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300\
-      \ (The Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-      \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\nTotal:\
-      \ £1,150"
-  - name: donors__value_4
-    type: number
-    description: Value of the payment
-    constraints:
-      unique: false
-      enum:
-      - .nan
-      - 1150.0
-    example: '1150.0'
-  - name: donors__is_sole_beneficiary_4
-    type: string
-    description: Whether the MP is the sole beneficiary
-    constraints:
-      unique: false
-      enum:
-      - 'True'
-    example: 'True'
-  - name: donors__name_5
-    type: string
-    description: Name of the donor
-    constraints:
-      unique: false
-      enum:
-      - Turkish Airlines
-    example: Turkish Airlines
-  - name: donors__is_private_individual_5
-    type: string
-    description: Whether the donor is a private individual
-    constraints:
-      unique: false
-      enum:
-      - 'False'
-    example: 'False'
-  - name: donors__public_address_5
-    type: string
-    description: Public address of the donor
-    constraints:
-      unique: false
-      enum:
-      - Istanbul Atatürk Airport, Yeşilköy, Bakırköy, Istanbul, Türkiye
-    example: Istanbul Atatürk Airport, Yeşilköy, Bakırköy, Istanbul, Türkiye
-  - name: donors__payment_type_5
-    type: string
-    description: Type of payment
-    constraints:
-      unique: false
-      enum:
-      - In kind
-    example: In kind
-  - name: donors__payment_description_5
-    type: string
-    description: Description of the payment
-    constraints:
-      unique: false
-      enum:
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
-    example: "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300\
-      \ (The Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-      \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\nTotal:\
-      \ £1,150"
-  - name: donors__value_5
-    type: number
-    description: Value of the payment
-    constraints:
-      unique: false
-      enum:
-      - .nan
-      - 1150.0
-    example: '1150.0'
-  - name: donors__is_sole_beneficiary_5
-    type: string
-    description: Whether the MP is the sole beneficiary
-    constraints:
-      unique: false
-      enum:
-      - 'True'
-    example: 'True'
   - name: category_code
     type: string
     description: Code for the category
@@ -557,4 +516,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 46aa99ffd7d68fb2cc2d8d280404e317
+hash: 4df63271113c4aa02330cd98d82c2953

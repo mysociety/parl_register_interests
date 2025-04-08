@@ -1,7 +1,7 @@
 title: Register of Members Interests (latest register)
 description: Register of members interests with basic NLP extraction
 custom:
-  row_count: 10281
+  row_count: 10412
 path: register_of_interests.parquet
 name: register_of_interests
 profile: data-resource
@@ -58,42 +58,12 @@ schema:
     description: Earliest date this interest appeared in register
     constraints:
       unique: false
-      enum:
-      - '2024-08-04'
-      - '2024-09-02'
-      - '2024-09-30'
-      - '2024-10-14'
-      - '2024-10-28'
-      - '2024-11-11'
-      - '2024-11-25'
-      - '2024-12-09'
-      - '2025-01-06'
-      - '2025-01-20'
-      - '2025-02-03'
-      - '2025-02-24'
-      - '2025-03-10'
-      - '2025-03-24'
     example: '2024-08-04'
   - name: latest_declaration
     type: string
     description: Latest date this interest appeared in register
     constraints:
       unique: false
-      enum:
-      - '2024-08-04'
-      - '2024-09-02'
-      - '2024-09-30'
-      - '2024-10-14'
-      - '2024-10-28'
-      - '2024-11-11'
-      - '2024-11-25'
-      - '2024-12-09'
-      - '2025-01-06'
-      - '2025-01-20'
-      - '2025-02-03'
-      - '2025-02-24'
-      - '2025-03-10'
-      - '2025-03-24'
     example: '2024-08-04'
   - name: new_in_latest
     type: boolean
@@ -126,4 +96,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: 094accd6d9d19bf652966eaa6588cbba
+hash: 20f24fd4392053451fb7bb210b81cf51

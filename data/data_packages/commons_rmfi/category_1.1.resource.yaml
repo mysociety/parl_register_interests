@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 573
+  row_count: 583
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -40,7 +40,7 @@ schema:
     description: published date
     constraints:
       unique: false
-    example: '2024-03-16'
+    example: '2024-03-18'
   - name: updated_1
     type: string
     description: updated date
@@ -124,11 +124,11 @@ schema:
       - Guest presenting LBC Radio programme
       - Institutional Investor Event - guest speaker
       - Italian translation of a book
+      - Speaking
       - Speaking engagement
       - Speech and workshop at LGA Black, Asian and Minority Ethnic Councillors Masterclass
         Weekender
       - Writing
-      - for a radio recording of a book.
       - medical practice
     example: Adaptation of authored works.
   - name: payment_type
@@ -225,6 +225,7 @@ schema:
       unique: false
       enum:
       - Charity
+      - Community organisation
       - Other
     example: Charity
   - name: donatee_details
@@ -250,4 +251,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 02a1601c7dced1c10f83f55f683947ab
+hash: e0e4efbb473b90b0ca515449c699d8fd

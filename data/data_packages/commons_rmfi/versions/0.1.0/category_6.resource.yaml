@@ -175,13 +175,13 @@ schema:
       unique: false
       enum:
       - 1.0
-      - 3.0
-      - 5.0
-      - 7.0
       - .nan
       - 2.0
+      - 3.0
       - 4.0
+      - 5.0
       - 6.0
+      - 7.0
       - 15.0
     example: '1.0'
   - name: is_land
@@ -276,4 +276,4 @@ schema:
       enum:
       - '6'
     example: '6'
-hash: 414b0ec24ebbc0d96ae3db8e7e06e702
+hash: c7943a4440fd8dc27ecf90be883727d2
