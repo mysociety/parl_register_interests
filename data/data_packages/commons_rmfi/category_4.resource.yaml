@@ -172,7 +172,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "A four night trip to Israel for my husband and I including\r\nflights\
+    example: "A four night trip to Israel for my husband and I including\nflights\
       \ (£989.74 for two return flights to Tel Aviv), accommodation, meals and visits\
       \ within Israel (£26,811.53)"
   - name: donors__value_1
@@ -292,10 +292,10 @@ schema:
       - Accommodation Costs
       - Accommodation, meals
       - Daytrip to Zhytomyr (approx.)
-      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
-        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
-        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
-        \nTotal: £1,150"
+      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
+        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
+        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
+        Total: £1,150"
       - Formal Dinner and receptions
       - Hotel (£350), Food (£20)
       - Meal £50.00
@@ -371,10 +371,10 @@ schema:
       - Bus transport in Kyiv and Lviv
       - Conference £150
       - Dinner in Kyiv (approx.)
-      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
-        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
-        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
-        \nTotal: £1,150"
+      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
+        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
+        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
+        Total: £1,150"
     example: Bus transport in Kyiv and Lviv
   - name: donors__value_4
     type: number
@@ -439,10 +439,10 @@ schema:
       unique: false
       enum:
       - Dinner in Lviv
-      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
-        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
-        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
-        \nTotal: £1,150"
+      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
+        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
+        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
+        Total: £1,150"
       - YES Conference
     example: Dinner in Lviv
   - name: donors__value_5
@@ -516,4 +516,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 4df63271113c4aa02330cd98d82c2953
+hash: 5b186c5ddb6bfd1754176bf68fa42c52
