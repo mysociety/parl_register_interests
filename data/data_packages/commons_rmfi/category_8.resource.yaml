@@ -1,7 +1,7 @@
 title: Category 8
 description: Miscellaneous
 custom:
-  row_count: 958
+  row_count: 967
 path: category_8.parquet
 name: category_8
 profile: data-resource
@@ -63,7 +63,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: '1409'
+    example: '1211'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -103,7 +103,7 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-    example: Betting & Gaming Council
+    example: African Development Bank, Avenue Lamblin, Abidjan, Cote d'Ivoire
   - name: description
     type: string
     description: Description of the interest
@@ -145,6 +145,7 @@ schema:
       - '2024-09-24'
       - '2024-10-28'
       - '2025-03-11'
+      - '2025-04-25'
     example: '2021-07-22'
   - name: updated_3
     type: string
@@ -179,4 +180,4 @@ schema:
       enum:
       - '8'
     example: '8'
-hash: cc2f4a1badf639ed4e74562eaf67e8db
+hash: 55ce267d4dd0a66674391d3a6c9bc22c

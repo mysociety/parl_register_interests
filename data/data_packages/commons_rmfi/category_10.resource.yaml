@@ -65,6 +65,7 @@ schema:
       - '2022-12-09'
       - '2024-12-16'
       - '2025-01-13'
+      - '2025-04-28'
     example: '2021-05-11'
   - name: category
     type: string
@@ -114,7 +115,7 @@ schema:
     description: Name of the employer
     constraints:
       unique: false
-    example: BB Partners
+    example: Betting and Gaming Council
   - name: person_name
     type: string
     description: Name of the family member
@@ -165,6 +166,7 @@ schema:
       unique: false
       enum:
       - '2024-11-19'
+      - '2025-04-24'
     example: '2024-11-19'
   - name: category_code
     type: string
@@ -174,4 +176,4 @@ schema:
       enum:
       - '10'
     example: '10'
-hash: 6042385d356ade894ad9da16d30b6152
+hash: 19c11add4ae293b8834b757a35c42f4b

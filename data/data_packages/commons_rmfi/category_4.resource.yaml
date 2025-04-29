@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 232
+  row_count: 244
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -52,6 +52,7 @@ schema:
       enum:
       - '2024-04-11'
       - '2024-10-25'
+      - '2025-04-10'
     example: '2024-04-11'
   - name: category
     type: string
@@ -142,7 +143,7 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-    example: Adam Management Holdings
+    example: AIM Congress Abu Dhabi
   - name: donors__is_private_individual_1
     type: boolean
     description: Whether the donor is a private individual
@@ -172,7 +173,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "A four night trip to Israel for my husband and I including\nflights\
+    example: "A four night trip to Israel for my husband and I including\r\nflights\
       \ (£989.74 for two return flights to Tel Aviv), accommodation, meals and visits\
       \ within Israel (£26,811.53)"
   - name: donors__value_1
@@ -190,6 +191,12 @@ schema:
       - false
       - true
     example: 'False'
+  - name: link
+    type: string
+    description: Link to the interest
+    constraints:
+      unique: true
+    example: https://interests-api.parliament.uk/api/v1/Interests/10168
   - name: donors__name_2
     type: string
     description: Name of the donor
@@ -271,6 +278,7 @@ schema:
       - 1147 Lindsay Rd, Carnegie, PA 15106
       - 25 Mala Berdichivska str., Zhytomyr, Ukraine, 10014
       - 3 Orchard Pl, London SW1H 0BF
+      - 53 Degtyarivska St, Kiev, Kyiv City, 03113, Ukraine
       - 'P.O. Box : 309 Girne- Kıbrıs, 99300'
       - S.P. Korolova Square, 4/2, Zhytomyr, Zhytomyr Oblast, Ukraine, 10002
       - Thunstrasse 50, CH - 3005 Bern
@@ -292,10 +300,11 @@ schema:
       - Accommodation Costs
       - Accommodation, meals
       - Daytrip to Zhytomyr (approx.)
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - Dinner and briefing in Kyiv with delegation,
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
       - Formal Dinner and receptions
       - Hotel (£350), Food (£20)
       - Meal £50.00
@@ -307,8 +316,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - 25.0
       - .nan
+      - 25.0
       - 50.0
       - 160.0
       - 370.0
@@ -350,6 +359,7 @@ schema:
       unique: false
       enum:
       - 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
+      - 81 High Street, Cosham, Portsmouth PO6 3BL
       - 81 High Street, Cosham, Portsmouth, PO6 3BL
       - Mustafa Cagatay Avenue, Girne
       - Vikentiya Khvoiky St, 15/15
@@ -371,10 +381,10 @@ schema:
       - Bus transport in Kyiv and Lviv
       - Conference £150
       - Dinner in Kyiv (approx.)
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
     example: Bus transport in Kyiv and Lviv
   - name: donors__value_4
     type: number
@@ -382,8 +392,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - 25.0
       - .nan
+      - 25.0
       - 25.86
       - 150.0
       - 1150.0
@@ -439,10 +449,10 @@ schema:
       unique: false
       enum:
       - Dinner in Lviv
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
       - YES Conference
     example: Dinner in Lviv
   - name: donors__value_5
@@ -451,9 +461,9 @@ schema:
     constraints:
       unique: false
       enum:
-      - 92.11
       - .nan
       - 86.2
+      - 92.11
       - 1150.0
     example: '1150.0'
   - name: donors__is_sole_beneficiary_5
@@ -464,12 +474,6 @@ schema:
       enum:
       - 'True'
     example: 'True'
-  - name: link
-    type: string
-    description: Link to the interest
-    constraints:
-      unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10168
   - name: visit_locations__country_2
     type: string
     description: Country of the visit
@@ -481,6 +485,7 @@ schema:
       - Palestine
       - Poland
       - Singapore
+      - Syria
     example: Azerbaijan
   - name: visit_locations__destination_2
     type: string
@@ -490,6 +495,7 @@ schema:
       enum:
       - Baku
       - Hebron, Ramallah
+      - Rojava
     example: Baku
   - name: visit_locations__country_3
     type: string
@@ -516,4 +522,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 5b186c5ddb6bfd1754176bf68fa42c52
+hash: 63338744c8ca829cabcc743ffa8949bf
