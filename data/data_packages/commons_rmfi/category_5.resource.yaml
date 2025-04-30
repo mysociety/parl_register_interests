@@ -227,13 +227,13 @@ schema:
     constraints:
       unique: true
       enum:
-      - "Ayita LLC\r\n10351 Washington Blvd, Culver City, CA 90232"
+      - "Ayita LLC\n10351 Washington Blvd, Culver City, CA 90232"
       - Floor 4, General Services Administration at National Capitol Region 301 7th
         Street SW, Washington, DC 20024 USA
       - Leiden University, PO Box 9500, 2300 RA Leiden. The Netherlands
       - Services & General Administration Department, Central Transport Pool G0, Azad
         Government of the State of Jammu & Kashmir, Muzzadarabad
-    example: "Ayita LLC\r\n10351 Washington Blvd, Culver City, CA 90232"
+    example: "Ayita LLC\n10351 Washington Blvd, Culver City, CA 90232"
   - name: donor_status
     type: string
     description: Type of donor
@@ -313,4 +313,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: fdac955811183b230d71f636e367d559
+hash: 20560a4ce702834bc7fb81b285ed0a91
