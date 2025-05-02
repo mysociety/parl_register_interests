@@ -87,6 +87,7 @@ schema:
       - scottish-national-party
       - sinn-fein
       - traditional-unionist-voice
+      - unknown
     example: conservative
   - name: member
     type: string
@@ -276,4 +277,4 @@ schema:
       enum:
       - '6'
     example: '6'
-hash: 0688c08d30f5054f170aa660e6fe1aab
+hash: 563140b667b4cf1c5f5c105a37b4bc7c

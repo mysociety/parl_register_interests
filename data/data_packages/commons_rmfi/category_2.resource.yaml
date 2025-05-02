@@ -86,6 +86,7 @@ schema:
       - scottish-national-party
       - speaker
       - traditional-unionist-voice
+      - unknown
       - uup
     example: conservative
   - name: member
@@ -259,4 +260,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: c25c6deec16fd8b7a069f7b5b5fe2221
+hash: 92ea51e82daae7bd6d7b294cd403ac29
