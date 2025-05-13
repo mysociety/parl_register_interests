@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 610
+  row_count: 609
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -130,6 +130,7 @@ schema:
         Weekender
       - Writing
       - medical practice
+      - wrote an article for newspaper
     example: Adaptation of authored works.
   - name: payment_type
     type: string
@@ -234,9 +235,9 @@ schema:
     constraints:
       unique: false
       enum:
+      - All Party Parliamentary Group secretariat Beyond Pills
       - Elizabeth Garrett Anderson School
-      - Fee allocated to my staffing budget.
-    example: Elizabeth Garrett Anderson School
+    example: All Party Parliamentary Group secretariat Beyond Pills
   - name: link
     type: string
     description: Link to the interest
@@ -251,4 +252,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: f99ef813c8db5c92be0834b65e85a541
+hash: 24be31b83d620780b79b362460dc48c1

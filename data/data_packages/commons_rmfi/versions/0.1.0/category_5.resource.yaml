@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 5
+  row_count: 6
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -22,6 +22,7 @@ schema:
       - 11267
       - 11809
       - 12043
+      - 12324
     example: '10723'
   - name: summary
     type: string
@@ -33,6 +34,7 @@ schema:
       - Azad Government of the State of Jammu & Kashmir - £707.00
       - Leiden University - £350.00
       - Mr Ronald Chagoury - £1,440.00
+      - Real Madrid CF - £340.00
       - Trump Vance Inaugural Committee - £712.87
     example: Ayita LLC - £836.00
   - name: parent_interest_id
@@ -54,6 +56,7 @@ schema:
       - '2024-11-14'
       - '2025-02-14'
       - '2025-03-18'
+      - '2025-05-01'
     example: '2024-09-17'
   - name: published
     type: string
@@ -66,6 +69,7 @@ schema:
       - '2024-11-18'
       - '2025-02-14'
       - '2025-03-19'
+      - '2025-05-01'
     example: '2024-09-17'
   - name: updated_1
     type: number
@@ -90,6 +94,7 @@ schema:
       unique: true
       enum:
       - 4018
+      - 4119
       - 4356
       - 4475
       - 4598
@@ -102,6 +107,7 @@ schema:
       unique: true
       enum:
       - '24796'
+      - '24929'
       - '25272'
       - '25429'
       - '25649'
@@ -115,6 +121,7 @@ schema:
       enum:
       - conservative
       - labour
+      - labourco-operative
       - liberal-democrat
     example: conservative
   - name: member
@@ -126,6 +133,7 @@ schema:
       - Angela Rayner
       - Freddie van Mierlo
       - Helen Grant
+      - Jonathan Reynolds
       - Mohammad Yasin
       - Suella Braverman
     example: Angela Rayner
@@ -161,6 +169,9 @@ schema:
         January 2025
       - Transport was provided for me and up to six other family members during my
         recent trip to Pakistan
+      - Two tickets to the Real Madrid v Valencia football match on Saturday 5 April
+        2025. It was not possible to purchase the tickets therefore a donation of
+        500 euros, a higher value than the tickets,  was made to the Real Madrid Foundation
     example: Accommodation at the Peninsula Hotel, 19 Av. Kléber, 75116 Paris, France
       - value €1700 Euro - equivalent to GBP @1.18 = £1440.  I was accompanied by
       my husband
@@ -170,6 +181,7 @@ schema:
     constraints:
       unique: true
       enum:
+      - 340.0
       - 350.0
       - 707.0
       - 712.87
@@ -219,6 +231,7 @@ schema:
       - Azad Government of the State of Jammu & Kashmir
       - Leiden University
       - Mr Ronald Chagoury
+      - Real Madrid CF
       - Trump Vance Inaugural Committee
     example: Ayita LLC
   - name: donor_public_address
@@ -227,13 +240,14 @@ schema:
     constraints:
       unique: true
       enum:
-      - "Ayita LLC\n10351 Washington Blvd, Culver City, CA 90232"
+      - "Ayita LLC\r\n10351 Washington Blvd, Culver City, CA 90232"
       - Floor 4, General Services Administration at National Capitol Region 301 7th
         Street SW, Washington, DC 20024 USA
       - Leiden University, PO Box 9500, 2300 RA Leiden. The Netherlands
+      - Santiago Bernabeu Stadium, Madrid, Spain
       - Services & General Administration Department, Central Transport Pool G0, Azad
         Government of the State of Jammu & Kashmir, Muzzadarabad
-    example: "Ayita LLC\n10351 Washington Blvd, Culver City, CA 90232"
+    example: "Ayita LLC\r\n10351 Washington Blvd, Culver City, CA 90232"
   - name: donor_status
     type: string
     description: Type of donor
@@ -291,6 +305,7 @@ schema:
       unique: false
       enum:
       - Government
+      - Member owned sports association
       - University
     example: Government
   - name: link
@@ -304,6 +319,7 @@ schema:
       - https://interests-api.parliament.uk/api/v1/Interests/11267
       - https://interests-api.parliament.uk/api/v1/Interests/11809
       - https://interests-api.parliament.uk/api/v1/Interests/12043
+      - https://interests-api.parliament.uk/api/v1/Interests/12324
     example: https://interests-api.parliament.uk/api/v1/Interests/10723
   - name: category_code
     type: string
@@ -313,4 +329,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 20560a4ce702834bc7fb81b285ed0a91
+hash: f1e7f8de2c6785a7d2e95feeb3d1c3ad

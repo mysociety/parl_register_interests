@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 244
+  row_count: 255
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -37,23 +37,22 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2024-03-13'
+    example: '2024-05-01'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: false
-    example: '2024-04-08'
+    example: '2024-05-01'
   - name: updated_1
     type: string
     description: Updated date
     constraints:
       unique: false
       enum:
-      - '2024-04-11'
       - '2024-10-25'
       - '2025-04-10'
-    example: '2024-04-11'
+    example: '2024-10-25'
   - name: category
     type: string
     description: Category of the interest
@@ -95,7 +94,7 @@ schema:
     description: Name of the MP
     constraints:
       unique: false
-    example: Adam Jogee
+    example: Abtisam Mohamed
   - name: visit_locations__country_1
     type: string
     description: Country of the visit
@@ -173,9 +172,8 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: "A four night trip to Israel for my husband and I including\nflights\
-      \ (£989.74 for two return flights to Tel Aviv), accommodation, meals and visits\
-      \ within Israel (£26,811.53)"
+    example: 2nd April 2025 - reimbursement payment for 1 x return flight from London
+      to Bahrain
   - name: donors__value_1
     type: number
     description: Value of the payment
@@ -197,6 +195,48 @@ schema:
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10168
+  - name: visit_locations__country_2
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+      enum:
+      - Azerbaijan
+      - Israel
+      - Palestine
+      - Poland
+      - Singapore
+      - Syria
+    example: Azerbaijan
+  - name: visit_locations__destination_2
+    type: string
+    description: Destination of the visit
+    constraints:
+      unique: false
+      enum:
+      - Baku
+      - Hebron, Ramallah
+      - Palestine (Occupied Palestinian Territory) and Israel
+      - Rojava
+    example: Baku
+  - name: visit_locations__country_3
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+      enum:
+      - Georgia
+      - Israel
+      - Moldova
+    example: Georgia
+  - name: visit_locations__destination_3
+    type: string
+    description: Destination of the visit
+    constraints:
+      unique: false
+      enum:
+      - Tbilisi airport (transfer)
+    example: Tbilisi airport (transfer)
   - name: donors__name_2
     type: string
     description: Name of the donor
@@ -301,10 +341,10 @@ schema:
       - Accommodation, meals
       - Daytrip to Zhytomyr (approx.)
       - Dinner and briefing in Kyiv with delegation,
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
       - Formal Dinner and receptions
       - Hotel (£350), Food (£20)
       - Meal £50.00
@@ -381,10 +421,10 @@ schema:
       - Bus transport in Kyiv and Lviv
       - Conference £150
       - Dinner in Kyiv (approx.)
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
     example: Bus transport in Kyiv and Lviv
   - name: donors__value_4
     type: number
@@ -449,10 +489,10 @@ schema:
       unique: false
       enum:
       - Dinner in Lviv
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
       - YES Conference
     example: Dinner in Lviv
   - name: donors__value_5
@@ -474,46 +514,6 @@ schema:
       enum:
       - 'True'
     example: 'True'
-  - name: visit_locations__country_2
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-      enum:
-      - Azerbaijan
-      - Israel
-      - Palestine
-      - Poland
-      - Singapore
-      - Syria
-    example: Azerbaijan
-  - name: visit_locations__destination_2
-    type: string
-    description: Destination of the visit
-    constraints:
-      unique: false
-      enum:
-      - Baku
-      - Hebron, Ramallah
-      - Rojava
-    example: Baku
-  - name: visit_locations__country_3
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-      enum:
-      - Georgia
-      - Moldova
-    example: Georgia
-  - name: visit_locations__destination_3
-    type: string
-    description: Destination of the visit
-    constraints:
-      unique: false
-      enum:
-      - Tbilisi airport (transfer)
-    example: Tbilisi airport (transfer)
   - name: category_code
     type: string
     description: Code for the category
@@ -522,4 +522,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: f1c14c5cf11134d5e0ed8db67fc8c2a0
+hash: f7471b306aef452974a9222b7606d734

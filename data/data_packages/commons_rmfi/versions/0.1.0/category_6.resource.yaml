@@ -1,7 +1,7 @@
 title: Category 6
 description: Land and property (within or outside the UK)
 custom:
-  row_count: 214
+  row_count: 215
 path: category_6.parquet
 name: category_6
 profile: data-resource
@@ -176,13 +176,13 @@ schema:
       unique: false
       enum:
       - 1.0
-      - 3.0
-      - 5.0
-      - 7.0
       - .nan
       - 2.0
+      - 3.0
       - 4.0
+      - 5.0
       - 6.0
+      - 7.0
       - 15.0
     example: '1.0'
   - name: is_land
@@ -268,6 +268,7 @@ schema:
       enum:
       - '2020-01-09'
       - '2025-03-07'
+      - '2025-05-12'
     example: '2020-01-09'
   - name: category_code
     type: string
@@ -277,4 +278,4 @@ schema:
       enum:
       - '6'
     example: '6'
-hash: 563140b667b4cf1c5f5c105a37b4bc7c
+hash: 0c638202b447b14edaf7338b00a6229e

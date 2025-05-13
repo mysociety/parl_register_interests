@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 557
+  row_count: 539
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -68,7 +68,7 @@ schema:
     description: TheyWorkForYou ID of the MP
     constraints:
       unique: false
-    example: '10001'
+    example: '10131'
   - name: party
     type: string
     description: Political party of the MP
@@ -252,4 +252,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 1c8c7b8c394b96586f14d2a908b2795c
+hash: 80666a516c8a2fd99d1a68b0f66b8913
