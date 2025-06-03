@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 609
+  row_count: 638
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -53,6 +53,7 @@ schema:
       - '2024-10-03'
       - '2024-12-05'
       - '2024-12-18'
+      - '2025-05-22'
     example: '2024-08-27'
   - name: category
     type: string
@@ -121,6 +122,7 @@ schema:
       enum:
       - Adaptation of authored works.
       - Councillor
+      - Giving a speech
       - Guest presenting LBC Radio programme
       - Institutional Investor Event - guest speaker
       - Italian translation of a book
@@ -194,13 +196,13 @@ schema:
     description: Address of the ultimate payer
     constraints:
       unique: false
-    example: 100 Talbot Road, Stretford, Manchester, M16 0PG
+    example: 1 Centenary Square, Birmingham B1 1HQ
   - name: ultimate_payer_nature_of_business
     type: string
     description: Nature of business of the ultimate payer
     constraints:
       unique: false
-    example: Business to business publisher, focused primarily on international finance.
+    example: An industry insights & market intelligence firm for the investment community
   - name: is_payment_donated
     type: boolean
     description: Whether the payment was donated
@@ -252,4 +254,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: d2c0760c247416b988115e6598c09b85
+hash: eecac8a34974e60ded25a988478af126

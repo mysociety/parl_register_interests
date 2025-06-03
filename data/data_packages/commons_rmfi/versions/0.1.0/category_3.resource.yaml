@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 539
+  row_count: 576
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -99,6 +99,7 @@ schema:
       - APPG Aviation, Aerospace and Travel (This event was during my time as Chair)
       - APPG on Beer
       - British Busses
+      - Food and Drink
       - Food and Drink APPG
       - Music
       - Tennis APPG
@@ -252,4 +253,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 331173a6f8e4deca504c90e47d41350f
+hash: e75700d45b256aa9674621bcd304aedf

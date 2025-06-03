@@ -159,7 +159,7 @@ schema:
     description: Value of the payment (£)
     constraints:
       unique: false
-    example: '0.0'
+    example: '1000.0'
   - name: hours_worked
     type: number
     description: Hours worked for the payment
@@ -300,4 +300,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: 71d2a8102d4daca65c4081766f5854e5
+hash: b12e11cd2d95c31a6f5c30b28014d479

@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 6
+  row_count: 7
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -23,6 +23,7 @@ schema:
       - 11809
       - 12043
       - 12324
+      - 12462
     example: '10723'
   - name: summary
     type: string
@@ -32,6 +33,7 @@ schema:
       enum:
       - Ayita LLC - £836.00
       - Azad Government of the State of Jammu & Kashmir - £707.00
+      - Duolingo - £2,500.00
       - Leiden University - £350.00
       - Mr Ronald Chagoury - £1,440.00
       - Real Madrid CF - £340.00
@@ -57,6 +59,7 @@ schema:
       - '2025-02-14'
       - '2025-03-18'
       - '2025-05-01'
+      - '2025-05-20'
     example: '2024-09-17'
   - name: published
     type: string
@@ -70,6 +73,7 @@ schema:
       - '2025-02-14'
       - '2025-03-19'
       - '2025-05-01'
+      - '2025-05-20'
     example: '2024-09-17'
   - name: updated_1
     type: number
@@ -98,6 +102,7 @@ schema:
       - 4356
       - 4475
       - 4598
+      - 5141
       - 5296
     example: '4018'
   - name: twfy_id
@@ -111,6 +116,7 @@ schema:
       - '25272'
       - '25429'
       - '25649'
+      - '26395'
       - '26540'
     example: '24796'
   - name: party
@@ -130,13 +136,14 @@ schema:
     constraints:
       unique: true
       enum:
+      - Alex Mayer
       - Angela Rayner
       - Freddie van Mierlo
       - Helen Grant
       - Jonathan Reynolds
       - Mohammad Yasin
       - Suella Braverman
-    example: Angela Rayner
+    example: Alex Mayer
   - name: appg
     type: number
     description: Linked to an All-Party Parliamentary Group
@@ -163,6 +170,9 @@ schema:
         value €1700 Euro - equivalent to GBP @1.18 = £1440.  I was accompanied by
         my husband
       - Hospitality - visit to DJ booth, Hï Ibiza
+      - I took part in the Duolingo Westminster Language Challenge. Winners were asked
+        to nominate a charity to receive payment direct from Duolingo. I chose Home
+        Start Bedfordshire for the £2500 donation. Registered charity no. 1109262.
       - Photography for alumni magazine; permission granted for other use
       - Tickets for my husband and I to attend the Trump Victory Rally on 19th January,
         the President's Inauguration on 20th January and the Liberty Ball on 21st
@@ -187,6 +197,7 @@ schema:
       - 712.87
       - 836.0
       - 1440.0
+      - 2500.0
     example: '1440.0'
   - name: received_date
     type: string
@@ -229,6 +240,7 @@ schema:
       enum:
       - Ayita LLC
       - Azad Government of the State of Jammu & Kashmir
+      - Duolingo
       - Leiden University
       - Mr Ronald Chagoury
       - Real Madrid CF
@@ -240,14 +252,15 @@ schema:
     constraints:
       unique: true
       enum:
-      - "Ayita LLC\n10351 Washington Blvd, Culver City, CA 90232"
+      - "Ayita LLC\r\n10351 Washington Blvd, Culver City, CA 90232"
+      - Duolingo, Inc. of 5900 Penn Avenue, Pittsburgh, PA 15206
       - Floor 4, General Services Administration at National Capitol Region 301 7th
         Street SW, Washington, DC 20024 USA
       - Leiden University, PO Box 9500, 2300 RA Leiden. The Netherlands
       - Santiago Bernabeu Stadium, Madrid, Spain
       - Services & General Administration Department, Central Transport Pool G0, Azad
         Government of the State of Jammu & Kashmir, Muzzadarabad
-    example: "Ayita LLC\n10351 Washington Blvd, Culver City, CA 90232"
+    example: "Ayita LLC\r\n10351 Washington Blvd, Culver City, CA 90232"
   - name: donor_status
     type: string
     description: Type of donor
@@ -320,6 +333,7 @@ schema:
       - https://interests-api.parliament.uk/api/v1/Interests/11809
       - https://interests-api.parliament.uk/api/v1/Interests/12043
       - https://interests-api.parliament.uk/api/v1/Interests/12324
+      - https://interests-api.parliament.uk/api/v1/Interests/12462
     example: https://interests-api.parliament.uk/api/v1/Interests/10723
   - name: category_code
     type: string
@@ -329,4 +343,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: a988fcdacfb64c5937e4d05e9f22e959
+hash: 7bf3abda6406980d8cfa76be2b377bd3

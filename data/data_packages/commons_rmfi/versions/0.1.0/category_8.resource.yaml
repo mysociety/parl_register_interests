@@ -1,7 +1,7 @@
 title: Category 8
 description: Miscellaneous
 custom:
-  row_count: 969
+  row_count: 978
 path: category_8.parquet
 name: category_8
 profile: data-resource
@@ -180,4 +180,4 @@ schema:
       enum:
       - '8'
     example: '8'
-hash: 68da09df0df390b6f657e3c2dbb12158
+hash: 6cd3a309112b83d96a602b9474f2831f

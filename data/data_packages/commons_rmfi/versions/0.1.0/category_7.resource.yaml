@@ -1,7 +1,7 @@
 title: Category 7
 description: Shareholdings
 custom:
-  row_count: 196
+  row_count: 198
 path: category_7.parquet
 name: category_7
 profile: data-resource
@@ -128,7 +128,7 @@ schema:
     description: Description of the organisation
     constraints:
       unique: false
-    example: A baby swimming company
+    example: (domant, never traded)
   - name: held_on_behalf_of
     type: string
     description: Organisation held on behalf of
@@ -167,4 +167,4 @@ schema:
       enum:
       - '7'
     example: '7'
-hash: c46aba64dd7d018b49d73ebdd17fbaa6
+hash: c6080c493ac64e9916a1e054b9865754
