@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 7
+  row_count: 9
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -24,6 +24,8 @@ schema:
       - 12043
       - 12324
       - 12462
+      - 12551
+      - 12556
     example: '10723'
   - name: summary
     type: string
@@ -31,6 +33,8 @@ schema:
     constraints:
       unique: true
       enum:
+      - Ailsa Roell - £42,000.00
+      - Association of Marshall Scholars - £803.00
       - Ayita LLC - £836.00
       - Azad Government of the State of Jammu & Kashmir - £707.00
       - Duolingo - £2,500.00
@@ -38,7 +42,7 @@ schema:
       - Mr Ronald Chagoury - £1,440.00
       - Real Madrid CF - £340.00
       - Trump Vance Inaugural Committee - £712.87
-    example: Ayita LLC - £836.00
+    example: Ailsa Roell - £42,000.00
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -60,6 +64,8 @@ schema:
       - '2025-03-18'
       - '2025-05-01'
       - '2025-05-20'
+      - '2025-06-03'
+      - '2025-06-04'
     example: '2024-09-17'
   - name: published
     type: string
@@ -74,6 +80,8 @@ schema:
       - '2025-03-19'
       - '2025-05-01'
       - '2025-05-20'
+      - '2025-06-03'
+      - '2025-06-04'
     example: '2024-09-17'
   - name: updated_1
     type: number
@@ -98,12 +106,14 @@ schema:
       unique: true
       enum:
       - 4018
+      - 4107
       - 4119
       - 4356
       - 4475
       - 4598
       - 5141
       - 5296
+      - 5325
     example: '4018'
   - name: twfy_id
     type: string
@@ -111,6 +121,7 @@ schema:
     constraints:
       unique: true
       enum:
+      - '24785'
       - '24796'
       - '24929'
       - '25272'
@@ -118,7 +129,8 @@ schema:
       - '25649'
       - '26395'
       - '26540'
-    example: '24796'
+      - '26544'
+    example: '24785'
   - name: party
     type: string
     description: Political party of the MP
@@ -138,6 +150,8 @@ schema:
       enum:
       - Alex Mayer
       - Angela Rayner
+      - Charlie Maynard
+      - Dame Harriett Baldwin
       - Freddie van Mierlo
       - Helen Grant
       - Jonathan Reynolds
@@ -169,6 +183,10 @@ schema:
       - Accommodation at the Peninsula Hotel, 19 Av. Kléber, 75116 Paris, France -
         value €1700 Euro - equivalent to GBP @1.18 = £1440.  I was accompanied by
         my husband
+      - Associated with taking part in the US-UK legislative exchange in Cambridge,
+        hospitality and accommodation
+      - Free accommodation in a family member’s flat since my election. The estimated
+        rental value is £3,500 per month,
       - Hospitality - visit to DJ booth, Hï Ibiza
       - I took part in the Duolingo Westminster Language Challenge. Winners were asked
         to nominate a charity to receive payment direct from Duolingo. I chose Home
@@ -195,9 +213,11 @@ schema:
       - 350.0
       - 707.0
       - 712.87
+      - 803.0
       - 836.0
       - 1440.0
       - 2500.0
+      - 42000.0
     example: '1440.0'
   - name: received_date
     type: string
@@ -238,6 +258,8 @@ schema:
     constraints:
       unique: true
       enum:
+      - Ailsa Roell
+      - Association of Marshall Scholars
       - Ayita LLC
       - Azad Government of the State of Jammu & Kashmir
       - Duolingo
@@ -245,14 +267,15 @@ schema:
       - Mr Ronald Chagoury
       - Real Madrid CF
       - Trump Vance Inaugural Committee
-    example: Ayita LLC
+    example: Ailsa Roell
   - name: donor_public_address
     type: string
     description: Public address of the donor
     constraints:
-      unique: true
+      unique: false
       enum:
-      - "Ayita LLC\n10351 Washington Blvd, Culver City, CA 90232"
+      - "67 35th Street, Unit B-513\r\nBrooklyn, NY 11232"
+      - "Ayita LLC\r\n10351 Washington Blvd, Culver City, CA 90232"
       - Duolingo, Inc. of 5900 Penn Avenue, Pittsburgh, PA 15206
       - Floor 4, General Services Administration at National Capitol Region 301 7th
         Street SW, Washington, DC 20024 USA
@@ -260,7 +283,7 @@ schema:
       - Santiago Bernabeu Stadium, Madrid, Spain
       - Services & General Administration Department, Central Transport Pool G0, Azad
         Government of the State of Jammu & Kashmir, Muzzadarabad
-    example: "Ayita LLC\n10351 Washington Blvd, Culver City, CA 90232"
+    example: "67 35th Street, Unit B-513\r\nBrooklyn, NY 11232"
   - name: donor_status
     type: string
     description: Type of donor
@@ -319,6 +342,7 @@ schema:
       enum:
       - Government
       - Member owned sports association
+      - US non-profit endowment
       - University
     example: Government
   - name: link
@@ -334,6 +358,8 @@ schema:
       - https://interests-api.parliament.uk/api/v1/Interests/12043
       - https://interests-api.parliament.uk/api/v1/Interests/12324
       - https://interests-api.parliament.uk/api/v1/Interests/12462
+      - https://interests-api.parliament.uk/api/v1/Interests/12551
+      - https://interests-api.parliament.uk/api/v1/Interests/12556
     example: https://interests-api.parliament.uk/api/v1/Interests/10723
   - name: category_code
     type: string
@@ -343,4 +369,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 7702aa11bd7192d167a8996331f18768
+hash: 1ae824f1a05fb9390b83daeb595304bc

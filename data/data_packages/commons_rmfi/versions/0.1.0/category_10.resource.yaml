@@ -66,6 +66,7 @@ schema:
       - '2024-12-16'
       - '2025-01-13'
       - '2025-04-28'
+      - '2025-06-05'
     example: '2021-05-11'
   - name: category
     type: string
@@ -109,7 +110,7 @@ schema:
     description: Job title of the family member
     constraints:
       unique: false
-    example: Associate Director
+    example: Consultant
   - name: employer
     type: string
     description: Name of the employer
@@ -176,4 +177,4 @@ schema:
       enum:
       - '10'
     example: '10'
-hash: add9b235770b4969cb0b5b99d0b01b68
+hash: e4dc30b4cae60c456e659f1f014a0cc1

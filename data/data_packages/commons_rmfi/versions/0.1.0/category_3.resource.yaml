@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 576
+  row_count: 564
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -83,6 +83,7 @@ schema:
       - liberal-democrat
       - reform
       - sinn-fein
+      - social-democratic-and-labour-party
     example: conservative
   - name: member
     type: string
@@ -101,6 +102,7 @@ schema:
       - British Busses
       - Food and Drink
       - Food and Drink APPG
+      - Humanist Group
       - Music
       - Tennis APPG
       - Ukraine
@@ -185,6 +187,7 @@ schema:
       - Other
       - Registered Party
       - Trade Union
+      - Trust
       - Unincorporated association
     example: Company
   - name: donor_company_name
@@ -253,4 +256,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: c6a4b0eaaa2bb2fd24cb9939b1ea571b
+hash: 0027ac70a9d6ba292ca990e07713ed27

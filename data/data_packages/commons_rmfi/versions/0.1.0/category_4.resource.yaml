@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 271
+  row_count: 279
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -37,13 +37,13 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2024-05-01'
+    example: '2024-05-21'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: false
-    example: '2024-05-01'
+    example: '2024-05-22'
   - name: updated_1
     type: string
     description: Updated date
@@ -112,9 +112,12 @@ schema:
     description: Purpose of the visit
     constraints:
       unique: false
-    example: (1) In my capacity as Chair of the Parliamentary Network on the World
-      Bank and international Monetary Fund, to attend the World Bank IMF Spring Meetings.  (2)
-      Invited to present a lecture at the University on the Inequality of Wealth.
+    example: 26-29 May 2025  With the APPG for Cyprus at the invitation of the House
+      of Representatives for meetings with the President of the Republic of Cyprus,
+      The President of the National Assembly, The Foreign Minister, Members of the
+      House of Representatives and The Mayors of Morphou and Famagusta . Accommodation
+      and hospitality provided by the House of Representatives and others to the value
+      of £891.14
   - name: start_date
     type: string
     description: Start date of the visit
@@ -217,6 +220,7 @@ schema:
       - Hebron, Ramallah
       - Palestine (Occupied Palestinian Territory) and Israel
       - Rojava
+      - Warsaw
     example: Baku
   - name: visit_locations__country_3
     type: string
@@ -227,6 +231,7 @@ schema:
       - Georgia
       - Israel
       - Moldova
+      - Ukraine
     example: Georgia
   - name: visit_locations__destination_3
     type: string
@@ -264,6 +269,7 @@ schema:
       unique: false
       enum:
       - In kind
+      - Monetary
     example: In kind
   - name: donors__payment_description_2
     type: string
@@ -293,7 +299,6 @@ schema:
       unique: false
       enum:
       - British Embassy Berne
-      - Irish American Unity Conference
       - Kyivstar
       - The Arkin Group
       - UK-India Business Council
@@ -314,7 +319,6 @@ schema:
       unique: false
       enum:
       - 03113, m. Kyiv, vul. Dehtiarivska, 53
-      - 1147 Lindsay Rd, Carnegie, PA 15106
       - 25 Mala Berdichivska str., Zhytomyr, Ukraine, 10014
       - 3 Orchard Pl, London SW1H 0BF
       - 53 Degtyarivska St, Kiev, Kyiv City, 03113, Ukraine
@@ -336,19 +340,18 @@ schema:
     constraints:
       unique: false
       enum:
-      - Accommodation Costs
       - Accommodation, meals
       - Daytrip to Zhytomyr (approx.)
       - Dinner and briefing in Kyiv with delegation,
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
       - Formal Dinner and receptions
       - Hotel (£350), Food (£20)
       - Meal £50.00
       - Transport and buffet lunch
-    example: Accommodation Costs
+    example: Accommodation, meals
   - name: donors__value_3
     type: number
     description: Value of the payment
@@ -358,7 +361,6 @@ schema:
       - .nan
       - 25.0
       - 50.0
-      - 160.0
       - 370.0
       - 670.28
       - 1150.0
@@ -420,10 +422,10 @@ schema:
       - Bus transport in Kyiv and Lviv
       - Conference £150
       - Dinner in Kyiv (approx.)
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
     example: Bus transport in Kyiv and Lviv
   - name: donors__value_4
     type: number
@@ -488,10 +490,10 @@ schema:
       unique: false
       enum:
       - Dinner in Lviv
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
       - YES Conference
     example: Dinner in Lviv
   - name: donors__value_5
@@ -521,4 +523,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 145523b6224a224264b4c38f96ea90f2
+hash: 0c58dd004d07f075eacd38cc2e7a3311

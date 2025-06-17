@@ -1,7 +1,7 @@
 title: Category 6
 description: Land and property (within or outside the UK)
 custom:
-  row_count: 216
+  row_count: 215
 path: category_6.parquet
 name: category_6
 profile: data-resource
@@ -87,7 +87,6 @@ schema:
       - scottish-national-party
       - sinn-fein
       - traditional-unionist-voice
-      - unknown
     example: conservative
   - name: member
     type: string
@@ -278,4 +277,4 @@ schema:
       enum:
       - '6'
     example: '6'
-hash: 63d10bba03b3b37e7bc565ad771ec1ad
+hash: 9ad1c3ea9e1d253cb09c9e3165221c97
