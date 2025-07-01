@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 564
+  row_count: 596
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -122,7 +122,8 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: 2 Tickets to the Davis Cup in September 2024
+    example: 12 month membership of a private members' club, giving access to the
+      club premises and the opportunity to purchase food, drink and overnight stays
   - name: value
     type: number
     description: Value of the payment
@@ -256,4 +257,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: ea356302fb8dd8a12a7e947a36afce95
+hash: 34689501408fd7516e7d2a3581a1e336

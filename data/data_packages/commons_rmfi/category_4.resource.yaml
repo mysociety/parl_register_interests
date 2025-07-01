@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 279
+  row_count: 300
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -52,6 +52,7 @@ schema:
       enum:
       - '2024-10-25'
       - '2025-04-10'
+      - '2025-06-25'
     example: '2024-10-25'
   - name: category
     type: string
@@ -107,6 +108,31 @@ schema:
     constraints:
       unique: false
     example: Abidjan
+  - name: visit_locations__country_2
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+      enum:
+      - Azerbaijan
+      - Israel
+      - Palestine
+      - Poland
+      - Singapore
+      - Syria
+    example: Azerbaijan
+  - name: visit_locations__destination_2
+    type: string
+    description: Destination of the visit
+    constraints:
+      unique: false
+      enum:
+      - Baku
+      - Hebron, Ramallah
+      - Palestine (Occupied Palestinian Territory) and Israel
+      - Rojava
+      - Warsaw
+    example: Baku
   - name: purpose
     type: string
     description: Purpose of the visit
@@ -197,31 +223,6 @@ schema:
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10168
-  - name: visit_locations__country_2
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-      enum:
-      - Azerbaijan
-      - Israel
-      - Palestine
-      - Poland
-      - Singapore
-      - Syria
-    example: Azerbaijan
-  - name: visit_locations__destination_2
-    type: string
-    description: Destination of the visit
-    constraints:
-      unique: false
-      enum:
-      - Baku
-      - Hebron, Ramallah
-      - Palestine (Occupied Palestinian Territory) and Israel
-      - Rojava
-      - Warsaw
-    example: Baku
   - name: visit_locations__country_3
     type: string
     description: Country of the visit
@@ -343,10 +344,10 @@ schema:
       - Accommodation, meals
       - Daytrip to Zhytomyr (approx.)
       - Dinner and briefing in Kyiv with delegation,
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
       - Formal Dinner and receptions
       - Hotel (£350), Food (£20)
       - Meal £50.00
@@ -422,10 +423,10 @@ schema:
       - Bus transport in Kyiv and Lviv
       - Conference £150
       - Dinner in Kyiv (approx.)
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
     example: Bus transport in Kyiv and Lviv
   - name: donors__value_4
     type: number
@@ -490,10 +491,10 @@ schema:
       unique: false
       enum:
       - Dinner in Lviv
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
+      - "Flights: £500 (Cyprus Premier)\r\nAccommodation (for three nights): £300\
+        \ (The Arkin Group)\r\nSubsistence (across three days): £350 (The Turkish\
+        \ Cypriot Chamber of Commerce, the British Residents Society, Turkish Airlines).\r\
+        \nTotal: £1,150"
       - YES Conference
     example: Dinner in Lviv
   - name: donors__value_5
@@ -523,4 +524,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: a56dbf493e2f4830bedd01d9fdef4880
+hash: bf8d41d35b5bb33bece6eaac75bdef66

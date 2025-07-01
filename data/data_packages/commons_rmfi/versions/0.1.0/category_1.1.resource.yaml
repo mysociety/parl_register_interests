@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 643
+  row_count: 666
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -131,6 +131,7 @@ schema:
       - Speech and workshop at LGA Black, Asian and Minority Ethnic Councillors Masterclass
         Weekender
       - Writing
+      - Writing two articles for the LBC app/ website
       - medical practice
       - wrote an article for newspaper
     example: Adaptation of authored works.
@@ -254,4 +255,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: d924353f051c25eadf88f5620635c21c
+hash: 4825513c4987a1bfe9b01d416119124b
