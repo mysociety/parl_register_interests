@@ -2,7 +2,7 @@ title: Details
 description: "A key-value that can belong to an entry with more specific data.\nSome\
   \ details have sub-details - which come in groups. \n"
 custom:
-  row_count: 60861
+  row_count: 62130
   dataset_order: 1
 path: details.parquet
 name: details
@@ -60,13 +60,13 @@ schema:
     description: The ID of the parent detail (if any)
     constraints:
       unique: false
-    example: 10119_4_2288_donors
+    example: 10001_4_12796_donors
   - name: detail_row_id
     type: string
     description: The ID of the detail row (for sub details)
     constraints:
       unique: false
-    example: 10119_4_2288_donors_0
+    example: 10001_4_12796_donors_0
   - name: detail_id
     type: string
     description: The ID of the detail
@@ -94,4 +94,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: 57e1c2ed433637738e4f2507b8234fe8
+hash: 132deee5d7bf6e664900bafff05dfee1

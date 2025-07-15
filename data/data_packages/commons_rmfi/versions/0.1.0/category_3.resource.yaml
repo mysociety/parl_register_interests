@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 596
+  row_count: 650
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -82,6 +82,7 @@ schema:
       - labourco-operative
       - liberal-democrat
       - reform
+      - scottish-national-party
       - sinn-fein
       - social-democratic-and-labour-party
     example: conservative
@@ -98,10 +99,14 @@ schema:
       unique: false
       enum:
       - APPG Aviation, Aerospace and Travel (This event was during my time as Chair)
+      - APPG Tennis
+      - APPG for Formula 1 and Motorsport
       - APPG on Beer
       - British Busses
       - Food and Drink
       - Food and Drink APPG
+      - Formula 1 and Motorsport
+      - Formula One
       - Humanist Group
       - Music
       - Tennis APPG
@@ -232,7 +237,7 @@ schema:
     description: Other details of the donor
     constraints:
       unique: false
-    example: Charity (registration number SC006161)
+    example: Charity
   - name: link
     type: string
     description: Link to the interest in the Parliament API
@@ -248,6 +253,7 @@ schema:
       - '2023-01-11'
       - '2024-12-12'
       - '2024-12-18'
+      - '2025-07-14'
     example: '2023-01-11'
   - name: category_code
     type: string
@@ -257,4 +263,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: a1c811edb1a280d66f35626fd151939e
+hash: 196dcf3529510e803d31067c38f95ab6

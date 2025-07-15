@@ -60,7 +60,7 @@ schema:
     description: Parliament ID of the MP
     constraints:
       unique: false
-    example: '146'
+    example: '1211'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -153,7 +153,9 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: (last received in July)
+    example: (amount has been converted from US Dollars based on on 3 July 2025 exchange
+      rate), Africa50 will meet the cost of any travel and other expenses arising
+      from this role
   - name: value
     type: number
     description: Value of the payment (£)
@@ -299,4 +301,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: 778896ec5c1458b4bbdab7a5057cc1c5
+hash: 7bf38ef5d5c8bee6d656841604495aac
