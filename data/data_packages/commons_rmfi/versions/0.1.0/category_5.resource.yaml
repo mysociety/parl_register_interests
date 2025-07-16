@@ -294,9 +294,9 @@ schema:
       unique: false
       enum:
       - 1515 Ringling Blvd, Suite 250 Sarasota, FL, 34236 USA
-      - "354 Oyster Point Boulevard\r\nSouth San Francisco\r\nCA 94080\r\nUS"
-      - "67 35th Street, Unit B-513\r\nBrooklyn, NY 11232"
-      - "Ayita LLC\r\n10351 Washington Blvd, Culver City, CA 90232"
+      - "354 Oyster Point Boulevard\nSouth San Francisco\nCA 94080\nUS"
+      - "67 35th Street, Unit B-513\nBrooklyn, NY 11232"
+      - "Ayita LLC\n10351 Washington Blvd, Culver City, CA 90232"
       - Duolingo, Inc. of 5900 Penn Avenue, Pittsburgh, PA 15206
       - Floor 4, General Services Administration at National Capitol Region 301 7th
         Street SW, Washington, DC 20024 USA
@@ -392,4 +392,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: ac5e456a1143556c586d5b6586d88d1b
+hash: e5a226931bad5b06148a69fb6fb49439
