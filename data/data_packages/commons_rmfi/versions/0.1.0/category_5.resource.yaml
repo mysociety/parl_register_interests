@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 11
+  row_count: 12
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -26,6 +26,7 @@ schema:
       - 12462
       - 12551
       - 12556
+      - 12757
       - 12829
       - 12866
     example: '10723'
@@ -44,6 +45,7 @@ schema:
       - Leiden University - £350.00
       - Mr Ronald Chagoury - £1,440.00
       - Real Madrid CF - £340.00
+      - SM Entertainment - £400.00
       - Stripe Matter, Inc - £369.00
       - Trump Vance Inaugural Committee - £712.87
     example: Ailsa Roell - £42,000.00
@@ -72,6 +74,7 @@ schema:
       - '2025-06-04'
       - '2025-07-08'
       - '2025-07-10'
+      - '2025-07-21'
     example: '2024-09-17'
   - name: published
     type: string
@@ -90,6 +93,7 @@ schema:
       - '2025-06-04'
       - '2025-07-08'
       - '2025-07-10'
+      - '2025-07-21'
     example: '2024-09-17'
   - name: updated_1
     type: number
@@ -117,6 +121,7 @@ schema:
       - 4107
       - 4119
       - 4356
+      - 4441
       - 4475
       - 4598
       - 5141
@@ -135,6 +140,7 @@ schema:
       - '24796'
       - '24929'
       - '25272'
+      - '25323'
       - '25429'
       - '25649'
       - '26395'
@@ -170,6 +176,7 @@ schema:
       - Helen Grant
       - Jonathan Reynolds
       - Mohammad Yasin
+      - Sir Oliver Dowden
       - Suella Braverman
     example: Alex Mayer
   - name: appg
@@ -194,6 +201,7 @@ schema:
     constraints:
       unique: true
       enum:
+      - 4 Tickets and Hospitality for SM Town Live
       - A ticket to the Cash in the UK conference
       - Accommodation at the Peninsula Hotel, 19 Av. Kléber, 75116 Paris, France -
         value €1700 Euro - equivalent to GBP @1.18 = £1440.  I was accompanied by
@@ -217,7 +225,7 @@ schema:
       - Two tickets to the Real Madrid v Valencia football match on Saturday 5 April
         2025. It was not possible to purchase the tickets therefore a donation of
         500 euros, a higher value than the tickets,  was made to the Real Madrid Foundation
-    example: A ticket to the Cash in the UK conference
+    example: 4 Tickets and Hospitality for SM Town Live
   - name: value
     type: number
     description: Value of the payment (£)
@@ -227,6 +235,7 @@ schema:
       - 340.0
       - 350.0
       - 369.0
+      - 400.0
       - 707.0
       - 712.87
       - 803.0
@@ -284,6 +293,7 @@ schema:
       - Leiden University
       - Mr Ronald Chagoury
       - Real Madrid CF
+      - SM Entertainment
       - Stripe Matter, Inc
       - Trump Vance Inaugural Committee
     example: Ailsa Roell
@@ -294,9 +304,10 @@ schema:
       unique: false
       enum:
       - 1515 Ringling Blvd, Suite 250 Sarasota, FL, 34236 USA
-      - "354 Oyster Point Boulevard\nSouth San Francisco\nCA 94080\nUS"
-      - "67 35th Street, Unit B-513\nBrooklyn, NY 11232"
-      - "Ayita LLC\n10351 Washington Blvd, Culver City, CA 90232"
+      - "354 Oyster Point Boulevard\r\nSouth San Francisco\r\nCA 94080\r\nUS"
+      - "67 35th Street, Unit B-513\r\nBrooklyn, NY 11232"
+      - Acro Seoul Forest D-Tower, 83-21 Wangsimni-Ro, Seongdong-Gu, Seoul, Korea
+      - "Ayita LLC\r\n10351 Washington Blvd, Culver City, CA 90232"
       - Duolingo, Inc. of 5900 Penn Avenue, Pittsburgh, PA 15206
       - Floor 4, General Services Administration at National Capitol Region 301 7th
         Street SW, Washington, DC 20024 USA
@@ -381,6 +392,7 @@ schema:
       - https://interests-api.parliament.uk/api/v1/Interests/12462
       - https://interests-api.parliament.uk/api/v1/Interests/12551
       - https://interests-api.parliament.uk/api/v1/Interests/12556
+      - https://interests-api.parliament.uk/api/v1/Interests/12757
       - https://interests-api.parliament.uk/api/v1/Interests/12829
       - https://interests-api.parliament.uk/api/v1/Interests/12866
     example: https://interests-api.parliament.uk/api/v1/Interests/10723
@@ -392,4 +404,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: e5a226931bad5b06148a69fb6fb49439
+hash: d1a421288eb4f6b2366e6bdc676de68e

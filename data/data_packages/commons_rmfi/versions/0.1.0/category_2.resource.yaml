@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 2694
+  row_count: 1597
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -48,7 +48,7 @@ schema:
     description: Updated date
     constraints:
       unique: false
-    example: '2023-11-21'
+    example: '2024-04-26'
   - name: category
     type: string
     description: Category of the interest
@@ -84,7 +84,6 @@ schema:
       - plaid-cymru
       - reform
       - scottish-national-party
-      - speaker
       - traditional-unionist-voice
       - uup
     example: conservative
@@ -206,7 +205,7 @@ schema:
     description: Identifier of the donor company
     constraints:
       unique: false
-    example: '00044888'
+    example: '00120011'
   - name: donor_company_identifier_source
     type: string
     description: Source of the donor company identifier
@@ -234,6 +233,18 @@ schema:
     description: Details of the donor
     constraints:
       unique: false
+      enum:
+      - Charity
+      - Group of Labour Gedling Borough Councillors (Gedling Borough Labour Group)
+      - I am unsure what the North Yorkshire Labour Group is or if it counts as direct
+        support from party, but declaring it to be on the safe side.
+      - Labour Council Group
+      - Local Councillor Group of Plaid Cymru
+      - Local government political group
+      - Mutual society
+      - Socialist Society Affiliated to The Labour Party
+      - University
+      - charity, registration 1169558
     example: Charity
   - name: link
     type: string
@@ -259,4 +270,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: ed2b2da70bab4fad223f8d9b350cfaa4
+hash: 58dc38153f10c065f9fe5251395dd42c

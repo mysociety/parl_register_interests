@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 680
+  row_count: 616
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -96,7 +96,7 @@ schema:
     description: Name of the MP
     constraints:
       unique: false
-    example: Adam Thompson
+    example: Alex McIntyre
   - name: payment_received
     type: boolean
     description: Whether there was a payment received
@@ -132,7 +132,6 @@ schema:
         Weekender
       - Writing
       - Writing two articles for the LBC app/ website
-      - medical practice
       - wrote an article for newspaper
     example: Adaptation of authored works.
   - name: payment_type
@@ -167,7 +166,7 @@ schema:
     description: Details of the hours worked
     constraints:
       unique: false
-    example: (Estimated hours worked for preparation to appear at trial)
+    example: (This is Used to offset office costs.)
   - name: is_ultimate_payer_different
     type: boolean
     description: Whether the ultimate payer is different
@@ -182,7 +181,7 @@ schema:
     description: Name of the ultimate payer
     constraints:
       unique: false
-    example: 1LoD Ltd
+    example: ALCS
   - name: ultimate_payer_protected_by_confidentiality
     type: boolean
     description: Whether the ultimate payer is protected by confidentiality
@@ -197,7 +196,7 @@ schema:
     description: Address of the ultimate payer
     constraints:
       unique: false
-    example: 1 Centenary Square, Birmingham B1 1HQ
+    example: 1 Bishops Square, London E1 6AD
   - name: ultimate_payer_nature_of_business
     type: string
     description: Nature of business of the ultimate payer
@@ -255,4 +254,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 73662d80991754aefa4a6fc550bfe9b3
+hash: 0b855ff4cff88db4d18551db667a5a0b

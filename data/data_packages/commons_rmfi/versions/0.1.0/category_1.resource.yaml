@@ -1,7 +1,7 @@
 title: Category 1
 description: Employment and earnings
 custom:
-  row_count: 511
+  row_count: 456
 path: category_1.parquet
 name: category_1
 profile: data-resource
@@ -244,4 +244,4 @@ schema:
       enum:
       - '1'
     example: '1'
-hash: c3bb26c2f33863b0b4bacdbe4602cdd1
+hash: e5936a31c9a6429d7f1ee0ec07de3344

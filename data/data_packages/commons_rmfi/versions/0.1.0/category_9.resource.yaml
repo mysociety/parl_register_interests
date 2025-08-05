@@ -122,7 +122,6 @@ schema:
       - Principal Secretary
       - Secretary
       - Senior Caseworker
-      - Senior Communications Officer
       - Senior Parliamentary Assistant
       - Senior Researcher
       - Senior Secretary
@@ -207,4 +206,4 @@ schema:
       enum:
       - '9'
     example: '9'
-hash: bc0963ffab27f7b112ff4238f2ef767f
+hash: bdf7764c3ad01a33a4ca9e209d7faf80

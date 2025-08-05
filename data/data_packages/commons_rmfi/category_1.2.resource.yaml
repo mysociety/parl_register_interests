@@ -1,7 +1,7 @@
 title: Category 1.2
 description: Employment and earnings - Ongoing paid employment
 custom:
-  row_count: 184
+  row_count: 157
 path: category_1.2.parquet
 name: category_1.2
 profile: data-resource
@@ -189,9 +189,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - Evans Derry Solicitors
       - SSE
-    example: Evans Derry Solicitors
+    example: SSE
   - name: ultimate_payer_protected_by_confidentiality
     type: boolean
     description: Whether the ultimate payer is protected by confidentiality
@@ -206,18 +205,16 @@ schema:
     constraints:
       unique: false
       enum:
-      - 133  Long Street Atherstone Warwickshire CV9 1AD
       - Inveralmond House, 200 Dunkeld Rd, Perth, PH1 3AQ
-    example: 133  Long Street Atherstone Warwickshire CV9 1AD
+    example: Inveralmond House, 200 Dunkeld Rd, Perth, PH1 3AQ
   - name: ultimate_payer_nature_of_business
     type: string
     description: Nature of business of the ultimate payer
     constraints:
       unique: false
       enum:
-      - High Street Solicitors Practice
       - Multinational energy company headquartered in Perth, Scotland
-    example: High Street Solicitors Practice
+    example: Multinational energy company headquartered in Perth, Scotland
   - name: is_payment_donated
     type: boolean
     description: Whether the payment was donated
@@ -301,4 +298,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: 7bf38ef5d5c8bee6d656841604495aac
+hash: 35c8cdcbed6ce7f716b6ef4c0512c2bb

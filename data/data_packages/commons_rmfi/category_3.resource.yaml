@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 650
+  row_count: 641
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -62,7 +62,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: '1383'
+    example: '1440'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -76,6 +76,7 @@ schema:
       unique: false
       enum:
       - conservative
+      - dup
       - green
       - independent
       - labour
@@ -85,6 +86,7 @@ schema:
       - scottish-national-party
       - sinn-fein
       - social-democratic-and-labour-party
+      - traditional-unionist-voice
     example: conservative
   - name: member
     type: string
@@ -97,20 +99,6 @@ schema:
     description: Payment made via an All-Party Parliamentary Group
     constraints:
       unique: false
-      enum:
-      - APPG Aviation, Aerospace and Travel (This event was during my time as Chair)
-      - APPG Tennis
-      - APPG for Formula 1 and Motorsport
-      - APPG on Beer
-      - British Busses
-      - Food and Drink
-      - Food and Drink APPG
-      - Formula 1 and Motorsport
-      - Formula One
-      - Humanist Group
-      - Music
-      - Tennis APPG
-      - Ukraine
     example: APPG Aviation, Aerospace and Travel (This event was during my time as
       Chair)
   - name: payment_type
@@ -215,7 +203,7 @@ schema:
     description: Company id of the donor
     constraints:
       unique: false
-    example: '00028301'
+    example: '00035668'
   - name: donor_company_identifier_source
     type: string
     description: Identifer category of company number
@@ -237,7 +225,7 @@ schema:
     description: Other details of the donor
     constraints:
       unique: false
-    example: Charity
+    example: 93199  Other sports activities
   - name: link
     type: string
     description: Link to the interest in the Parliament API
@@ -263,4 +251,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 0885028e4ee1a607f0f321e04e4c252f
+hash: b03e5eb9dcd956a461c56d1878230e90
