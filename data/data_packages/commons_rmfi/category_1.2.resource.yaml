@@ -1,7 +1,7 @@
 title: Category 1.2
 description: Employment and earnings - Ongoing paid employment
 custom:
-  row_count: 157
+  row_count: 123
 path: category_1.2.parquet
 name: category_1.2
 profile: data-resource
@@ -16,13 +16,13 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10028'
+    example: '10100'
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: false
-    example: Agreement - £1,000.00
+    example: Agreement - £1,001.17
   - name: parent_interest_id
     type: integer
     description: Unique identifier for the parent interest
@@ -77,7 +77,6 @@ schema:
       - dup
       - independent
       - labour
-      - labourco-operative
       - liberal-democrat
       - reform
       - scottish-national-party
@@ -133,8 +132,6 @@ schema:
       unique: false
       enum:
       - Councillor
-      - Deputy Leader of the Council and Cabinet Member
-      - Project management and delivery
       - Special Responsibility Allowance - Sutton Local Committee Chair
       - This post is solely focused on the School of International Relations.
       - advice and scrutiny
@@ -181,16 +178,15 @@ schema:
       unique: false
       enum:
       - false
-      - true
     example: 'False'
   - name: ultimate_payer_name
-    type: string
+    type: number
     description: Name of the ultimate payer
     constraints:
       unique: false
       enum:
-      - SSE
-    example: SSE
+      - .nan
+    example: ''
   - name: ultimate_payer_protected_by_confidentiality
     type: boolean
     description: Whether the ultimate payer is protected by confidentiality
@@ -200,21 +196,21 @@ schema:
       - false
     example: 'False'
   - name: ultimate_payer_address
-    type: string
+    type: number
     description: Address of the ultimate payer
     constraints:
       unique: false
       enum:
-      - Inveralmond House, 200 Dunkeld Rd, Perth, PH1 3AQ
-    example: Inveralmond House, 200 Dunkeld Rd, Perth, PH1 3AQ
+      - .nan
+    example: ''
   - name: ultimate_payer_nature_of_business
-    type: string
+    type: number
     description: Nature of business of the ultimate payer
     constraints:
       unique: false
       enum:
-      - Multinational energy company headquartered in Perth, Scotland
-    example: Multinational energy company headquartered in Perth, Scotland
+      - .nan
+    example: ''
   - name: is_payment_donated
     type: boolean
     description: Whether the payment was donated
@@ -257,7 +253,7 @@ schema:
     description: URL to the interest on the interests API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10028
+    example: https://interests-api.parliament.uk/api/v1/Interests/10100
   - name: updated_2
     type: string
     description: Date the interest was updated
@@ -298,4 +294,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: 35c8cdcbed6ce7f716b6ef4c0512c2bb
+hash: 553f6f4c98dd0d58e936bb2bd6e5c668

@@ -1,7 +1,7 @@
 title: Category 1
 description: Employment and earnings
 custom:
-  row_count: 456
+  row_count: 373
 path: category_1.parquet
 name: category_1
 profile: data-resource
@@ -153,7 +153,9 @@ schema:
     description: Nature of the payer's business
     constraints:
       unique: false
-    example: A Chartered Institute and professional body
+    example: A UK investment firm with permissions to operate a Multilateral Trading
+      Facility ("MTF"), an Organised Trading Facility (“OTF”) and an Approved Publication
+      Arrangement (“APA”).
   - name: payer_public_address
     type: string
     description: Public address of the payer
@@ -244,4 +246,4 @@ schema:
       enum:
       - '1'
     example: '1'
-hash: e5936a31c9a6429d7f1ee0ec07de3344
+hash: a36482e2b3c4ead2400f450faec42f18

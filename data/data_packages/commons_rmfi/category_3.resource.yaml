@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 641
+  row_count: 590
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -16,13 +16,13 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10009'
+    example: '1049'
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: false
-    example: 3UK - £1,785.68
+    example: AFC Wimbledon - £700.00
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -62,7 +62,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: '1440'
+    example: '1409'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -161,7 +161,7 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-    example: 3UK
+    example: AFC Wimbledon
   - name: donor_public_address
     type: string
     description: Public address of the donor
@@ -189,7 +189,7 @@ schema:
     description: Name of the donor company
     constraints:
       unique: false
-    example: 3UK
+    example: AFC Wimbledon
   - name: donor_company_url
     type: number
     description: URL of the donor company
@@ -231,7 +231,7 @@ schema:
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10009
+    example: https://interests-api.parliament.uk/api/v1/Interests/1049
   - name: updated_2
     type: string
     description: Date the second interest was updated
@@ -251,4 +251,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 0ea5dd77c197e6fe90a63e4aa15b8023
+hash: d8df658eccc40b17ccbbed1576bf3b21

@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 303
+  row_count: 296
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10168'
+    example: '10630'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -53,6 +53,7 @@ schema:
       - '2024-10-25'
       - '2025-04-10'
       - '2025-06-25'
+      - '2025-08-28'
     example: '2024-10-25'
   - name: category
     type: string
@@ -197,7 +198,7 @@ schema:
     description: Link to the interest
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10168
+    example: https://interests-api.parliament.uk/api/v1/Interests/10630
   - name: visit_locations__country_2
     type: string
     description: Country of the visit
@@ -228,6 +229,20 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
+      enum:
+      - B4NZ
+      - Bulldog Political Consulting
+      - Davos Klosters Bergbahnen AG
+      - Friedrich Naumann Foundation
+      - GB News
+      - Gulf Air
+      - Kyivstar
+      - Landschaft Davos
+      - Skigruppe der Bundesversammlung
+      - States of Guernsey
+      - The 1928 Institute
+      - The 1928 Institute (Secretariat to the India APPG)
+      - Zhytomyr Administration
     example: B4NZ
   - name: donors__is_private_individual_2
     type: string
@@ -243,7 +258,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: 239-241 Kennington Ln, London SE11 5QU
+    example: 25 Mala Berdichivska str., Zhytomyr, Ukraine, 10014
   - name: donors__payment_type_2
     type: string
     description: Type of payment
@@ -264,6 +279,21 @@ schema:
     description: Value of the payment
     constraints:
       unique: false
+      enum:
+      - .nan
+      - 25.0
+      - 50.0
+      - 64.0
+      - 86.2
+      - 324.0
+      - 424.0
+      - 1031.0
+      - 1206.33
+      - 1418.0
+      - 1701.99
+      - 3047.0
+      - 4850.86
+      - 7924.02
     example: '1031.0'
   - name: donors__is_sole_beneficiary_2
     type: string
@@ -301,7 +331,6 @@ schema:
       enum:
       - British Embassy Berne
       - Kyivstar
-      - The Arkin Group
       - UK-India Business Council
       - Zhytomyr Administration
     example: British Embassy Berne
@@ -323,7 +352,6 @@ schema:
       - 25 Mala Berdichivska str., Zhytomyr, Ukraine, 10014
       - 3 Orchard Pl, London SW1H 0BF
       - 53 Degtyarivska St, Kiev, Kyiv City, 03113, Ukraine
-      - 'P.O. Box : 309 Girne- Kıbrıs, 99300'
       - S.P. Korolova Square, 4/2, Zhytomyr, Zhytomyr Oblast, Ukraine, 10002
       - Thunstrasse 50, CH - 3005 Bern
     example: 03113, m. Kyiv, vul. Dehtiarivska, 53
@@ -344,10 +372,6 @@ schema:
       - Accommodation, meals
       - Daytrip to Zhytomyr (approx.)
       - Dinner and briefing in Kyiv with delegation,
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
       - Formal Dinner and receptions
       - Hotel (£350), Food (£20)
       - Meal £50.00
@@ -364,8 +388,7 @@ schema:
       - 50.0
       - 370.0
       - 670.28
-      - 1150.0
-    example: '1150.0'
+    example: '25.0'
   - name: donors__is_sole_beneficiary_3
     type: string
     description: Whether the MP is the sole beneficiary
@@ -382,7 +405,6 @@ schema:
       unique: false
       enum:
       - Kyivstar
-      - The British Residents Society
       - UK Friends of Ukraine
       - Yes Foundation
     example: Kyivstar
@@ -403,7 +425,6 @@ schema:
       - 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
       - 81 High Street, Cosham, Portsmouth PO6 3BL
       - 81 High Street, Cosham, Portsmouth, PO6 3BL
-      - Mustafa Cagatay Avenue, Girne
       - Vikentiya Khvoiky St, 15/15
     example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
   - name: donors__payment_type_4
@@ -423,10 +444,6 @@ schema:
       - Bus transport in Kyiv and Lviv
       - Conference £150
       - Dinner in Kyiv (approx.)
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
     example: Bus transport in Kyiv and Lviv
   - name: donors__value_4
     type: number
@@ -438,8 +455,7 @@ schema:
       - 25.0
       - 25.86
       - 150.0
-      - 1150.0
-    example: '1150.0'
+    example: '150.0'
   - name: donors__is_sole_beneficiary_4
     type: string
     description: Whether the MP is the sole beneficiary
@@ -455,7 +471,6 @@ schema:
       unique: false
       enum:
       - Bulldog Political Consulting
-      - Turkish Airlines
       - YES Foundation
     example: Bulldog Political Consulting
   - name: donors__is_private_individual_5
@@ -474,7 +489,6 @@ schema:
       enum:
       - 19-20 Bourne Court, Southend Road, Woodford Green, Essex IG8 8HD
       - 81 High Street, Cosham, Portsmouth PO6 3BL
-      - Istanbul Atatürk Airport, Yeşilköy, Bakırköy, Istanbul, Türkiye
     example: 19-20 Bourne Court, Southend Road, Woodford Green, Essex IG8 8HD
   - name: donors__payment_type_5
     type: string
@@ -491,10 +505,6 @@ schema:
       unique: false
       enum:
       - Dinner in Lviv
-      - "Flights: £500 (Cyprus Premier)\nAccommodation (for three nights): £300 (The\
-        \ Arkin Group)\nSubsistence (across three days): £350 (The Turkish Cypriot\
-        \ Chamber of Commerce, the British Residents Society, Turkish Airlines).\n\
-        Total: £1,150"
       - YES Conference
     example: Dinner in Lviv
   - name: donors__value_5
@@ -506,8 +516,7 @@ schema:
       - .nan
       - 86.2
       - 92.11
-      - 1150.0
-    example: '1150.0'
+    example: '86.2'
   - name: donors__is_sole_beneficiary_5
     type: string
     description: Whether the MP is the sole beneficiary
@@ -524,4 +533,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: c6835f52d2649b555d6b21f285205f4d
+hash: fda7ca801fca8b4e67e972660d5d01b6

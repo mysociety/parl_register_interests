@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 616
+  row_count: 538
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10033'
+    example: '10361'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -47,14 +47,13 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2024-08-27'
       - '2024-09-25'
       - '2024-09-30'
       - '2024-10-03'
       - '2024-12-05'
       - '2024-12-18'
       - '2025-05-22'
-    example: '2024-08-27'
+    example: '2024-09-25'
   - name: category
     type: string
     description: Category of the interest
@@ -87,7 +86,6 @@ schema:
       - labour
       - labourco-operative
       - liberal-democrat
-      - plaid-cymru
       - reform
       - scottish-national-party
     example: conservative
@@ -96,7 +94,7 @@ schema:
     description: Name of the MP
     constraints:
       unique: false
-    example: Alex McIntyre
+    example: Alex Burghart
   - name: payment_received
     type: boolean
     description: Whether there was a payment received
@@ -119,20 +117,6 @@ schema:
     description: Job the MP was paid for
     constraints:
       unique: false
-      enum:
-      - Adaptation of authored works.
-      - Councillor
-      - Giving a speech
-      - Guest presenting LBC Radio programme
-      - Institutional Investor Event - guest speaker
-      - Italian translation of a book
-      - Speaking
-      - Speaking engagement
-      - Speech and workshop at LGA Black, Asian and Minority Ethnic Councillors Masterclass
-        Weekender
-      - Writing
-      - Writing two articles for the LBC app/ website
-      - wrote an article for newspaper
     example: Adaptation of authored works.
   - name: payment_type
     type: string
@@ -245,7 +229,7 @@ schema:
     description: Link to the interest
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10033
+    example: https://interests-api.parliament.uk/api/v1/Interests/10361
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -254,4 +238,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: d9dfb1f46d134de027f8787b022df8b2
+hash: 474a3583c9a9f5840767e8cbb8d9dd9f

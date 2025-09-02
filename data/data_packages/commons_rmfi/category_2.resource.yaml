@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 1597
+  row_count: 561
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -16,13 +16,13 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10000'
+    example: '10159'
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: false
-    example: 1900 Club - £2,500.00
+    example: Access Industries (UK) Limited - £20,000.00
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -68,7 +68,7 @@ schema:
     description: TheyWorkForYou ID of the MP
     constraints:
       unique: false
-    example: '10001'
+    example: '10131'
   - name: party
     type: string
     description: Political party of the MP
@@ -83,16 +83,14 @@ schema:
       - liberal-democrat
       - plaid-cymru
       - reform
-      - scottish-national-party
       - traditional-unionist-voice
-      - uup
     example: conservative
   - name: member
     type: string
     description: Name of the MP
     constraints:
       unique: false
-    example: Abtisam Mohamed
+    example: Adam Dance
   - name: donation_source
     type: string
     description: Source of the donation
@@ -118,8 +116,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: (The donation was made to the national party, so other MPs may have benefited
-      as other parts of the party may also have benefitted)
+    example: (monthly donations of £500 between January and October 2025)
   - name: value
     type: number
     description: Value of the donation
@@ -164,7 +161,7 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-    example: 1900 Club
+    example: Access Industries (UK) Limited
   - name: donor_public_address
     type: string
     description: Public address of the donor
@@ -183,7 +180,6 @@ schema:
       - Other
       - Registered Party
       - Trade Union
-      - Trust
       - Unincorporated association
     example: Company
   - name: donor_company_name
@@ -191,7 +187,7 @@ schema:
     description: Name of the donor company
     constraints:
       unique: false
-    example: 1ST IT Limited
+    example: Access Industries (UK) Limited
   - name: donor_company_url
     type: number
     description: URL of the donor company
@@ -205,7 +201,7 @@ schema:
     description: Identifier of the donor company
     constraints:
       unique: false
-    example: '00120011'
+    example: '00357963'
   - name: donor_company_identifier_source
     type: string
     description: Source of the donor company identifier
@@ -215,19 +211,13 @@ schema:
       - Companies House
     example: Companies House
   - name: donor_trust_details
-    type: string
+    type: number
     description: Details of the donor trust
     constraints:
       unique: false
       enum:
-      - TLC is a Trust, raising funds for political campaigning activities of the
-        South Hams Liberal Democratic Party
-      - The Port Isaac Liberal Club is administered as a trust.
-      - Trust created before 27 July 1999
-      - Trust supporting unionist campaigns
-      - Trust supporting unionist candidates
-    example: TLC is a Trust, raising funds for political campaigning activities of
-      the South Hams Liberal Democratic Party
+      - .nan
+    example: ''
   - name: donor_other_details
     type: string
     description: Details of the donor
@@ -235,14 +225,8 @@ schema:
       unique: false
       enum:
       - Charity
-      - Group of Labour Gedling Borough Councillors (Gedling Borough Labour Group)
-      - I am unsure what the North Yorkshire Labour Group is or if it counts as direct
-        support from party, but declaring it to be on the safe side.
       - Labour Council Group
-      - Local Councillor Group of Plaid Cymru
-      - Local government political group
       - Mutual society
-      - Socialist Society Affiliated to The Labour Party
       - University
       - charity, registration 1169558
     example: Charity
@@ -251,7 +235,7 @@ schema:
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10000
+    example: https://interests-api.parliament.uk/api/v1/Interests/10159
   - name: updated_2
     type: string
     description: Date the second interest was updated
@@ -261,6 +245,7 @@ schema:
       - '2024-08-01'
       - '2024-10-18'
       - '2024-12-02'
+      - '2025-08-28'
     example: '2024-08-01'
   - name: category_code
     type: string
@@ -270,4 +255,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: 01283c371ac3ca667781d74973743012
+hash: 224b51c47609facd5c8dbc681186c59f

@@ -1,7 +1,7 @@
 title: Overall Register of Interests
 description: Register of interests, text summaries by category,
 custom:
-  row_count: 5228
+  row_count: 3889
   dataset_order: -10
 path: overall.parquet
 name: overall
@@ -17,7 +17,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10000'
+    example: '10004'
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -91,5 +91,6 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: 1900 Club - £2,500.00
-hash: 65cff4266aee39974f8cdcc60c455e04
+    example: A 10% shareholding in WT IP Ltd.  The shareholding is below the threshold
+      for registration.
+hash: 4af2cfbc2ade3fda8f04be4597095734
