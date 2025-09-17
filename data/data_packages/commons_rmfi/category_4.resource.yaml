@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 296
+  row_count: 307
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -229,20 +229,6 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-      enum:
-      - B4NZ
-      - Bulldog Political Consulting
-      - Davos Klosters Bergbahnen AG
-      - Friedrich Naumann Foundation
-      - GB News
-      - Gulf Air
-      - Kyivstar
-      - Landschaft Davos
-      - Skigruppe der Bundesversammlung
-      - States of Guernsey
-      - The 1928 Institute
-      - The 1928 Institute (Secretariat to the India APPG)
-      - Zhytomyr Administration
     example: B4NZ
   - name: donors__is_private_individual_2
     type: string
@@ -279,21 +265,6 @@ schema:
     description: Value of the payment
     constraints:
       unique: false
-      enum:
-      - .nan
-      - 25.0
-      - 50.0
-      - 64.0
-      - 86.2
-      - 324.0
-      - 424.0
-      - 1031.0
-      - 1206.33
-      - 1418.0
-      - 1701.99
-      - 3047.0
-      - 4850.86
-      - 7924.02
     example: '1031.0'
   - name: donors__is_sole_beneficiary_2
     type: string
@@ -533,4 +504,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: aa5d42ca597e8c7a508857a48044e30d
+hash: d2ff60a0f1358f06dc6271ab7c3b9d08

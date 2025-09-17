@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 590
+  row_count: 614
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -22,7 +22,8 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: AFC Wimbledon - £700.00
+    example: (1) Chartered Institute of Housing and (2) National Housing Federation
+      - £850.00
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -161,13 +162,14 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-    example: AFC Wimbledon
+    example: (1) Chartered Institute of Housing and (2) National Housing Federation
   - name: donor_public_address
     type: string
     description: Public address of the donor
     constraints:
       unique: false
-    example: 1 - 3 Cockburn Street, Edinburgh EH1 1QB
+    example: (1) Suites 5 and 6 Rowan House, Westwood Way, Coventry CV4 8HS; (2) Lion
+      Court, 25 Procter Street, London WC1V 6NY
   - name: donor_status
     type: string
     description: Type of donor
@@ -251,4 +253,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 962bb95c373a96d0f445c582c7c8bc91
+hash: 00476a8e345df2d4ff8b6780902997ca

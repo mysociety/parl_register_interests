@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 561
+  row_count: 580
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -246,6 +246,7 @@ schema:
       - '2024-10-18'
       - '2024-12-02'
       - '2025-08-28'
+      - '2025-09-04'
     example: '2024-08-01'
   - name: category_code
     type: string
@@ -255,4 +256,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: d56a7b5ea7dc5adca90b2c47da525f4a
+hash: 012cc3ea7e4b92264936f7849206f5f5

@@ -1,7 +1,7 @@
 title: Overall Register of Interests
 description: Register of interests, text summaries by category,
 custom:
-  row_count: 3889
+  row_count: 3939
   dataset_order: -10
 path: overall.parquet
 name: overall
@@ -91,6 +91,6 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: A 10% shareholding in WT IP Ltd.  The shareholding is below the threshold
-      for registration.
-hash: 2fe58ce238c9aca3490f3c283995f4c1
+    example: (1) Chartered Institute of Housing and (2) National Housing Federation
+      - £850.00
+hash: 780df9a71bd330e50741fc35547cabf7

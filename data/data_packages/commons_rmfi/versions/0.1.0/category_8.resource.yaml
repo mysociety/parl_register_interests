@@ -1,7 +1,7 @@
 title: Category 8
 description: Miscellaneous
 custom:
-  row_count: 925
+  row_count: 917
 path: category_8.parquet
 name: category_8
 profile: data-resource
@@ -37,7 +37,7 @@ schema:
     description: Date the interest was registered
     constraints:
       unique: false
-    example: '2012-12-16'
+    example: '2012-12-28'
   - name: published
     type: string
     description: Date the interest was published
@@ -135,11 +135,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2021-07-22'
       - '2022-02-25'
-      - '2023-04-18'
       - '2024-02-05'
-      - '2024-07-19'
       - '2024-09-09'
       - '2024-09-24'
       - '2024-10-28'
@@ -147,33 +144,15 @@ schema:
       - '2025-04-25'
       - '2025-06-24'
       - '2025-07-17'
-    example: '2021-07-22'
+    example: '2022-02-25'
   - name: updated_3
     type: string
     description: Date the third interest was updated
     constraints:
       unique: false
       enum:
-      - '2022-09-28'
-      - '2024-07-10'
       - '2025-08-20'
-    example: '2022-09-28'
-  - name: updated_4
-    type: string
-    description: Date the fourth interest was updated
-    constraints:
-      unique: false
-      enum:
-      - '2023-08-15'
-    example: '2023-08-15'
-  - name: updated_5
-    type: string
-    description: Date the fifth interest was updated
-    constraints:
-      unique: false
-      enum:
-      - '2024-07-11'
-    example: '2024-07-11'
+    example: '2025-08-20'
   - name: category_code
     type: string
     description: Category code of the interest
@@ -182,4 +161,4 @@ schema:
       enum:
       - '8'
     example: '8'
-hash: 644eb481ce5faecb342f1d4367f9ff3b
+hash: 94ee5fbe6395a4cfc6d3ce8b1a58d462

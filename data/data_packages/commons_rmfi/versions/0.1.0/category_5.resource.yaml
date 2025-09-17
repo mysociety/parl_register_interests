@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 13
+  row_count: 15
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -16,40 +16,12 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-      enum:
-      - 10723
-      - 10782
-      - 11267
-      - 11809
-      - 12043
-      - 12324
-      - 12462
-      - 12551
-      - 12556
-      - 12757
-      - 12829
-      - 12866
-      - 13070
     example: '10723'
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
       unique: true
-      enum:
-      - Ailsa Roell - £42,000.00
-      - Association of Marshall Scholars - £803.00
-      - Ayita LLC - £836.00
-      - Azad Government of the State of Jammu & Kashmir - £707.00
-      - CMS Analytics - £995.00
-      - Duolingo - £2,500.00
-      - Embassy of the State of Qatar - £1,200.00
-      - Leiden University - £350.00
-      - Mr Ronald Chagoury - £1,440.00
-      - Real Madrid CF - £340.00
-      - SM Entertainment - £400.00
-      - Stripe Matter, Inc - £369.00
-      - Trump Vance Inaugural Committee - £712.87
     example: Ailsa Roell - £42,000.00
   - name: parent_interest_id
     type: number
@@ -64,40 +36,12 @@ schema:
     description: Registered date
     constraints:
       unique: true
-      enum:
-      - '2024-09-17'
-      - '2024-09-25'
-      - '2024-11-14'
-      - '2025-02-14'
-      - '2025-03-18'
-      - '2025-05-01'
-      - '2025-05-20'
-      - '2025-06-03'
-      - '2025-06-04'
-      - '2025-07-08'
-      - '2025-07-10'
-      - '2025-07-21'
-      - '2025-08-05'
     example: '2024-09-17'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: true
-      enum:
-      - '2024-09-17'
-      - '2024-09-25'
-      - '2024-11-18'
-      - '2025-02-14'
-      - '2025-03-19'
-      - '2025-05-01'
-      - '2025-05-20'
-      - '2025-06-03'
-      - '2025-06-04'
-      - '2025-07-08'
-      - '2025-07-10'
-      - '2025-07-21'
-      - '2025-08-05'
     example: '2024-09-17'
   - name: updated_1
     type: number
@@ -119,7 +63,7 @@ schema:
     type: integer
     description: Parliamentary ID of the MP
     constraints:
-      unique: true
+      unique: false
       enum:
       - 39
       - 4018
@@ -132,6 +76,7 @@ schema:
       - 5141
       - 5282
       - 5284
+      - 5294
       - 5296
       - 5325
     example: '39'
@@ -139,7 +84,7 @@ schema:
     type: string
     description: TheyWorkForYou ID of the MP
     constraints:
-      unique: true
+      unique: false
       enum:
       - '10632'
       - '24785'
@@ -150,6 +95,7 @@ schema:
       - '25429'
       - '25649'
       - '26395'
+      - '26430'
       - '26502'
       - '26518'
       - '26540'
@@ -170,9 +116,10 @@ schema:
     type: string
     description: Name of the MP
     constraints:
-      unique: true
+      unique: false
       enum:
       - Alex Mayer
+      - Amanda Martin
       - Angela Rayner
       - Charlie Maynard
       - Dame Harriett Baldwin
@@ -187,13 +134,13 @@ schema:
       - Suella Braverman
     example: Alex Mayer
   - name: appg
-    type: number
+    type: string
     description: Linked to an All-Party Parliamentary Group
     constraints:
       unique: false
       enum:
-      - .nan
-    example: ''
+      - APPG GIBRALTAR
+    example: APPG GIBRALTAR
   - name: payment_type
     type: string
     description: Type of payment
@@ -206,7 +153,7 @@ schema:
     type: string
     description: Description of the payment
     constraints:
-      unique: true
+      unique: false
       enum:
       - 4 Tickets and Hospitality for SM Town Live
       - A ticket to the Cash in the UK conference
@@ -217,6 +164,7 @@ schema:
         hospitality and accommodation
       - Attendance at conference in the UK, including one night hotel accommodation
         and food and drink while in attendance.
+      - Flights (£558), accommodation for 3 nights (£700), meals (£250), taxi (£200)
       - Free accommodation in a family member’s flat since my election. The estimated
         rental value is £3,500 per month
       - Hospitality - visit to DJ booth, Hï Ibiza
@@ -240,20 +188,6 @@ schema:
     description: Value of the payment (£)
     constraints:
       unique: true
-      enum:
-      - 340.0
-      - 350.0
-      - 369.0
-      - 400.0
-      - 707.0
-      - 712.87
-      - 803.0
-      - 836.0
-      - 995.0
-      - 1200.0
-      - 1440.0
-      - 2500.0
-      - 42000.0
     example: '1200.0'
   - name: received_date
     type: string
@@ -292,7 +226,7 @@ schema:
     type: string
     description: Name of the donor
     constraints:
-      unique: true
+      unique: false
       enum:
       - Ailsa Roell
       - Association of Marshall Scholars
@@ -301,6 +235,7 @@ schema:
       - CMS Analytics
       - Duolingo
       - Embassy of the State of Qatar
+      - HM Government of Gibraltar
       - Leiden University
       - Mr Ronald Chagoury
       - Real Madrid CF
@@ -314,20 +249,21 @@ schema:
     constraints:
       unique: false
       enum:
-      - "1 South Audley Street \nLondon W1K 1NB"
+      - "1 South Audley Street \r\nLondon W1K 1NB"
       - 1515 Ringling Blvd, Suite 250 Sarasota, FL, 34236 USA
-      - "354 Oyster Point Boulevard\nSouth San Francisco\nCA 94080\nUS"
-      - "67 35th Street, Unit B-513\nBrooklyn, NY 11232"
+      - "354 Oyster Point Boulevard\r\nSouth San Francisco\r\nCA 94080\r\nUS"
+      - "67 35th Street, Unit B-513\r\nBrooklyn, NY 11232"
       - Acro Seoul Forest D-Tower, 83-21 Wangsimni-Ro, Seongdong-Gu, Seoul, Korea
-      - "Ayita LLC\n10351 Washington Blvd, Culver City, CA 90232"
+      - "Ayita LLC\r\n10351 Washington Blvd, Culver City, CA 90232"
       - Duolingo, Inc. of 5900 Penn Avenue, Pittsburgh, PA 15206
       - Floor 4, General Services Administration at National Capitol Region 301 7th
         Street SW, Washington, DC 20024 USA
+      - Gibraltar House, 150 The Strand, London WC2R 1JA
       - Leiden University, PO Box 9500, 2300 RA Leiden. The Netherlands
       - Santiago Bernabeu Stadium, Madrid, Spain
       - Services & General Administration Department, Central Transport Pool G0, Azad
         Government of the State of Jammu & Kashmir, Muzzadarabad
-    example: "1 South Audley Street \nLondon W1K 1NB"
+    example: "1 South Audley Street \r\nLondon W1K 1NB"
   - name: donor_status
     type: string
     description: Type of donor
@@ -394,20 +330,6 @@ schema:
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-      enum:
-      - https://interests-api.parliament.uk/api/v1/Interests/10723
-      - https://interests-api.parliament.uk/api/v1/Interests/10782
-      - https://interests-api.parliament.uk/api/v1/Interests/11267
-      - https://interests-api.parliament.uk/api/v1/Interests/11809
-      - https://interests-api.parliament.uk/api/v1/Interests/12043
-      - https://interests-api.parliament.uk/api/v1/Interests/12324
-      - https://interests-api.parliament.uk/api/v1/Interests/12462
-      - https://interests-api.parliament.uk/api/v1/Interests/12551
-      - https://interests-api.parliament.uk/api/v1/Interests/12556
-      - https://interests-api.parliament.uk/api/v1/Interests/12757
-      - https://interests-api.parliament.uk/api/v1/Interests/12829
-      - https://interests-api.parliament.uk/api/v1/Interests/12866
-      - https://interests-api.parliament.uk/api/v1/Interests/13070
     example: https://interests-api.parliament.uk/api/v1/Interests/10723
   - name: category_code
     type: string
@@ -417,4 +339,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 61024cf8503521e8b55d21994f888e01
+hash: dfd2b10851b405e3fbf778c5072dbb02

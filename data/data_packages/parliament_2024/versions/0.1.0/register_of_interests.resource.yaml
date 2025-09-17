@@ -1,7 +1,7 @@
 title: Register of Members Interests (latest register)
 description: Register of members interests with basic NLP extraction
 custom:
-  row_count: 11600
+  row_count: 11728
 path: register_of_interests.parquet
 name: register_of_interests
 profile: data-resource
@@ -47,12 +47,15 @@ schema:
     description: Free text description of interest
     constraints:
       unique: false
-    example: "1900 Club - £2,500.00\nDonation Source: (a) Support linked to an MP\
-      \ but received by a local party organisation or indirectly via a central party\
-      \ organisation\nPayment Type: Cash\nPayment Description: Fighting fund donation\n\
-      Value: 2500.00\nIs Sole Beneficiary: True\nDonor Name: 1900 Club\nDonor Public\
-      \ Address: 4 Barton Street, London SW1P 3NG\nDonor Status: Unincorporated association\n\
-      Registration Date: 02 August 2024\nPublished Date: 02 August 2024"
+    example: "(1) Chartered Institute of Housing and (2) National Housing Federation\
+      \ - £850.00\nPayment Type: In kind\nPayment Description: A free ticket to the\
+      \ Housing Summit held in Liverpool on Monday 8th and Tuesday 9th September 2025\n\
+      Value: 850.00\nReceived Date: 2025-08-21\nAccepted Date: 2025-09-09\nIs Sole\
+      \ Beneficiary: True\nDonor Name: (1) Chartered Institute of Housing and (2)\
+      \ National Housing Federation\nDonor Public Address: (1) Suites 5 and 6 Rowan\
+      \ House, Westwood Way, Coventry CV4 8HS; (2) Lion Court, 25 Procter Street,\
+      \ London WC1V 6NY\nDonor Status: Other\nRegistration Date: 11 September 2025\n\
+      Published Date: 15 September 2025\nReceived Date: 21 August 2025"
   - name: earliest_declaration
     type: string
     description: Earliest date this interest appeared in register
@@ -96,4 +99,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: a481ebec58efe80403d3790b3f9ef744
+hash: 1cfc37d6994dba443b4bbafdc224d4af
