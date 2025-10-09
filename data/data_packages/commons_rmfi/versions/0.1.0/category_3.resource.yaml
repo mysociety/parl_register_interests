@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 614
+  row_count: 582
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -191,7 +191,7 @@ schema:
     description: Name of the donor company
     constraints:
       unique: false
-    example: AFC Wimbledon
+    example: A.G. Barr PLC
   - name: donor_company_url
     type: number
     description: URL of the donor company
@@ -205,7 +205,7 @@ schema:
     description: Company id of the donor
     constraints:
       unique: false
-    example: '00035668'
+    example: '00023307'
   - name: donor_company_identifier_source
     type: string
     description: Identifer category of company number
@@ -253,4 +253,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 11c03700ea37ee0fec61b0e76ae6edc5
+hash: fcda76429ea4ec9d05dbd0f6a4d1fd90

@@ -1,7 +1,7 @@
 title: Overall Register of Interests
 description: Register of interests, text summaries by category,
 custom:
-  row_count: 3939
+  row_count: 3810
   dataset_order: -10
 path: overall.parquet
 name: overall
@@ -23,7 +23,7 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
-    example: '10026.0'
+    example: '10097.0'
   - name: member
     type: string
     description: Name of the MP
@@ -93,4 +93,4 @@ schema:
       unique: false
     example: (1) Chartered Institute of Housing and (2) National Housing Federation
       - £850.00
-hash: 01316526c994f0b69bf848ffbe1fb207
+hash: 2699ce05fec38e7ccd344638bbea7934

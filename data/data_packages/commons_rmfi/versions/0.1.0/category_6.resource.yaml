@@ -1,7 +1,7 @@
 title: Category 6
 description: Land and property (within or outside the UK)
 custom:
-  row_count: 215
+  row_count: 216
 path: category_6.parquet
 name: category_6
 profile: data-resource
@@ -175,13 +175,13 @@ schema:
       unique: false
       enum:
       - 1.0
+      - 3.0
+      - 5.0
+      - 7.0
       - .nan
       - 2.0
-      - 3.0
       - 4.0
-      - 5.0
       - 6.0
-      - 7.0
       - 15.0
     example: '1.0'
   - name: is_land
@@ -208,6 +208,7 @@ schema:
     constraints:
       unique: false
       enum:
+      - Australia
       - France
       - Germany
       - India
@@ -217,7 +218,7 @@ schema:
       - Spain
       - United Kingdom
       - United States
-    example: France
+    example: Australia
   - name: land_use
     type: string
     description: Use of the land
@@ -277,4 +278,4 @@ schema:
       enum:
       - '6'
     example: '6'
-hash: 6b27470728d010d40cd1965c205d3f31
+hash: 3d439084398144cb8ab5ab72af1255d2

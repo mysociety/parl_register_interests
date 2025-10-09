@@ -1,7 +1,7 @@
 title: Category 8
 description: Miscellaneous
 custom:
-  row_count: 917
+  row_count: 909
 path: category_8.parquet
 name: category_8
 profile: data-resource
@@ -43,7 +43,7 @@ schema:
     description: Date the interest was published
     constraints:
       unique: false
-    example: '2022-12-17'
+    example: '2023-11-17'
   - name: updated_1
     type: string
     description: Date the interest was updated
@@ -138,12 +138,14 @@ schema:
       - '2022-02-25'
       - '2024-02-05'
       - '2024-09-09'
-      - '2024-09-24'
       - '2024-10-28'
       - '2025-03-11'
       - '2025-04-25'
       - '2025-06-24'
       - '2025-07-17'
+      - '2025-09-17'
+      - '2025-09-19'
+      - '2025-10-06'
     example: '2022-02-25'
   - name: updated_3
     type: string
@@ -161,4 +163,4 @@ schema:
       enum:
       - '8'
     example: '8'
-hash: e048aa7e064a7cf336435a380119ed28
+hash: 18d214c191483390bd3b1dbe3af66174

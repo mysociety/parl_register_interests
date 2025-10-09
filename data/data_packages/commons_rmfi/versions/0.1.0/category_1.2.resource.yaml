@@ -1,7 +1,7 @@
 title: Category 1.2
 description: Employment and earnings - Ongoing paid employment
 custom:
-  row_count: 118
+  row_count: 108
 path: category_1.2.parquet
 name: category_1.2
 profile: data-resource
@@ -134,7 +134,6 @@ schema:
       - Councillor
       - Special Responsibility Allowance - Sutton Local Committee Chair
       - This post is solely focused on the School of International Relations.
-      - advice and scrutiny
     example: Councillor
   - name: payment_type
     type: string
@@ -294,4 +293,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: a9e90183c8082c3e7e9c77a616cb3231
+hash: 749bc81f7ce46c940f7c835f7cd1ebe9

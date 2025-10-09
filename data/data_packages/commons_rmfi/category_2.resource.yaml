@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 580
+  row_count: 536
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -22,7 +22,7 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: Access Industries (UK) Limited - £20,000.00
+    example: 89up Ltd - £5,268.97
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -161,7 +161,7 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-    example: Access Industries (UK) Limited
+    example: 89up Ltd
   - name: donor_public_address
     type: string
     description: Public address of the donor
@@ -187,7 +187,7 @@ schema:
     description: Name of the donor company
     constraints:
       unique: false
-    example: Access Industries (UK) Limited
+    example: 89up Ltd
   - name: donor_company_url
     type: number
     description: URL of the donor company
@@ -226,7 +226,6 @@ schema:
       enum:
       - Charity
       - Labour Council Group
-      - Mutual society
       - University
       - charity, registration 1169558
     example: Charity
@@ -247,6 +246,7 @@ schema:
       - '2024-12-02'
       - '2025-08-28'
       - '2025-09-04'
+      - '2025-09-16'
     example: '2024-08-01'
   - name: category_code
     type: string
@@ -256,4 +256,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: 35a08801d960f40862d29eb7382ac054
+hash: 1335c66f4697fe5d29d18aaa3b83e28b

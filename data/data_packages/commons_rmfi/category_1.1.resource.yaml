@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 555
+  row_count: 535
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -28,7 +28,7 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
-    example: '10026'
+    example: '10356'
   - name: registered
     type: string
     description: registered date
@@ -47,13 +47,12 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2024-09-25'
-      - '2024-09-30'
       - '2024-10-03'
       - '2024-12-05'
       - '2024-12-18'
       - '2025-05-22'
-    example: '2024-09-25'
+      - '2025-09-18'
+    example: '2024-10-03'
   - name: category
     type: string
     description: Category of the interest
@@ -238,4 +237,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 20a4752a506c3d7c26cb8ad155abe34e
+hash: 207e95065e2cb08468fd1dc0ee647de0

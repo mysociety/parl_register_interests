@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 307
+  row_count: 317
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10630'
+    example: '10638'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -87,6 +87,7 @@ schema:
       - labour
       - labourco-operative
       - liberal-democrat
+      - plaid-cymru
       - reform
       - scottish-national-party
       - sinn-fein
@@ -162,7 +163,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: 1 Horse Guards Avenue, London SW1A 2HU
+    example: 1 Gough Square, London EC4A 3DE
   - name: donors__payment_type_1
     type: string
     description: Type of payment
@@ -198,32 +199,7 @@ schema:
     description: Link to the interest
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10630
-  - name: visit_locations__country_2
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-      enum:
-      - Azerbaijan
-      - Guernsey
-      - Israel
-      - Palestine
-      - Poland
-      - Syria
-    example: Azerbaijan
-  - name: visit_locations__destination_2
-    type: string
-    description: Destination of the visit
-    constraints:
-      unique: false
-      enum:
-      - Baku
-      - Hebron, Ramallah
-      - Palestine (Occupied Palestinian Territory) and Israel
-      - Rojava
-      - Warsaw
-    example: Baku
+    example: https://interests-api.parliament.uk/api/v1/Interests/10638
   - name: donors__name_2
     type: string
     description: Name of the donor
@@ -259,7 +235,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: Day trip £25.00
+    example: Accommodation, meals and reception, and bus travel
   - name: donors__value_2
     type: number
     description: Value of the payment
@@ -275,25 +251,53 @@ schema:
       - 'False'
       - 'True'
     example: 'False'
+  - name: visit_locations__country_2
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+      enum:
+      - Azerbaijan
+      - Canada
+      - Guernsey
+      - Israel
+      - Jordan
+      - Palestine
+      - Poland
+      - Syria
+      - United States
+    example: Azerbaijan
+  - name: visit_locations__destination_2
+    type: string
+    description: Destination of the visit
+    constraints:
+      unique: false
+      enum:
+      - Baku
+      - Hebron, Ramallah
+      - Palestine (Occupied Palestinian Territory) and Israel
+      - Rojava
+      - Warsaw
+      - Washington, New York, Michigan
+    example: Baku
   - name: visit_locations__country_3
     type: string
     description: Country of the visit
     constraints:
       unique: false
       enum:
-      - Georgia
       - Israel
       - Moldova
       - Ukraine
-    example: Georgia
+    example: Israel
   - name: visit_locations__destination_3
-    type: string
+    type: number
     description: Destination of the visit
     constraints:
       unique: false
       enum:
-      - Tbilisi airport (transfer)
-    example: Tbilisi airport (transfer)
+      - .nan
+    example: ''
   - name: donors__name_3
     type: string
     description: Name of the donor
@@ -504,4 +508,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 6d108dabf265f40b481dee2c44520f8f
+hash: 0df9a900a4d393343433ca0dc3009140
