@@ -2,7 +2,7 @@ title: Entries
 description: "This is the main register of interests data. It contains the entries\
   \ for all\nthe different registers.\n"
 custom:
-  row_count: 23258
+  row_count: 23321
   dataset_order: 0
 path: entries.parquet
 name: entries
@@ -65,42 +65,12 @@ schema:
     description: The content of the entry
     constraints:
       unique: false
-    example: "\tFrom 17 to 26 November 2023 I was part of a cross-party delegation\
-      \ of MSPs who visited the People’s Republic of Bangladesh at the invitation\
-      \ of the High Commission of Bangladesh to the UK based in London (28 Queen's\
-      \ Gate, South Kensington, London SW7 5JA) and Ministry for Foreign Affairs of\
-      \ Bangladesh. The purpose of the visit was to engage with senior politicians\
-      \ within the Bangladeshi government, organisations, academics and business leaders\
-      \ to strengthen relationships between Bangladesh and Scotland, especially on\
-      \ issues of joint importance such as climate change, education, support for\
-      \ refugees and, fair pay and conditions for garment workers, and to build skill\
-      \ and knowledge sharing opportunities which will benefit both our nations. The\
-      \ delegation held meetings with Her Excellency Sheikh Hasina, Prime Minister\
-      \ of Bangladesh; A.K. Abdul Momen MP, Foreign Affairs Minister; Shirin Sharmin\
-      \ Chaudhury MP, Speaker of the Bangladesh Parliament; Md. Shahab Uddin MP, Minister\
-      \ of Environment Forest & Climate Change; Professor Dr AKM Zakir Hossain, Vice-Chancellor\
-      \ of Kurigram Agricultural University; Md. Atiqul Islam, The Mayor of Dhaka\
-      \ North City; Dinner with Mahbub Ali MP, Minister of Civil Aviation and Tourism;\
-      \ and breakfast with Matt Cannell, British Deputy High Commissioner and Development\
-      \ Director to Bangladesh. The Delegation visited the Rohingya refugee camp in\
-      \ Cox’s Bazar; Sylhet Women’s Medical College Hospital; Nabiganj and Habiganj;\
-      \ the medical camp in Biswanath’s Amtoil Village, and NRB Hospital in Sylhet.\
-      \ In the course of these visits, the delegation held meetings with Anwaruzzaman\
-      \ Chowdhury, Mayor of Sylhet; Chamber of Commerce of Sylhet and other business\
-      \ leaders from the region; university academic and administrative heads, and\
-      \ Ataur Rahman Selim, Mayor of Habiganj. The total cost of the visit was £3,683.57.\
-      \ Of the total costs, £2,300 for return flights from Edinburgh to Dhaka and\
-      \ a one-way internal flight from Sylhet to Dhaka was met by Workpermitcloud\
-      \ Limited (legal recruitment experts; of the Gherkin Level 28, 30 Street Mary\
-      \ Axe, London, England, EC3A, Company Registration: 12909694) and £1,082.92\
-      \ for hotel accommodation, £240.65 for food and transport, £60 for internal\
-      \ return flights Dhaka to Cox Bazar were met by the Ministry of Foreign Affairs\
-      \ of Bangladesh (State Ministry which oversees foreign relations of Bangladesh;\
-      \ of Segunbagicha, Dhaka 1000, Bangladesh) and Sylhet City Corporation (Sylhet\
-      \ City Council; of Nagar Bhaban, 3100, Bangladesh). I also received gifts, which\
-      \ including welcome crests, posters and books. The values of the items are below\
-      \ the threshold for registration in the gifts category. [Registered 22 December\
-      \ 2023]"
+    example: "\t\r\nOn 20 September 2025, in my capacity as a member of the Cross\
+      \ Party Group on Horseracing and Bloodstock Industries, I attended the Ayr Gold\
+      \ Cup at Ayr Racecourse as a guest of Ladbrokes Coral Group plc (a betting and\
+      \ gambling company of 5th Floor, The Zig Zag Building, 70 Victoria Street, London,\
+      \ SW1E 6SQ). The value of the gift, which comprised a ticket and hospitality,\
+      \ was £375+vat. [Registered 23 September 2025]"
   - name: date_registered
     type: string
     description: The date the entry was registered
@@ -159,4 +129,4 @@ schema:
     constraints:
       unique: false
     example: '2016-06-30'
-hash: b6235d4a12e34608e06f04ebf2bfeeb0
+hash: 66d5ac4d31dbed35a0ea88756ca12ca4
