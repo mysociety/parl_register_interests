@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 13
+  row_count: 14
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -30,6 +30,7 @@ schema:
       - 13070
       - 13278
       - 13284
+      - 13581
     example: '11267'
   - name: summary
     type: string
@@ -43,6 +44,7 @@ schema:
       - CMS Analytics - £995.00
       - Duolingo - £2,500.00
       - Embassy of the State of Qatar - £1,200.00
+      - Fanatics (International) Limited - £329.50
       - HM Government of Gibraltar - £1,708.00
       - Leiden University - £350.00
       - Real Madrid CF - £340.00
@@ -77,6 +79,7 @@ schema:
       - '2025-08-05'
       - '2025-09-11'
       - '2025-09-12'
+      - '2025-10-20'
     example: '2024-11-14'
   - name: published
     type: string
@@ -97,6 +100,7 @@ schema:
       - '2025-08-05'
       - '2025-09-11'
       - '2025-09-15'
+      - '2025-10-20'
     example: '2024-11-18'
   - name: updated_1
     type: string
@@ -123,6 +127,7 @@ schema:
       - 39
       - 4107
       - 4119
+      - 4407
       - 4441
       - 4475
       - 4598
@@ -144,6 +149,7 @@ schema:
       - '24929'
       - '25272'
       - '25323'
+      - '25381'
       - '25649'
       - '26395'
       - '26430'
@@ -178,6 +184,7 @@ schema:
       - Freddie van Mierlo
       - Jonathan Reynolds
       - Mohammad Yasin
+      - Nigel Huddleston
       - Sir John Whittingdale
       - Sir Oliver Dowden
       - Suella Braverman
@@ -215,13 +222,14 @@ schema:
         rental value is £3,500 per month
       - I took part in the Duolingo Westminster Language Challenge. Winners were asked
         to nominate a charity to receive payment direct from Duolingo. I chose Home
-        Start Bedfordshire for the £2500 donation. Registered charity no. 1109262.
+        Start Bedfordshire for the £2500 donation. Registered charity no. 1109262
       - Photography for alumni magazine; permission granted for other use
       - Tickets for my husband and I to attend the Trump Victory Rally on 19th January,
         the President's Inauguration on 20th January and the Liberty Ball on 21st
         January 2025
       - Transport was provided for me and up to six other family members during my
         recent trip to Pakistan
+      - Two tickets for NFL game including hospitality for myself and one guest
       - Two tickets to the Qatar Goodwood Festival 2025 and to the Goodwood Regency
         Ball including hospitality and accommodation for one night
       - Two tickets to the Real Madrid v Valencia football match on Saturday 5 April
@@ -234,6 +242,7 @@ schema:
     constraints:
       unique: false
       enum:
+      - 329.5
       - 340.0
       - 350.0
       - 369.0
@@ -292,6 +301,7 @@ schema:
       - CMS Analytics
       - Duolingo
       - Embassy of the State of Qatar
+      - Fanatics (International) Limited
       - HM Government of Gibraltar
       - Leiden University
       - Real Madrid CF
@@ -305,10 +315,10 @@ schema:
     constraints:
       unique: false
       enum:
-      - "1 South Audley Street \nLondon W1K 1NB"
+      - "1 South Audley Street \r\nLondon W1K 1NB"
       - 1515 Ringling Blvd, Suite 250 Sarasota, FL, 34236 USA
-      - "354 Oyster Point Boulevard\nSouth San Francisco\nCA 94080\nUS"
-      - "67 35th Street, Unit B-513\nBrooklyn, NY 11232"
+      - "354 Oyster Point Boulevard\r\nSouth San Francisco\r\nCA 94080\r\nUS"
+      - "67 35th Street, Unit B-513\r\nBrooklyn, NY 11232"
       - Acro Seoul Forest D-Tower, 83-21 Wangsimni-Ro, Seongdong-Gu, Seoul, Korea
       - Duolingo, Inc. of 5900 Penn Avenue, Pittsburgh, PA 15206
       - Floor 4, General Services Administration at National Capitol Region 301 7th
@@ -318,7 +328,8 @@ schema:
       - Santiago Bernabeu Stadium, Madrid, Spain
       - Services & General Administration Department, Central Transport Pool G0, Azad
         Government of the State of Jammu & Kashmir, Muzzadarabad
-    example: "1 South Audley Street \nLondon W1K 1NB"
+      - Stubbs Mill, 3 Upper Kirby Street, Manchester M4 6FN
+    example: "1 South Audley Street \r\nLondon W1K 1NB"
   - name: donor_status
     type: string
     description: Type of donor
@@ -330,13 +341,13 @@ schema:
       - Other
     example: Company
   - name: donor_company_name
-    type: number
+    type: string
     description: Name of the donor company
     constraints:
       unique: false
       enum:
-      - .nan
-    example: ''
+      - Fanatics (International) Limited
+    example: Fanatics (International) Limited
   - name: donor_company_url
     type: number
     description: URL of the donor company
@@ -351,16 +362,17 @@ schema:
     constraints:
       unique: false
       enum:
+      - 5933624.0
       - .nan
-    example: ''
+    example: '5933624.0'
   - name: donor_company_identifier_source
-    type: number
+    type: string
     description: Donor company identifier register
     constraints:
       unique: false
       enum:
-      - .nan
-    example: ''
+      - Companies House
+    example: Companies House
   - name: donor_trust_details
     type: number
     description: Details of the donor trust
@@ -399,6 +411,7 @@ schema:
       - https://interests-api.parliament.uk/api/v1/Interests/13070
       - https://interests-api.parliament.uk/api/v1/Interests/13278
       - https://interests-api.parliament.uk/api/v1/Interests/13284
+      - https://interests-api.parliament.uk/api/v1/Interests/13581
     example: https://interests-api.parliament.uk/api/v1/Interests/11267
   - name: category_code
     type: string
@@ -408,4 +421,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 007d2ae19ffa392ba0fb96d2c2d4f21a
+hash: 04622e86e0e2b82334527b24d1a01868

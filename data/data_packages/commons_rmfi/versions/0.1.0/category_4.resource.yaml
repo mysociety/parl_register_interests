@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 317
+  row_count: 344
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -148,7 +148,7 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-    example: AIM Congress Abu Dhabi
+    example: AA Access Partnerships
   - name: donors__is_private_individual_1
     type: boolean
     description: Whether the donor is a private individual
@@ -508,4 +508,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: f414c572cbd4d12019fcdc5d1126df42
+hash: c56ad57221ad632e004fb63daff4f58b

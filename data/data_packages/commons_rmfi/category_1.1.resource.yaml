@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 535
+  row_count: 573
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -137,7 +137,7 @@ schema:
     description: Value of the payment (£)
     constraints:
       unique: false
-    example: '1000.0'
+    example: '100.35'
   - name: hours_worked
     type: number
     description: Hours worked for the payment
@@ -149,7 +149,7 @@ schema:
     description: Details of the hours worked
     constraints:
       unique: false
-    example: (This is Used to offset office costs.)
+    example: (I was using some annual leave and TOIL for these months.)
   - name: is_ultimate_payer_different
     type: boolean
     description: Whether the ultimate payer is different
@@ -237,4 +237,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 3a5df72a5f73e02e59731ff4b5108bcd
+hash: 5d66b006c505fab746323487101fae29

@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 582
+  row_count: 605
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -253,4 +253,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 5795064a621b48291931274ddb83df01
+hash: be42ee47016b76849b7a70ef3545f0f9

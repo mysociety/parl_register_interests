@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 536
+  row_count: 549
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -226,6 +226,7 @@ schema:
       enum:
       - Charity
       - Labour Council Group
+      - Member's Association
       - University
       - charity, registration 1169558
     example: Charity
@@ -247,6 +248,7 @@ schema:
       - '2025-08-28'
       - '2025-09-04'
       - '2025-09-16'
+      - '2025-10-14'
     example: '2024-08-01'
   - name: category_code
     type: string
@@ -256,4 +258,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: ae31c8f79cd1126de6e33919e174f7af
+hash: aea9bea6e12b1418c31ef2324bacbcdb
