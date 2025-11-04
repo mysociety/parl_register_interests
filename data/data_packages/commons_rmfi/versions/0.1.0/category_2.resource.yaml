@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 549
+  row_count: 477
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -22,7 +22,7 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: 89up Ltd - £5,268.97
+    example: 89Up Ltd - £1,500.00
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -42,13 +42,13 @@ schema:
     description: Published date
     constraints:
       unique: false
-    example: '2023-11-03'
+    example: '2023-11-19'
   - name: updated_1
     type: string
     description: Updated date
     constraints:
       unique: false
-    example: '2024-04-26'
+    example: '2024-07-05'
   - name: category
     type: string
     description: Category of the interest
@@ -68,7 +68,7 @@ schema:
     description: TheyWorkForYou ID of the MP
     constraints:
       unique: false
-    example: '10131'
+    example: '10133'
   - name: party
     type: string
     description: Political party of the MP
@@ -161,7 +161,7 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-    example: 89up Ltd
+    example: 89Up Ltd
   - name: donor_public_address
     type: string
     description: Public address of the donor
@@ -187,7 +187,7 @@ schema:
     description: Name of the donor company
     constraints:
       unique: false
-    example: 89up Ltd
+    example: 89Up Ltd
   - name: donor_company_url
     type: number
     description: URL of the donor company
@@ -225,10 +225,8 @@ schema:
       unique: false
       enum:
       - Charity
-      - Labour Council Group
       - Member's Association
       - University
-      - charity, registration 1169558
     example: Charity
   - name: link
     type: string
@@ -242,14 +240,11 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2024-08-01'
-      - '2024-10-18'
       - '2024-12-02'
       - '2025-08-28'
-      - '2025-09-04'
       - '2025-09-16'
       - '2025-10-14'
-    example: '2024-08-01'
+    example: '2024-12-02'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -258,4 +253,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: be01238da256e755434c49aa2db5735f
+hash: 9fe0866253a5f61b319f0e00c7f79241

@@ -1,7 +1,7 @@
 title: Overall Register of Interests
 description: Register of interests, text summaries by category,
 custom:
-  row_count: 3916
+  row_count: 3774
   dataset_order: -10
 path: overall.parquet
 name: overall
@@ -93,4 +93,4 @@ schema:
       unique: false
     example: (1) Chartered Institute of Housing and (2) National Housing Federation
       - £850.00
-hash: ec496183d7d855e4b6b3aa80ca0fef24
+hash: ec2fdf6d321300a37f1b47eccdb759be

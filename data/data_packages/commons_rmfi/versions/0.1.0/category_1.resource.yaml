@@ -1,7 +1,7 @@
 title: Category 1
 description: Employment and earnings
 custom:
-  row_count: 336
+  row_count: 309
 path: category_1.parquet
 name: category_1
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10026'
+    example: '10097'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -177,7 +177,7 @@ schema:
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10026
+    example: https://interests-api.parliament.uk/api/v1/Interests/10097
   - name: updated_2
     type: string
     description: Date the interest was updated
@@ -193,7 +193,6 @@ schema:
       - '2024-01-03'
       - '2024-04-12'
       - '2024-07-30'
-      - '2024-10-15'
       - '2025-03-07'
       - '2025-07-14'
       - '2025-09-15'
@@ -247,4 +246,4 @@ schema:
       enum:
       - '1'
     example: '1'
-hash: e6a45f964421b61057ab918cf29d260a
+hash: 7c228493b50ecf648b961514ed5de497

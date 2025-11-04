@@ -1,7 +1,7 @@
 title: Category 1.2
 description: Employment and earnings - Ongoing paid employment
 custom:
-  row_count: 108
+  row_count: 89
 path: category_1.2.parquet
 name: category_1.2
 profile: data-resource
@@ -47,6 +47,38 @@ schema:
     constraints:
       unique: false
     example: '2014-03-19'
+  - name: updated_2
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+    example: '2019-10-31'
+  - name: updated_3
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+      enum:
+      - '2020-11-11'
+      - '2024-10-14'
+      - '2025-03-07'
+    example: '2020-11-11'
+  - name: updated_4
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+      enum:
+      - '2022-11-22'
+    example: '2022-11-22'
+  - name: updated_5
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+      enum:
+      - '2025-01-03'
+    example: '2025-01-03'
   - name: category
     type: string
     description: Category of the interest
@@ -132,7 +164,6 @@ schema:
       unique: false
       enum:
       - Councillor
-      - Special Responsibility Allowance - Sutton Local Committee Chair
       - This post is solely focused on the School of International Relations.
     example: Councillor
   - name: payment_type
@@ -253,38 +284,6 @@ schema:
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10100
-  - name: updated_2
-    type: string
-    description: Date the interest was updated
-    constraints:
-      unique: false
-    example: '2019-10-31'
-  - name: updated_3
-    type: string
-    description: Date the interest was updated
-    constraints:
-      unique: false
-      enum:
-      - '2020-11-11'
-      - '2024-10-14'
-      - '2025-03-07'
-    example: '2020-11-11'
-  - name: updated_4
-    type: string
-    description: Date the interest was updated
-    constraints:
-      unique: false
-      enum:
-      - '2022-11-22'
-    example: '2022-11-22'
-  - name: updated_5
-    type: string
-    description: Date the interest was updated
-    constraints:
-      unique: false
-      enum:
-      - '2025-01-03'
-    example: '2025-01-03'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -293,4 +292,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: e79fd790bb8fdb15b2876a58d40bb367
+hash: bae0e3351ff07a15e830e5449219e45f

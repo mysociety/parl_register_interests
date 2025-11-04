@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 344
+  row_count: 354
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10638'
+    example: '11071'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -37,24 +37,23 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2024-05-21'
+    example: '2024-11-01'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: false
-    example: '2024-05-22'
+    example: '2024-11-05'
   - name: updated_1
     type: string
     description: Updated date
     constraints:
       unique: false
       enum:
-      - '2024-10-25'
       - '2025-04-10'
       - '2025-06-25'
       - '2025-08-28'
-    example: '2024-10-25'
+    example: '2025-04-10'
   - name: category
     type: string
     description: Category of the interest
@@ -91,6 +90,7 @@ schema:
       - reform
       - scottish-national-party
       - sinn-fein
+      - social-democratic-and-labour-party
     example: conservative
   - name: member
     type: string
@@ -110,6 +110,37 @@ schema:
     constraints:
       unique: false
     example: Abidjan
+  - name: visit_locations__country_2
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+      enum:
+      - Azerbaijan
+      - Canada
+      - Guernsey
+      - Israel
+      - Jordan
+      - Namibia
+      - Palestine
+      - Poland
+      - Syria
+      - United States
+    example: Azerbaijan
+  - name: visit_locations__destination_2
+    type: string
+    description: Destination of the visit
+    constraints:
+      unique: false
+      enum:
+      - Baku
+      - Hebron, Ramallah
+      - Jerusalem & the West Bank
+      - Palestine (Occupied Palestinian Territory) and Israel
+      - Rojava
+      - Warsaw
+      - Washington, New York, Michigan
+    example: Baku
   - name: purpose
     type: string
     description: Purpose of the visit
@@ -142,7 +173,7 @@ schema:
     description: Visit associated with an All-Party Parliamentary Group
     constraints:
       unique: false
-    example: AAPG Gibraltar
+    example: APP Taiwan
   - name: donors__name_1
     type: string
     description: Name of the donor
@@ -194,18 +225,12 @@ schema:
       - false
       - true
     example: 'False'
-  - name: link
-    type: string
-    description: Link to the interest
-    constraints:
-      unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10638
   - name: donors__name_2
     type: string
     description: Name of the donor
     constraints:
       unique: false
-    example: B4NZ
+    example: APPG Italy
   - name: donors__is_private_individual_2
     type: string
     description: Whether the donor is a private individual
@@ -251,53 +276,6 @@ schema:
       - 'False'
       - 'True'
     example: 'False'
-  - name: visit_locations__country_2
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-      enum:
-      - Azerbaijan
-      - Canada
-      - Guernsey
-      - Israel
-      - Jordan
-      - Palestine
-      - Poland
-      - Syria
-      - United States
-    example: Azerbaijan
-  - name: visit_locations__destination_2
-    type: string
-    description: Destination of the visit
-    constraints:
-      unique: false
-      enum:
-      - Baku
-      - Hebron, Ramallah
-      - Palestine (Occupied Palestinian Territory) and Israel
-      - Rojava
-      - Warsaw
-      - Washington, New York, Michigan
-    example: Baku
-  - name: visit_locations__country_3
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-      enum:
-      - Israel
-      - Moldova
-      - Ukraine
-    example: Israel
-  - name: visit_locations__destination_3
-    type: number
-    description: Destination of the visit
-    constraints:
-      unique: false
-      enum:
-      - .nan
-    example: ''
   - name: donors__name_3
     type: string
     description: Name of the donor
@@ -306,6 +284,7 @@ schema:
       enum:
       - British Embassy Berne
       - Kyivstar
+      - Progressive International
       - UK-India Business Council
       - Zhytomyr Administration
     example: British Embassy Berne
@@ -327,6 +306,7 @@ schema:
       - 25 Mala Berdichivska str., Zhytomyr, Ukraine, 10014
       - 3 Orchard Pl, London SW1H 0BF
       - 53 Degtyarivska St, Kiev, Kyiv City, 03113, Ukraine
+      - "71-75 Shelton Street,\r\nLondon WC2H 9JQ"
       - S.P. Korolova Square, 4/2, Zhytomyr, Zhytomyr Oblast, Ukraine, 10002
       - Thunstrasse 50, CH - 3005 Bern
     example: 03113, m. Kyiv, vul. Dehtiarivska, 53
@@ -347,6 +327,7 @@ schema:
       - Accommodation, meals
       - Daytrip to Zhytomyr (approx.)
       - Dinner and briefing in Kyiv with delegation,
+      - Flight (£213.05) and hotel (£97.64)
       - Formal Dinner and receptions
       - Hotel (£350), Food (£20)
       - Meal £50.00
@@ -358,6 +339,7 @@ schema:
     constraints:
       unique: false
       enum:
+      - 310.69
       - .nan
       - 25.0
       - 50.0
@@ -373,6 +355,30 @@ schema:
       - 'False'
       - 'True'
     example: 'False'
+  - name: link
+    type: string
+    description: Link to the interest
+    constraints:
+      unique: true
+    example: https://interests-api.parliament.uk/api/v1/Interests/11071
+  - name: visit_locations__country_3
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+      enum:
+      - Israel
+      - Moldova
+      - Ukraine
+    example: Israel
+  - name: visit_locations__destination_3
+    type: number
+    description: Destination of the visit
+    constraints:
+      unique: false
+      enum:
+      - .nan
+    example: ''
   - name: donors__name_4
     type: string
     description: Name of the donor
@@ -508,4 +514,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: d14fe7b2074da4953d87d8f34f691c37
+hash: 7620ce78548db5ee21876a0a44876931

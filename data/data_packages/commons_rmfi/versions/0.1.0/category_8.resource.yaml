@@ -1,7 +1,7 @@
 title: Category 8
 description: Miscellaneous
 custom:
-  row_count: 914
+  row_count: 912
 path: category_8.parquet
 name: category_8
 profile: data-resource
@@ -138,7 +138,7 @@ schema:
       - '2022-02-25'
       - '2024-02-05'
       - '2024-09-09'
-      - '2024-10-28'
+      - '2024-10-30'
       - '2025-03-11'
       - '2025-04-25'
       - '2025-06-24'
@@ -146,6 +146,7 @@ schema:
       - '2025-09-17'
       - '2025-09-19'
       - '2025-10-06'
+      - '2025-10-21'
     example: '2022-02-25'
   - name: updated_3
     type: string
@@ -154,6 +155,7 @@ schema:
       unique: false
       enum:
       - '2025-08-20'
+      - '2025-11-03'
     example: '2025-08-20'
   - name: category_code
     type: string
@@ -163,4 +165,4 @@ schema:
       enum:
       - '8'
     example: '8'
-hash: db62d7e130813ca094489e01b6272267
+hash: 91969d1fe324c25a25aafe90b16cca46

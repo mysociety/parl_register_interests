@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 573
+  row_count: 570
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10361'
+    example: '10475'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -47,12 +47,11 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2024-10-03'
       - '2024-12-05'
       - '2024-12-18'
       - '2025-05-22'
       - '2025-09-18'
-    example: '2024-10-03'
+    example: '2024-12-05'
   - name: category
     type: string
     description: Category of the interest
@@ -221,14 +220,13 @@ schema:
       unique: false
       enum:
       - All Party Parliamentary Group secretariat Beyond Pills
-      - Elizabeth Garrett Anderson School
     example: All Party Parliamentary Group secretariat Beyond Pills
   - name: link
     type: string
     description: Link to the interest
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10361
+    example: https://interests-api.parliament.uk/api/v1/Interests/10475
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -237,4 +235,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: ee33e5949e31a20f62c7f02340f650b0
+hash: 83dd56fca3de3a4da771a90187da2cee

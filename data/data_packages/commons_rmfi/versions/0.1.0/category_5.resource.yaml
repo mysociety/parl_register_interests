@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 14
+  row_count: 15
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -16,21 +16,6 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-      enum:
-      - 11267
-      - 11809
-      - 12043
-      - 12324
-      - 12462
-      - 12551
-      - 12556
-      - 12757
-      - 12829
-      - 12866
-      - 13070
-      - 13278
-      - 13284
-      - 13581
     example: '11267'
   - name: summary
     type: string
@@ -50,6 +35,7 @@ schema:
       - Real Madrid CF - £340.00
       - SM Entertainment - £400.00
       - Stripe Matter, Inc - £369.00
+      - The British School of Brussels - £386.79
       - Trump Vance Inaugural Committee - £712.87
     example: Ailsa Roell - £42,000.00
   - name: parent_interest_id
@@ -65,42 +51,12 @@ schema:
     description: Registered date
     constraints:
       unique: true
-      enum:
-      - '2024-11-14'
-      - '2025-02-14'
-      - '2025-03-18'
-      - '2025-05-01'
-      - '2025-05-20'
-      - '2025-06-03'
-      - '2025-06-04'
-      - '2025-07-08'
-      - '2025-07-10'
-      - '2025-07-21'
-      - '2025-08-05'
-      - '2025-09-11'
-      - '2025-09-12'
-      - '2025-10-20'
     example: '2024-11-14'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: true
-      enum:
-      - '2024-11-18'
-      - '2025-02-14'
-      - '2025-03-19'
-      - '2025-05-01'
-      - '2025-05-20'
-      - '2025-06-03'
-      - '2025-06-04'
-      - '2025-07-08'
-      - '2025-07-10'
-      - '2025-07-21'
-      - '2025-08-05'
-      - '2025-09-11'
-      - '2025-09-15'
-      - '2025-10-20'
     example: '2024-11-18'
   - name: updated_1
     type: string
@@ -213,10 +169,13 @@ schema:
       enum:
       - 4 Tickets and Hospitality for SM Town Live
       - A ticket to the Cash in the UK conference
+      - Annual Trustee meeting of the British School in Brussels. Hospitality included
+        a standard Eurostar return ticket and one night accommodation in order to
+        be able to attend the meeting. Hotel (£214),travel (£172.79)
       - Associated with taking part in the US-UK legislative exchange in Cambridge,
         hospitality and accommodation
       - Attendance at conference in the UK, including one night hotel accommodation
-        and food and drink while in attendance.
+        and food and drink while in attendance
       - Flights (£558), accommodation for 3 nights (£700), meals (£250), taxi (£200)
       - Free accommodation in a family member’s flat since my election. The estimated
         rental value is £3,500 per month
@@ -246,6 +205,7 @@ schema:
       - 340.0
       - 350.0
       - 369.0
+      - 386.79
       - 400.0
       - 707.0
       - 712.87
@@ -307,6 +267,7 @@ schema:
       - Real Madrid CF
       - SM Entertainment
       - Stripe Matter, Inc
+      - The British School of Brussels
       - Trump Vance Inaugural Committee
     example: Ailsa Roell
   - name: donor_public_address
@@ -315,10 +276,10 @@ schema:
     constraints:
       unique: false
       enum:
-      - "1 South Audley Street \nLondon W1K 1NB"
+      - "1 South Audley Street \r\nLondon W1K 1NB"
       - 1515 Ringling Blvd, Suite 250 Sarasota, FL, 34236 USA
-      - "354 Oyster Point Boulevard\nSouth San Francisco\nCA 94080\nUS"
-      - "67 35th Street, Unit B-513\nBrooklyn, NY 11232"
+      - "354 Oyster Point Boulevard\r\nSouth San Francisco\r\nCA 94080\r\nUS"
+      - "67 35th Street, Unit B-513\r\nBrooklyn, NY 11232"
       - Acro Seoul Forest D-Tower, 83-21 Wangsimni-Ro, Seongdong-Gu, Seoul, Korea
       - Duolingo, Inc. of 5900 Penn Avenue, Pittsburgh, PA 15206
       - Floor 4, General Services Administration at National Capitol Region 301 7th
@@ -329,7 +290,8 @@ schema:
       - Services & General Administration Department, Central Transport Pool G0, Azad
         Government of the State of Jammu & Kashmir, Muzzadarabad
       - Stubbs Mill, 3 Upper Kirby Street, Manchester M4 6FN
-    example: "1 South Audley Street \nLondon W1K 1NB"
+      - The British School of Brussels, Pater Dupierreuxlaan 1, Tervuren, Belgium
+    example: "1 South Audley Street \r\nLondon W1K 1NB"
   - name: donor_status
     type: string
     description: Type of donor
@@ -362,8 +324,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - 5933624.0
       - .nan
+      - 5933624.0
     example: '5933624.0'
   - name: donor_company_identifier_source
     type: string
@@ -389,6 +351,7 @@ schema:
       enum:
       - Government
       - Member owned sports association
+      - School
       - US non-profit endowment
       - University
     example: Government
@@ -397,21 +360,6 @@ schema:
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-      enum:
-      - https://interests-api.parliament.uk/api/v1/Interests/11267
-      - https://interests-api.parliament.uk/api/v1/Interests/11809
-      - https://interests-api.parliament.uk/api/v1/Interests/12043
-      - https://interests-api.parliament.uk/api/v1/Interests/12324
-      - https://interests-api.parliament.uk/api/v1/Interests/12462
-      - https://interests-api.parliament.uk/api/v1/Interests/12551
-      - https://interests-api.parliament.uk/api/v1/Interests/12556
-      - https://interests-api.parliament.uk/api/v1/Interests/12757
-      - https://interests-api.parliament.uk/api/v1/Interests/12829
-      - https://interests-api.parliament.uk/api/v1/Interests/12866
-      - https://interests-api.parliament.uk/api/v1/Interests/13070
-      - https://interests-api.parliament.uk/api/v1/Interests/13278
-      - https://interests-api.parliament.uk/api/v1/Interests/13284
-      - https://interests-api.parliament.uk/api/v1/Interests/13581
     example: https://interests-api.parliament.uk/api/v1/Interests/11267
   - name: category_code
     type: string
@@ -421,4 +369,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 7c77c3585fc77fc05fa010f8429a4c3d
+hash: e609dfe240421e12ad91ac43d78fe2f1
