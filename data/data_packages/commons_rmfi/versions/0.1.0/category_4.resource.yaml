@@ -306,7 +306,7 @@ schema:
       - 25 Mala Berdichivska str., Zhytomyr, Ukraine, 10014
       - 3 Orchard Pl, London SW1H 0BF
       - 53 Degtyarivska St, Kiev, Kyiv City, 03113, Ukraine
-      - "71-75 Shelton Street,\r\nLondon WC2H 9JQ"
+      - "71-75 Shelton Street,\nLondon WC2H 9JQ"
       - S.P. Korolova Square, 4/2, Zhytomyr, Zhytomyr Oblast, Ukraine, 10002
       - Thunstrasse 50, CH - 3005 Bern
     example: 03113, m. Kyiv, vul. Dehtiarivska, 53
@@ -514,4 +514,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 7620ce78548db5ee21876a0a44876931
+hash: e7f466351bf98a7200b64c928555816a
