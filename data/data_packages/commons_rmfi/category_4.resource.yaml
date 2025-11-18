@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 354
+  row_count: 385
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -53,6 +53,8 @@ schema:
       - '2025-04-10'
       - '2025-06-25'
       - '2025-08-28'
+      - '2025-11-07'
+      - '2025-11-14'
     example: '2025-04-10'
   - name: category
     type: string
@@ -110,37 +112,6 @@ schema:
     constraints:
       unique: false
     example: Abidjan
-  - name: visit_locations__country_2
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-      enum:
-      - Azerbaijan
-      - Canada
-      - Guernsey
-      - Israel
-      - Jordan
-      - Namibia
-      - Palestine
-      - Poland
-      - Syria
-      - United States
-    example: Azerbaijan
-  - name: visit_locations__destination_2
-    type: string
-    description: Destination of the visit
-    constraints:
-      unique: false
-      enum:
-      - Baku
-      - Hebron, Ramallah
-      - Jerusalem & the West Bank
-      - Palestine (Occupied Palestinian Territory) and Israel
-      - Rojava
-      - Warsaw
-      - Washington, New York, Michigan
-    example: Baku
   - name: purpose
     type: string
     description: Purpose of the visit
@@ -225,6 +196,44 @@ schema:
       - false
       - true
     example: 'False'
+  - name: link
+    type: string
+    description: Link to the interest
+    constraints:
+      unique: true
+    example: https://interests-api.parliament.uk/api/v1/Interests/11071
+  - name: visit_locations__country_2
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+      enum:
+      - Azerbaijan
+      - Canada
+      - Guernsey
+      - Israel
+      - Jordan
+      - Namibia
+      - Palestine
+      - Poland
+      - Syria
+      - United States
+      - Vatican City
+    example: Azerbaijan
+  - name: visit_locations__destination_2
+    type: string
+    description: Destination of the visit
+    constraints:
+      unique: false
+      enum:
+      - Baku
+      - Hebron, Ramallah
+      - Jerusalem & the West Bank
+      - Palestine (Occupied Palestinian Territory) and Israel
+      - Rojava
+      - Warsaw
+      - Washington, New York, Michigan
+    example: Baku
   - name: donors__name_2
     type: string
     description: Name of the donor
@@ -245,7 +254,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: 25 Mala Berdichivska str., Zhytomyr, Ukraine, 10014
+    example: 1 Canada Square, London E14 5AA
   - name: donors__payment_type_2
     type: string
     description: Type of payment
@@ -260,7 +269,8 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: Accommodation, meals and reception, and bus travel
+    example: '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
+      (£154.80), hospitality (£210.20), Tech Equipment (£106.60).'
   - name: donors__value_2
     type: number
     description: Value of the payment
@@ -282,12 +292,15 @@ schema:
     constraints:
       unique: false
       enum:
+      - Alford Technology (via Animar Travel Network)
       - British Embassy Berne
+      - Guartel Technologies (via Animar Travel Network)
+      - Italian Parliament
       - Kyivstar
       - Progressive International
       - UK-India Business Council
       - Zhytomyr Administration
-    example: British Embassy Berne
+    example: Alford Technology (via Animar Travel Network)
   - name: donors__is_private_individual_3
     type: string
     description: Whether the donor is a private individual
@@ -305,8 +318,13 @@ schema:
       - 03113, m. Kyiv, vul. Dehtiarivska, 53
       - 25 Mala Berdichivska str., Zhytomyr, Ukraine, 10014
       - 3 Orchard Pl, London SW1H 0BF
+      - 4 Ravenscroft Court Buttington Cross Enterprise Park, Buttington, Welshpool,
+        Powys, Wales, SY21 8SL
       - 53 Degtyarivska St, Kiev, Kyiv City, 03113, Ukraine
-      - "71-75 Shelton Street,\nLondon WC2H 9JQ"
+      - "71-75 Shelton Street,\r\nLondon WC2H 9JQ"
+      - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
+        England, BA14 0XG
+      - Camera de Deputati, Palazzo Montecitorio - Piazza Montecitorio 00186, Rome
       - S.P. Korolova Square, 4/2, Zhytomyr, Zhytomyr Oblast, Ukraine, 10002
       - Thunstrasse 50, CH - 3005 Bern
     example: 03113, m. Kyiv, vul. Dehtiarivska, 53
@@ -317,6 +335,7 @@ schema:
       unique: false
       enum:
       - In kind
+      - Monetary
     example: In kind
   - name: donors__payment_description_3
     type: string
@@ -324,6 +343,8 @@ schema:
     constraints:
       unique: false
       enum:
+      - '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
+        (£154.80), hospitality (£210.20), Tech Equipment (£106.60).'
       - Accommodation, meals
       - Daytrip to Zhytomyr (approx.)
       - Dinner and briefing in Kyiv with delegation,
@@ -331,20 +352,26 @@ schema:
       - Formal Dinner and receptions
       - Hotel (£350), Food (£20)
       - Meal £50.00
+      - Presentation of symbolic, parliamentary items exchanged between me, as co
+        Chair of the All Party Parliamentary Group for Italy, and the various senior
+        Italian Select Committee Chairs we met (estimated value £340)
       - Transport and buffet lunch
-    example: Accommodation, meals
+    example: '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
+      (£154.80), hospitality (£210.20), Tech Equipment (£106.60).'
   - name: donors__value_3
     type: number
     description: Value of the payment
     constraints:
       unique: false
       enum:
-      - 310.69
       - .nan
       - 25.0
       - 50.0
+      - 310.69
+      - 340.0
       - 370.0
       - 670.28
+      - 763.2
     example: '25.0'
   - name: donors__is_sole_beneficiary_3
     type: string
@@ -355,40 +382,18 @@ schema:
       - 'False'
       - 'True'
     example: 'False'
-  - name: link
-    type: string
-    description: Link to the interest
-    constraints:
-      unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/11071
-  - name: visit_locations__country_3
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-      enum:
-      - Israel
-      - Moldova
-      - Ukraine
-    example: Israel
-  - name: visit_locations__destination_3
-    type: number
-    description: Destination of the visit
-    constraints:
-      unique: false
-      enum:
-      - .nan
-    example: ''
   - name: donors__name_4
     type: string
     description: Name of the donor
     constraints:
       unique: false
       enum:
+      - Alford Technology (via Animar Travel Network)
       - Kyivstar
+      - NIC Instruments (via Animar Travel Network)
       - UK Friends of Ukraine
       - Yes Foundation
-    example: Kyivstar
+    example: Alford Technology (via Animar Travel Network)
   - name: donors__is_private_individual_4
     type: string
     description: Whether the donor is a private individual
@@ -406,6 +411,9 @@ schema:
       - 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
       - 81 High Street, Cosham, Portsmouth PO6 3BL
       - 81 High Street, Cosham, Portsmouth, PO6 3BL
+      - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
+        England, BA14 0XG
+      - Gladstone Road, Folkestone, Kent, CT19 5NF
       - Vikentiya Khvoiky St, 15/15
     example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
   - name: donors__payment_type_4
@@ -415,6 +423,7 @@ schema:
       unique: false
       enum:
       - In kind
+      - Monetary
     example: In kind
   - name: donors__payment_description_4
     type: string
@@ -422,10 +431,13 @@ schema:
     constraints:
       unique: false
       enum:
+      - '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
+        (£154.80), hospitality (£210.20), Tech Equipment (£106.60).'
       - Bus transport in Kyiv and Lviv
       - Conference £150
       - Dinner in Kyiv (approx.)
-    example: Bus transport in Kyiv and Lviv
+    example: '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
+      (£154.80), hospitality (£210.20), Tech Equipment (£106.60).'
   - name: donors__value_4
     type: number
     description: Value of the payment
@@ -436,6 +448,7 @@ schema:
       - 25.0
       - 25.86
       - 150.0
+      - 763.2
     example: '150.0'
   - name: donors__is_sole_beneficiary_4
     type: string
@@ -452,6 +465,8 @@ schema:
       unique: false
       enum:
       - Bulldog Political Consulting
+      - NIC Instruments (via Animar Travel Network)
+      - RSK Group (via Animar Travel Network)
       - YES Foundation
     example: Bulldog Political Consulting
   - name: donors__is_private_individual_5
@@ -470,6 +485,8 @@ schema:
       enum:
       - 19-20 Bourne Court, Southend Road, Woodford Green, Essex IG8 8HD
       - 81 High Street, Cosham, Portsmouth PO6 3BL
+      - Gladstone Road, Folkestone, Kent, CT19 5NF
+      - Spring Lodge, 172 Chester Road, Helsby, Cheshire, United Kingdom, WA6 0AR
     example: 19-20 Bourne Court, Southend Road, Woodford Green, Essex IG8 8HD
   - name: donors__payment_type_5
     type: string
@@ -478,6 +495,7 @@ schema:
       unique: false
       enum:
       - In kind
+      - Monetary
     example: In kind
   - name: donors__payment_description_5
     type: string
@@ -485,9 +503,14 @@ schema:
     constraints:
       unique: false
       enum:
+      - '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
+        (£154.80), hospitality (£210.20), Tech Equipment (£106.60)'
+      - '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
+        (£154.80), hospitality (£210.20), Tech Equipment (£106.60).'
       - Dinner in Lviv
       - YES Conference
-    example: Dinner in Lviv
+    example: '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
+      (£154.80), hospitality (£210.20), Tech Equipment (£106.60)'
   - name: donors__value_5
     type: number
     description: Value of the payment
@@ -497,7 +520,8 @@ schema:
       - .nan
       - 86.2
       - 92.11
-    example: '86.2'
+      - 763.2
+    example: '763.2'
   - name: donors__is_sole_beneficiary_5
     type: string
     description: Whether the MP is the sole beneficiary
@@ -506,6 +530,24 @@ schema:
       enum:
       - 'True'
     example: 'True'
+  - name: visit_locations__country_3
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+      enum:
+      - Israel
+      - Moldova
+      - Ukraine
+    example: Israel
+  - name: visit_locations__destination_3
+    type: number
+    description: Destination of the visit
+    constraints:
+      unique: false
+      enum:
+      - .nan
+    example: ''
   - name: category_code
     type: string
     description: Code for the category
@@ -514,4 +556,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: e7f466351bf98a7200b64c928555816a
+hash: ca619e4843a36cd9b87b17872656230b

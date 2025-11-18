@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 575
+  row_count: 610
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '1049'
+    example: '10009'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -83,6 +83,7 @@ schema:
       - labour
       - labourco-operative
       - liberal-democrat
+      - plaid-cymru
       - reform
       - scottish-national-party
       - sinn-fein
@@ -233,7 +234,7 @@ schema:
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/1049
+    example: https://interests-api.parliament.uk/api/v1/Interests/10009
   - name: updated_2
     type: string
     description: Date the second interest was updated
@@ -253,4 +254,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: c882bbe8ae0f5a171e26495058ed419c
+hash: 54ec90f09347c363c424b3d86a892c87

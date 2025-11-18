@@ -276,10 +276,10 @@ schema:
     constraints:
       unique: false
       enum:
-      - "1 South Audley Street \nLondon W1K 1NB"
+      - "1 South Audley Street \r\nLondon W1K 1NB"
       - 1515 Ringling Blvd, Suite 250 Sarasota, FL, 34236 USA
-      - "354 Oyster Point Boulevard\nSouth San Francisco\nCA 94080\nUS"
-      - "67 35th Street, Unit B-513\nBrooklyn, NY 11232"
+      - "354 Oyster Point Boulevard\r\nSouth San Francisco\r\nCA 94080\r\nUS"
+      - "67 35th Street, Unit B-513\r\nBrooklyn, NY 11232"
       - Acro Seoul Forest D-Tower, 83-21 Wangsimni-Ro, Seongdong-Gu, Seoul, Korea
       - Duolingo, Inc. of 5900 Penn Avenue, Pittsburgh, PA 15206
       - Floor 4, General Services Administration at National Capitol Region 301 7th
@@ -291,7 +291,7 @@ schema:
         Government of the State of Jammu & Kashmir, Muzzadarabad
       - Stubbs Mill, 3 Upper Kirby Street, Manchester M4 6FN
       - The British School of Brussels, Pater Dupierreuxlaan 1, Tervuren, Belgium
-    example: "1 South Audley Street \nLondon W1K 1NB"
+    example: "1 South Audley Street \r\nLondon W1K 1NB"
   - name: donor_status
     type: string
     description: Type of donor
@@ -369,4 +369,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 107c9d665d96d098c73ae06fd77d51a7
+hash: e609dfe240421e12ad91ac43d78fe2f1
