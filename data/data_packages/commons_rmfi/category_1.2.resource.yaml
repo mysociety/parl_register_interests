@@ -47,38 +47,6 @@ schema:
     constraints:
       unique: false
     example: '2014-03-19'
-  - name: updated_2
-    type: string
-    description: Date the interest was updated
-    constraints:
-      unique: false
-    example: '2019-10-31'
-  - name: updated_3
-    type: string
-    description: Date the interest was updated
-    constraints:
-      unique: false
-      enum:
-      - '2020-11-11'
-      - '2024-10-14'
-      - '2025-03-07'
-    example: '2020-11-11'
-  - name: updated_4
-    type: string
-    description: Date the interest was updated
-    constraints:
-      unique: false
-      enum:
-      - '2022-11-22'
-    example: '2022-11-22'
-  - name: updated_5
-    type: string
-    description: Date the interest was updated
-    constraints:
-      unique: false
-      enum:
-      - '2025-01-03'
-    example: '2025-01-03'
   - name: category
     type: string
     description: Category of the interest
@@ -284,6 +252,46 @@ schema:
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10100
+  - name: updated_2
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+    example: '2019-10-31'
+  - name: updated_3
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+      enum:
+      - '2020-11-11'
+      - '2024-10-14'
+      - '2025-03-07'
+    example: '2020-11-11'
+  - name: updated_4
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+      enum:
+      - '2022-11-22'
+    example: '2022-11-22'
+  - name: updated_5
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+      enum:
+      - '2025-01-03'
+    example: '2025-01-03'
+  - name: updated_6
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+      enum:
+      - '2025-10-27'
+    example: '2025-10-27'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -292,4 +300,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: bae0e3351ff07a15e830e5449219e45f
+hash: 71e51bccde3bd94e1462ce5925db3ace
