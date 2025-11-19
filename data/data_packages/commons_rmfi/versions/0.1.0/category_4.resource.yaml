@@ -321,7 +321,7 @@ schema:
       - 4 Ravenscroft Court Buttington Cross Enterprise Park, Buttington, Welshpool,
         Powys, Wales, SY21 8SL
       - 53 Degtyarivska St, Kiev, Kyiv City, 03113, Ukraine
-      - "71-75 Shelton Street,\r\nLondon WC2H 9JQ"
+      - "71-75 Shelton Street,\nLondon WC2H 9JQ"
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
       - Camera de Deputati, Palazzo Montecitorio - Piazza Montecitorio 00186, Rome
@@ -556,4 +556,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: ca619e4843a36cd9b87b17872656230b
+hash: 4a9599f509e5ef5c3cc0c728ffc46354
