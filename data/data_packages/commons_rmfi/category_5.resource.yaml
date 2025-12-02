@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 15
+  row_count: 14
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -16,16 +16,31 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '11267'
+      enum:
+      - 11809
+      - 12043
+      - 12324
+      - 12462
+      - 12551
+      - 12556
+      - 12757
+      - 12829
+      - 12866
+      - 13070
+      - 13278
+      - 13284
+      - 13581
+      - 13649
+    example: '11809'
   - name: summary
     type: string
     description: Text summary of the interest
     constraints:
-      unique: false
+      unique: true
       enum:
+      - Ailsa Roell - £14,000.00
       - Ailsa Roell - £42,000.00
       - Association of Marshall Scholars - £803.00
-      - Azad Government of the State of Jammu & Kashmir - £707.00
       - CMS Analytics - £995.00
       - Duolingo - £2,500.00
       - Embassy of the State of Qatar - £1,200.00
@@ -37,7 +52,7 @@ schema:
       - Stripe Matter, Inc - £369.00
       - The British School of Brussels - £386.79
       - Trump Vance Inaugural Committee - £712.87
-    example: Ailsa Roell - £42,000.00
+    example: Ailsa Roell - £14,000.00
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -51,13 +66,43 @@ schema:
     description: Registered date
     constraints:
       unique: true
-    example: '2024-11-14'
+      enum:
+      - '2025-02-14'
+      - '2025-03-18'
+      - '2025-05-01'
+      - '2025-05-20'
+      - '2025-06-03'
+      - '2025-06-04'
+      - '2025-07-08'
+      - '2025-07-10'
+      - '2025-07-21'
+      - '2025-08-05'
+      - '2025-09-11'
+      - '2025-09-12'
+      - '2025-10-20'
+      - '2025-10-28'
+    example: '2025-02-14'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: true
-    example: '2024-11-18'
+      enum:
+      - '2025-02-14'
+      - '2025-03-19'
+      - '2025-05-01'
+      - '2025-05-20'
+      - '2025-06-03'
+      - '2025-06-04'
+      - '2025-07-08'
+      - '2025-07-10'
+      - '2025-07-21'
+      - '2025-08-05'
+      - '2025-09-11'
+      - '2025-09-15'
+      - '2025-10-20'
+      - '2025-10-28'
+    example: '2025-02-14'
   - name: updated_1
     type: string
     description: Updated date
@@ -86,7 +131,6 @@ schema:
       - 4407
       - 4441
       - 4475
-      - 4598
       - 5141
       - 5282
       - 5284
@@ -106,7 +150,6 @@ schema:
       - '25272'
       - '25323'
       - '25381'
-      - '25649'
       - '26395'
       - '26430'
       - '26502'
@@ -139,7 +182,6 @@ schema:
       - David Chadwick
       - Freddie van Mierlo
       - Jonathan Reynolds
-      - Mohammad Yasin
       - Nigel Huddleston
       - Sir John Whittingdale
       - Sir Oliver Dowden
@@ -186,8 +228,6 @@ schema:
       - Tickets for my husband and I to attend the Trump Victory Rally on 19th January,
         the President's Inauguration on 20th January and the Liberty Ball on 21st
         January 2025
-      - Transport was provided for me and up to six other family members during my
-        recent trip to Pakistan
       - Two tickets for NFL game including hospitality for myself and one guest
       - Two tickets to the Qatar Goodwood Festival 2025 and to the Goodwood Regency
         Ball including hospitality and accommodation for one night
@@ -199,7 +239,7 @@ schema:
     type: number
     description: Value of the payment (£)
     constraints:
-      unique: false
+      unique: true
       enum:
       - 329.5
       - 340.0
@@ -207,13 +247,13 @@ schema:
       - 369.0
       - 386.79
       - 400.0
-      - 707.0
       - 712.87
       - 803.0
       - 995.0
       - 1200.0
       - 1708.0
       - 2500.0
+      - 14000.0
       - 42000.0
     example: '1200.0'
   - name: received_date
@@ -257,7 +297,6 @@ schema:
       enum:
       - Ailsa Roell
       - Association of Marshall Scholars
-      - Azad Government of the State of Jammu & Kashmir
       - CMS Analytics
       - Duolingo
       - Embassy of the State of Qatar
@@ -276,10 +315,10 @@ schema:
     constraints:
       unique: false
       enum:
-      - "1 South Audley Street \nLondon W1K 1NB"
+      - "1 South Audley Street \r\nLondon W1K 1NB"
       - 1515 Ringling Blvd, Suite 250 Sarasota, FL, 34236 USA
-      - "354 Oyster Point Boulevard\nSouth San Francisco\nCA 94080\nUS"
-      - "67 35th Street, Unit B-513\nBrooklyn, NY 11232"
+      - "354 Oyster Point Boulevard\r\nSouth San Francisco\r\nCA 94080\r\nUS"
+      - "67 35th Street, Unit B-513\r\nBrooklyn, NY 11232"
       - Acro Seoul Forest D-Tower, 83-21 Wangsimni-Ro, Seongdong-Gu, Seoul, Korea
       - Duolingo, Inc. of 5900 Penn Avenue, Pittsburgh, PA 15206
       - Floor 4, General Services Administration at National Capitol Region 301 7th
@@ -287,11 +326,9 @@ schema:
       - Gibraltar House, 150 The Strand, London WC2R 1JA
       - Leiden University, PO Box 9500, 2300 RA Leiden. The Netherlands
       - Santiago Bernabeu Stadium, Madrid, Spain
-      - Services & General Administration Department, Central Transport Pool G0, Azad
-        Government of the State of Jammu & Kashmir, Muzzadarabad
       - Stubbs Mill, 3 Upper Kirby Street, Manchester M4 6FN
       - The British School of Brussels, Pater Dupierreuxlaan 1, Tervuren, Belgium
-    example: "1 South Audley Street \nLondon W1K 1NB"
+    example: "1 South Audley Street \r\nLondon W1K 1NB"
   - name: donor_status
     type: string
     description: Type of donor
@@ -349,18 +386,40 @@ schema:
     constraints:
       unique: false
       enum:
-      - Government
       - Member owned sports association
       - School
       - US non-profit endowment
       - University
-    example: Government
+    example: Member owned sports association
   - name: link
     type: string
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/11267
+      enum:
+      - https://interests-api.parliament.uk/api/v1/Interests/11809
+      - https://interests-api.parliament.uk/api/v1/Interests/12043
+      - https://interests-api.parliament.uk/api/v1/Interests/12324
+      - https://interests-api.parliament.uk/api/v1/Interests/12462
+      - https://interests-api.parliament.uk/api/v1/Interests/12551
+      - https://interests-api.parliament.uk/api/v1/Interests/12556
+      - https://interests-api.parliament.uk/api/v1/Interests/12757
+      - https://interests-api.parliament.uk/api/v1/Interests/12829
+      - https://interests-api.parliament.uk/api/v1/Interests/12866
+      - https://interests-api.parliament.uk/api/v1/Interests/13070
+      - https://interests-api.parliament.uk/api/v1/Interests/13278
+      - https://interests-api.parliament.uk/api/v1/Interests/13284
+      - https://interests-api.parliament.uk/api/v1/Interests/13581
+      - https://interests-api.parliament.uk/api/v1/Interests/13649
+    example: https://interests-api.parliament.uk/api/v1/Interests/11809
+  - name: updated_2
+    type: string
+    description: Updated date for second item
+    constraints:
+      unique: false
+      enum:
+      - '2025-11-19'
+    example: '2025-11-19'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -369,4 +428,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 107c9d665d96d098c73ae06fd77d51a7
+hash: e5f265b6732544e2a03ad7f6f63aeec2
