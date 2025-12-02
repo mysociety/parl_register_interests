@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 610
+  row_count: 614
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -86,16 +86,16 @@ schema:
       - plaid-cymru
       - reform
       - scottish-national-party
-      - sinn-fein
       - social-democratic-and-labour-party
       - traditional-unionist-voice
+      - your-party
     example: conservative
   - name: member
     type: string
     description: Name of the MP
     constraints:
       unique: false
-    example: Abtisam Mohamed
+    example: Adam Dance
   - name: appg
     type: string
     description: Payment made via an All-Party Parliamentary Group
@@ -182,7 +182,6 @@ schema:
       - Individual
       - Limited Liability Partnership
       - Other
-      - Registered Party
       - Trade Union
       - Trust
       - Unincorporated association
@@ -216,13 +215,13 @@ schema:
       - Companies House
     example: Companies House
   - name: donor_trust_details
-    type: number
+    type: string
     description: Trust details of the donor
     constraints:
       unique: false
       enum:
-      - .nan
-    example: ''
+      - Company Number 00951524
+    example: Company Number 00951524
   - name: donor_other_details
     type: string
     description: Other details of the donor
@@ -254,4 +253,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: fc70152e6521acb27f02a00de9f86b89
+hash: 8cf280716022d9b85828b36ea8ed718b

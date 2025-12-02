@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 385
+  row_count: 400
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '11071'
+    example: '11342'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -37,13 +37,13 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2024-11-01'
+    example: '2024-12-02'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: false
-    example: '2024-11-05'
+    example: '2024-12-02'
   - name: updated_1
     type: string
     description: Updated date
@@ -93,6 +93,7 @@ schema:
       - scottish-national-party
       - sinn-fein
       - social-democratic-and-labour-party
+      - your-party
     example: conservative
   - name: member
     type: string
@@ -186,7 +187,7 @@ schema:
     description: Value of the payment
     constraints:
       unique: false
-    example: '1001.33'
+    example: '1002.49'
   - name: donors__is_sole_beneficiary_1
     type: boolean
     description: Whether the MP is the sole beneficiary
@@ -201,14 +202,14 @@ schema:
     description: Link to the interest
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/11071
+    example: https://interests-api.parliament.uk/api/v1/Interests/11342
   - name: visit_locations__country_2
     type: string
     description: Country of the visit
     constraints:
       unique: false
       enum:
-      - Azerbaijan
+      - Brazil
       - Canada
       - Guernsey
       - Israel
@@ -216,24 +217,25 @@ schema:
       - Namibia
       - Palestine
       - Poland
+      - San Marino
       - Syria
       - United States
       - Vatican City
-    example: Azerbaijan
+    example: Brazil
   - name: visit_locations__destination_2
     type: string
     description: Destination of the visit
     constraints:
       unique: false
       enum:
-      - Baku
       - Hebron, Ramallah
       - Jerusalem & the West Bank
       - Palestine (Occupied Palestinian Territory) and Israel
+      - Rio de Janeiro
       - Rojava
       - Warsaw
       - Washington, New York, Michigan
-    example: Baku
+    example: Hebron, Ramallah
   - name: donors__name_2
     type: string
     description: Name of the donor
@@ -294,6 +296,8 @@ schema:
       enum:
       - Alford Technology (via Animar Travel Network)
       - British Embassy Berne
+      - Climate Parliament
+      - Dr Maurizio Bragagni
       - Guartel Technologies (via Animar Travel Network)
       - Italian Parliament
       - Kyivstar
@@ -308,6 +312,7 @@ schema:
       unique: false
       enum:
       - 'False'
+      - 'True'
     example: 'False'
   - name: donors__public_address_3
     type: string
@@ -316,12 +321,13 @@ schema:
       unique: false
       enum:
       - 03113, m. Kyiv, vul. Dehtiarivska, 53
+      - 21 The Cliff, Brighton East Sussex BN2 5RF
       - 25 Mala Berdichivska str., Zhytomyr, Ukraine, 10014
       - 3 Orchard Pl, London SW1H 0BF
       - 4 Ravenscroft Court Buttington Cross Enterprise Park, Buttington, Welshpool,
         Powys, Wales, SY21 8SL
       - 53 Degtyarivska St, Kiev, Kyiv City, 03113, Ukraine
-      - "71-75 Shelton Street,\nLondon WC2H 9JQ"
+      - "71-75 Shelton Street,\r\nLondon WC2H 9JQ"
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
       - Camera de Deputati, Palazzo Montecitorio - Piazza Montecitorio 00186, Rome
@@ -349,12 +355,15 @@ schema:
       - Daytrip to Zhytomyr (approx.)
       - Dinner and briefing in Kyiv with delegation,
       - Flight (£213.05) and hotel (£97.64)
+      - 'For myself, my staff member and one guest: Transport (£284.45), accommodation
+        (£156.30), meals (£273.57) & other costs (£26.07)'
       - Formal Dinner and receptions
       - Hotel (£350), Food (£20)
       - Meal £50.00
       - Presentation of symbolic, parliamentary items exchanged between me, as co
         Chair of the All Party Parliamentary Group for Italy, and the various senior
         Italian Select Committee Chairs we met (estimated value £340)
+      - Return flights Washington to Rio De Janeiro (£1394.88), accommodation (£1730)
       - Transport and buffet lunch
     example: '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
       (£154.80), hospitality (£210.20), Tech Equipment (£106.60).'
@@ -371,7 +380,9 @@ schema:
       - 340.0
       - 370.0
       - 670.28
+      - 740.39
       - 763.2
+      - 3124.88
     example: '25.0'
   - name: donors__is_sole_beneficiary_3
     type: string
@@ -389,6 +400,7 @@ schema:
       unique: false
       enum:
       - Alford Technology (via Animar Travel Network)
+      - Italian Parliament
       - Kyivstar
       - NIC Instruments (via Animar Travel Network)
       - UK Friends of Ukraine
@@ -413,6 +425,8 @@ schema:
       - 81 High Street, Cosham, Portsmouth, PO6 3BL
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
+      - "Camera dei Deputati \r\nPalazzo Montecitorio - Piazza Montecitorio\r\n00186\
+        \ - Rome (Italy)"
       - Gladstone Road, Folkestone, Kent, CT19 5NF
       - Vikentiya Khvoiky St, 15/15
     example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
@@ -436,6 +450,9 @@ schema:
       - Bus transport in Kyiv and Lviv
       - Conference £150
       - Dinner in Kyiv (approx.)
+      - Presentation of symbolic, parliamentary items exchanged between me, as Chair
+        of the All-Party Parliamentary Group for Italy, and the various senior Italian
+        select committee chairs we met. Estimated value of ceremonial items is £275.
     example: '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
       (£154.80), hospitality (£210.20), Tech Equipment (£106.60).'
   - name: donors__value_4
@@ -448,6 +465,7 @@ schema:
       - 25.0
       - 25.86
       - 150.0
+      - 275.0
       - 763.2
     example: '150.0'
   - name: donors__is_sole_beneficiary_4
@@ -556,4 +574,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 4a9599f509e5ef5c3cc0c728ffc46354
+hash: d381b3c39f881fd1de9bf883d6f8e2f3

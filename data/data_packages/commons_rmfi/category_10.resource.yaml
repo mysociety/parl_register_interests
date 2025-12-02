@@ -1,7 +1,7 @@
 title: Category 10
 description: Family members engaged in third-party lobbying
 custom:
-  row_count: 22
+  row_count: 21
   dataset_order: 20
 path: category_10.parquet
 name: category_10
@@ -62,7 +62,6 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2021-05-11'
       - '2022-12-09'
       - '2024-12-16'
       - '2025-01-13'
@@ -70,7 +69,7 @@ schema:
       - '2025-06-05'
       - '2025-07-22'
       - '2025-10-13'
-    example: '2021-05-11'
+    example: '2022-12-09'
   - name: category
     type: string
     description: Category of the interest
@@ -169,10 +168,9 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2024-11-19'
       - '2025-04-24'
       - '2025-08-04'
-    example: '2024-11-19'
+    example: '2025-04-24'
   - name: category_code
     type: string
     description: Code for the category
@@ -181,4 +179,4 @@ schema:
       enum:
       - '10'
     example: '10'
-hash: 585558425d4908a9f7a0812eb2383e2f
+hash: c791ef8f9a752534998c87aff85357cc

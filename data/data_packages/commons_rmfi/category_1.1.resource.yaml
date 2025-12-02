@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 599
+  row_count: 570
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -51,6 +51,7 @@ schema:
       - '2024-12-18'
       - '2025-05-22'
       - '2025-09-18'
+      - '2025-11-20'
     example: '2024-12-05'
   - name: category
     type: string
@@ -235,4 +236,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 485f88985f773d9ee4882d63d426c331
+hash: d219f5c3019d5debe3777bdc5af46848

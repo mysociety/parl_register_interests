@@ -85,6 +85,7 @@ schema:
       - scottish-national-party
       - sinn-fein
       - unknown
+      - your-party
     example: conservative
   - name: member
     type: string
@@ -167,4 +168,4 @@ schema:
       enum:
       - '7'
     example: '7'
-hash: e44a6d6068d8716871604bb675847df7
+hash: 81f61e5eb0bb121b4709a6e1e1513183
