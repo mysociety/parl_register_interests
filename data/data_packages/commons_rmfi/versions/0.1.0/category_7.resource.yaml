@@ -1,7 +1,7 @@
 title: Category 7
 description: Shareholdings
 custom:
-  row_count: 202
+  row_count: 204
 path: category_7.parquet
 name: category_7
 profile: data-resource
@@ -168,4 +168,4 @@ schema:
       enum:
       - '7'
     example: '7'
-hash: 0b0012d5bcd87cc53f3a19dae4df1372
+hash: 084420804c74b1c694b0fb7b0ebc16b2

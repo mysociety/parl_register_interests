@@ -21,7 +21,7 @@ schema:
     type: string
     description: Text summary of the interest
     constraints:
-      unique: false
+      unique: true
     example: Agreement - £1,001.17
   - name: parent_interest_id
     type: integer
@@ -299,4 +299,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: e8bfcd28358a49e1c122bcef117d8468
+hash: e62a676e8ea2b19cb4d90a62f9d93551

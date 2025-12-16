@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 465
+  row_count: 492
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -167,7 +167,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 Canada Square\nLondon\nE14 5AA"
+    example: "1 Canada Square\r\nLondon\r\nE14 5AA"
   - name: donor_status
     type: string
     description: Status of the donor
@@ -226,6 +226,10 @@ schema:
       enum:
       - Charity
       - Member's Association
+      - The UK Fusion Cluster is a network of organisations, including research institutions,
+        businesses and government bodies, focused on advancing fusion energy research
+        and development within the UK. It fosters collaboration and innovation to
+        accelerate progress in the field.
       - University
     example: Charity
   - name: link
@@ -253,4 +257,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: f82cb0d23367f9f56c0ab97004b138d5
+hash: 4f681a3ee9fbbdc31876a9affc913619

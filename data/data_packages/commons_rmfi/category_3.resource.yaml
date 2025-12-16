@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 614
+  row_count: 627
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -182,6 +182,7 @@ schema:
       - Individual
       - Limited Liability Partnership
       - Other
+      - Registered Party
       - Trade Union
       - Trust
       - Unincorporated association
@@ -253,4 +254,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 4125d3c96f9b0c712df3ca85c7fdb480
+hash: e54436022da0d9fecb0873dbe701cd64

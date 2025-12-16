@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 570
+  row_count: 592
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -22,7 +22,7 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: Payment expected for services on 01 July 2022 - £4,331.96
+    example: Payment expected for services on 01 September 2022 - £5,000.00
   - name: parent_interest_id
     type: integer
     description: Unique identifier for the parent interest
@@ -52,6 +52,7 @@ schema:
       - '2025-05-22'
       - '2025-09-18'
       - '2025-11-20'
+      - '2025-12-09'
     example: '2024-12-05'
   - name: category
     type: string
@@ -85,6 +86,7 @@ schema:
       - labour
       - labourco-operative
       - liberal-democrat
+      - plaid-cymru
       - reform
       - scottish-national-party
     example: conservative
@@ -221,6 +223,7 @@ schema:
       unique: false
       enum:
       - All Party Parliamentary Group secretariat Beyond Pills
+      - Jamaica Hurricane Melissa Relief Fund
     example: All Party Parliamentary Group secretariat Beyond Pills
   - name: link
     type: string
@@ -236,4 +239,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 550064240bcfd858bdebd8f63eec177c
+hash: 76aed4e4b630bded2c27a7dac185e0ce
