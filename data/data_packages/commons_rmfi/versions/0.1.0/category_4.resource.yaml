@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 409
+  row_count: 403
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '11342'
+    example: '11484'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -37,13 +37,13 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2024-12-02'
+    example: '2025-01-02'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: false
-    example: '2024-12-02'
+    example: '2025-01-02'
   - name: updated_1
     type: string
     description: Updated date
@@ -113,7 +113,7 @@ schema:
     description: Destination of the visit
     constraints:
       unique: false
-    example: Abidjan
+    example: Abu Dhabi
   - name: purpose
     type: string
     description: Purpose of the visit
@@ -188,7 +188,7 @@ schema:
     description: Value of the payment
     constraints:
       unique: false
-    example: '1002.49'
+    example: '10000.0'
   - name: donors__is_sole_beneficiary_1
     type: boolean
     description: Whether the MP is the sole beneficiary
@@ -203,25 +203,12 @@ schema:
     description: Link to the interest
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/11342
+    example: https://interests-api.parliament.uk/api/v1/Interests/11484
   - name: visit_locations__country_2
     type: string
     description: Country of the visit
     constraints:
       unique: false
-      enum:
-      - Brazil
-      - Canada
-      - Guernsey
-      - Israel
-      - Jordan
-      - Namibia
-      - Palestine
-      - Poland
-      - San Marino
-      - Syria
-      - United States
-      - Vatican City
     example: Brazil
   - name: visit_locations__destination_2
     type: string
@@ -303,7 +290,6 @@ schema:
       - Italian Parliament
       - Kyivstar
       - Progressive International
-      - UK-India Business Council
       - Zhytomyr Administration
     example: Alford Technology (via Animar Travel Network)
   - name: donors__is_private_individual_3
@@ -324,11 +310,10 @@ schema:
       - 03113, m. Kyiv, vul. Dehtiarivska, 53
       - 21 The Cliff, Brighton East Sussex BN2 5RF
       - 25 Mala Berdichivska str., Zhytomyr, Ukraine, 10014
-      - 3 Orchard Pl, London SW1H 0BF
       - 4 Ravenscroft Court Buttington Cross Enterprise Park, Buttington, Welshpool,
         Powys, Wales, SY21 8SL
       - 53 Degtyarivska St, Kiev, Kyiv City, 03113, Ukraine
-      - "71-75 Shelton Street,\nLondon WC2H 9JQ"
+      - "71-75 Shelton Street,\r\nLondon WC2H 9JQ"
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
       - Camera de Deputati, Palazzo Montecitorio - Piazza Montecitorio 00186, Rome
@@ -352,14 +337,12 @@ schema:
       enum:
       - '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
         (£154.80), hospitality (£210.20), Tech Equipment (£106.60).'
-      - Accommodation, meals
       - Daytrip to Zhytomyr (approx.)
-      - Dinner and briefing in Kyiv with delegation,
+      - Dinner and briefing in Kyiv with delegation
       - Flight (£213.05) and hotel (£97.64)
       - 'For myself, my staff member and one guest: Transport (£284.45), accommodation
         (£156.30), meals (£273.57) & other costs (£26.07)'
       - Formal Dinner and receptions
-      - Hotel (£350), Food (£20)
       - Meal £50.00
       - Presentation of symbolic, parliamentary items exchanged between me, as co
         Chair of the All Party Parliamentary Group for Italy, and the various senior
@@ -379,7 +362,6 @@ schema:
       - 50.0
       - 310.69
       - 340.0
-      - 370.0
       - 670.28
       - 740.39
       - 763.2
@@ -426,8 +408,8 @@ schema:
       - 81 High Street, Cosham, Portsmouth, PO6 3BL
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
-      - "Camera dei Deputati \nPalazzo Montecitorio - Piazza Montecitorio\n00186 -\
-        \ Rome (Italy)"
+      - "Camera dei Deputati \r\nPalazzo Montecitorio - Piazza Montecitorio\r\n00186\
+        \ - Rome (Italy)"
       - Gladstone Road, Folkestone, Kent, CT19 5NF
       - Vikentiya Khvoiky St, 15/15
     example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
@@ -453,7 +435,7 @@ schema:
       - Dinner in Kyiv (approx.)
       - Presentation of symbolic, parliamentary items exchanged between me, as Chair
         of the All-Party Parliamentary Group for Italy, and the various senior Italian
-        select committee chairs we met. Estimated value of ceremonial items is £275.
+        select committee chairs we met. Estimated value of ceremonial items is
     example: '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
       (£154.80), hospitality (£210.20), Tech Equipment (£106.60).'
   - name: donors__value_4
@@ -575,4 +557,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: f4648ddd14c4d6676ee2d2f7bfafd261
+hash: 01206a5e517008c05ebfaa68e1c36254

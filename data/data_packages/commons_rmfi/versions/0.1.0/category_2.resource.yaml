@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 492
+  row_count: 479
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -48,7 +48,7 @@ schema:
     description: Updated date
     constraints:
       unique: false
-    example: '2024-07-05'
+    example: '2024-07-30'
   - name: category
     type: string
     description: Category of the interest
@@ -68,7 +68,7 @@ schema:
     description: TheyWorkForYou ID of the MP
     constraints:
       unique: false
-    example: '10133'
+    example: '10155'
   - name: party
     type: string
     description: Political party of the MP
@@ -83,7 +83,6 @@ schema:
       - liberal-democrat
       - plaid-cymru
       - reform
-      - traditional-unionist-voice
     example: conservative
   - name: member
     type: string
@@ -167,7 +166,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 Canada Square\nLondon\nE14 5AA"
+    example: "1 Canada Square\r\nLondon\r\nE14 5AA"
   - name: donor_status
     type: string
     description: Status of the donor
@@ -244,11 +243,10 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2024-12-02'
       - '2025-08-28'
       - '2025-09-16'
       - '2025-10-14'
-    example: '2024-12-02'
+    example: '2025-08-28'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -257,4 +255,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: c2647c4359ab387331dcfa3fe4b970bd
+hash: ee23ef77678abd4e036b8d7d698ce12d

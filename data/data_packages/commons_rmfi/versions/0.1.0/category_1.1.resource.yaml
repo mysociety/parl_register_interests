@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 592
+  row_count: 573
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10475'
+    example: '10825'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -28,7 +28,7 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
-    example: '10356'
+    example: '10545'
   - name: registered
     type: string
     description: registered date
@@ -47,13 +47,13 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2024-12-05'
-      - '2024-12-18'
       - '2025-05-22'
       - '2025-09-18'
       - '2025-11-20'
       - '2025-12-09'
-    example: '2024-12-05'
+      - '2025-12-18'
+      - '2025-12-22'
+    example: '2025-05-22'
   - name: category
     type: string
     description: Category of the interest
@@ -133,7 +133,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: (Includes 15% to be deducted for Chambers fee)
+    example: (Includes 15% to be deducted for Chambers fees)
   - name: value
     type: number
     description: Value of the payment (£)
@@ -151,7 +151,7 @@ schema:
     description: Details of the hours worked
     constraints:
       unique: false
-    example: (I was using some annual leave and TOIL for these months.)
+    example: (A balance of £1,393.44 was paid on 22 December 2025)
   - name: is_ultimate_payer_different
     type: boolean
     description: Whether the ultimate payer is different
@@ -174,7 +174,6 @@ schema:
       unique: false
       enum:
       - false
-      - true
     example: 'False'
   - name: ultimate_payer_address
     type: string
@@ -230,7 +229,7 @@ schema:
     description: Link to the interest
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10475
+    example: https://interests-api.parliament.uk/api/v1/Interests/10825
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -239,4 +238,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: a53d98e864ebee4887a353abddba5771
+hash: 569f03dbdcb179781475c4f6ce80e366

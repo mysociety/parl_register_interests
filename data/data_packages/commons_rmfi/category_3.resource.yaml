@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 627
+  row_count: 622
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -221,8 +221,9 @@ schema:
     constraints:
       unique: false
       enum:
+      - 'Charity number: 210183'
       - Company Number 00951524
-    example: Company Number 00951524
+    example: 'Charity number: 210183'
   - name: donor_other_details
     type: string
     description: Other details of the donor
@@ -242,8 +243,6 @@ schema:
       unique: false
       enum:
       - '2023-01-11'
-      - '2024-12-12'
-      - '2024-12-18'
       - '2025-07-14'
     example: '2023-01-11'
   - name: category_code
@@ -254,4 +253,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: d6611e07cee584ec97c04a92a4c61fe3
+hash: 5223def342830126839ed522d8a78e25

@@ -175,11 +175,11 @@ schema:
       unique: false
       enum:
       - 1.0
+      - .nan
       - 2.0
       - 3.0
       - 4.0
       - 5.0
-      - .nan
       - 6.0
       - 7.0
       - 15.0
@@ -279,4 +279,4 @@ schema:
       enum:
       - '6'
     example: '6'
-hash: ab964d23b417e49c886efdb92e08ca4a
+hash: 231339502fbe9c2bf5b6dc8bef179123
