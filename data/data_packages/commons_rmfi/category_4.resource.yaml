@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 403
+  row_count: 415
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -114,6 +114,26 @@ schema:
     constraints:
       unique: false
     example: Abu Dhabi
+  - name: visit_locations__country_2
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+    example: Brazil
+  - name: visit_locations__destination_2
+    type: string
+    description: Destination of the visit
+    constraints:
+      unique: false
+      enum:
+      - Hebron, Ramallah
+      - Jerusalem & the West Bank
+      - Palestine (Occupied Palestinian Territory) and Israel
+      - Rio de Janeiro
+      - Rojava
+      - Warsaw
+      - Washington, New York, Michigan
+    example: Hebron, Ramallah
   - name: purpose
     type: string
     description: Purpose of the visit
@@ -188,7 +208,7 @@ schema:
     description: Value of the payment
     constraints:
       unique: false
-    example: '10000.0'
+    example: '1000.0'
   - name: donors__is_sole_beneficiary_1
     type: boolean
     description: Whether the MP is the sole beneficiary
@@ -204,26 +224,6 @@ schema:
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/11484
-  - name: visit_locations__country_2
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-    example: Brazil
-  - name: visit_locations__destination_2
-    type: string
-    description: Destination of the visit
-    constraints:
-      unique: false
-      enum:
-      - Hebron, Ramallah
-      - Jerusalem & the West Bank
-      - Palestine (Occupied Palestinian Territory) and Israel
-      - Rio de Janeiro
-      - Rojava
-      - Warsaw
-      - Washington, New York, Michigan
-    example: Hebron, Ramallah
   - name: donors__name_2
     type: string
     description: Name of the donor
@@ -313,7 +313,7 @@ schema:
       - 4 Ravenscroft Court Buttington Cross Enterprise Park, Buttington, Welshpool,
         Powys, Wales, SY21 8SL
       - 53 Degtyarivska St, Kiev, Kyiv City, 03113, Ukraine
-      - "71-75 Shelton Street,\nLondon WC2H 9JQ"
+      - "71-75 Shelton Street,\r\nLondon WC2H 9JQ"
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
       - Camera de Deputati, Palazzo Montecitorio - Piazza Montecitorio 00186, Rome
@@ -408,8 +408,8 @@ schema:
       - 81 High Street, Cosham, Portsmouth, PO6 3BL
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
-      - "Camera dei Deputati \nPalazzo Montecitorio - Piazza Montecitorio\n00186 -\
-        \ Rome (Italy)"
+      - "Camera dei Deputati \r\nPalazzo Montecitorio - Piazza Montecitorio\r\n00186\
+        \ - Rome (Italy)"
       - Gladstone Road, Folkestone, Kent, CT19 5NF
       - Vikentiya Khvoiky St, 15/15
     example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
@@ -557,4 +557,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 570ad6ba3c354d899b59d71f9714f098
+hash: 430001a056b5194cc8f08fb4f3b95634

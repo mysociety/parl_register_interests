@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 479
+  row_count: 496
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -166,7 +166,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 Canada Square\nLondon\nE14 5AA"
+    example: "1 Canada Square\r\nLondon\r\nE14 5AA"
   - name: donor_status
     type: string
     description: Status of the donor
@@ -255,4 +255,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: fa8c5c5aaf11487c30494bf47bdb60d2
+hash: bc5e3013777af8d4edd16add84924355
