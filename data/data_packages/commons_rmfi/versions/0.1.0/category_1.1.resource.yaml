@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 588
+  row_count: 568
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -53,6 +53,7 @@ schema:
       - '2025-12-09'
       - '2025-12-18'
       - '2025-12-22'
+      - '2026-01-22'
     example: '2025-05-22'
   - name: category
     type: string
@@ -133,13 +134,13 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: (Includes 15% to be deducted for Chambers fees)
+    example: (Includes 15% to be deducted on account of Chambers fees)
   - name: value
     type: number
     description: Value of the payment (£)
     constraints:
       unique: false
-    example: '100.35'
+    example: '100.0'
   - name: hours_worked
     type: number
     description: Hours worked for the payment
@@ -238,4 +239,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: e04a90f2cbadc6c62f4ed927453f3b06
+hash: de843c9b81eae16496a89dc2cf5d05fd

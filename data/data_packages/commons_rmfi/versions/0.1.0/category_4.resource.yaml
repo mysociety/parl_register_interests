@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 415
+  row_count: 409
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '11484'
+    example: '11591'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -37,13 +37,13 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2025-01-02'
+    example: '2025-01-22'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: false
-    example: '2025-01-02'
+    example: '2025-01-22'
   - name: updated_1
     type: string
     description: Updated date
@@ -56,6 +56,7 @@ schema:
       - '2025-11-07'
       - '2025-11-14'
       - '2025-12-15'
+      - '2026-01-09'
     example: '2025-04-10'
   - name: category
     type: string
@@ -94,6 +95,7 @@ schema:
       - scottish-national-party
       - sinn-fein
       - social-democratic-and-labour-party
+      - unknown
       - your-party
     example: conservative
   - name: member
@@ -114,26 +116,6 @@ schema:
     constraints:
       unique: false
     example: Abu Dhabi
-  - name: visit_locations__country_2
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-    example: Brazil
-  - name: visit_locations__destination_2
-    type: string
-    description: Destination of the visit
-    constraints:
-      unique: false
-      enum:
-      - Hebron, Ramallah
-      - Jerusalem & the West Bank
-      - Palestine (Occupied Palestinian Territory) and Israel
-      - Rio de Janeiro
-      - Rojava
-      - Warsaw
-      - Washington, New York, Michigan
-    example: Hebron, Ramallah
   - name: purpose
     type: string
     description: Purpose of the visit
@@ -223,7 +205,27 @@ schema:
     description: Link to the interest
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/11484
+    example: https://interests-api.parliament.uk/api/v1/Interests/11591
+  - name: visit_locations__country_2
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+    example: Brazil
+  - name: visit_locations__destination_2
+    type: string
+    description: Destination of the visit
+    constraints:
+      unique: false
+      enum:
+      - Hebron, Ramallah
+      - Jerusalem & the West Bank
+      - Palestine (Occupied Palestinian Territory) and Israel
+      - Rio de Janeiro
+      - Rojava
+      - Warsaw
+      - Washington, New York, Michigan
+    example: Hebron, Ramallah
   - name: donors__name_2
     type: string
     description: Name of the donor
@@ -283,7 +285,6 @@ schema:
       unique: false
       enum:
       - Alford Technology (via Animar Travel Network)
-      - British Embassy Berne
       - Climate Parliament
       - Dr Maurizio Bragagni
       - Guartel Technologies (via Animar Travel Network)
@@ -313,12 +314,11 @@ schema:
       - 4 Ravenscroft Court Buttington Cross Enterprise Park, Buttington, Welshpool,
         Powys, Wales, SY21 8SL
       - 53 Degtyarivska St, Kiev, Kyiv City, 03113, Ukraine
-      - "71-75 Shelton Street,\nLondon WC2H 9JQ"
+      - "71-75 Shelton Street,\r\nLondon WC2H 9JQ"
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
       - Camera de Deputati, Palazzo Montecitorio - Piazza Montecitorio 00186, Rome
       - S.P. Korolova Square, 4/2, Zhytomyr, Zhytomyr Oblast, Ukraine, 10002
-      - Thunstrasse 50, CH - 3005 Bern
     example: 03113, m. Kyiv, vul. Dehtiarivska, 53
   - name: donors__payment_type_3
     type: string
@@ -342,7 +342,6 @@ schema:
       - Flight (£213.05) and hotel (£97.64)
       - 'For myself, my staff member and one guest: Transport (£284.45), accommodation
         (£156.30), meals (£273.57) & other costs (£26.07)'
-      - Formal Dinner and receptions
       - Meal £50.00
       - Presentation of symbolic, parliamentary items exchanged between me, as co
         Chair of the All Party Parliamentary Group for Italy, and the various senior
@@ -362,7 +361,6 @@ schema:
       - 50.0
       - 310.69
       - 340.0
-      - 670.28
       - 740.39
       - 763.2
       - 3124.88
@@ -408,8 +406,8 @@ schema:
       - 81 High Street, Cosham, Portsmouth, PO6 3BL
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
-      - "Camera dei Deputati \nPalazzo Montecitorio - Piazza Montecitorio\n00186 -\
-        \ Rome (Italy)"
+      - "Camera dei Deputati \r\nPalazzo Montecitorio - Piazza Montecitorio\r\n00186\
+        \ - Rome (Italy)"
       - Gladstone Road, Folkestone, Kent, CT19 5NF
       - Vikentiya Khvoiky St, 15/15
     example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
@@ -557,4 +555,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: d1325bb181326e7c6350f63b1fefac98
+hash: 548ced99465d8867fc59711944143f58

@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 496
+  row_count: 497
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10159'
+    example: '10799'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -166,7 +166,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 Canada Square\nLondon\nE14 5AA"
+    example: "1 Canada Square\r\nLondon\r\nE14 5AA"
   - name: donor_status
     type: string
     description: Status of the donor
@@ -224,19 +224,24 @@ schema:
       unique: false
       enum:
       - Charity
+      - Education college
       - Member's Association
       - The UK Fusion Cluster is a network of organisations, including research institutions,
         businesses and government bodies, focused on advancing fusion energy research
         and development within the UK. It fosters collaboration and innovation to
         accelerate progress in the field.
       - University
+      - special interest group - key cities network is a special interest group of  the
+        Local Government Association (company number of the LGA 11177145) comprising
+        24 statutory local urban city authorities and administered by Salford City
+        Council
     example: Charity
   - name: link
     type: string
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10159
+    example: https://interests-api.parliament.uk/api/v1/Interests/10799
   - name: updated_2
     type: string
     description: Date the second interest was updated
@@ -255,4 +260,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: dedf1d70eac7a3fcb7467550d5d411db
+hash: 5ba47059545fcec714de4ba8573ef25b
