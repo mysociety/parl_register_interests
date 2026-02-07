@@ -129,4 +129,4 @@ schema:
     constraints:
       unique: false
     example: '2016-06-30'
-hash: 82e6f8addc67bfd0f7a767dc94d9a50a
+hash: d69215c44469175ad32fe5d1c9d783ff
