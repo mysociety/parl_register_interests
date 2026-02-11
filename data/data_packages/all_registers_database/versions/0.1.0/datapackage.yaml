@@ -51,4 +51,4 @@ custom:
       exclude: none
       render: true
   change_log:
-    0.1.0: 'Minor change in data for resource(s): entries,details'
+    0.1.0: 'Change in data for resource(s): entries'
