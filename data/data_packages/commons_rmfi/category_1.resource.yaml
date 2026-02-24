@@ -1,7 +1,7 @@
 title: Category 1
 description: Employment and earnings
 custom:
-  row_count: 282
+  row_count: 283
 path: category_1.parquet
 name: category_1
 profile: data-resource
@@ -206,6 +206,7 @@ schema:
       - '2020-03-13'
       - '2024-08-02'
       - '2025-11-11'
+      - '2026-02-09'
     example: '2020-03-13'
   - name: updated_4
     type: string
@@ -247,4 +248,4 @@ schema:
       enum:
       - '1'
     example: '1'
-hash: 21efd4e98f51e2052836aaa0d2c6d38b
+hash: 1dbb912c11dbc565351347b8b7358ccf

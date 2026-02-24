@@ -1,7 +1,7 @@
 title: Category 1.2
 description: Employment and earnings - Ongoing paid employment
 custom:
-  row_count: 79
+  row_count: 83
 path: category_1.2.parquet
 name: category_1.2
 profile: data-resource
@@ -148,9 +148,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: (amount has been converted from US Dollars based on on 3 July 2025 exchange
-      rate), Africa50 will meet the cost of any travel and other expenses arising
-      from this role
+    example: (60,000 USD. The conversion rate on 18 February 2026 is £44,304)
   - name: value
     type: number
     description: Value of the payment (£)
@@ -299,4 +297,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: f813da6adb5fc31f83704ebabb65315f
+hash: f35264c25f56f19b2d55733d34fe5e0d
