@@ -98,6 +98,7 @@ schema:
       unique: false
       enum:
       - conservative
+      - independent
       - labour
       - labourco-operative
       - liberal-democrat
@@ -179,4 +180,4 @@ schema:
       enum:
       - '10'
     example: '10'
-hash: 14f78787cb2e565e048c6f26dabbb5ad
+hash: cd9e24028f461bb4214ee26e2c37588f

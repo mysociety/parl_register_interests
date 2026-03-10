@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 426
+  row_count: 412
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -22,8 +22,8 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: International visit to Albania between 30 January 2025 and 03 February
-      2025
+    example: International visit to Albania between 13 February 2026 and 18 February
+      2026
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -95,7 +95,6 @@ schema:
       - scottish-national-party
       - sinn-fein
       - social-democratic-and-labour-party
-      - unknown
       - your-party
     example: conservative
   - name: member
@@ -218,14 +217,13 @@ schema:
     constraints:
       unique: false
       enum:
-      - Hebron, Ramallah
       - Jerusalem & the West Bank
       - Palestine (Occupied Palestinian Territory) and Israel
       - Rio de Janeiro
       - Rojava
       - Warsaw
       - Washington, New York, Michigan
-    example: Hebron, Ramallah
+    example: Jerusalem & the West Bank
   - name: donors__name_2
     type: string
     description: Name of the donor
@@ -314,7 +312,7 @@ schema:
       - 4 Ravenscroft Court Buttington Cross Enterprise Park, Buttington, Welshpool,
         Powys, Wales, SY21 8SL
       - 53 Degtyarivska St, Kiev, Kyiv City, 03113, Ukraine
-      - "71-75 Shelton Street,\nLondon WC2H 9JQ"
+      - "71-75 Shelton Street,\r\nLondon WC2H 9JQ"
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
       - Camera de Deputati, Palazzo Montecitorio - Piazza Montecitorio 00186, Rome
@@ -406,8 +404,8 @@ schema:
       - 81 High Street, Cosham, Portsmouth, PO6 3BL
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
-      - "Camera dei Deputati \nPalazzo Montecitorio - Piazza Montecitorio\n00186 -\
-        \ Rome (Italy)"
+      - "Camera dei Deputati \r\nPalazzo Montecitorio - Piazza Montecitorio\r\n00186\
+        \ - Rome (Italy)"
       - Gladstone Road, Folkestone, Kent, CT19 5NF
       - Vikentiya Khvoiky St, 15/15
     example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
@@ -555,4 +553,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: ec13569a7225a79f4e134ab7b9a79fd4
+hash: 7d84ffe310b92905a1357d5b598f037e

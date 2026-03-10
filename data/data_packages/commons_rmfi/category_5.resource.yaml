@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 18
+  row_count: 17
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '11809'
+    example: '12043'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -36,13 +36,13 @@ schema:
     description: Registered date
     constraints:
       unique: true
-    example: '2025-02-14'
+    example: '2025-03-18'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: true
-    example: '2025-02-14'
+    example: '2025-03-19'
   - name: updated_1
     type: string
     description: Updated date
@@ -64,12 +64,42 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
+      enum:
+      - 39
+      - 4107
+      - 4119
+      - 4359
+      - 4407
+      - 4441
+      - 5025
+      - 5091
+      - 5141
+      - 5282
+      - 5284
+      - 5294
+      - 5296
+      - 5325
     example: '39'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
     constraints:
       unique: false
+      enum:
+      - '10632'
+      - '24785'
+      - '24929'
+      - '25297'
+      - '25323'
+      - '25381'
+      - '26305'
+      - '26352'
+      - '26395'
+      - '26430'
+      - '26502'
+      - '26518'
+      - '26540'
+      - '26544'
     example: '10632'
   - name: party
     type: string
@@ -88,6 +118,21 @@ schema:
     description: Name of the MP
     constraints:
       unique: false
+      enum:
+      - Alex Mayer
+      - Amanda Martin
+      - Charlie Maynard
+      - Chris Webb
+      - Dame Harriett Baldwin
+      - Dan Tomlinson
+      - David Chadwick
+      - Freddie van Mierlo
+      - Jonathan Reynolds
+      - Nigel Farage
+      - Nigel Huddleston
+      - Sir John Whittingdale
+      - Sir Oliver Dowden
+      - Stephen Kinnock
     example: Alex Mayer
   - name: appg
     type: string
@@ -161,7 +206,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 South Audley Street \nLondon W1K 1NB"
+    example: "1 South Audley Street \r\nLondon W1K 1NB"
   - name: donor_status
     type: string
     description: Type of donor
@@ -234,7 +279,7 @@ schema:
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/11809
+    example: https://interests-api.parliament.uk/api/v1/Interests/12043
   - name: updated_2
     type: string
     description: Updated date for second item
@@ -251,4 +296,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 22917ba855d57447e640c23dbad80cfb
+hash: 56ac0e8e4a9e804010f288d244714bdb

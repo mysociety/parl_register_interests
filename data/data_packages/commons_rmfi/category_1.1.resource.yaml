@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 587
+  row_count: 563
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -22,7 +22,7 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: Payment expected for services on 01 September 2022 - £5,000.00
+    example: Payment expected for services on 06 June 2025 - £150.00
   - name: parent_interest_id
     type: integer
     description: Unique identifier for the parent interest
@@ -34,13 +34,13 @@ schema:
     description: registered date
     constraints:
       unique: false
-    example: '2022-09-22'
+    example: '2024-09-26'
   - name: published
     type: string
     description: published date
     constraints:
       unique: false
-    example: '2024-03-18'
+    example: '2024-09-26'
   - name: updated_1
     type: string
     description: updated date
@@ -239,4 +239,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 8833b770e189ce72b75f9dd792e753c5
+hash: f47620f1e5442a41acd27728d361a217
