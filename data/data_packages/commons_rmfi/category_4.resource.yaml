@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 412
+  row_count: 427
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -57,6 +57,7 @@ schema:
       - '2025-11-14'
       - '2025-12-15'
       - '2026-01-09'
+      - '2026-03-11'
     example: '2025-04-10'
   - name: category
     type: string
@@ -218,6 +219,7 @@ schema:
       unique: false
       enum:
       - Jerusalem & the West Bank
+      - Odessa, Kiev
       - Palestine (Occupied Palestinian Territory) and Israel
       - Rio de Janeiro
       - Rojava
@@ -286,6 +288,7 @@ schema:
       - Climate Parliament
       - Dr Maurizio Bragagni
       - Guartel Technologies (via Animar Travel Network)
+      - International Democracy Union
       - Italian Parliament
       - Kyivstar
       - Progressive International
@@ -312,10 +315,11 @@ schema:
       - 4 Ravenscroft Court Buttington Cross Enterprise Park, Buttington, Welshpool,
         Powys, Wales, SY21 8SL
       - 53 Degtyarivska St, Kiev, Kyiv City, 03113, Ukraine
-      - "71-75 Shelton Street,\nLondon WC2H 9JQ"
+      - "71-75 Shelton Street,\r\nLondon WC2H 9JQ"
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
       - Camera de Deputati, Palazzo Montecitorio - Piazza Montecitorio 00186, Rome
+      - IDU Franz Josef Strauß Haus Mies-van-der-Rohe-Str. 1 80807 Munich Germany
       - S.P. Korolova Square, 4/2, Zhytomyr, Zhytomyr Oblast, Ukraine, 10002
     example: 03113, m. Kyiv, vul. Dehtiarivska, 53
   - name: donors__payment_type_3
@@ -344,6 +348,8 @@ schema:
       - Presentation of symbolic, parliamentary items exchanged between me, as co
         Chair of the All Party Parliamentary Group for Italy, and the various senior
         Italian Select Committee Chairs we met (estimated value £340)
+      - Refreshments provided to myself and a CCHQ adviser at a dinner and discussion,
+        held at the Munich Security Conference on 13 February 2026
       - Return flights Washington to Rio De Janeiro (£1394.88), accommodation (£1730)
       - Transport and buffet lunch
     example: '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
@@ -357,12 +363,13 @@ schema:
       - .nan
       - 25.0
       - 50.0
+      - 120.0
       - 310.69
       - 340.0
       - 740.39
       - 763.2
       - 3124.88
-    example: '25.0'
+    example: '120.0'
   - name: donors__is_sole_beneficiary_3
     type: string
     description: Whether the MP is the sole beneficiary
@@ -404,8 +411,8 @@ schema:
       - 81 High Street, Cosham, Portsmouth, PO6 3BL
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
-      - "Camera dei Deputati \nPalazzo Montecitorio - Piazza Montecitorio\n00186 -\
-        \ Rome (Italy)"
+      - "Camera dei Deputati \r\nPalazzo Montecitorio - Piazza Montecitorio\r\n00186\
+        \ - Rome (Italy)"
       - Gladstone Road, Folkestone, Kent, CT19 5NF
       - Vikentiya Khvoiky St, 15/15
     example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
@@ -553,4 +560,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: c43675e761789dee258195b51409720e
+hash: 36eefefdddec2d0d9b22848a6e702aa0

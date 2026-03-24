@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 527
+  row_count: 547
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -22,7 +22,7 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: 89Up Ltd - £1,500.00
+    example: 25 Seven Talent Solutions Limited - £3,024.00
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -160,13 +160,13 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-    example: 89Up Ltd
+    example: 25 Seven Talent Solutions Limited
   - name: donor_public_address
     type: string
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 Canada Square\nLondon\nE14 5AA"
+    example: "1 Canada Square\r\nLondon\r\nE14 5AA"
   - name: donor_status
     type: string
     description: Status of the donor
@@ -186,7 +186,7 @@ schema:
     description: Name of the donor company
     constraints:
       unique: false
-    example: 89Up Ltd
+    example: 25 Seven Talent Solutions Limited
   - name: donor_company_url
     type: number
     description: URL of the donor company
@@ -260,4 +260,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: 459e40ac228cc0bdd1fb8e0fe011a474
+hash: 5ba22d81671ef6656528f92c1f4d2009
