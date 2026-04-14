@@ -1,7 +1,7 @@
 title: Category 10
 description: Family members engaged in third-party lobbying
 custom:
-  row_count: 22
+  row_count: 23
   dataset_order: 20
 path: category_10.parquet
 name: category_10
@@ -56,6 +56,7 @@ schema:
       - '2025-02-27'
       - '2025-08-03'
       - '2025-12-19'
+      - '2026-04-13'
     example: '2023-12-17'
   - name: updated_1
     type: string
@@ -120,7 +121,7 @@ schema:
     description: Name of the employer
     constraints:
       unique: false
-    example: Betting and Gaming Council
+    example: Appleby Solutions LTD
   - name: person_name
     type: string
     description: Name of the family member
@@ -180,4 +181,4 @@ schema:
       enum:
       - '10'
     example: '10'
-hash: d88cd0345ab0f4ba79b322b0b78b2184
+hash: 97e6d35a565af9690bc2287cc1b77a11

@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 671
+  row_count: 652
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -101,8 +101,7 @@ schema:
     description: Payment made via an All-Party Parliamentary Group
     constraints:
       unique: false
-    example: APPG Aviation, Aerospace and Travel (This event was during my time as
-      Chair)
+    example: APPG Italy
   - name: payment_type
     type: string
     description: Type of payment
@@ -255,4 +254,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: b57fa8ec38dbfe0e2b19602d972cb518
+hash: e0f1c795a5cbad102bd20595ce8581bd

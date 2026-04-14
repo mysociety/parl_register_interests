@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 17
+  row_count: 16
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '12043'
+    example: '12324'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -36,13 +36,13 @@ schema:
     description: Registered date
     constraints:
       unique: true
-    example: '2025-03-18'
+    example: '2025-05-01'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: true
-    example: '2025-03-19'
+    example: '2025-05-01'
   - name: updated_1
     type: string
     description: Updated date
@@ -77,7 +77,6 @@ schema:
       - 5282
       - 5284
       - 5294
-      - 5296
       - 5325
     example: '39'
   - name: twfy_id
@@ -98,7 +97,6 @@ schema:
       - '26430'
       - '26502'
       - '26518'
-      - '26540'
       - '26544'
     example: '10632'
   - name: party
@@ -126,7 +124,6 @@ schema:
       - Dame Harriett Baldwin
       - Dan Tomlinson
       - David Chadwick
-      - Freddie van Mierlo
       - Jonathan Reynolds
       - Nigel Farage
       - Nigel Huddleston
@@ -206,7 +203,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 South Audley Street \nLondon W1K 1NB"
+    example: "1 South Audley Street \r\nLondon W1K 1NB"
   - name: donor_status
     type: string
     description: Type of donor
@@ -272,14 +269,13 @@ schema:
       - Non-profit organisation
       - School
       - US non-profit endowment
-      - University
     example: Member owned sports association
   - name: link
     type: string
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/12043
+    example: https://interests-api.parliament.uk/api/v1/Interests/12324
   - name: updated_2
     type: string
     description: Updated date for second item
@@ -296,4 +292,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 7409093ab189f5555349caf2213aded7
+hash: 63d9b4d1d3ccbd7b1678ac2dacba6a87

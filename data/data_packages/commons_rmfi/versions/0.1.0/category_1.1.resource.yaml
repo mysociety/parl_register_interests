@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 583
+  row_count: 574
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -119,7 +119,7 @@ schema:
     description: Job the MP was paid for
     constraints:
       unique: false
-    example: Adaptation of authored works.
+    example: Emergency vascular surgeon
   - name: payment_type
     type: string
     description: Type of payment
@@ -213,7 +213,6 @@ schema:
       unique: false
       enum:
       - Charity
-      - Community organisation
       - Other
     example: Charity
   - name: donatee_details
@@ -239,4 +238,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: c5929891d0b94586e7be5e1e55090c9b
+hash: f65a31588ac64b20411d8f81fbe01157
