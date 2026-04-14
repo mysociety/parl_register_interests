@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 547
+  row_count: 551
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -36,19 +36,19 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2023-04-19'
+    example: '2024-07-29'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: false
-    example: '2023-11-19'
+    example: '2024-07-31'
   - name: updated_1
     type: string
     description: Updated date
     constraints:
       unique: false
-    example: '2024-07-30'
+    example: '2025-04-02'
   - name: category
     type: string
     description: Category of the interest
@@ -166,7 +166,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 Canada Square\nLondon\nE14 5AA"
+    example: "1 Canada Square\r\nLondon\r\nE14 5AA"
   - name: donor_status
     type: string
     description: Status of the donor
@@ -200,7 +200,7 @@ schema:
     description: Identifier of the donor company
     constraints:
       unique: false
-    example: '00357963'
+    example: '00510565'
   - name: donor_company_identifier_source
     type: string
     description: Source of the donor company identifier
@@ -252,6 +252,14 @@ schema:
       - '2025-09-16'
       - '2025-10-14'
     example: '2025-08-28'
+  - name: updated_3
+    type: string
+    description: Date the third interest was updated
+    constraints:
+      unique: false
+      enum:
+      - '2026-03-24'
+    example: '2026-03-24'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -260,4 +268,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: 9286d8ae185f21cc77b81298d5f29c88
+hash: 33689dbaf12d750cb3dcae19c5e8dcac
