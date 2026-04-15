@@ -89,6 +89,7 @@ schema:
       - liberal-democrat
       - plaid-cymru
       - reform
+      - restore-britain
       - scottish-national-party
     example: conservative
   - name: member
@@ -238,4 +239,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: f65a31588ac64b20411d8f81fbe01157
+hash: 304045b14e375775d62d69f86f5c9025

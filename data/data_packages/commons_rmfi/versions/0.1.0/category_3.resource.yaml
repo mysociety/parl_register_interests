@@ -85,6 +85,7 @@ schema:
       - liberal-democrat
       - plaid-cymru
       - reform
+      - restore-britain
       - scottish-national-party
       - social-democratic-and-labour-party
       - traditional-unionist-voice
@@ -254,4 +255,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: e0f1c795a5cbad102bd20595ce8581bd
+hash: f92a6ed10bca9188c6c6684790603a48

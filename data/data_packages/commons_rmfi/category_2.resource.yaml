@@ -83,6 +83,7 @@ schema:
       - liberal-democrat
       - plaid-cymru
       - reform
+      - restore-britain
     example: conservative
   - name: member
     type: string
@@ -166,7 +167,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 Canada Square\r\nLondon\r\nE14 5AA"
+    example: "1 Canada Square\nLondon\nE14 5AA"
   - name: donor_status
     type: string
     description: Status of the donor
@@ -268,4 +269,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: 33689dbaf12d750cb3dcae19c5e8dcac
+hash: a5b6bf8375639136713dcb50e310e7c9
