@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 551
+  row_count: 587
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -84,6 +84,7 @@ schema:
       - plaid-cymru
       - reform
       - restore-britain
+      - your-party
     example: conservative
   - name: member
     type: string
@@ -167,7 +168,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 Canada Square\nLondon\nE14 5AA"
+    example: "1 Canada Square\r\nLondon\r\nE14 5AA"
   - name: donor_status
     type: string
     description: Status of the donor
@@ -201,7 +202,7 @@ schema:
     description: Identifier of the donor company
     constraints:
       unique: false
-    example: '00510565'
+    example: '00066558'
   - name: donor_company_identifier_source
     type: string
     description: Source of the donor company identifier
@@ -227,6 +228,8 @@ schema:
       - Charity
       - Education college
       - Member's Association
+      - The John Smith Centre falls under the Governance of the University of Glasgow
+        SC004401
       - The UK Fusion Cluster is a network of organisations, including research institutions,
         businesses and government bodies, focused on advancing fusion energy research
         and development within the UK. It fosters collaboration and innovation to
@@ -252,6 +255,7 @@ schema:
       - '2025-08-28'
       - '2025-09-16'
       - '2025-10-14'
+      - '2026-04-17'
     example: '2025-08-28'
   - name: updated_3
     type: string
@@ -269,4 +273,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: a5b6bf8375639136713dcb50e310e7c9
+hash: c5051f94ee7c978412ef67e539b3cfd4
