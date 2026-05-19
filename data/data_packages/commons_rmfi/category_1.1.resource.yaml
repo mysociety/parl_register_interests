@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 597
+  row_count: 588
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -54,6 +54,7 @@ schema:
       - '2025-12-18'
       - '2025-12-22'
       - '2026-01-22'
+      - '2026-05-06'
     example: '2025-05-22'
   - name: category
     type: string
@@ -231,6 +232,14 @@ schema:
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/10825
+  - name: updated_2
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+      enum:
+      - '2026-05-06'
+    example: '2026-05-06'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -239,4 +248,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 9aba1cc9a131be6b2154172f6ce48e9a
+hash: 37ac35de71383a286ae07b393b9be4ed
