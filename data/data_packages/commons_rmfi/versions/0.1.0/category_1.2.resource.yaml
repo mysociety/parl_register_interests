@@ -80,8 +80,8 @@ schema:
       - labour
       - liberal-democrat
       - reform
-      - scottish-national-party
       - sinn-fein
+      - unknown
     example: conservative
   - name: member
     type: string
@@ -234,7 +234,6 @@ schema:
       enum:
       - Charity
       - Community organisation
-      - Local party organisation
       - Other
     example: Charity
   - name: donatee_details
@@ -243,8 +242,9 @@ schema:
     constraints:
       unique: false
       enum:
+      - Helen Grant Limited
       - Kemyel Ltd
-    example: Kemyel Ltd
+    example: Helen Grant Limited
   - name: link
     type: string
     description: URL to the interest on the interests API
@@ -264,6 +264,7 @@ schema:
       unique: false
       enum:
       - '2020-11-11'
+      - '2026-04-26'
     example: '2020-11-11'
   - name: updated_4
     type: string
@@ -297,4 +298,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: 1321c7de5cc2c265b16f1689b831cd24
+hash: 8907493757cec99b264adb3ea54dbe90
