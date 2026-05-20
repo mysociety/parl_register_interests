@@ -168,7 +168,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 Canada Square\r\nLondon\r\nE14 5AA"
+    example: "1 Canada Square\nLondon\nE14 5AA"
   - name: donor_status
     type: string
     description: Status of the donor
@@ -273,4 +273,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: a097ad7f959c463614cbc942a96938b1
+hash: a7cc637c750bac1196b801c3cc3cb349
