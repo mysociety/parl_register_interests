@@ -2,7 +2,7 @@ title: Entries
 description: "Reprocessed register of interests for the Senedd/Welsh Parliament\n\
   Starting register date starts when this file was created (March 2025).\n"
 custom:
-  row_count: 1078
+  row_count: 1115
 path: entries.parquet
 name: entries
 profile: data-resource
@@ -47,18 +47,6 @@ schema:
     description: The name of the category the entry is associated with
     constraints:
       unique: false
-      enum:
-      - Directorships
-      - Financial sponsorship
-      - Gifts, hospitality, material benefit or advantage
-      - Land and property
-      - Membership/Chairmanship of bodies in receipt of Senedd funds
-      - Overseas visits
-      - Record of membership of societies
-      - Record of the employment of family members
-      - Remunerated employment, office, profession etc
-      - Remuneration or other material benefit
-      - Shareholdings
     example: Directorships
   - name: entry_id
     type: string
@@ -85,8 +73,9 @@ schema:
     description: Machine friendly version of the two fields
     constraints:
       unique: false
-    example: '{"entry_in_respect_of": "-", "name_of_organisation_and_position_held":
-      "."}'
+    example: '{"category_1": "Entry in respect of: Member Name and nature of the employer:
+      Clerkit Nature of the post: Director Amount of remuneration received: Nil Average
+      number of hours devoted each week: Nil (Registered 10 May 2026)"}'
   - name: first_register
     type: string
     description: The first register (that we publish) that this entry appeared in
@@ -108,4 +97,4 @@ schema:
       - false
       - true
     example: 'False'
-hash: 8b98d98c7b6b79e2efec97188b73b8d6
+hash: c92f2dd17b5bce52f4b62b27f0f3f0e5
