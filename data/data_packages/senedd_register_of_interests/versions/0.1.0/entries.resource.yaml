@@ -2,7 +2,7 @@ title: Entries
 description: "Reprocessed register of interests for the Senedd/Welsh Parliament\n\
   Starting register date starts when this file was created (March 2025).\n"
 custom:
-  row_count: 1122
+  row_count: 1183
 path: entries.parquet
 name: entries
 profile: data-resource
@@ -74,8 +74,9 @@ schema:
     constraints:
       unique: false
     example: '{"category_1": "Entry in respect of: Member Name and nature of the employer:
-      Clerkit Nature of the post: Director Amount of remuneration received: Nil Average
-      number of hours devoted each week: Nil (Registered 10 May 2026)"}'
+      Author Royalties - Amazon Kindle Direct Publishing Nature of the post: Published
+      author Amount of remuneration received: Band 2: between \u00a3101 - \u00a3500
+      a year Average number of hours devoted each week: N/A (Registered 21 May 2026)"}'
   - name: first_register
     type: string
     description: The first register (that we publish) that this entry appeared in
@@ -97,4 +98,4 @@ schema:
       - false
       - true
     example: 'False'
-hash: 2ec14aa89a5ba14462449413bcbfdbbd
+hash: 6de9cedf952e262e024d277bf7a81ce6
