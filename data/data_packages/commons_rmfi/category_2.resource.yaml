@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 586
+  row_count: 600
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -117,7 +117,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: (monthly donations of £500 between January and November 2025)
+    example: (50% of this donation was passed on to another MP)
   - name: value
     type: number
     description: Value of the donation
@@ -168,21 +168,23 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 Canada Square\nLondon\nE14 5AA"
+    example: "1 Canada Square\r\nLondon\r\nE14 5AA"
   - name: donor_status
     type: string
     description: Status of the donor
     constraints:
       unique: false
       enum:
+      - Building society
       - Company
+      - Friendly society
       - Individual
       - Limited Liability Partnership
       - Other
       - Registered Party
       - Trade Union
       - Unincorporated association
-    example: Company
+    example: Building society
   - name: donor_company_name
     type: string
     description: Name of the donor company
@@ -273,4 +275,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: a7cc637c750bac1196b801c3cc3cb349
+hash: bc9b9d467b8c45d26450ab10524e1072

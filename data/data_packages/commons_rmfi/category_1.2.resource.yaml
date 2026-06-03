@@ -1,7 +1,7 @@
 title: Category 1.2
 description: Employment and earnings - Ongoing paid employment
 custom:
-  row_count: 81
+  row_count: 80
 path: category_1.2.parquet
 name: category_1.2
 profile: data-resource
@@ -81,7 +81,6 @@ schema:
       - liberal-democrat
       - reform
       - sinn-fein
-      - unknown
     example: conservative
   - name: member
     type: string
@@ -133,7 +132,6 @@ schema:
       unique: false
       enum:
       - Councillor
-      - This post is solely focused on the School of International Relations.
     example: Councillor
   - name: payment_type
     type: string
@@ -265,6 +263,7 @@ schema:
       enum:
       - '2020-11-11'
       - '2026-04-26'
+      - '2026-05-19'
     example: '2020-11-11'
   - name: updated_4
     type: string
@@ -298,4 +297,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: 8907493757cec99b264adb3ea54dbe90
+hash: a6df614da5f1f779ca6e332275ec50f7
