@@ -1,7 +1,7 @@
 title: Entries
 description: "Reprocessed register of interests for the Northern Ireland Assembly\n"
 custom:
-  row_count: 466
+  row_count: 467
 path: entries.parquet
 name: entries
 profile: data-resource
@@ -102,7 +102,7 @@ schema:
       - '2026-01-28'
       - '2026-02-03'
       - '2026-03-25'
-      - '2026-05-18'
+      - '2026-05-19'
     example: '2025-06-09'
   - name: in_latest_register
     type: boolean
@@ -113,4 +113,4 @@ schema:
       - false
       - true
     example: 'False'
-hash: 0a7005c2ac517d8386bbe53933556de4
+hash: 414650a34fd5678bcf16007fd22db014
