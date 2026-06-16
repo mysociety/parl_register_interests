@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 424
+  row_count: 421
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -104,7 +104,7 @@ schema:
     description: Name of the MP
     constraints:
       unique: false
-    example: Abtisam Mohamed
+    example: Adam Jogee
   - name: visit_locations__country_1
     type: string
     description: Country of the visit
@@ -185,7 +185,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: (Flight (£531), hotel (£200))
+    example: (£1,121.83) hotel accommodation for one night
   - name: donors__value_1
     type: number
     description: Value of the payment
@@ -207,26 +207,6 @@ schema:
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/11727
-  - name: visit_locations__country_2
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-    example: Bahrain
-  - name: visit_locations__destination_2
-    type: string
-    description: Destination of the visit
-    constraints:
-      unique: false
-      enum:
-      - Jerusalem & the West Bank
-      - Odessa, Kiev
-      - Palestine (Occupied Palestinian Territory) and Israel
-      - Rio de Janeiro
-      - Warsaw
-      - Washington, New York, Michigan
-      - also visited Sark
-    example: Jerusalem & the West Bank
   - name: donors__name_2
     type: string
     description: Name of the donor
@@ -279,6 +259,26 @@ schema:
       - 'False'
       - 'True'
     example: 'False'
+  - name: visit_locations__country_2
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+    example: Bahrain
+  - name: visit_locations__destination_2
+    type: string
+    description: Destination of the visit
+    constraints:
+      unique: false
+      enum:
+      - Jerusalem & the West Bank
+      - Odessa, Kiev
+      - Rio de Janeiro
+      - Various including Ramallah and Hebron
+      - Warsaw
+      - Washington, New York, Michigan
+      - also visited Sark
+    example: Jerusalem & the West Bank
   - name: donors__name_3
     type: string
     description: Name of the donor
@@ -314,7 +314,7 @@ schema:
       - 21 The Cliff, Brighton East Sussex BN2 5RF
       - 4 Ravenscroft Court Buttington Cross Enterprise Park, Buttington, Welshpool,
         Powys, Wales, SY21 8SL
-      - "71-75 Shelton Street,\nLondon WC2H 9JQ"
+      - "71-75 Shelton Street,\r\nLondon WC2H 9JQ"
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
       - Camera de Deputati, Palazzo Montecitorio - Piazza Montecitorio 00186, Rome
@@ -407,8 +407,8 @@ schema:
       - 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
-      - "Camera dei Deputati \nPalazzo Montecitorio - Piazza Montecitorio\n00186 -\
-        \ Rome (Italy)"
+      - "Camera dei Deputati \r\nPalazzo Montecitorio - Piazza Montecitorio\r\n00186\
+        \ - Rome (Italy)"
       - Gladstone Road, Folkestone, Kent, CT19 5NF
     example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
   - name: donors__payment_type_4
@@ -540,4 +540,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 1f6b80a587d96eff66a3098b3ddbdc3a
+hash: ef45b1b596450c96f5a757d6abfa0a33

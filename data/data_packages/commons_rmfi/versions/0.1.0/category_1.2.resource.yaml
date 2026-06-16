@@ -1,7 +1,7 @@
 title: Category 1.2
 description: Employment and earnings - Ongoing paid employment
 custom:
-  row_count: 80
+  row_count: 73
 path: category_1.2.parquet
 name: category_1.2
 profile: data-resource
@@ -126,13 +126,13 @@ schema:
       - Yearly
     example: Monthly
   - name: job_title
-    type: string
+    type: number
     description: Job title
     constraints:
       unique: false
       enum:
-      - Councillor
-    example: Councillor
+      - .nan
+    example: ''
   - name: payment_type
     type: string
     description: Type of payment
@@ -297,4 +297,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: a6df614da5f1f779ca6e332275ec50f7
+hash: e408988955ba2e5f162e92f7cdfe9a1b

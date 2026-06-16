@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 609
+  row_count: 578
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -47,7 +47,6 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2025-05-22'
       - '2025-09-18'
       - '2025-11-20'
       - '2025-12-09'
@@ -57,7 +56,7 @@ schema:
       - '2026-05-06'
       - '2026-05-28'
       - '2026-06-01'
-    example: '2025-05-22'
+    example: '2025-09-18'
   - name: category
     type: string
     description: Category of the interest
@@ -93,7 +92,6 @@ schema:
       - plaid-cymru
       - reform
       - restore-britain
-      - scottish-national-party
     example: conservative
   - name: member
     type: string
@@ -191,7 +189,7 @@ schema:
     description: Nature of business of the ultimate payer
     constraints:
       unique: false
-    example: An industry insights & market intelligence firm for the investment community
+    example: Banking & Financial Services
   - name: is_payment_donated
     type: boolean
     description: Whether the payment was donated
@@ -225,9 +223,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - All Party Parliamentary Group secretariat Beyond Pills
       - Jamaica Hurricane Melissa Relief Fund
-    example: All Party Parliamentary Group secretariat Beyond Pills
+    example: Jamaica Hurricane Melissa Relief Fund
   - name: link
     type: string
     description: Link to the interest
@@ -250,4 +247,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: df8245a3e2f39da2166ffca9e767854c
+hash: b03422759e8cc9b21d306cc8ead8a406

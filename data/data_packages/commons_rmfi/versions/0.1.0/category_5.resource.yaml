@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 18
+  row_count: 16
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '12324'
+    example: '12551'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -36,13 +36,13 @@ schema:
     description: Registered date
     constraints:
       unique: true
-    example: '2025-05-01'
+    example: '2025-06-03'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: true
-    example: '2025-05-01'
+    example: '2025-06-03'
   - name: updated_1
     type: string
     description: Updated date
@@ -67,7 +67,6 @@ schema:
       enum:
       - 39
       - 4107
-      - 4119
       - 4359
       - 4407
       - 4441
@@ -88,7 +87,6 @@ schema:
       enum:
       - '10632'
       - '24785'
-      - '24929'
       - '25297'
       - '25323'
       - '25381'
@@ -109,7 +107,6 @@ schema:
       enum:
       - conservative
       - labour
-      - labourco-operative
       - liberal-democrat
       - reform
     example: conservative
@@ -127,7 +124,6 @@ schema:
       - Dan Tomlinson
       - David Chadwick
       - Fred Thomas
-      - Jonathan Reynolds
       - Nigel Farage
       - Nigel Huddleston
       - Sir John Whittingdale
@@ -161,6 +157,21 @@ schema:
     description: Value of the payment (£)
     constraints:
       unique: false
+      enum:
+      - 329.5
+      - 369.0
+      - 386.79
+      - 400.0
+      - 803.0
+      - 995.0
+      - 1000.0
+      - 1200.0
+      - 1708.0
+      - 1872.25
+      - 2877.6
+      - 5000.0
+      - 14000.0
+      - 42000.0
     example: '1000.0'
   - name: received_date
     type: string
@@ -206,7 +217,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 South Audley Street \nLondon W1K 1NB"
+    example: "1 South Audley Street \r\nLondon W1K 1NB"
   - name: donor_status
     type: string
     description: Type of donor
@@ -268,18 +279,17 @@ schema:
     constraints:
       unique: false
       enum:
-      - Member owned sports association
       - Non-profit organisation
       - Non-profit think tank
       - School
       - US non-profit endowment
-    example: Member owned sports association
+    example: Non-profit organisation
   - name: link
     type: string
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/12324
+    example: https://interests-api.parliament.uk/api/v1/Interests/12551
   - name: updated_2
     type: string
     description: Updated date for second item
@@ -296,4 +306,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: b818b26236ad192f01c788e4bc525937
+hash: d5c9382e316af358071ed896a0471cd4
