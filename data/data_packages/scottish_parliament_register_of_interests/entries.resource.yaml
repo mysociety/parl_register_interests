@@ -1,7 +1,7 @@
 title: Entries
 description: "Reprocessed register of interests for the Scottish Parliament\n"
 custom:
-  row_count: 14669
+  row_count: 14834
 path: entries.parquet
 name: entries
 profile: data-resource
@@ -22,7 +22,7 @@ schema:
     description: The name of the person the entry is associated with
     constraints:
       unique: false
-    example: Alasdair Allan
+    example: Adam Harley
   - name: category_id
     type: string
     description: The ID of the category the entry is associated with
@@ -116,4 +116,4 @@ schema:
       - false
       - true
     example: 'False'
-hash: 682e80b0635a060e162c48ed61febdc9
+hash: e0aff336e1743bf495b293122e09ec98
