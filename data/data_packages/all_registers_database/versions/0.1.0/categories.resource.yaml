@@ -1,7 +1,7 @@
 title: Categories
 description: ID to name mapping for categories
 custom:
-  row_count: 47
+  row_count: 48
   dataset_order: 2
 path: categories.parquet
 name: categories
@@ -35,4 +35,4 @@ schema:
     constraints:
       unique: false
     example: Controlled transactions
-hash: 45c1784bfee783faf228072ab57f0375
+hash: 17c41c87facce00262b0f0b60f02d323
