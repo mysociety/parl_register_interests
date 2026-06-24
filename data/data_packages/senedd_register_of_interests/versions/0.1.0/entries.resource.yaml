@@ -2,7 +2,7 @@ title: Entries
 description: "Reprocessed register of interests for the Senedd/Welsh Parliament\n\
   Starting register date starts when this file was created (March 2025).\n"
 custom:
-  row_count: 1356
+  row_count: 1371
 path: entries.parquet
 name: entries
 profile: data-resource
@@ -100,4 +100,4 @@ schema:
       - false
       - true
     example: 'False'
-hash: 76eca362f0f8e2c5b77c7d2f7ef9dbf8
+hash: 6737870004843c666d3d634b6d179b3e
