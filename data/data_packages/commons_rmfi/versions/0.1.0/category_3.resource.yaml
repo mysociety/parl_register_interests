@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 646
+  row_count: 668
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -206,7 +206,7 @@ schema:
     description: Company id of the donor
     constraints:
       unique: false
-    example: '00023307'
+    example: '00002065'
   - name: donor_company_identifier_source
     type: string
     description: Identifer category of company number
@@ -221,10 +221,11 @@ schema:
     constraints:
       unique: false
       enum:
+      - A diaspora-led international development organisation
       - 'Charity Number: 1157697'
       - 'Charity number: 210183'
       - Company Number 00951524
-    example: 'Charity Number: 1157697'
+    example: A diaspora-led international development organisation
   - name: donor_other_details
     type: string
     description: Other details of the donor
@@ -255,4 +256,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 1380bb3ea603f3b568f72ebd3dc17f85
+hash: 091a8612ebc03c69248c4c398b740c64

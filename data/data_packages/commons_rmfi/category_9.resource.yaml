@@ -67,6 +67,18 @@ schema:
     constraints:
       unique: false
     example: '2015-05-20'
+  - name: updated_2
+    type: string
+    description: Date the second interest was updated
+    constraints:
+      unique: false
+      enum:
+      - '2017-06-30'
+      - '2020-12-14'
+      - '2023-11-14'
+      - '2024-04-15'
+      - '2026-06-18'
+    example: '2017-06-30'
   - name: category
     type: string
     description: Category of the interest
@@ -177,17 +189,6 @@ schema:
     constraints:
       unique: true
     example: https://interests-api.parliament.uk/api/v1/Interests/2686
-  - name: updated_2
-    type: string
-    description: Date the second interest was updated
-    constraints:
-      unique: false
-      enum:
-      - '2017-06-30'
-      - '2020-12-14'
-      - '2023-11-14'
-      - '2024-04-15'
-    example: '2017-06-30'
   - name: updated_3
     type: string
     description: Date the third interest was updated
@@ -205,4 +206,4 @@ schema:
       enum:
       - '9'
     example: '9'
-hash: b480c61579128485bd4faff01d2d3df4
+hash: 81b4e16c0afb512e9732a2683faf7e3b

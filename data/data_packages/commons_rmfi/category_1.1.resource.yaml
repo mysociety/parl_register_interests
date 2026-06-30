@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 578
+  row_count: 604
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -224,6 +224,7 @@ schema:
       unique: false
       enum:
       - Jamaica Hurricane Melissa Relief Fund
+      - a charity in my constituency
     example: Jamaica Hurricane Melissa Relief Fund
   - name: link
     type: string
@@ -247,4 +248,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 11d23933952a3c143952ac02b40d72ab
+hash: ce4aa8f7cad5972f86235b1b029f0d4b
