@@ -160,7 +160,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 South Audley Street \r\nLondon W1K 1NB"
+    example: "1 South Audley Street \nLondon W1K 1NB"
   - name: donor_status
     type: string
     description: Type of donor
@@ -251,4 +251,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 4f0c357ae2fb139b234e3a1f5a821a5a
+hash: 0a199042df097e457bde2579fb0c7f3c

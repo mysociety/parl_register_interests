@@ -314,7 +314,7 @@ schema:
       - 21 The Cliff, Brighton East Sussex BN2 5RF
       - 4 Ravenscroft Court Buttington Cross Enterprise Park, Buttington, Welshpool,
         Powys, Wales, SY21 8SL
-      - "71-75 Shelton Street,\r\nLondon WC2H 9JQ"
+      - "71-75 Shelton Street,\nLondon WC2H 9JQ"
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
       - Camera de Deputati, Palazzo Montecitorio - Piazza Montecitorio 00186, Rome
@@ -407,8 +407,8 @@ schema:
       - 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
-      - "Camera dei Deputati \r\nPalazzo Montecitorio - Piazza Montecitorio\r\n00186\
-        \ - Rome (Italy)"
+      - "Camera dei Deputati \nPalazzo Montecitorio - Piazza Montecitorio\n00186 -\
+        \ Rome (Italy)"
       - Gladstone Road, Folkestone, Kent, CT19 5NF
     example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
   - name: donors__payment_type_4
@@ -540,4 +540,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 938df47c80a6ff8da1a8c511215b3820
+hash: edb98a71d9107b82bdaaa68953798308
