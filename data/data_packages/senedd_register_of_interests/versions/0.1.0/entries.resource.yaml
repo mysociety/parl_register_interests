@@ -2,7 +2,7 @@ title: Entries
 description: "Reprocessed register of interests for the Senedd/Welsh Parliament\n\
   Starting register date starts when this file was created (March 2025).\n"
 custom:
-  row_count: 1456
+  row_count: 1551
 path: entries.parquet
 name: entries
 profile: data-resource
@@ -75,10 +75,12 @@ schema:
     constraints:
       unique: false
     example: '{"category_1": "Entry in respect of: Member Name and nature of the employer:
-      Artificial Art Ltd, website design and web hosting Nature of the post: Director
-      and sole employee Amount of remuneration received: Nil Average number of hours
-      devoted each week: N/A Additional information: Ceased employment on 9 May 2026
-      (Registered 27 May 2026)"}'
+      - BHNW (Christie Fields Ltd)  - EFE Bridge Street Ltd  - Emery Properties Ltd  -
+      Emery Developments Ltd  - Emery Investments Ltd  - Gordon Emery Ltd  - Hampson
+      & Kemp Ltd  - Business Homes (North West) Limited  - BHNW Developments Limited  -
+      Business Homes (Wakefield) Limited Nature of the post: Director Amount of remuneration
+      received: N/A Average number of hours devoted each week: N/A Additional information:
+      Subsidiaries of Emery Farm Estates Limited (Registered 29 June 2026)"}'
   - name: first_register
     type: string
     description: The first register (that we publish) that this entry appeared in
@@ -100,4 +102,4 @@ schema:
       - false
       - true
     example: 'False'
-hash: 075653b8ee69d0f55a56ae875252b7bf
+hash: 9cc7f69b0a6a44c33e0dc041357fe933
