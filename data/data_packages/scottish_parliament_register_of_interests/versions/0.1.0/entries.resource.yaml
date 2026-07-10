@@ -1,7 +1,7 @@
 title: Entries
 description: "Reprocessed register of interests for the Scottish Parliament\n"
 custom:
-  row_count: 15762
+  row_count: 15784
 path: entries.parquet
 name: entries
 profile: data-resource
@@ -116,4 +116,4 @@ schema:
       - false
       - true
     example: 'False'
-hash: 559257f8fe4e5e9b5825e80dfe4ebdc9
+hash: ad2f5e7368b45ff9480f4ff6c855b9e6
