@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 19
+  row_count: 17
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '12551'
+    example: '12757'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -36,13 +36,13 @@ schema:
     description: Registered date
     constraints:
       unique: true
-    example: '2025-06-03'
+    example: '2025-07-08'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: true
-    example: '2025-06-03'
+    example: '2025-07-08'
   - name: updated_1
     type: string
     description: Updated date
@@ -80,7 +80,7 @@ schema:
       - conservative
       - labour
       - liberal-democrat
-      - reform
+      - unknown
     example: conservative
   - name: member
     type: string
@@ -108,13 +108,28 @@ schema:
     type: string
     description: Description of the payment
     constraints:
-      unique: false
+      unique: true
     example: 4 Tickets and Hospitality for SM Town Live
   - name: value
     type: number
     description: Value of the payment (£)
     constraints:
       unique: false
+      enum:
+      - 329.5
+      - 352.94
+      - 369.0
+      - 386.79
+      - 400.0
+      - 995.0
+      - 1000.0
+      - 1200.0
+      - 1284.0
+      - 1708.0
+      - 1872.25
+      - 2877.6
+      - 5000.0
+      - 14000.0
     example: '1000.0'
   - name: received_date
     type: string
@@ -159,8 +174,8 @@ schema:
     type: string
     description: Public address of the donor
     constraints:
-      unique: false
-    example: "1 South Audley Street \nLondon W1K 1NB"
+      unique: true
+    example: "1 South Audley Street \r\nLondon W1K 1NB"
   - name: donor_status
     type: string
     description: Type of donor
@@ -234,7 +249,7 @@ schema:
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/12551
+    example: https://interests-api.parliament.uk/api/v1/Interests/12757
   - name: updated_2
     type: string
     description: Updated date for second item
@@ -251,4 +266,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 0a199042df097e457bde2579fb0c7f3c
+hash: b663b9d0a861e6d8ebb9009e87b8b9a4

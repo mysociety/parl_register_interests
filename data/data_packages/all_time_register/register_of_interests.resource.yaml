@@ -1,7 +1,7 @@
 title: Register of Members Interests (2000-)
 description: Register of members interests with basic NLP extraction
 custom:
-  row_count: 132746
+  row_count: 132922
 path: register_of_interests.parquet
 name: register_of_interests
 profile: data-resource
@@ -77,4 +77,4 @@ schema:
     constraints:
       unique: false
     example: ''
-hash: 8ea5626b0b73ba0dfaf6726e7e71d2d1
+hash: d622d9de0a07d47bfd43f5c1bfafe406

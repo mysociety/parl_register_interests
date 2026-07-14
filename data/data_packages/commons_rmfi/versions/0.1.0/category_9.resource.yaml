@@ -78,6 +78,7 @@ schema:
       - '2023-11-14'
       - '2024-04-15'
       - '2026-06-18'
+      - '2026-07-07'
     example: '2017-06-30'
   - name: category
     type: string
@@ -206,4 +207,4 @@ schema:
       enum:
       - '9'
     example: '9'
-hash: 81b4e16c0afb512e9732a2683faf7e3b
+hash: f3631f8d20454214cb5cdfe842f62e3d

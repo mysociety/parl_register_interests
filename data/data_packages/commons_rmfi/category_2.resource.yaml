@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 631
+  row_count: 642
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -62,7 +62,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: '1171'
+    example: '1211'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -168,7 +168,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 Canada Square\nLondon\nE14 5AA"
+    example: "1 Canada Square\r\nLondon\r\nE14 5AA"
   - name: donor_status
     type: string
     description: Status of the donor
@@ -179,7 +179,6 @@ schema:
       - Company
       - Friendly society
       - Individual
-      - Limited Liability Partnership
       - Other
       - Registered Party
       - Trade Union
@@ -276,4 +275,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: 1061e0fe2fb5ee4c82c4582a5a398595
+hash: 492a47e27a33955c5f521be8af623689

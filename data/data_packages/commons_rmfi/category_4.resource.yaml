@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 445
+  row_count: 410
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -50,7 +50,6 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2025-06-25'
       - '2025-08-28'
       - '2025-11-07'
       - '2025-11-14'
@@ -58,7 +57,7 @@ schema:
       - '2026-01-09'
       - '2026-03-11'
       - '2026-04-07'
-    example: '2025-06-25'
+    example: '2025-08-28'
   - name: category
     type: string
     description: Category of the interest
@@ -97,6 +96,7 @@ schema:
       - scottish-national-party
       - sinn-fein
       - social-democratic-and-labour-party
+      - unknown
       - your-party
     example: conservative
   - name: member
@@ -122,12 +122,9 @@ schema:
     description: Purpose of the visit
     constraints:
       unique: false
-    example: 26-29 May 2025  With the APPG for Cyprus at the invitation of the House
-      of Representatives for meetings with the President of the Republic of Cyprus,
-      The President of the National Assembly, The Foreign Minister, Members of the
-      House of Representatives and The Mayors of Morphou and Famagusta . Accommodation
-      and hospitality provided by the House of Representatives and others to the value
-      of £891.14
+    example: A cross-party learning trip to Angola to understand better the work,
+      challenges and impact of UK-funded projects, particularly as it related to conflict,
+      food security and nutrition in Angola.
   - name: start_date
     type: string
     description: Start date of the visit
@@ -275,7 +272,6 @@ schema:
       - Odessa, Kiev
       - Rio de Janeiro
       - Various including Ramallah and Hebron
-      - Warsaw
       - Washington, New York, Michigan
       - also visited Sark
     example: Jerusalem & the West Bank
@@ -314,7 +310,7 @@ schema:
       - 21 The Cliff, Brighton East Sussex BN2 5RF
       - 4 Ravenscroft Court Buttington Cross Enterprise Park, Buttington, Welshpool,
         Powys, Wales, SY21 8SL
-      - "71-75 Shelton Street,\nLondon WC2H 9JQ"
+      - "71-75 Shelton Street,\r\nLondon WC2H 9JQ"
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
       - Camera de Deputati, Palazzo Montecitorio - Piazza Montecitorio 00186, Rome
@@ -407,8 +403,8 @@ schema:
       - 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
-      - "Camera dei Deputati \nPalazzo Montecitorio - Piazza Montecitorio\n00186 -\
-        \ Rome (Italy)"
+      - "Camera dei Deputati \r\nPalazzo Montecitorio - Piazza Montecitorio\r\n00186\
+        \ - Rome (Italy)"
       - Gladstone Road, Folkestone, Kent, CT19 5NF
     example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
   - name: donors__payment_type_4
@@ -516,22 +512,6 @@ schema:
       enum:
       - 'True'
     example: 'True'
-  - name: visit_locations__country_3
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-      enum:
-      - Ukraine
-    example: Ukraine
-  - name: visit_locations__destination_3
-    type: number
-    description: Destination of the visit
-    constraints:
-      unique: false
-      enum:
-      - .nan
-    example: ''
   - name: category_code
     type: string
     description: Code for the category
@@ -540,4 +520,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: edb98a71d9107b82bdaaa68953798308
+hash: f5d784f3b15c0d5b6b81aa98a00fb69e

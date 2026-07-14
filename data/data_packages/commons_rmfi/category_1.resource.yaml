@@ -87,6 +87,7 @@ schema:
       - restore-britain
       - scottish-national-party
       - sinn-fein
+      - unknown
     example: conservative
   - name: member
     type: string
@@ -130,7 +131,7 @@ schema:
     description: Name of the payer
     constraints:
       unique: false
-    example: A Bit of TLC Ltd
+    example: A M Heath & Company Limited,
   - name: payer_is_private_individual
     type: boolean
     description: Whether the payer is a private individual
@@ -247,4 +248,4 @@ schema:
       enum:
       - '1'
     example: '1'
-hash: 3eeb62ca412b0b31b56109cbb001ed72
+hash: 6b9f3d7d76c1dacf04fdcd27de81441e

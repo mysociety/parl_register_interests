@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 604
+  row_count: 569
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -22,7 +22,7 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: Payment expected for services on 06 June 2025 - £150.00
+    example: Payment expected for services on 07 March 2026 - £27,856.88
   - name: parent_interest_id
     type: integer
     description: Unique identifier for the parent interest
@@ -92,6 +92,7 @@ schema:
       - plaid-cymru
       - reform
       - restore-britain
+      - unknown
     example: conservative
   - name: member
     type: string
@@ -121,7 +122,7 @@ schema:
     description: Job the MP was paid for
     constraints:
       unique: false
-    example: Emergency vascular surgeon
+    example: Advance for a book
   - name: payment_type
     type: string
     description: Type of payment
@@ -136,7 +137,7 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: (Includes 15% to be deducted on account of Chambers fees)
+    example: (Includes 15% to be deducted on account of Chambers' fees)
   - name: value
     type: number
     description: Value of the payment (£)
@@ -189,7 +190,7 @@ schema:
     description: Nature of business of the ultimate payer
     constraints:
       unique: false
-    example: Banking & Financial Services
+    example: Bank
   - name: is_payment_donated
     type: boolean
     description: Whether the payment was donated
@@ -248,4 +249,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 5a4b1e38d8d67b575203ddb2dbf89ab0
+hash: bc0f92fab633abb06a3fb329ddb396b3

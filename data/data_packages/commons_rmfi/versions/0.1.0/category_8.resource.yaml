@@ -144,6 +144,7 @@ schema:
       - '2025-08-20'
       - '2025-11-03'
       - '2026-03-27'
+      - '2026-07-13'
     example: '2025-08-20'
   - name: category_code
     type: string
@@ -153,4 +154,4 @@ schema:
       enum:
       - '8'
     example: '8'
-hash: f55f9ca7e9856ae30ce49903b6cbbde8
+hash: fc1599a242da5fb262009dc84a6a4473

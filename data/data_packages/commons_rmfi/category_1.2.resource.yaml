@@ -1,7 +1,7 @@
 title: Category 1.2
 description: Employment and earnings - Ongoing paid employment
 custom:
-  row_count: 74
+  row_count: 73
 path: category_1.2.parquet
 name: category_1.2
 profile: data-resource
@@ -80,7 +80,9 @@ schema:
       - labour
       - liberal-democrat
       - reform
+      - scottish-national-party
       - sinn-fein
+      - unknown
     example: conservative
   - name: member
     type: string
@@ -297,4 +299,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: f11038261b4b7bf9b01527a38898ff65
+hash: 73b95b6bb6a2a83c3c96960892620ecd

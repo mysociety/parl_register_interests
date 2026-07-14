@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 668
+  row_count: 679
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -87,8 +87,8 @@ schema:
       - reform
       - restore-britain
       - scottish-national-party
-      - social-democratic-and-labour-party
       - traditional-unionist-voice
+      - unknown
       - your-party
     example: conservative
   - name: member
@@ -117,8 +117,8 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: 12 month membership of a private members' club, giving access to the
-      club premises and the opportunity to purchase food, drink and overnight stays
+    example: 1  ticket with hospitality to Silverstone F1 in my capacity as CMS Select
+      Committee member.
   - name: value
     type: number
     description: Value of the payment
@@ -256,4 +256,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: ed386120598dd3632fddb88113847e5c
+hash: 7558ed7be93a317bdcd89009a23fdbcd
