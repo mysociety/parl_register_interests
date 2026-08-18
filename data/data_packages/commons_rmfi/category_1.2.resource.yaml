@@ -82,7 +82,6 @@ schema:
       - reform
       - scottish-national-party
       - sinn-fein
-      - unknown
     example: conservative
   - name: member
     type: string
@@ -167,7 +166,7 @@ schema:
     description: Details of the hours worked
     constraints:
       unique: false
-    example: (between 20 and 30 hrs)
+    example: (between 40 and 80 hours a month)
   - name: is_ultimate_payer_different
     type: boolean
     description: Whether the ultimate payer is different
@@ -266,6 +265,7 @@ schema:
       - '2020-11-11'
       - '2026-04-26'
       - '2026-05-19'
+      - '2026-07-22'
     example: '2020-11-11'
   - name: updated_4
     type: string
@@ -299,4 +299,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: 73b95b6bb6a2a83c3c96960892620ecd
+hash: 73f4cec504f7c3ce66c4aec0c35c00f3

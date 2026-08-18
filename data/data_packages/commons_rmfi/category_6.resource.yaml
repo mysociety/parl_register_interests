@@ -62,7 +62,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: '1442'
+    example: '1427'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MPss
@@ -88,7 +88,6 @@ schema:
       - scottish-national-party
       - sinn-fein
       - traditional-unionist-voice
-      - unknown
     example: conservative
   - name: member
     type: string
@@ -263,6 +262,7 @@ schema:
       - '2025-11-06'
       - '2026-05-08'
       - '2026-06-01'
+      - '2026-07-16'
     example: '2016-10-11'
   - name: updated_3
     type: string
@@ -281,4 +281,4 @@ schema:
       enum:
       - '6'
     example: '6'
-hash: 8f421961c378bf501eab2fd8f331f2e7
+hash: 5c5dbbd4929cc7aa6572d58ffabc090b

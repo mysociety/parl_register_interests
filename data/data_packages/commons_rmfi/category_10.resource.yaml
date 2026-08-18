@@ -1,7 +1,7 @@
 title: Category 10
 description: Family members engaged in third-party lobbying
 custom:
-  row_count: 23
+  row_count: 22
   dataset_order: 20
 path: category_10.parquet
 name: category_10
@@ -69,7 +69,6 @@ schema:
       - '2025-01-13'
       - '2025-04-28'
       - '2025-06-05'
-      - '2025-07-22'
       - '2025-10-13'
     example: '2022-12-09'
   - name: category
@@ -99,7 +98,6 @@ schema:
       unique: false
       enum:
       - conservative
-      - independent
       - labour
       - labourco-operative
       - liberal-democrat
@@ -181,4 +179,4 @@ schema:
       enum:
       - '10'
     example: '10'
-hash: 7fc2f1d18467bac3c434debf0caa00b9
+hash: 775d6161f9b8e027ab9e936c5ef44d19

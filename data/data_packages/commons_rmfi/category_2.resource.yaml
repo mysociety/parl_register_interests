@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 642
+  row_count: 680
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -48,7 +48,7 @@ schema:
     description: Updated date
     constraints:
       unique: false
-    example: '2025-04-02'
+    example: '2025-07-15'
   - name: category
     type: string
     description: Category of the interest
@@ -168,7 +168,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: "1 Canada Square\nLondon\nE14 5AA"
+    example: 1 Angel Lane, London EC4R 3AB
   - name: donor_status
     type: string
     description: Status of the donor
@@ -179,9 +179,11 @@ schema:
       - Company
       - Friendly society
       - Individual
+      - Limited Liability Partnership
       - Other
       - Registered Party
       - Trade Union
+      - Trust
       - Unincorporated association
     example: Building society
   - name: donor_company_name
@@ -229,6 +231,9 @@ schema:
       - Charity
       - Education college
       - Member's Association
+      - The Country Land and Business Association Limited is registered as an active
+        private company limited by guarantee without share capital. It operates as
+        a non-profit membership organisation.
       - The John Smith Centre falls under the Governance of the University of Glasgow
         SC004401
       - The UK Fusion Cluster is a network of organisations, including research institutions,
@@ -275,4 +280,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: f20e18a7c4e9933a5807c2ae924dbd2c
+hash: 406f357eacc1aa74d774d65ab0d40fe6

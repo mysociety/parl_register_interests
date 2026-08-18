@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 410
+  row_count: 403
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -96,7 +96,6 @@ schema:
       - scottish-national-party
       - sinn-fein
       - social-democratic-and-labour-party
-      - unknown
       - your-party
     example: conservative
   - name: member
@@ -146,7 +145,7 @@ schema:
     description: Visit associated with an All-Party Parliamentary Group
     constraints:
       unique: false
-    example: APPG Channel Islands
+    example: APPG Azerbaijan
   - name: donors__name_1
     type: string
     description: Name of the donor
@@ -246,7 +245,7 @@ schema:
     description: Value of the payment
     constraints:
       unique: false
-    example: '1031.0'
+    example: '124.14'
   - name: donors__is_sole_beneficiary_2
     type: string
     description: Whether the MP is the sole beneficiary
@@ -310,7 +309,7 @@ schema:
       - 21 The Cliff, Brighton East Sussex BN2 5RF
       - 4 Ravenscroft Court Buttington Cross Enterprise Park, Buttington, Welshpool,
         Powys, Wales, SY21 8SL
-      - "71-75 Shelton Street,\nLondon WC2H 9JQ"
+      - 71-75 Shelton Street,    London WC2H 9JQ
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
       - Camera de Deputati, Palazzo Montecitorio - Piazza Montecitorio 00186, Rome
@@ -403,8 +402,8 @@ schema:
       - 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
-      - "Camera dei Deputati \nPalazzo Montecitorio - Piazza Montecitorio\n00186 -\
-        \ Rome (Italy)"
+      - Camera dei Deputati     Palazzo Montecitorio - Piazza Montecitorio    00186
+        - Rome (Italy)
       - Gladstone Road, Folkestone, Kent, CT19 5NF
     example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
   - name: donors__payment_type_4
@@ -520,4 +519,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 175cd8da5bd5dd5268e7aa3d85fd39c3
+hash: 99eef041abbb188282c72f6aed8a2ace
