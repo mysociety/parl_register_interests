@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '13070'
+    example: '13278'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -36,13 +36,13 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2025-08-05'
+    example: '2025-09-11'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: true
-    example: '2025-08-05'
+    example: '2025-09-11'
   - name: updated_1
     type: string
     description: Updated date
@@ -70,7 +70,7 @@ schema:
     description: TheyWorkForYou ID of the MP
     constraints:
       unique: false
-    example: '10632'
+    example: '10766'
   - name: party
     type: string
     description: Political party of the MP
@@ -162,7 +162,7 @@ schema:
     description: Public address of the donor
     constraints:
       unique: false
-    example: 1 South Audley Street     London W1K 1NB
+    example: 1 South Audley Street,     London,    W1K 1NB
   - name: donor_status
     type: string
     description: Type of donor
@@ -239,7 +239,7 @@ schema:
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/13070
+    example: https://interests-api.parliament.uk/api/v1/Interests/13278
   - name: updated_2
     type: string
     description: Updated date for second item
@@ -256,4 +256,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: d5a8b53f1d461eb7df7d0757171e9aac
+hash: 96d0e2056bb2e2171aa2ee1e51e4ff1c

@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 680
+  row_count: 682
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -84,6 +84,7 @@ schema:
       - plaid-cymru
       - reform
       - restore-britain
+      - unknown
       - your-party
     example: conservative
   - name: member
@@ -215,13 +216,13 @@ schema:
       - Companies House
     example: Companies House
   - name: donor_trust_details
-    type: number
+    type: string
     description: Details of the donor trust
     constraints:
       unique: false
       enum:
-      - .nan
-    example: ''
+      - Sixth form college (exempt charity)
+    example: Sixth form college (exempt charity)
   - name: donor_other_details
     type: string
     description: Details of the donor
@@ -230,6 +231,7 @@ schema:
       enum:
       - Charity
       - Education college
+      - Local sixth form college
       - Member's Association
       - The Country Land and Business Association Limited is registered as an active
         private company limited by guarantee without share capital. It operates as
@@ -258,12 +260,11 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2025-08-28'
       - '2025-09-16'
       - '2025-10-14'
       - '2026-04-17'
       - '2026-06-16'
-    example: '2025-08-28'
+    example: '2025-09-16'
   - name: updated_3
     type: string
     description: Date the third interest was updated
@@ -280,4 +281,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: 406f357eacc1aa74d774d65ab0d40fe6
+hash: b5bb3cc4422a46bfe25de5f0c7434640

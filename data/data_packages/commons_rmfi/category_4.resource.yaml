@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 403
+  row_count: 394
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -50,14 +50,14 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2025-08-28'
       - '2025-11-07'
       - '2025-11-14'
       - '2025-12-15'
       - '2026-01-09'
       - '2026-03-11'
       - '2026-04-07'
-    example: '2025-08-28'
+      - '2026-08-27'
+    example: '2025-11-07'
   - name: category
     type: string
     description: Category of the interest
@@ -287,7 +287,6 @@ schema:
       - Guartel Technologies (via Animar Travel Network)
       - International Democracy Union
       - Italian Parliament
-      - Kyivstar
       - Progressive International
     example: Alford Technology (via Animar Travel Network)
   - name: donors__is_private_individual_3
@@ -305,7 +304,6 @@ schema:
     constraints:
       unique: false
       enum:
-      - 03113, m. Kyiv, vul. Dehtiarivska, 53
       - 21 The Cliff, Brighton East Sussex BN2 5RF
       - 4 Ravenscroft Court Buttington Cross Enterprise Park, Buttington, Welshpool,
         Powys, Wales, SY21 8SL
@@ -316,7 +314,7 @@ schema:
       - IDU Franz Josef Strauß Haus Mies-van-der-Rohe-Str. 1 80807 Munich Germany
       - Richmond House, Houses of Parliament, London SW1A 0AA
       - Richmond House, Houses of parliament, London SW1A 0AA
-    example: 03113, m. Kyiv, vul. Dehtiarivska, 53
+    example: 21 The Cliff, Brighton East Sussex BN2 5RF
   - name: donors__payment_type_3
     type: string
     description: Type of payment
@@ -337,7 +335,6 @@ schema:
       - Flight (£213.05) and hotel (£97.64)
       - 'For myself, my staff member and one guest: Transport (£284.45), accommodation
         (£156.30), meals (£273.57) & other costs (£26.07)'
-      - Meal £50.00
       - Presentation of symbolic, parliamentary items exchanged between me, as co
         Chair of the All Party Parliamentary Group for Italy, and the various senior
         Italian Select Committee Chairs we met (estimated value £340)
@@ -355,7 +352,6 @@ schema:
       unique: false
       enum:
       - .nan
-      - 50.0
       - 120.0
       - 310.69
       - 340.0
@@ -383,7 +379,6 @@ schema:
       - Alford Technology (via Animar Travel Network)
       - Italian Parliament
       - NIC Instruments (via Animar Travel Network)
-      - Yes Foundation
     example: Alford Technology (via Animar Travel Network)
   - name: donors__is_private_individual_4
     type: string
@@ -399,13 +394,13 @@ schema:
     constraints:
       unique: false
       enum:
-      - 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
       - Camera dei Deputati     Palazzo Montecitorio - Piazza Montecitorio    00186
         - Rome (Italy)
       - Gladstone Road, Folkestone, Kent, CT19 5NF
-    example: 01601, Ukraine, Кyiv, Shovkovychna Street, 42-44
+    example: Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
+      England, BA14 0XG
   - name: donors__payment_type_4
     type: string
     description: Type of payment
@@ -423,7 +418,6 @@ schema:
       enum:
       - '20% of all: Flights & Train (£237.80), internal travel (£53.80), accommodation
         (£154.80), hospitality (£210.20), Tech Equipment (£106.60).'
-      - Conference £150
       - Presentation of symbolic, parliamentary items exchanged between me, as Chair
         of the All-Party Parliamentary Group for Italy, and the various senior Italian
         select committee chairs we met. Estimated value of ceremonial items is
@@ -436,10 +430,9 @@ schema:
       unique: false
       enum:
       - .nan
-      - 150.0
       - 275.0
       - 763.2
-    example: '150.0'
+    example: '275.0'
   - name: donors__is_sole_beneficiary_4
     type: string
     description: Whether the MP is the sole beneficiary
@@ -519,4 +512,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 99eef041abbb188282c72f6aed8a2ace
+hash: 8c8018e738870ba30c1a88d1f918673d

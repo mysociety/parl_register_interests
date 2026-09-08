@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 583
+  row_count: 563
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -93,6 +93,7 @@ schema:
       - plaid-cymru
       - reform
       - restore-britain
+      - unknown
     example: conservative
   - name: member
     type: string
@@ -122,6 +123,23 @@ schema:
     description: Job the MP was paid for
     constraints:
       unique: false
+      enum:
+      - Advance for a book
+      - Emergency vascular surgeon
+      - General and transplant surgery specialist services
+      - General vascular and transplant surgery
+      - Speaking Engagement
+      - Speaking at event
+      - Speaking engagement
+      - Speaking engagement (York)
+      - Speaking engagement for Oxford University as part of its CEO programme delegates
+        at Tokyo University including workshop tasks and participation over three
+        days. The payer covered the costs of my return flight to Japan (£10,343.19)
+        and accommodation for three nights (£909)
+      - Writing an article
+      - Writing an article (not presenting a show)
+      - Writing articles
+      - speaking engagement
     example: Advance for a book
   - name: payment_type
     type: string
@@ -249,4 +267,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 7d8246be9a19a4fb34f4242d6a144b95
+hash: 3790537e4dd046bed5b6582ce20a5813

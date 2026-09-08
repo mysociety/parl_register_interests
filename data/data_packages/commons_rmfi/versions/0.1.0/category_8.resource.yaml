@@ -1,7 +1,7 @@
 title: Category 8
 description: Miscellaneous
 custom:
-  row_count: 944
+  row_count: 933
 path: category_8.parquet
 name: category_8
 profile: data-resource
@@ -103,7 +103,7 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-    example: African Development Bank, Avenue Lamblin, Abidjan, Cote d'Ivoire
+    example: ADS Group
   - name: description
     type: string
     description: Description of the interest
@@ -141,11 +141,10 @@ schema:
     constraints:
       unique: false
       enum:
-      - '2025-08-20'
       - '2025-11-03'
       - '2026-03-27'
       - '2026-07-13'
-    example: '2025-08-20'
+    example: '2025-11-03'
   - name: category_code
     type: string
     description: Category code of the interest
@@ -154,4 +153,4 @@ schema:
       enum:
       - '8'
     example: '8'
-hash: 2bb8f9a682943764b369f6f3f9f870c4
+hash: 7c6f506040f76f76adb0ae6a06fb8d7b

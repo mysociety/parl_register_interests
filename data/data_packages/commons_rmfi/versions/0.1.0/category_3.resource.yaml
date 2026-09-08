@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 665
+  row_count: 627
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -63,7 +63,7 @@ schema:
     description: Parliamentary ID of the MP
     constraints:
       unique: false
-    example: '1409'
+    example: '1427'
   - name: twfy_id
     type: string
     description: TheyWorkForYou ID of the MP
@@ -77,7 +77,6 @@ schema:
       unique: false
       enum:
       - conservative
-      - dup
       - green
       - independent
       - labour
@@ -87,6 +86,7 @@ schema:
       - reform
       - restore-britain
       - scottish-national-party
+      - unknown
       - your-party
     example: conservative
   - name: member
@@ -116,7 +116,7 @@ schema:
     constraints:
       unique: false
     example: 1  ticket with hospitality to Silverstone F1 in my capacity as CMS Select
-      Committee member.
+      Committee member
   - name: value
     type: number
     description: Value of the payment
@@ -255,4 +255,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 7661f927a41638a84578af4f8689a262
+hash: a3e1c66dc1561f5e9d71f66d68745cff
