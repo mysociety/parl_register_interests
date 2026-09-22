@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 394
+  row_count: 405
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -116,6 +116,25 @@ schema:
     constraints:
       unique: false
     example: Abu Dhabi
+  - name: visit_locations__country_2
+    type: string
+    description: Country of the visit
+    constraints:
+      unique: false
+    example: Bahrain
+  - name: visit_locations__destination_2
+    type: string
+    description: Destination of the visit
+    constraints:
+      unique: false
+      enum:
+      - Jerusalem & the West Bank
+      - Odessa, Kiev
+      - Rio de Janeiro
+      - Various including Ramallah and Hebron
+      - Washington, New York, Michigan
+      - also visited Sark
+    example: Jerusalem & the West Bank
   - name: purpose
     type: string
     description: Purpose of the visit
@@ -255,25 +274,6 @@ schema:
       - 'False'
       - 'True'
     example: 'False'
-  - name: visit_locations__country_2
-    type: string
-    description: Country of the visit
-    constraints:
-      unique: false
-    example: Bahrain
-  - name: visit_locations__destination_2
-    type: string
-    description: Destination of the visit
-    constraints:
-      unique: false
-      enum:
-      - Jerusalem & the West Bank
-      - Odessa, Kiev
-      - Rio de Janeiro
-      - Various including Ramallah and Hebron
-      - Washington, New York, Michigan
-      - also visited Sark
-    example: Jerusalem & the West Bank
   - name: donors__name_3
     type: string
     description: Name of the donor
@@ -288,6 +288,7 @@ schema:
       - International Democracy Union
       - Italian Parliament
       - Progressive International
+      - Sinistra Italiana
     example: Alford Technology (via Animar Travel Network)
   - name: donors__is_private_individual_3
     type: string
@@ -311,6 +312,7 @@ schema:
       - Alford House Epsom Square, White Horse Business Park, Trowbridge, Wiltshire,
         England, BA14 0XG
       - Camera de Deputati, Palazzo Montecitorio - Piazza Montecitorio 00186, Rome
+      - Corso Rinascimento 69 - 00186 Rome
       - IDU Franz Josef Strauß Haus Mies-van-der-Rohe-Str. 1 80807 Munich Germany
       - Richmond House, Houses of Parliament, London SW1A 0AA
       - Richmond House, Houses of parliament, London SW1A 0AA
@@ -335,6 +337,7 @@ schema:
       - Flight (£213.05) and hotel (£97.64)
       - 'For myself, my staff member and one guest: Transport (£284.45), accommodation
         (£156.30), meals (£273.57) & other costs (£26.07)'
+      - Half the hotel cost in Rome (£131.18)
       - Presentation of symbolic, parliamentary items exchanged between me, as co
         Chair of the All Party Parliamentary Group for Italy, and the various senior
         Italian Select Committee Chairs we met (estimated value £340)
@@ -353,6 +356,7 @@ schema:
       enum:
       - .nan
       - 120.0
+      - 131.18
       - 310.69
       - 340.0
       - 740.39
@@ -512,4 +516,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 8c8018e738870ba30c1a88d1f918673d
+hash: 27f250e5056d8879ae6143f8d7b0932c

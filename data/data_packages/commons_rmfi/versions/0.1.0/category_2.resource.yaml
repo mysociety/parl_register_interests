@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 682
+  row_count: 704
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -84,7 +84,6 @@ schema:
       - plaid-cymru
       - reform
       - restore-britain
-      - unknown
       - your-party
     example: conservative
   - name: member
@@ -230,7 +229,9 @@ schema:
       unique: false
       enum:
       - Charity
+      - 'Charity (charity number: 1194995)'
       - Education college
+      - GP Practice
       - Local sixth form college
       - Member's Association
       - The Country Land and Business Association Limited is registered as an active
@@ -242,6 +243,7 @@ schema:
         businesses and government bodies, focused on advancing fusion energy research
         and development within the UK. It fosters collaboration and innovation to
         accelerate progress in the field.
+      - Town Council
       - University
       - special interest group - key cities network is a special interest group of  the
         Local Government Association (company number of the LGA 11177145) comprising
@@ -281,4 +283,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: b5bb3cc4422a46bfe25de5f0c7434640
+hash: 0b569625531789a07486c18af9350066

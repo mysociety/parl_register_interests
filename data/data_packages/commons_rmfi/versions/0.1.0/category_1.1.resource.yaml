@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 563
+  row_count: 579
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -93,7 +93,6 @@ schema:
       - plaid-cymru
       - reform
       - restore-britain
-      - unknown
     example: conservative
   - name: member
     type: string
@@ -242,9 +241,10 @@ schema:
     constraints:
       unique: false
       enum:
+      - Donated to son, who is a student
       - Jamaica Hurricane Melissa Relief Fund
       - a charity in my constituency
-    example: Jamaica Hurricane Melissa Relief Fund
+    example: Donated to son, who is a student
   - name: link
     type: string
     description: Link to the interest
@@ -267,4 +267,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 3790537e4dd046bed5b6582ce20a5813
+hash: 35589542513617d7ac62b1aceb1a308a

@@ -1,7 +1,7 @@
 title: Category 1
 description: Employment and earnings
 custom:
-  row_count: 267
+  row_count: 269
 path: category_1.parquet
 name: category_1
 profile: data-resource
@@ -87,7 +87,6 @@ schema:
       - restore-britain
       - scottish-national-party
       - sinn-fein
-      - unknown
     example: conservative
   - name: member
     type: string
@@ -194,6 +193,7 @@ schema:
       - '2024-07-30'
       - '2025-09-15'
       - '2026-05-19'
+      - '2026-09-17'
     example: '2015-10-02'
   - name: updated_3
     type: string
@@ -247,4 +247,4 @@ schema:
       enum:
       - '1'
     example: '1'
-hash: 1389efd6e1fb64f58e88a3a94b97f775
+hash: 19c03ebad9bda0b91dab6848274c5abb
