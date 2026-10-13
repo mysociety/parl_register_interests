@@ -200,7 +200,8 @@ schema:
     description: Description of the payment
     constraints:
       unique: false
-    example: (£1,121.83) hotel accommodation for one night
+    example: (Flights and accommodation were claimed via IPSA) group meals, bus transfers
+      around Ukraine, and costs associated with the visits to various locations.
   - name: donors__value_1
     type: number
     description: Value of the payment
@@ -516,4 +517,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: 27f250e5056d8879ae6143f8d7b0932c
+hash: a8c045f155452f8276a49de47452720f

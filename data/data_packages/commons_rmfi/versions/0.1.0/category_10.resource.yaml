@@ -1,7 +1,7 @@
 title: Category 10
 description: Family members engaged in third-party lobbying
 custom:
-  row_count: 23
+  row_count: 25
   dataset_order: 20
 path: category_10.parquet
 name: category_10
@@ -43,21 +43,6 @@ schema:
     description: Date the interest was published
     constraints:
       unique: false
-      enum:
-      - '2023-12-17'
-      - '2024-07-15'
-      - '2024-07-22'
-      - '2024-07-26'
-      - '2024-07-29'
-      - '2024-08-04'
-      - '2024-10-31'
-      - '2024-11-13'
-      - '2025-02-04'
-      - '2025-02-27'
-      - '2025-08-03'
-      - '2025-12-19'
-      - '2026-04-13'
-      - '2026-08-27'
     example: '2023-12-17'
   - name: updated_1
     type: string
@@ -108,7 +93,7 @@ schema:
     description: Name of the MP
     constraints:
       unique: false
-    example: Dame Nia Griffith
+    example: Antonia Bance
   - name: job_title
     type: string
     description: Job title of the family member
@@ -180,4 +165,4 @@ schema:
       enum:
       - '10'
     example: '10'
-hash: 0c51297a1d504e5f9ca095336137a0a5
+hash: 7fbd0c846534a1578d2fbca627737809

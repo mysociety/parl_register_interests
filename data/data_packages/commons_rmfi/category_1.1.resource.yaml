@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 579
+  row_count: 566
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10825'
+    example: '11318'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -28,26 +28,25 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
-    example: '10545'
+    example: '10624'
   - name: registered
     type: string
     description: registered date
     constraints:
       unique: false
-    example: '2024-09-26'
+    example: '2024-11-20'
   - name: published
     type: string
     description: published date
     constraints:
       unique: false
-    example: '2024-09-26'
+    example: '2024-11-20'
   - name: updated_1
     type: string
     description: updated date
     constraints:
       unique: false
       enum:
-      - '2025-09-18'
       - '2025-11-20'
       - '2025-12-09'
       - '2025-12-18'
@@ -57,7 +56,7 @@ schema:
       - '2026-05-28'
       - '2026-06-01'
       - '2026-07-08'
-    example: '2025-09-18'
+    example: '2025-11-20'
   - name: category
     type: string
     description: Category of the interest
@@ -99,7 +98,7 @@ schema:
     description: Name of the MP
     constraints:
       unique: false
-    example: Alex Burghart
+    example: Alan Mak
   - name: payment_received
     type: boolean
     description: Whether there was a payment received
@@ -124,8 +123,6 @@ schema:
       unique: false
       enum:
       - Advance for a book
-      - Emergency vascular surgeon
-      - General and transplant surgery specialist services
       - General vascular and transplant surgery
       - Speaking Engagement
       - Speaking at event
@@ -135,6 +132,7 @@ schema:
         at Tokyo University including workshop tasks and participation over three
         days. The payer covered the costs of my return flight to Japan (£10,343.19)
         and accommodation for three nights (£909)
+      - Speaking/interviewing event
       - Writing an article
       - Writing an article (not presenting a show)
       - Writing articles
@@ -172,7 +170,7 @@ schema:
     description: Details of the hours worked
     constraints:
       unique: false
-    example: (A balance of £1,393.44 was paid on 22 December 2025)
+    example: (1.5 hours per week over a 4 week period)
   - name: is_ultimate_payer_different
     type: boolean
     description: Whether the ultimate payer is different
@@ -207,7 +205,7 @@ schema:
     description: Nature of business of the ultimate payer
     constraints:
       unique: false
-    example: Bank
+    example: Agentic AI for Enterprise finance
   - name: is_payment_donated
     type: boolean
     description: Whether the payment was donated
@@ -250,7 +248,7 @@ schema:
     description: Link to the interest
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10825
+    example: https://interests-api.parliament.uk/api/v1/Interests/11318
   - name: updated_2
     type: string
     description: Date the interest was updated
@@ -267,4 +265,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: 35589542513617d7ac62b1aceb1a308a
+hash: 5f681e12b764bf98be1931bb7f9a8c77

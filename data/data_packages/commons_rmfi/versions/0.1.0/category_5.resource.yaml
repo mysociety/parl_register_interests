@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 20
+  row_count: 19
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '13278'
+    example: '13581'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -36,21 +36,21 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2025-09-11'
+    example: '2025-10-20'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: true
-    example: '2025-09-11'
+    example: '2025-10-20'
   - name: updated_1
-    type: string
+    type: number
     description: Updated date
     constraints:
       unique: false
       enum:
-      - '2025-09-23'
-    example: '2025-09-23'
+      - .nan
+    example: ''
   - name: category
     type: string
     description: Category of the interest
@@ -80,7 +80,6 @@ schema:
       - conservative
       - labour
       - labourco-operative
-      - liberal-democrat
       - reform
     example: conservative
   - name: member
@@ -95,9 +94,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - APPG GIBRALTAR
       - APPG for Cricket
-    example: APPG GIBRALTAR
+    example: APPG for Cricket
   - name: payment_type
     type: string
     description: Type of payment
@@ -161,7 +159,7 @@ schema:
     type: string
     description: Public address of the donor
     constraints:
-      unique: false
+      unique: true
     example: 1 South Audley Street,     London,    W1K 1NB
   - name: donor_status
     type: string
@@ -239,15 +237,7 @@ schema:
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/13278
-  - name: updated_2
-    type: string
-    description: Updated date for second item
-    constraints:
-      unique: false
-      enum:
-      - '2025-11-19'
-    example: '2025-11-19'
+    example: https://interests-api.parliament.uk/api/v1/Interests/13581
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -256,4 +246,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 96d0e2056bb2e2171aa2ee1e51e4ff1c
+hash: ddb8cc9175ce430515fa522ab0ca8e9e
