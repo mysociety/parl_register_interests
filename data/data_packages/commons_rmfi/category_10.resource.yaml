@@ -1,7 +1,7 @@
 title: Category 10
 description: Family members engaged in third-party lobbying
 custom:
-  row_count: 25
+  row_count: 26
   dataset_order: 20
 path: category_10.parquet
 name: category_10
@@ -99,7 +99,7 @@ schema:
     description: Job title of the family member
     constraints:
       unique: false
-    example: Board Member, Rise Associates North East Ltd
+    example: Associate
   - name: employer
     type: string
     description: Name of the employer
@@ -157,6 +157,14 @@ schema:
       - '2025-04-24'
       - '2025-08-04'
     example: '2025-04-24'
+  - name: updated_3
+    type: string
+    description: Date the (third) interest was updated
+    constraints:
+      unique: false
+      enum:
+      - '2026-10-13'
+    example: '2026-10-13'
   - name: category_code
     type: string
     description: Code for the category
@@ -165,4 +173,4 @@ schema:
       enum:
       - '10'
     example: '10'
-hash: 7fbd0c846534a1578d2fbca627737809
+hash: 898ef4b74972a8bf43c47025e72056a9
