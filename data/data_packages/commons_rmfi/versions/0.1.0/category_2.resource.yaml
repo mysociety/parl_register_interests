@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 695
+  row_count: 735
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -91,7 +91,7 @@ schema:
     description: Name of the MP
     constraints:
       unique: false
-    example: Al Carns
+    example: Adam Thompson
   - name: donation_source
     type: string
     description: Source of the donation
@@ -261,4 +261,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: 63828daa22a0ae7b8e5e5375e9c0ea0d
+hash: b1e93b8126a4dde8c5a8fb82339c1d96

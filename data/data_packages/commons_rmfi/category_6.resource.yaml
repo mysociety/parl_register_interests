@@ -176,11 +176,11 @@ schema:
       unique: false
       enum:
       - 1.0
-      - .nan
       - 2.0
+      - 5.0
+      - .nan
       - 3.0
       - 4.0
-      - 5.0
       - 6.0
       - 7.0
       - 15.0
@@ -264,6 +264,8 @@ schema:
       - '2026-06-01'
       - '2026-07-16'
       - '2026-08-19'
+      - '2026-10-18'
+      - '2026-10-21'
     example: '2016-10-11'
   - name: updated_3
     type: string
@@ -273,6 +275,7 @@ schema:
       enum:
       - '2020-01-09'
       - '2025-03-07'
+      - '2026-10-22'
     example: '2020-01-09'
   - name: category_code
     type: string
@@ -282,4 +285,4 @@ schema:
       enum:
       - '6'
     example: '6'
-hash: d669d2629262e8ef2a02b7aa98ae99f8
+hash: bf12c06190ff3a04c68788f640bc5aea

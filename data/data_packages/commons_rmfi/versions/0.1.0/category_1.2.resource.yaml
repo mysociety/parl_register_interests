@@ -292,6 +292,14 @@ schema:
       enum:
       - '2025-10-27'
     example: '2025-10-27'
+  - name: updated_7
+    type: string
+    description: Date the interest was updated
+    constraints:
+      unique: false
+      enum:
+      - '2026-10-18'
+    example: '2026-10-18'
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -300,4 +308,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: 44cd280e3ee766efd9698dd616e31df3
+hash: 01cbb75ec238896068a7374be9b0be13
