@@ -1,7 +1,7 @@
 title: Overall Register of Interests
 description: Register of interests, text summaries by category,
 custom:
-  row_count: 4170
+  row_count: 4070
   dataset_order: -10
 path: overall.parquet
 name: overall
@@ -23,7 +23,7 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
-    example: '10097.0'
+    example: '10624.0'
   - name: member
     type: string
     description: Name of the MP
@@ -91,5 +91,5 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: 1001 Critical Days Foundation - £3,729.00
-hash: aaaa6c1c77016cc60433faa4576aea4c
+    example: 25 Seven Talent Solutions Limited - £3,024.00
+hash: 6b518262d37b7ad3a55155ac2cb18a2f

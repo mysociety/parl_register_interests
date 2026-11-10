@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 587
+  row_count: 556
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '11318'
+    example: '11707'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -34,13 +34,13 @@ schema:
     description: registered date
     constraints:
       unique: false
-    example: '2024-11-20'
+    example: '2025-01-28'
   - name: published
     type: string
     description: published date
     constraints:
       unique: false
-    example: '2024-11-20'
+    example: '2025-01-28'
   - name: updated_1
     type: string
     description: updated date
@@ -76,7 +76,7 @@ schema:
     description: TheyWorkForYou ID for the member
     constraints:
       unique: false
-    example: '10001'
+    example: '10119'
   - name: party
     type: string
     description: TWFY ID for the party as of this release date
@@ -232,7 +232,7 @@ schema:
     description: Link to the interest
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/11318
+    example: https://interests-api.parliament.uk/api/v1/Interests/11707
   - name: updated_2
     type: string
     description: Date the interest was updated
@@ -249,4 +249,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: f1a59e4b4e0f6ca06be247938b6c9ad4
+hash: c659c39a7b8c87cd7d08600d0f060f15

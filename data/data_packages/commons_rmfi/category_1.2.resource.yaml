@@ -1,7 +1,7 @@
 title: Category 1.2
 description: Employment and earnings - Ongoing paid employment
 custom:
-  row_count: 71
+  row_count: 72
 path: category_1.2.parquet
 name: category_1.2
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '10100'
+    example: '11257'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -28,7 +28,7 @@ schema:
     description: Unique identifier for the parent interest
     constraints:
       unique: false
-    example: '10097'
+    example: '11256'
   - name: registered
     type: string
     description: Registered date
@@ -74,7 +74,6 @@ schema:
       unique: false
       enum:
       - conservative
-      - dup
       - green
       - independent
       - labour
@@ -249,7 +248,7 @@ schema:
     description: URL to the interest on the interests API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/10100
+    example: https://interests-api.parliament.uk/api/v1/Interests/11257
   - name: updated_2
     type: string
     description: Date the interest was updated
@@ -308,4 +307,4 @@ schema:
       enum:
       - '1.2'
     example: '1.2'
-hash: 01cbb75ec238896068a7374be9b0be13
+hash: 80d684c8adf58af5a39ee3bec1bf6975

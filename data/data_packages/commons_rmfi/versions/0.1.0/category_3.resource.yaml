@@ -1,7 +1,7 @@
 title: Category 3
 description: Gifts, benefits and hospitality from UK sources
 custom:
-  row_count: 665
+  row_count: 645
 path: category_3.parquet
 name: category_3
 profile: data-resource
@@ -22,7 +22,7 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: A.G. Barr PLC - £490.00
+    example: AMS Global Solutions - £550.00
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -158,7 +158,7 @@ schema:
     description: Name of the donor
     constraints:
       unique: false
-    example: A.G. Barr PLC
+    example: AMS Global Solutions
   - name: donor_public_address
     type: string
     description: Public address of the donor
@@ -186,7 +186,7 @@ schema:
     description: Name of the donor company
     constraints:
       unique: false
-    example: A.G. Barr PLC
+    example: AMS Global Solutions
   - name: donor_company_url
     type: number
     description: URL of the donor company
@@ -251,4 +251,4 @@ schema:
       enum:
       - '3'
     example: '3'
-hash: 81fd16140a54b1a2aaf15e131d871c4f
+hash: 8c3243c3eccef512766dff2f008de58a

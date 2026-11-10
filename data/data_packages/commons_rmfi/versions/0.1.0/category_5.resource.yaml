@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 19
+  row_count: 17
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -16,7 +16,7 @@ schema:
     description: Unique identifier for the interest
     constraints:
       unique: true
-    example: '13581'
+    example: '14043'
   - name: summary
     type: string
     description: Text summary of the interest
@@ -36,13 +36,13 @@ schema:
     description: Registered date
     constraints:
       unique: false
-    example: '2025-10-20'
+    example: '2025-12-02'
   - name: published
     type: string
     description: Published date
     constraints:
       unique: true
-    example: '2025-10-20'
+    example: '2025-12-04'
   - name: updated_1
     type: number
     description: Updated date
@@ -115,6 +115,20 @@ schema:
     description: Value of the payment (£)
     constraints:
       unique: false
+      enum:
+      - 310.45
+      - 340.0
+      - 352.94
+      - 416.8
+      - 500.0
+      - 650.0
+      - 780.0
+      - 1000.0
+      - 1002.0
+      - 1284.0
+      - 1872.25
+      - 2877.6
+      - 5000.0
     example: '1000.0'
   - name: received_date
     type: string
@@ -177,10 +191,9 @@ schema:
     constraints:
       unique: false
       enum:
-      - Fanatics (International) Limited
       - Paddy Power part of Flutter Entertainment plc
       - Solix ApS
-    example: Fanatics (International) Limited
+    example: Paddy Power part of Flutter Entertainment plc
   - name: donor_company_url
     type: number
     description: URL of the donor company
@@ -197,7 +210,6 @@ schema:
       enum:
       - .nan
       - 16956.0
-      - 5933624.0
       - 35480269.0
     example: '16956.0'
   - name: donor_company_identifier_source
@@ -228,7 +240,6 @@ schema:
       - Non-profit organisation
       - Non-profit think tank
       - Political Party
-      - School
       - Sport governing body
       - US non-profit endowment
     example: Country
@@ -237,7 +248,7 @@ schema:
     description: Link to the interest in the Parliament API
     constraints:
       unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/13581
+    example: https://interests-api.parliament.uk/api/v1/Interests/14043
   - name: category_code
     type: string
     description: Code for the category of the interest
@@ -246,4 +257,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: ddb8cc9175ce430515fa522ab0ca8e9e
+hash: 4dea6eae60362c678c58a8e1456ed915
