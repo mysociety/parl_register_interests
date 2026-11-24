@@ -1,7 +1,7 @@
 title: Category 1.1
 description: Employment and earnings - Ad hoc payments
 custom:
-  row_count: 556
+  row_count: 576
 path: category_1.1.parquet
 name: category_1.1
 profile: data-resource
@@ -56,6 +56,7 @@ schema:
       - '2026-05-28'
       - '2026-06-01'
       - '2026-07-08'
+      - '2026-11-18'
     example: '2025-11-20'
   - name: category
     type: string
@@ -215,6 +216,7 @@ schema:
       unique: false
       enum:
       - Charity
+      - Community organisation
       - Other
     example: Charity
   - name: donatee_details
@@ -223,10 +225,11 @@ schema:
     constraints:
       unique: false
       enum:
+      - A community organisation in my constituency
       - Donated to son, who is a student
       - Jamaica Hurricane Melissa Relief Fund
       - a charity in my constituency
-    example: Donated to son, who is a student
+    example: A community organisation in my constituency
   - name: link
     type: string
     description: Link to the interest
@@ -249,4 +252,4 @@ schema:
       enum:
       - '1.1'
     example: '1.1'
-hash: c659c39a7b8c87cd7d08600d0f060f15
+hash: 68821f1e40fbf675f7de76f9099245a3

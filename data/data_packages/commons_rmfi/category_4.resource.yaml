@@ -1,7 +1,7 @@
 title: Category 4
 description: Visits outside the UK
 custom:
-  row_count: 385
+  row_count: 407
 path: category_4.parquet
 name: category_4
 profile: data-resource
@@ -57,6 +57,7 @@ schema:
       - '2026-03-11'
       - '2026-04-07'
       - '2026-08-27'
+      - '2026-11-16'
     example: '2025-11-07'
   - name: category
     type: string
@@ -182,7 +183,7 @@ schema:
     constraints:
       unique: false
     example: (Flights and accommodation were claimed via IPSA) group meals, bus transfers
-      around Ukraine, and costs associated with the visits to various locations.
+      around Ukraine, and costs associated with the visits to various locations
   - name: donors__value_1
     type: number
     description: Value of the payment
@@ -198,6 +199,12 @@ schema:
       - false
       - true
     example: 'False'
+  - name: link
+    type: string
+    description: Link to the interest
+    constraints:
+      unique: true
+    example: https://interests-api.parliament.uk/api/v1/Interests/11727
   - name: donors__name_2
     type: string
     description: Name of the donor
@@ -329,7 +336,7 @@ schema:
       - Transport and accommodation
       - Transportation
       - 'Visit to Zambia. Dates: 4 to 10 October 2026. Flights (£183), accommodation
-        (£69) and food, travel medication, transport and in-country expenses (£118).'
+        (£69) and food, travel medication, transport and in-country expenses (£118)'
     example: 10% funded of total cost of flights (£1,830), accommodation (£690), food,
       travel medication, transport, and in-country expenses (£580)
   - name: donors__value_3
@@ -338,11 +345,11 @@ schema:
     constraints:
       unique: false
       enum:
-      - 310.0
       - .nan
       - 120.0
       - 131.18
       - 288.0
+      - 310.0
       - 340.0
       - 370.0
       - 763.2
@@ -360,12 +367,6 @@ schema:
       - 'False'
       - 'True'
     example: 'False'
-  - name: link
-    type: string
-    description: Link to the interest
-    constraints:
-      unique: true
-    example: https://interests-api.parliament.uk/api/v1/Interests/11727
   - name: visit_locations__country_2
     type: string
     description: Country of the visit
@@ -519,4 +520,4 @@ schema:
       enum:
       - '4'
     example: '4'
-hash: aec433eb59af8367b533ea4948f11836
+hash: 1d8af8eaa49cc9e5bfa2528b776ac602

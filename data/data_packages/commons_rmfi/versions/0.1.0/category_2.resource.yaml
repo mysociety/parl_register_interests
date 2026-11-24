@@ -1,7 +1,7 @@
 title: Category 2
 description: Donations and other support (including loans) for activities as an MP
 custom:
-  row_count: 721
+  row_count: 764
 path: category_2.parquet
 name: category_2
 profile: data-resource
@@ -227,31 +227,6 @@ schema:
     description: Details of the donor
     constraints:
       unique: false
-      enum:
-      - Charity
-      - 'Charity (charity number: 1194995)'
-      - Education college
-      - GP Practice
-      - Housing Association, Community Benefit Society
-      - Local sixth form college
-      - Radiotherapy UK is a Registered Charity (1135902)
-      - The Corporation of Solihull College & University Centre was established under
-        the Further and Higher Education Act 1992 and is an exempt  charity under
-        Part 3 of the Charities Act 2011
-      - The Country Land and Business Association Limited is registered as an active
-        private company limited by guarantee without share capital. It operates as
-        a non-profit membership organisation.
-      - The John Smith Centre falls under the Governance of the University of Glasgow
-        SC004401
-      - The UK Fusion Cluster is a network of organisations, including research institutions,
-        businesses and government bodies, focused on advancing fusion energy research
-        and development within the UK. It fosters collaboration and innovation to
-        accelerate progress in the field.
-      - University
-      - special interest group - key cities network is a special interest group of  the
-        Local Government Association (company number of the LGA 11177145) comprising
-        24 statutory local urban city authorities and administered by Salford City
-        Council
     example: Charity
   - name: link
     type: string
@@ -286,4 +261,4 @@ schema:
       enum:
       - '2'
     example: '2'
-hash: eb6ba18de09f247b576df4e8ecb02bf7
+hash: 614b003837d1da169812228e58d6fde0

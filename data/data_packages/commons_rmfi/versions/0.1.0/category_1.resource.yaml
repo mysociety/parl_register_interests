@@ -1,7 +1,7 @@
 title: Category 1
 description: Employment and earnings
 custom:
-  row_count: 280
+  row_count: 282
 path: category_1.parquet
 name: category_1
 profile: data-resource
@@ -22,7 +22,7 @@ schema:
     description: Text summary of the interest
     constraints:
       unique: false
-    example: Academic Work - Liberty Fund Inc
+    example: Academic Work - Centre for Policy Studies
   - name: parent_interest_id
     type: number
     description: Unique identifier for the parent interest
@@ -248,4 +248,4 @@ schema:
       enum:
       - '1'
     example: '1'
-hash: 734a5d7ae33e1a16b8228c6845f20b7e
+hash: e46782cc28967f846af845274eece89c

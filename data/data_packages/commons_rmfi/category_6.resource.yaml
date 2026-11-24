@@ -1,7 +1,7 @@
 title: Category 6
 description: Land and property (within or outside the UK)
 custom:
-  row_count: 214
+  row_count: 215
 path: category_6.parquet
 name: category_6
 profile: data-resource
@@ -176,11 +176,11 @@ schema:
       unique: false
       enum:
       - 1.0
-      - .nan
       - 2.0
       - 3.0
       - 4.0
       - 5.0
+      - .nan
       - 6.0
       - 7.0
       - 15.0
@@ -252,20 +252,6 @@ schema:
     description: Date the interest was updated
     constraints:
       unique: false
-      enum:
-      - '2016-10-11'
-      - '2017-04-03'
-      - '2019-01-18'
-      - '2024-09-09'
-      - '2024-11-28'
-      - '2025-02-19'
-      - '2025-11-06'
-      - '2026-05-08'
-      - '2026-06-01'
-      - '2026-07-16'
-      - '2026-08-19'
-      - '2026-10-18'
-      - '2026-10-21'
     example: '2016-10-11'
   - name: updated_3
     type: string
@@ -286,4 +272,4 @@ schema:
       enum:
       - '6'
     example: '6'
-hash: 5e9d55ea01d8b36349c72642f0d6990e
+hash: 5bd1ed103439c14fa26fba7d0a87db8f

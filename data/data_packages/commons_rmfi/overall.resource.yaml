@@ -1,7 +1,7 @@
 title: Overall Register of Interests
 description: Register of interests, text summaries by category,
 custom:
-  row_count: 4070
+  row_count: 4178
   dataset_order: -10
 path: overall.parquet
 name: overall
@@ -92,4 +92,4 @@ schema:
     constraints:
       unique: false
     example: 25 Seven Talent Solutions Limited - £3,024.00
-hash: 6b518262d37b7ad3a55155ac2cb18a2f
+hash: ca96e78a084c6a3f17747c321278911e

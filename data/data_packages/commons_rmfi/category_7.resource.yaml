@@ -160,6 +160,7 @@ schema:
       enum:
       - '2015-11-02'
       - '2021-05-13'
+      - '2026-11-12'
     example: '2015-11-02'
   - name: category_code
     type: string
@@ -169,4 +170,4 @@ schema:
       enum:
       - '7'
     example: '7'
-hash: 3a84870b0b8256d6a590b493417fd658
+hash: f32afe2df4a30d4723593f7ce80b278e

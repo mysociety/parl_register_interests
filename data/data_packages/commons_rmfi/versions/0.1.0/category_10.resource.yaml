@@ -56,6 +56,7 @@ schema:
       - '2025-04-28'
       - '2025-06-05'
       - '2025-10-13'
+      - '2026-11-15'
     example: '2022-12-09'
   - name: category
     type: string
@@ -173,4 +174,4 @@ schema:
       enum:
       - '10'
     example: '10'
-hash: 7ae3969f35822a33ac3937986dabe86a
+hash: 26a0d92e02f251e70fc42a540741f986

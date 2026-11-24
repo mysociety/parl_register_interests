@@ -1,7 +1,7 @@
 title: Category 5
 description: Gifts and benefits from sources outside the UK
 custom:
-  row_count: 17
+  row_count: 19
 path: category_5.parquet
 name: category_5
 profile: data-resource
@@ -80,6 +80,7 @@ schema:
       - conservative
       - labour
       - labourco-operative
+      - liberal-democrat
       - reform
     example: conservative
   - name: member
@@ -95,6 +96,7 @@ schema:
       unique: false
       enum:
       - APPG for Cricket
+      - Ukraine
     example: APPG for Cricket
   - name: payment_type
     type: string
@@ -103,6 +105,7 @@ schema:
       unique: false
       enum:
       - In kind
+      - Monetary
     example: In kind
   - name: payment_description
     type: string
@@ -115,20 +118,6 @@ schema:
     description: Value of the payment (£)
     constraints:
       unique: false
-      enum:
-      - 310.45
-      - 340.0
-      - 352.94
-      - 416.8
-      - 500.0
-      - 650.0
-      - 780.0
-      - 1000.0
-      - 1002.0
-      - 1284.0
-      - 1872.25
-      - 2877.6
-      - 5000.0
     example: '1000.0'
   - name: received_date
     type: string
@@ -173,7 +162,7 @@ schema:
     type: string
     description: Public address of the donor
     constraints:
-      unique: true
+      unique: false
     example: 1 South Audley Street,     London,    W1K 1NB
   - name: donor_status
     type: string
@@ -192,6 +181,7 @@ schema:
       unique: false
       enum:
       - Paddy Power part of Flutter Entertainment plc
+      - Shakhtar Donetsk
       - Solix ApS
     example: Paddy Power part of Flutter Entertainment plc
   - name: donor_company_url
@@ -210,6 +200,7 @@ schema:
       enum:
       - .nan
       - 16956.0
+      - 169816.0
       - 35480269.0
     example: '16956.0'
   - name: donor_company_identifier_source
@@ -257,4 +248,4 @@ schema:
       enum:
       - '5'
     example: '5'
-hash: 4dea6eae60362c678c58a8e1456ed915
+hash: 8aba46307d55966fa93909cd822753e4
